@@ -3,6 +3,7 @@ return {
   { "saadparwaiz1/cmp_luasnip" },
   {
     "L3MON4D3/LuaSnip",
+    build = "make install_jsregexp",
     keys = function()
       local ls = require("luasnip") --{{{
 
