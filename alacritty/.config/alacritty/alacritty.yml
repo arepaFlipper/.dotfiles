@@ -40,7 +40,7 @@ font:
     style: Regular
   bold:
     # family: "Hack Nerd Font"
-    family: "JetBrains Mono Extrabold"
+    family: "JetBrains Mono ExtraBold"
     style: Bold
   italic:
     family: "Nimbus Mono PS"

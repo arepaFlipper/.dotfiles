@@ -3,7 +3,7 @@
 # -n: name
 # -d: dettach
 session1="tuto_logs"
-folder_name="freeCodeCamp/LaTeX"
+folder_name="MIT_bare/main/"
 window11="logs"
 pane111=${window00}.1
 window12="lazygit"
@@ -16,22 +16,23 @@ cd ${path}
 # tmux new -s $session0;
 
 tmux new -s $session1 -n $window11 -d
-tmux send-keys -t $window11 'docker-compose up -d && docker-compose logs -f' C-m
+tmux send-keys -t $window11 'vimtex .' C-m
+# tmux send-keys -t $window11 'docker-compose up -d && docker-compose logs -f' C-m
 # tmux split-window -v -t $window11 'cd ./frontend/client/ && npm run start'
 # tmux split-pane -h -t $window11.2
 # tmux split-pane -t $session1:1.1 'docker attach abacus_dj'
 
-tmux new-window -n $window12
-tmux send-keys -t $window12 'vimtex .' C-m
+# tmux new-window -n $window12
+# tmux send-keys -t $window12 'lvim .' C-m
 
-tmux new-window -n $window13
-tmux send-keys -t $window13 'vimtex .' C-m
+# tmux new-window -n $window13
+# tmux send-keys -t $window13 'vimtex .' C-m
 
 # session 2
-tmux new -s $session2 -n $window21 -d
-tmux send-keys -t $window21
-
-tmux new-window -n $window13
-tmux send-keys -t $window13 'vimtex .' C-m
-
+# tmux new -s $session2 -n $window21 -d
+# tmux send-keys -t $window21
+#
+# tmux new-window -n $window13
+# tmux send-keys -t $window13 'lvim .' C-m
+#
 tmux attach -t $session1:1

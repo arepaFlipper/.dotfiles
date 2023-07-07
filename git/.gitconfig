@@ -1,6 +1,6 @@
 [user]
-	name = cris
-	email = ctovar@abexuspr.com
+	name = Cristian F. Tovar
+	email = cristian00tovar@gmail.com
 
 [core]
 	editor = NVIM_APPNAME=LazyVim nvim
