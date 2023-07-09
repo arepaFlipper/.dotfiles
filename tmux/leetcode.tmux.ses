@@ -16,7 +16,7 @@ cd ${path}
 # tmux new -s $session0;
 
 tmux new -s $session1 -n $window11 -d
-tmux send-keys -t $window11 'vimtex .' C-m
+tmux send-keys -t $window11 'leetvim .' C-m
 # tmux send-keys -t $window11 'docker-compose up -d && docker-compose logs -f' C-m
 # tmux split-window -v -t $window11 'cd ./frontend/client/ && npm run start'
 # tmux split-pane -h -t $window11.2
@@ -30,7 +30,7 @@ tmux send-keys -t $window11 'vimtex .' C-m
 
 # session 2
 tmux new -s $session2 -n $window21 -d
-tmux send-keys -t $window21
+tmux send-keys -t $window21 'lazygit' C-m
 #
 # tmux new-window -n $window13
 # tmux send-keys -t $window13 'lvim .' C-m
