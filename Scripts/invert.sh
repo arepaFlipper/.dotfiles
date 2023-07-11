@@ -1,13 +1,12 @@
 #! /bin/bash
 
-if [ "$(pidof picom)" ];
-    then
-            pkill picom
-    else
+if [ "$(pidof pid)" ]; then
+	pkill pid
+else
 
-        ID=$(xdotool getactivewindow)
-        CLASS=$(xprop -id "$ID"  | grep "WM_CLASS" | awk '{print $4}')
-        COND="class_g=${CLASS}"
-        picom --invert-color-include "$COND" &
+	ID=$(xdotool getactivewindow)
+	CLASS=$(xprop -id "$ID" | grep "WM_CLASS" | awk '{print $4}')
+	COND="class_g=${CLASS}"
+	pid --invert-color-include "$COND" &
 fi
 exit
