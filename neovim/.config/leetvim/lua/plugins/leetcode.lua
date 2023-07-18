@@ -26,6 +26,7 @@ return {
         "clangd",
         "clang-format",
         "codelldb",
+        "rust-analyzer",
       },
     },
   },
