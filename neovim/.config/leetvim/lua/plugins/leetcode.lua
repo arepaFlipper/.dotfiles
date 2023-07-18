@@ -7,7 +7,7 @@ return {
     },
     config = function()
       require("leetbuddy").setup({
-        language = "cpp",
+        language = "py",
       })
     end,
     keys = {
@@ -29,12 +29,7 @@ return {
       },
     },
   },
-  {
-    "mfussenegger/nvim-dap",
-    config = function(_, _)
-      require("core.utils").load_mappings("dap")
-    end,
-  },
+  { "mfussenegger/nvim-dap" },
   {
     "rcarriga/nvim-dap-ui",
     event = "VeryLazy",
@@ -54,10 +49,12 @@ return {
       end
     end,
     keys = {
-      { "ñdb", "<cmd>DapToggleBreakpoint<CR>", desc = "Add breakpoint at line" },
+      { "ñdb", "<cmd>DapToggleBreakpoint<CR>", desc = "Add breakpoint at line", remap = true },
       { "ñdr", "<cmd>DapContinue<CR>", desc = "Start or continue the debugger" },
-      { "ñr", "<cmd>LBReset<CR>", desc = "Reset Code" },
-      { "ñt", "<cmd>LBTest<CR>", desc = "Run Code" },
+      { "ñdn", "<cmd>DapStepOver<CR>", desc = "Start or continue the debugger" },
+      { "<C-'>", "<cmd>DapStepOver<CR>", desc = "Start or continue the debugger" },
+      { "ñdo", "<cmd>DapStepOut<CR>", desc = "Reset Code" },
+      { "ñdi", "<cmd>StepInto<CR>", desc = "Run Code" },
       { "ñs", "<cmd>LBSubmit<CR>", desc = "Submit Code" },
       { "ñp", "<cmd>LBChangeLanguage<CR>", desc = "switch language" },
     },
