@@ -17,3 +17,8 @@ remind -s -irem2ics=1 ./test.rem 1 Jul 2023 | TZ=America/Bogota rem2ics -do > ./
 ```
 remind -s1 -irem2ics=1 ./test.rem 1 Jul 2023 | TZ=America/Bogota rem2ics -do > ./google_calendar.ics
 ```
+
+# Convert to .ics from 1 AUG 2023 next month:
+```
+remind -s0 -irem2ics=1 ~/scheduling/domestic_tasks.rem 1 AUG 2023 | TZ=America/Bogota rem2ics -do > ~/scheduling/domestic_tasks.ics
+```

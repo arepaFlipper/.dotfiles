@@ -7,3 +7,9 @@ REM AT 16:00 DURATION 20 MSG Take a nap
 
 REM 13 AUG MSG Laura's birthday
 
+REM 1 --1 MSG Schedule next month tasks
+
+REM 1 AUG 2023 AT 8AM MSG Read JSON convertion docs.
+
+REM WED [(REALTODAY())]  MSG next wednesday
+REM [REALTODAY()+8]  MSG next wednesday
