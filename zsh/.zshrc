@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.cargo/bin:$HOME/.config/git/git-log-compact:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.cargo/bin:$HOME/.config/git/git-log-compact:/usr/local/bin:/usr/bin:$PATH
 
 
 #Aliases
@@ -26,6 +26,7 @@ alias jupy="~/Documents/jupyter_notes/jupyter-init.sh"
 alias dotfiles="~/dotfiles.tmux.ses"
 alias keyboard="~/qmk.tmux.ses"
 alias V="/usr/bin/nvim"
+alias rk="~/.cargo/bin/rust-kanban"
 
 alias lvim="NVIM_APPNAME=LazyVim nvim"
 alias kvim="NVIM_APPNAME=kickstart nvim"
