@@ -289,3 +289,670 @@ ID Age  D P Project Description   Urg
 
 3 tasks
 ```
+
+## Lesson 4: Miscellaneous Commands & Tags
+
+Use the calculator:
+```
+❯ task calc 2+5
+7
+```
+
+Display a calendar:
+
+```
+❯ task calendar
+
+        August 2023             September 2023             October 2023              November 2023             December 2023             January 2024              February 2024
+
+     Su Mo Tu We Th Fr Sa      Su Mo Tu We Th Fr Sa      Su Mo Tu We Th Fr Sa      Su Mo Tu We Th Fr Sa      Su Mo Tu We Th Fr Sa      Su Mo Tu We Th Fr Sa      Su Mo Tu We Th Fr Sa
+  31        1  2  3  4  5   35                 1  2   40  1  2  3  4  5  6  7   44           1  2  3  4   48                 1  2    1     1  2  3  4  5  6    5              1  2  3
+  32  6  7  8  9 10 11 12   36  3  4  5  6  7  8  9   41  8  9 10 11 12 13 14   45  5  6  7  8  9 10 11   49  3  4  5  6  7  8  9    2  7  8  9 10 11 12 13    6  4  5  6  7  8  9 10
+  33 13 14 15 16 17 18 19   37 10 11 12 13 14 15 16   42 15 16 17 18 19 20 21   46 12 13 14 15 16 17 18   50 10 11 12 13 14 15 16    3 14 15 16 17 18 19 20    7 11 12 13 14 15 16 17
+  34 20 21 22 23 24 25 26   38 17 18 19 20 21 22 23   43 22 23 24 25 26 27 28   47 19 20 21 22 23 24 25   51 17 18 19 20 21 22 23    4 21 22 23 24 25 26 27    8 18 19 20 21 22 23 24
+  35 27 28 29 30 31         39 24 25 26 27 28 29 30   44 29 30 31               48 26 27 28 29 30         52 24 25 26 27 28 29 30    5 28 29 30 31             9 25 26 27 28 29
+                                                                                                          52 31
+
+Legend: today, weekend, due, due-today, overdue, scheduled, weeknumber.
+
+```
+
+Export tasks to JSON format:
+
+```
+❯ task export
+[
+{"id":1,"description":"buy milk","entry":"20230821T180330Z","modified":"20230821T191646Z","project":"grocery","status":"pending","uuid":"9eb8ea44-60a1-4cf5-a215-491f63085f9f","annotations":[{"entry":"20230821T184149Z","description":"buy 2% milk"}],"urgency":9.8},
+{"id":2,"description":"buy eggs","entry":"20230821T180340Z","modified":"20230821T191646Z","project":"grocery","status":"pending","uuid":"28ecb42d-b172-4ac6-b2dd-898aab89d262","urgency":9},
+{"id":3,"description":"bake cake","entry":"20230821T180348Z","modified":"20230821T191559Z","priority":"H","project":"party","status":"pending","uuid":"19f619d8-9951-4457-bf9a-8f7571528095","depends":["28ecb42d-b172-4ac6-b2dd-898aab89d262","9eb8ea44-60a1-4cf5-a215-491f63085f9f"],"urgency":2},
+{"id":0,"description":"buy milk","end":"20230821T180251Z","entry":"20230821T180138Z","modified":"20230821T180253Z","status":"deleted","uuid":"c99b4c15-9b70-45e3-aac5-3b15afe9f236","urgency":0},
+{"id":0,"description":"buy eggs","end":"20230821T180244Z","entry":"20230821T180149Z","modified":"20230821T180247Z","status":"deleted","uuid":"ffef9144-98ae-41ce-a037-6b1a877f4da0","urgency":0},
+{"id":0,"description":"bake cake","end":"20230821T180219Z","entry":"20230821T180158Z","modified":"20230821T180221Z","status":"deleted","uuid":"31a109a3-ad0c-4029-8379-da332367ee0e","urgency":0},
+{"id":0,"description":"bake cake","end":"20230821T180237Z","entry":"20230821T180228Z","modified":"20230821T180239Z","status":"deleted","uuid":"d0de7ba3-4d43-4a78-9671-914713b849a9","urgency":0},
+{"id":0,"description":"get milk","end":"20230821T175922Z","entry":"20230821T175246Z","modified":"20230821T175927Z","status":"deleted","uuid":"02f8ffad-e263-49e5-9446-999660f07acf","urgency":0}
+]
+```
+
+Export tasks to JSON format into file:
+
+```
+❯ task export > backup.txt
+```
+
+See the current state of the list:
+
+```
+❯ task list
+
+ID Age  D P Project Description   Urg
+ 1 3h       grocery buy milk [1]   9.8
+ 2 3h       grocery buy eggs         9
+ 3 3h   D H party   bake cake        2
+
+3 tasks
+```
+
+Append text into the 3rd task message:
+
+```
+❯ task 3 append MUST
+Appending to task 3 'bake cake MUST'.
+Appended 1 task.
+Project 'party' is 0% complete (1 task remaining).
+```
+
+See the effects of the appended text on the list:
+
+```
+❯ task list
+
+ID Age  D P Project Description        Urg
+ 1 3h       grocery buy milk [1]        9.8
+ 2 3h       grocery buy eggs              9
+ 3 3h   D H party   bake cake MUST        2
+
+3 tasks
+```
+
+Undo the last modification:
+
+```
+❯ task undo
+
+The last modification was made 2023-08-21
+
+                                          Prior Values                                                               Current Values
+dep_28ecb42d-b172-4ac6-b2dd-898aab89d262  x                                                                          x
+dep_9eb8ea44-60a1-4cf5-a215-491f63085f9f  x                                                                          x
+depends                                   28ecb42d-b172-4ac6-b2dd-898aab89d262,9eb8ea44-60a1-4cf5-a215-491f63085f9f  28ecb42d-b172-4ac6-b2dd-898aab89d262,9eb8ea44-60a1-4cf5-a215-491f63085f9f
+description                               bake cake                                                                  bake cake MUST
+entry                                     2023-08-21                                                                 2023-08-21
+modified                                  2023-08-21                                                                 2023-08-21
+priority                                  H                                                                          H
+project                                   party                                                                      party
+status                                    pending                                                                    pending
+uuid                                      19f619d8-9951-4457-bf9a-8f7571528095                                       19f619d8-9951-4457-bf9a-8f7571528095
+
+The undo command is not reversible.  Are you sure you want to revert to the previous state? (yes/no) yes
+Modified task reverted.
+```
+As you can see in the output above, it display the previous state of the task and compare it with the current state
+to see the changes that are going to be applied.
+
+Append text into the 3rd task message:
+
+```
+❯ task 3 append for Joe
+Appending to task 3 'bake cake for Joe'.
+Appended 1 task.
+Project 'party' is 0% complete (1 task remaining).
+❯ task list
+
+ID Age  D P Project Description           Urg
+ 1 3h       grocery buy milk [1]           9.8
+ 2 3h       grocery buy eggs                 9
+ 3 3h   D H party   bake cake for Joe        2
+
+3 tasks
+```
+
+We also can prepend texts into message:
+```
+❯ task 3 prepend MUST
+Prepending to task 3 'MUST bake cake for Joe'.
+Prepended 1 task.
+Project 'party' is 0% complete (1 task remaining).
+```
+
+Let's see the current state of the list:
+```
+❯ task list
+
+ID Age  D P Project Description                Urg
+ 1 4h       grocery buy milk [1]                9.8
+ 2 4h       grocery buy eggs                      9
+ 3 4h   D H party   MUST bake cake for Joe        2
+
+3 tasks
+```
+
+Now, check what is the option `projects` for:
+```
+❯ task projects
+
+Project Tasks
+grocery     2
+party       1
+
+2 projects (3 tasks)
+```
+It display the projects tags in the list.
+
+The `log` allows you to add a task that's already in 
+`completed` state:
+```
+❯ task log get birthday card
+```
+
+So if we see the current state of the list:
+```
+❯ task
+
+ID Age  Deps P Project Description              Urg
+ 1 4h          grocery buy milk                  9.8
+                         2023-08-21 buy 2% milk
+ 2 4h          grocery buy eggs                    9
+ 3 4h   1 2  H party   MUST bake cake for Joe      2
+
+3 tasks
+```
+There is no view of `get birthday card` task. But
+if we check into:
+```
+❯ task completed
+
+ID UUID     Created    Completed  Age   Description
+ - a22ae088 2023-08-21 2023-08-21 45s   get birthday card
+
+1 task
+```
+The `completed` task display the task that are in that 
+state.
+
+Now we can also see the details to a task by its ID:
+```
+❯ task a22ae088
+
+Name          Value
+ID            -
+Description   get birthday card
+Status        Completed
+Entered       2023-08-21 17:11:51 (10min)
+End           2023-08-21 17:11:51
+Last modified 2023-08-21 17:11:51 (10min)
+Virtual tags  COMPLETED UNBLOCKED
+UUID          a22ae088-265b-41e2-8df2-61fb05640616
+Urgency          0
+```
+
+We can even modify a completed task by its ID:
+```
+❯ task a22ae088 modify project:party
+Modifying task a22ae088 'get birthday card'.
+Modified 1 task.
+Note: Modified task a22ae088 is completed. You may wish to make this task pending with: task a22ae088 modify status:pending
+The project 'party' has changed.  Project 'party' is 50% complete (1 of 2 tasks remaining).
+```
+
+Now, `TaskWarrior` also provides of set of functionalities to generate reports
+like `timesheet`:
+```
+❯ task timesheet
+
+Wk  Date       Day ID       Action    Project Due Task
+W34 2023-08-21 Mon a22ae088 Completed party       get birthday card
+
+1 completed, 0 started.
+```
+
+The `ghistory` allows you to see a report of each state of the tasks:
+```
+❯ task ghistory
+
+Year Month  Number Added/Completed/Deleted
+2023 August                                                                                                         9          1                                                         5
+
+Legend: Added, Completed, Deleted
+
+```
+
+We can generate reports by week as well:
+```
+❯ task ghistory.weekly
+
+Year Month  Day Number Added/Completed/Deleted
+2023 August  20                                                                                                      9          1                                                        5
+
+Legend: Added, Completed, Deleted
+
+```
+
+The `history` option display the same information but in kind of like
+Excel spreadsheet format:
+```
+❯ task history
+
+Year Month   Added Completed Deleted Net
+2023 August      9         1       5   3
+
+     Average     9         1       5   3
+
+```
+
+To see a bar-chart report:
+```
+❯ task burndown.daily
+
+                                                                                        Daily Burndown
+6 |
+  |
+  |
+  |
+  |                                                                                                                                                                                    Done
+  |                                                                                                                                                                                    Started
+3 |                                                                                                                                                                                    Pending
+  |
+  |
+  |
+  |
+  |
+  |
+0 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    25 26 27 28 29 30 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21
+    Jun               Jul                                                                                          Aug
+
+ Net Fix Rate:         -
+ Estimated completion: No convergence
+```
+
+To see all available options:
+```
+❯ task show
+```
+
+There is a way to set the task we are working on,
+first let's display the our current tasks list we are working on:
+```
+❯ task active
+No matches.
+```
+
+Let's say that we are going to start to work on the 1st task:
+```
+❯ task 1 start
+Starting task 1 'buy milk'.
+Started 1 task.
+Project 'grocery' is 0% complete (2 of 2 tasks remaining).
+```
+
+Now, let's see the current state of `active` task:
+```
+❯ task active
+
+ID Started    Active Age  Project Description
+ 1 2023-08-21   8s   4h   grocery buy milk
+                                    2023-08-21 buy 2% milk
+
+1 task
+```
+
+Now, start to work on the 2nd task, as well:
+```
+❯ task 2 start
+Starting task 2 'buy eggs'.
+Started 1 task.
+You have more urgent tasks.
+Project 'grocery' is 0% complete (2 of 2 tasks remaining).
+```
+
+We have two tasks working on:
+```
+❯ task active
+
+ID Started    Active Age  Project Description
+ 1 2023-08-21  26s   4h   grocery buy milk
+                                    2023-08-21 buy 2% milk
+ 2 2023-08-21   2s   4h   grocery buy eggs
+
+2 tasks
+```
+
+See the current state of the list:
+```
+❯ task list
+
+ID Active Age  D P Project Description                Urg
+ 2   7min 4h       grocery buy eggs                     13
+ 1   7min 4h       grocery buy milk [1]               13.8
+ 3        4h   D H party   MUST bake cake for Joe        2
+
+3 tasks
+```
+There are only 3 task on list
+
+We can duplicate a task by running:
+```
+❯ task 3 duplicate
+Duplicated task 3 'MUST bake cake for Joe'.
+Created task 4.
+Duplicated 1 task.
+The project 'party' has changed.  Project 'party' is 33% complete (2 of 3 tasks remaining).
+```
+
+Now we have 4 tasks:
+```
+❯ task list
+
+ID Active Age   D P Project Description                Urg
+ 2   8min  4h       grocery buy eggs                     13
+ 1   8min  4h       grocery buy milk [1]               13.8
+ 3         4h   D H party   MUST bake cake for Joe        2
+ 4        11s   D H party   MUST bake cake for Joe        2
+
+4 tasks
+```
+
+Brute edit a task to make a Cake for Sally:
+```
+❯ task 4 edit
+Launching 'NVIM_APPNAME=LazyVim nvim "task.c7777110.task"' now...
+Editing complete.
+Edits were detected.
+Description modified.
+```
+```
+❯ task list
+
+ID Active Age  D P Project Description                  Urg
+ 2   8min 4h       grocery buy eggs                       13
+ 1   9min 4h       grocery buy milk [1]                 13.8
+ 3        4h   D H party   MUST bake cake for Joe          2
+ 4        1min D H party   MUST bake cake for Sally        2
+
+4 tasks
+```
+
+Modify the 3rd task:
+```
+❯ task 3 modify tag:joe
+Modifying task 3 'MUST bake cake for Joe'.
+Modified 1 task.
+Project 'party' is 33% complete (2 of 3 tasks remaining).
+❯ task 4 modify tag:sally
+Modifying task 4 'MUST bake cake for Sally'.
+Modified 1 task.
+Project 'party' is 33% complete (2 of 3 tasks remaining).
+```
+
+```
+❯ task list
+
+ID Active Age  D P Project Tags  Description                  Urg
+ 2  10min 4h       grocery       buy eggs                       13
+ 1  10min 4h       grocery       buy milk [1]                 13.8
+ 3        4h   D H party   joe   MUST bake cake for Joe        2.8
+ 4        2min D H party   sally MUST bake cake for Sally      2.8
+
+4 tasks
+```
+
+Modify the 1st and 2nd task (this does not work properly):
+```
+❯ task 1 2 modify tag: joe sally
+This command will alter 2 tasks.
+Modifying task 1 'joe sally'.
+Modifying task 2 'joe sally'.
+Modified 2 tasks.
+Project 'grocery' is 0% complete (2 of 2 tasks remaining).
+```
+The space character ` ` between the colon `:` and the tag `joe`
+break the command:
+```
+❯ task list
+
+ID Active Age  D P Project Tags  Description                  Urg
+ 2  11min 4h       grocery       joe sally                      13
+ 1  12min 4h       grocery       joe sally [1]                13.8
+ 3        4h   D H party   joe   MUST bake cake for Joe        2.8
+ 4        3min D H party   sally MUST bake cake for Sally      2.8
+
+4 tasks
+```
+Let's undo the last modification:
+```
+❯ task undo
+
+The last modification was made 2023-08-21
+
+             Prior Values                          Current Values
+description  buy eggs                              joe sally
+entry        2023-08-21                            2023-08-21
+modified     2023-08-21                            2023-08-21
+project      grocery                               grocery
+start        2023-08-21                            2023-08-21
+status       pending                               pending
+uuid         28ecb42d-b172-4ac6-b2dd-898aab89d262  28ecb42d-b172-4ac6-b2dd-898aab89d262
+
+The undo command is not reversible.  Are you sure you want to revert to the previous state? (yes/no) y
+Modified task reverted.
+```
+The undo performs only once on each task:
+```
+❯ task list
+
+ID Active Age  D P Project Tags  Description                  Urg
+ 2  12min 4h       grocery       buy eggs                       13
+ 1  12min 4h       grocery       joe sally [1]                13.8
+ 3        4h   D H party   joe   MUST bake cake for Joe        2.8
+ 4        4min D H party   sally MUST bake cake for Sally      2.8
+
+4 tasks
+
+
+❯ task undo
+
+The last modification was made 2023-08-21
+
+                       Prior Values                          Current Values
+annotation_1692643309  buy 2% milk                           buy 2% milk
+description            buy milk                              joe sally
+entry                  2023-08-21                            2023-08-21
+modified               2023-08-21                            2023-08-21
+project                grocery                               grocery
+start                  2023-08-21                            2023-08-21
+status                 pending                               pending
+uuid                   9eb8ea44-60a1-4cf5-a215-491f63085f9f  9eb8ea44-60a1-4cf5-a215-491f63085f9f
+
+The undo command is not reversible.  Are you sure you want to revert to the previous state? (yes/no) y
+Modified task reverted.
+
+
+❯ task list
+
+ID Active Age  D P Project Tags  Description                  Urg
+ 2  12min 4h       grocery       buy eggs                       13
+ 1  12min 4h       grocery       buy milk [1]                 13.8
+ 3        4h   D H party   joe   MUST bake cake for Joe        2.8
+ 4        4min D H party   sally MUST bake cake for Sally      2.8
+
+4 tasks
+```
+This time we try removing the space character ` ` between the colon
+and the tag `joe`:
+```
+❯ task 1 2 modify tag:joe sally
+This command will alter 2 tasks.
+Modifying task 1 'sally'.
+Modifying task 2 'sally'.
+Modified 2 tasks.
+Project 'grocery' is 0% complete (2 of 2 tasks remaining).
+```
+It only adds the tag `joe`:
+```
+❯ task list
+
+ID Active Age  D P Project Tags  Description                  Urg
+ 2  12min 4h       grocery joe   sally                        13.8
+ 1  13min 4h       grocery joe   sally [1]                    14.6
+ 3        4h   D H party   joe   MUST bake cake for Joe        2.8
+ 4        5min D H party   sally MUST bake cake for Sally      2.8
+
+4 tasks
+```
+```
+❯ task undo
+
+The last modification was made 2023-08-21
+
+             Prior Values                          Current Values
+description  buy eggs                              sally
+entry        2023-08-21                            2023-08-21
+modified     2023-08-21                            2023-08-21
+project      grocery                               grocery
+start        2023-08-21                            2023-08-21
+status       pending                               pending
+uuid         28ecb42d-b172-4ac6-b2dd-898aab89d262  28ecb42d-b172-4ac6-b2dd-898aab89d262
+tags                                               joe
+tags_joe                                           x
+
+The undo command is not reversible.  Are you sure you want to revert to the previous state? (yes/no) y
+Modified task reverted.
+```
+```
+❯ task undo
+
+The last modification was made 2023-08-21
+
+                       Prior Values                          Current Values
+annotation_1692643309  buy 2% milk                           buy 2% milk
+description            buy milk                              sally
+entry                  2023-08-21                            2023-08-21
+modified               2023-08-21                            2023-08-21
+project                grocery                               grocery
+start                  2023-08-21                            2023-08-21
+status                 pending                               pending
+uuid                   9eb8ea44-60a1-4cf5-a215-491f63085f9f  9eb8ea44-60a1-4cf5-a215-491f63085f9f
+tags                                                         joe
+tags_joe                                                     x
+
+The undo command is not reversible.  Are you sure you want to revert to the previous state? (yes/no) y
+Modified task reverted.
+```
+We add them one by one:
+```
+❯ task list
+
+ID Active Age  D P Project Tags  Description                  Urg
+ 2  13min 4h       grocery       buy eggs                       13
+ 1  13min 4h       grocery       buy milk [1]                 13.8
+ 3        4h   D H party   joe   MUST bake cake for Joe        2.8
+ 4        5min D H party   sally MUST bake cake for Sally      2.8
+
+4 tasks
+❯ task 1 2 modify tag:joe
+This command will alter 2 tasks.
+Modifying task 1 'buy milk'.
+Modifying task 2 'buy eggs'.
+Modified 2 tasks.
+Project 'grocery' is 0% complete (2 of 2 tasks remaining).
+❯ task list
+
+ID Active Age  D P Project Tags  Description                  Urg
+ 2  14min 4h       grocery joe   buy eggs                     13.8
+ 1  14min 4h       grocery joe   buy milk [1]                 14.6
+ 3        4h   D H party   joe   MUST bake cake for Joe        2.8
+ 4        6min D H party   sally MUST bake cake for Sally      2.8
+
+4 tasks
+```
+```
+❯ task 1 2 modify tag:sally
+This command will alter 2 tasks.
+Modifying task 1 'buy milk'.
+Modifying task 2 'buy eggs'.
+Modified 2 tasks.
+Project 'grocery' is 0% complete (2 of 2 tasks remaining).
+❯ task list
+
+ID Active Age  D P Project Tags  Description                  Urg
+ 2  14min 4h       grocery sally buy eggs                     13.8
+ 1  14min 4h       grocery sally buy milk [1]                 14.6
+ 3        4h   D H party   joe   MUST bake cake for Joe        2.8
+ 4        6min D H party   sally MUST bake cake for Sally      2.8
+
+4 tasks
+```
+But the right way to do it is by separating the tags with a comma `,`:
+```
+❯ task 1 2 modify tag:sally,joe
+This command will alter 2 tasks.
+Modifying task 1 'buy milk'.
+Modifying task 2 'buy eggs'.
+Modified 2 tasks.
+Project 'grocery' is 0% complete (2 of 2 tasks remaining).
+```
+This is the expected output:
+```
+❯ task list
+
+ID Active Age  D P Project Tags      Description                  Urg
+ 2  14min 4h       grocery joe sally buy eggs                     13.9
+ 1  15min 4h       grocery joe sally buy milk [1]                 14.7
+ 3        4h   D H party   joe       MUST bake cake for Joe        2.8
+ 4        6min D H party   sally     MUST bake cake for Sally      2.8
+
+4 tasks
+```
+
+We can edit multiple task on one command,
+but what the following command is going to do is
+arrange an stack of tasks to edit one by one on 
+the EDITOR:
+```
+❯ task 1 2 edit
+Launching 'NVIM_APPNAME=LazyVim nvim "task.9eb8ea44.task"' now...
+Editing complete.
+Edits were detected.
+Launching 'NVIM_APPNAME=LazyVim nvim "task.28ecb42d.task"' now...
+Editing complete.
+Edits were detected.
+```
+```
+❯ task list
+
+ID Active Age  D P Project Tags       Description                  Urg
+ 2  16min 4h       grocery Tester baz buy eggs                     13.9
+ 1  16min 4h       grocery Bar Foo    buy milk [1]                 14.7
+ 3        4h   D H party   joe        MUST bake cake for Joe        2.8
+ 4        8min D H party   sally      MUST bake cake for Sally      2.8
+
+4 tasks
+
+```
+
+To display the tags used along our tasks:
+```
+❯ task tags
+
+Tag    Count
+Bar        1
+Foo        1
+Tester     1
+baz        1
+joe        1
+sally      1
+
+
+6 tags
+(4 tasks)
+```
