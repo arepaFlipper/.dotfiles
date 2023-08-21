@@ -164,7 +164,7 @@ source ~/.dotfiles/zsh/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # set vim as default IDE
-export EDITOR=vim
+export EDITOR=nvim
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 export NVM_DIR="$HOME/.nvm"
