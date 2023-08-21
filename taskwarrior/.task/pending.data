@@ -1,1 +1,3 @@
-[description:"get milk" end:"1692640762" entry:"1692640366" modified:"1692640767" status:"deleted" uuid:"02f8ffad-e263-49e5-9446-999660f07acf"]
+[annotation_1692643309:"buy 2% milk" description:"buy milk" entry:"1692641010" modified:"1692643309" status:"pending" uuid:"9eb8ea44-60a1-4cf5-a215-491f63085f9f"]
+[description:"buy eggs" entry:"1692641020" modified:"1692641020" status:"pending" uuid:"28ecb42d-b172-4ac6-b2dd-898aab89d262"]
+[description:"bake cake" entry:"1692641028" modified:"1692641028" status:"pending" uuid:"19f619d8-9951-4457-bf9a-8f7571528095"]
