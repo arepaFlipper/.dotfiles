@@ -14,3 +14,8 @@ ID Age   Description  Urg
 
 1 task
 ```
+
+- Delete a task:
+```
+❯ task delete 1
+```

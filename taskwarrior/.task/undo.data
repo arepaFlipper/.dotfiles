@@ -1,3 +1,7 @@
 time 1692640366
 new [description:"get milk" entry:"1692640366" modified:"1692640366" status:"pending" uuid:"02f8ffad-e263-49e5-9446-999660f07acf"]
 ---
+time 1692640767
+old [description:"get milk" entry:"1692640366" modified:"1692640366" status:"pending" uuid:"02f8ffad-e263-49e5-9446-999660f07acf"]
+new [description:"get milk" end:"1692640762" entry:"1692640366" modified:"1692640767" status:"deleted" uuid:"02f8ffad-e263-49e5-9446-999660f07acf"]
+---
