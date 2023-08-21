@@ -38,4 +38,4 @@ data.location=/home/tovar/.task
 #include solarized-dark-256.theme
 #include solarized-light-256.theme
 #include no-color.theme
-
+editor = NVIM_APPNAME=LazyVim nvim
