@@ -46,3 +46,27 @@ time 1692643309
 old [description:"buy milk" entry:"1692641010" modified:"1692641010" status:"pending" uuid:"9eb8ea44-60a1-4cf5-a215-491f63085f9f"]
 new [annotation_1692643309:"buy 2% milk" description:"buy milk" entry:"1692641010" modified:"1692643309" status:"pending" uuid:"9eb8ea44-60a1-4cf5-a215-491f63085f9f"]
 ---
+time 1692643956
+old [description:"bake cake" entry:"1692641028" modified:"1692641028" status:"pending" uuid:"19f619d8-9951-4457-bf9a-8f7571528095"]
+new [description:"bake cake" entry:"1692641028" modified:"1692643956" priority:"H" status:"pending" uuid:"19f619d8-9951-4457-bf9a-8f7571528095"]
+---
+time 1692644293
+old [description:"bake cake" entry:"1692641028" modified:"1692643956" priority:"H" status:"pending" uuid:"19f619d8-9951-4457-bf9a-8f7571528095"]
+new [dep_28ecb42d-b172-4ac6-b2dd-898aab89d262:"x" depends:"28ecb42d-b172-4ac6-b2dd-898aab89d262" description:"bake cake" entry:"1692641028" modified:"1692644293" priority:"H" status:"pending" uuid:"19f619d8-9951-4457-bf9a-8f7571528095"]
+---
+time 1692645142
+old [dep_28ecb42d-b172-4ac6-b2dd-898aab89d262:"x" depends:"28ecb42d-b172-4ac6-b2dd-898aab89d262" description:"bake cake" entry:"1692641028" modified:"1692644293" priority:"H" status:"pending" uuid:"19f619d8-9951-4457-bf9a-8f7571528095"]
+new [dep_28ecb42d-b172-4ac6-b2dd-898aab89d262:"x" dep_9eb8ea44-60a1-4cf5-a215-491f63085f9f:"x" depends:"28ecb42d-b172-4ac6-b2dd-898aab89d262,9eb8ea44-60a1-4cf5-a215-491f63085f9f" description:"bake cake" entry:"1692641028" modified:"1692645142" priority:"H" status:"pending" uuid:"19f619d8-9951-4457-bf9a-8f7571528095"]
+---
+time 1692645359
+old [dep_28ecb42d-b172-4ac6-b2dd-898aab89d262:"x" dep_9eb8ea44-60a1-4cf5-a215-491f63085f9f:"x" depends:"28ecb42d-b172-4ac6-b2dd-898aab89d262,9eb8ea44-60a1-4cf5-a215-491f63085f9f" description:"bake cake" entry:"1692641028" modified:"1692645142" priority:"H" status:"pending" uuid:"19f619d8-9951-4457-bf9a-8f7571528095"]
+new [dep_28ecb42d-b172-4ac6-b2dd-898aab89d262:"x" dep_9eb8ea44-60a1-4cf5-a215-491f63085f9f:"x" depends:"28ecb42d-b172-4ac6-b2dd-898aab89d262,9eb8ea44-60a1-4cf5-a215-491f63085f9f" description:"bake cake" entry:"1692641028" modified:"1692645359" priority:"H" project:"party" status:"pending" uuid:"19f619d8-9951-4457-bf9a-8f7571528095"]
+---
+time 1692645406
+old [annotation_1692643309:"buy 2% milk" description:"buy milk" entry:"1692641010" modified:"1692643309" status:"pending" uuid:"9eb8ea44-60a1-4cf5-a215-491f63085f9f"]
+new [annotation_1692643309:"buy 2% milk" description:"buy milk" entry:"1692641010" modified:"1692645406" project:"grocery" status:"pending" uuid:"9eb8ea44-60a1-4cf5-a215-491f63085f9f"]
+---
+time 1692645406
+old [description:"buy eggs" entry:"1692641020" modified:"1692641020" status:"pending" uuid:"28ecb42d-b172-4ac6-b2dd-898aab89d262"]
+new [description:"buy eggs" entry:"1692641020" modified:"1692645406" project:"grocery" status:"pending" uuid:"28ecb42d-b172-4ac6-b2dd-898aab89d262"]
+---
