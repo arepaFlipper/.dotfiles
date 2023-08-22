@@ -90,7 +90,6 @@
 {"description":"buy eggs","entry":"20230821T234349Z","modified":"20230822T144438Z","status":"pending","uuid":"cd82bb73-bb19-458d-8f48-6bebeb74eb59","tags":["grocery,","joe,","sally"]}
 {"description":"buy eggs","entry":"20230821T234349Z","modified":"20230822T144517Z","status":"pending","uuid":"cd82bb73-bb19-458d-8f48-6bebeb74eb59","tags":["grocery","joe","sally"]}
 {"description":"buy milk","entry":"20230821T234356Z","modified":"20230822T144527Z","status":"pending","uuid":"c7bc741b-b67e-446a-ba77-7a4a7a7c7e6e","tags":["grocery","joe","sally"]}
-{"description":"bake cake for joe","end":"20230822T144625Z","entry":"20230821T233757Z","modified":"20230822T144631Z","project":"joe","status":"deleted","uuid":"2f586544-6181-4d18-a0e5-ea8705339c97"}
-{"description":"bake cake for sally","end":"20230822T144631Z","entry":"20230821T234105Z","modified":"20230822T144631Z","project":"sally","status":"deleted","uuid":"e27be2f6-9236-4db9-acdb-0a6940f14200"}
-{"description":"buy eggs","end":"20230822T144631Z","entry":"20230821T234349Z","modified":"20230822T144631Z","status":"deleted","uuid":"cd82bb73-bb19-458d-8f48-6bebeb74eb59","tags":["grocery","joe","sally"]}
-{"description":"buy milk","end":"20230822T144631Z","entry":"20230821T234356Z","modified":"20230822T144631Z","status":"deleted","uuid":"c7bc741b-b67e-446a-ba77-7a4a7a7c7e6e","tags":["grocery","joe","sally"]}
+{"description":"buy flour","entry":"20230822T151249Z","modified":"20230822T151249Z","status":"pending","uuid":"a4acdb5a-192a-444b-9d18-85cf26846cb1"}
+{"description":"buy butter","entry":"20230822T151252Z","modified":"20230822T151252Z","status":"pending","uuid":"16e03f8e-4247-4754-9795-19a000bff3d7"}
+{"description":"buy sugar","entry":"20230822T151257Z","modified":"20230822T151257Z","status":"pending","uuid":"d249dbbf-5b24-4214-b2d2-978f528c53c9"}
