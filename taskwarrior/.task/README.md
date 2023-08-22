@@ -1611,3 +1611,6 @@ ID Age  Project Tag                                                            D
  4 1h           dactyl domestic domestic,home_made home_made keyboard manuform buy milk               1
 
 3 tasks
+```
+
+## lesson 6
