@@ -309,3 +309,19 @@ time 1692715527
 old [description:"buy milk" entry:"1692661436" modified:"1692715412" status:"pending" tags:",grocery,grocery,,joe,joe,,sally" tags_:"x" tags_grocery:"x" tags_grocery,:"x" tags_joe:"x" tags_joe,:"x" tags_sally:"x" uuid:"c7bc741b-b67e-446a-ba77-7a4a7a7c7e6e"]
 new [description:"buy milk" entry:"1692661436" modified:"1692715527" status:"pending" tags:"grocery,joe,sally" tags_grocery:"x" tags_joe:"x" tags_sally:"x" uuid:"c7bc741b-b67e-446a-ba77-7a4a7a7c7e6e"]
 ---
+time 1692715591
+old [description:"bake cake for joe" entry:"1692661077" modified:"1692715355" project:"joe" status:"pending" uuid:"2f586544-6181-4d18-a0e5-ea8705339c97"]
+new [description:"bake cake for joe" end:"1692715585" entry:"1692661077" modified:"1692715591" project:"joe" status:"deleted" uuid:"2f586544-6181-4d18-a0e5-ea8705339c97"]
+---
+time 1692715591
+old [description:"bake cake for sally" entry:"1692661265" modified:"1692715367" project:"sally" status:"pending" uuid:"e27be2f6-9236-4db9-acdb-0a6940f14200"]
+new [description:"bake cake for sally" end:"1692715591" entry:"1692661265" modified:"1692715591" project:"sally" status:"deleted" uuid:"e27be2f6-9236-4db9-acdb-0a6940f14200"]
+---
+time 1692715591
+old [description:"buy eggs" entry:"1692661429" modified:"1692715517" status:"pending" tags:"grocery,joe,sally" tags_grocery:"x" tags_joe:"x" tags_sally:"x" uuid:"cd82bb73-bb19-458d-8f48-6bebeb74eb59"]
+new [description:"buy eggs" end:"1692715591" entry:"1692661429" modified:"1692715591" status:"deleted" tags:"grocery,joe,sally" tags_grocery:"x" tags_joe:"x" tags_sally:"x" uuid:"cd82bb73-bb19-458d-8f48-6bebeb74eb59"]
+---
+time 1692715591
+old [description:"buy milk" entry:"1692661436" modified:"1692715527" status:"pending" tags:"grocery,joe,sally" tags_grocery:"x" tags_joe:"x" tags_sally:"x" uuid:"c7bc741b-b67e-446a-ba77-7a4a7a7c7e6e"]
+new [description:"buy milk" end:"1692715591" entry:"1692661436" modified:"1692715591" status:"deleted" tags:"grocery,joe,sally" tags_grocery:"x" tags_joe:"x" tags_sally:"x" uuid:"c7bc741b-b67e-446a-ba77-7a4a7a7c7e6e"]
+---

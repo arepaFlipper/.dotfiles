@@ -1,4 +1,0 @@
-[description:"bake cake for joe" entry:"1692661077" modified:"1692715355" project:"joe" status:"pending" uuid:"2f586544-6181-4d18-a0e5-ea8705339c97"]
-[description:"bake cake for sally" entry:"1692661265" modified:"1692715367" project:"sally" status:"pending" uuid:"e27be2f6-9236-4db9-acdb-0a6940f14200"]
-[description:"buy eggs" entry:"1692661429" modified:"1692715517" status:"pending" tags:"grocery,joe,sally" tags_grocery:"x" tags_joe:"x" tags_sally:"x" uuid:"cd82bb73-bb19-458d-8f48-6bebeb74eb59"]
-[description:"buy milk" entry:"1692661436" modified:"1692715527" status:"pending" tags:"grocery,joe,sally" tags_grocery:"x" tags_joe:"x" tags_sally:"x" uuid:"c7bc741b-b67e-446a-ba77-7a4a7a7c7e6e"]

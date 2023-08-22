@@ -1,3 +1,7 @@
+[description:"bake cake for joe" end:"1692715585" entry:"1692661077" modified:"1692715591" project:"joe" status:"deleted" uuid:"2f586544-6181-4d18-a0e5-ea8705339c97"]
+[description:"bake cake for sally" end:"1692715591" entry:"1692661265" modified:"1692715591" project:"sally" status:"deleted" uuid:"e27be2f6-9236-4db9-acdb-0a6940f14200"]
+[description:"buy eggs" end:"1692715591" entry:"1692661429" modified:"1692715591" status:"deleted" tags:"grocery,joe,sally" tags_grocery:"x" tags_joe:"x" tags_sally:"x" uuid:"cd82bb73-bb19-458d-8f48-6bebeb74eb59"]
+[description:"buy milk" end:"1692715591" entry:"1692661436" modified:"1692715591" status:"deleted" tags:"grocery,joe,sally" tags_grocery:"x" tags_joe:"x" tags_sally:"x" uuid:"c7bc741b-b67e-446a-ba77-7a4a7a7c7e6e"]
 [annotation_1692663166:"cd -5" description:"welcome to costco" end:"1692663166" entry:"1692663038" modified:"1692663169" status:"deleted" uuid:"487870a1-ea9b-4eae-b697-d29d52889987"]
 [annotation_1692663105:"cd -5" description:"cd -5" end:"1692663105" entry:"1692663075" modified:"1692663117" status:"deleted" uuid:"30be94ac-7d9c-41a6-b030-05106d034c09"]
 [annotation_1692663117:"cd -5" description:"cd -5 6" end:"1692663117" entry:"1692663093" modified:"1692663119" status:"deleted" uuid:"5bd2ca3a-777f-4ec4-b727-1e13a0a0088c"]
