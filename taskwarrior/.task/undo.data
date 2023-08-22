@@ -352,3 +352,55 @@ time 1692720304
 old [description:"Bake cake for jessica" due:"1692766800" entry:"1692718160" modified:"1692718160" scheduled:"1692421200" status:"pending" uuid:"0090aa73-8fb5-419d-a371-07dd3c5e5bd8" wait:"1692334800"]
 new [description:"Bake cake for jessica" due:"1692766800" entry:"1692718160" modified:"1692720304" scheduled:"1692421200" start:"1692720304" status:"pending" uuid:"0090aa73-8fb5-419d-a371-07dd3c5e5bd8" wait:"1692334800"]
 ---
+time 1692721003
+new [description:"Bake cake for christine" due:"1693458000" entry:"1692721003" modified:"1692721003" project:"baby-shower" scheduled:"1693112400" status:"pending" uuid:"e89d4d4f-ea17-485a-ac29-aba0fa329454" wait:"1693026000"]
+---
+time 1692721003
+new [description:"buy eggs" due:"1693458000" entry:"1692721003" modified:"1692721003" project:"baby-shower" scheduled:"1693371600" status:"pending" tags:"christine,grocery" tags_christine,grocery:"x" uuid:"c0ad6dca-71cc-4958-bd31-732bf81a4f54" wait:"1692548203"]
+---
+time 1692721003
+new [description:"buy flour" due:"1693458000" entry:"1692721003" modified:"1692721003" project:"baby-shower" scheduled:"1693371600" status:"pending" tags:"christine,grocery" tags_christine,grocery:"x" uuid:"2232f8b4-152a-4cc8-92b8-46cd176feef1" wait:"1692548203"]
+---
+time 1692721003
+new [description:"buy milk" due:"1693458000" entry:"1692721003" modified:"1692721003" project:"baby-shower" scheduled:"1693371600" status:"pending" tags:"christine,grocery" tags_christine,grocery:"x" uuid:"1a93aa4a-454f-4c10-97f7-e0e44f1f7fbd" wait:"1692548203"]
+---
+time 1692721104
+old [description:"buy eggs" due:"1693458000" entry:"1692717954" modified:"1692717954" project:"4" scheduled:"1693371600" status:"pending" tags:"Josh,Josh,grocery,grocery" tags_Josh:"x" tags_Josh,grocery:"x" tags_grocery:"x" uuid:"3abbceb7-74c0-46bd-9df4-6b4df941de90" wait:"1692545154"]
+new [description:"buy eggs" due:"1693458000" end:"1692721096" entry:"1692717954" modified:"1692721104" project:"4" scheduled:"1693371600" status:"completed" tags:"Josh,Josh,grocery,grocery" tags_Josh:"x" tags_Josh,grocery:"x" tags_grocery:"x" uuid:"3abbceb7-74c0-46bd-9df4-6b4df941de90" wait:"1692545154"]
+---
+time 1692721104
+old [description:"buy flour" due:"1693458000" entry:"1692717954" modified:"1692717954" project:"4" scheduled:"1693371600" status:"pending" tags:"Josh,Josh,grocery,grocery" tags_Josh:"x" tags_Josh,grocery:"x" tags_grocery:"x" uuid:"105e60c9-b913-415a-aa96-c30cd840038f" wait:"1692545154"]
+new [description:"buy flour" due:"1693458000" end:"1692721104" entry:"1692717954" modified:"1692721104" project:"4" scheduled:"1693371600" status:"completed" tags:"Josh,Josh,grocery,grocery" tags_Josh:"x" tags_Josh,grocery:"x" tags_grocery:"x" uuid:"105e60c9-b913-415a-aa96-c30cd840038f" wait:"1692545154"]
+---
+time 1692721104
+old [description:"buy milk" due:"1693458000" entry:"1692717954" modified:"1692717954" project:"4" scheduled:"1693371600" status:"pending" tags:"Josh,Josh,grocery,grocery" tags_Josh:"x" tags_Josh,grocery:"x" tags_grocery:"x" uuid:"fd3c2a43-b2bb-4b6e-9102-78f687abc733" wait:"1692545154"]
+new [description:"buy milk" due:"1693458000" end:"1692721104" entry:"1692717954" modified:"1692721104" project:"4" scheduled:"1693371600" status:"completed" tags:"Josh,Josh,grocery,grocery" tags_Josh:"x" tags_Josh,grocery:"x" tags_grocery:"x" uuid:"fd3c2a43-b2bb-4b6e-9102-78f687abc733" wait:"1692545154"]
+---
+time 1692721104
+old [description:"Bake cake for jessica" due:"1692766800" entry:"1692718160" modified:"1692720304" scheduled:"1692421200" start:"1692720304" status:"pending" uuid:"0090aa73-8fb5-419d-a371-07dd3c5e5bd8" wait:"1692334800"]
+new [description:"Bake cake for jessica" due:"1692766800" end:"1692721104" entry:"1692718160" modified:"1692721104" scheduled:"1692421200" status:"completed" uuid:"0090aa73-8fb5-419d-a371-07dd3c5e5bd8" wait:"1692334800"]
+---
+time 1692721104
+old [description:"buy eggs" due:"1692766800" entry:"1692718160" modified:"1692718160" scheduled:"1692680400" status:"pending" tags:"grocery,jessica,jessica,grocery" tags_grocery:"x" tags_jessica:"x" tags_jessica,grocery:"x" uuid:"d4d5b6b0-2f1a-45c0-8f0c-22fc098c3bb6" wait:"1692545360"]
+new [description:"buy eggs" due:"1692766800" end:"1692721104" entry:"1692718160" modified:"1692721104" scheduled:"1692680400" status:"completed" tags:"grocery,jessica,jessica,grocery" tags_grocery:"x" tags_jessica:"x" tags_jessica,grocery:"x" uuid:"d4d5b6b0-2f1a-45c0-8f0c-22fc098c3bb6" wait:"1692545360"]
+---
+time 1692721104
+old [description:"buy flour" due:"1692766800" entry:"1692718160" modified:"1692718160" scheduled:"1692680400" status:"pending" tags:"grocery,jessica,jessica,grocery" tags_grocery:"x" tags_jessica:"x" tags_jessica,grocery:"x" uuid:"4337eaf9-4034-4383-861b-ce78a8588913" wait:"1692545360"]
+new [description:"buy flour" due:"1692766800" end:"1692721104" entry:"1692718160" modified:"1692721104" scheduled:"1692680400" status:"completed" tags:"grocery,jessica,jessica,grocery" tags_grocery:"x" tags_jessica:"x" tags_jessica,grocery:"x" uuid:"4337eaf9-4034-4383-861b-ce78a8588913" wait:"1692545360"]
+---
+time 1692721104
+old [description:"buy milk" due:"1692766800" entry:"1692718160" modified:"1692718160" scheduled:"1692680400" status:"pending" tags:"grocery,jessica,jessica,grocery" tags_grocery:"x" tags_jessica:"x" tags_jessica,grocery:"x" uuid:"df1ab6e1-2d1d-4c4e-bb05-0631a1c16920" wait:"1692545360"]
+new [description:"buy milk" due:"1692766800" end:"1692721104" entry:"1692718160" modified:"1692721104" scheduled:"1692680400" status:"completed" tags:"grocery,jessica,jessica,grocery" tags_grocery:"x" tags_jessica:"x" tags_jessica,grocery:"x" uuid:"df1ab6e1-2d1d-4c4e-bb05-0631a1c16920" wait:"1692545360"]
+---
+time 1692721325
+old [description:"Bake cake for christine" due:"1693458000" entry:"1692721003" modified:"1692721003" project:"baby-shower" scheduled:"1693112400" status:"pending" uuid:"e89d4d4f-ea17-485a-ac29-aba0fa329454" wait:"1693026000"]
+new [cost:"50.00" description:"Bake cake for christine" due:"1693458000" entry:"1692721003" modified:"1692721325" project:"baby-shower" scheduled:"1693112400" status:"pending" uuid:"e89d4d4f-ea17-485a-ac29-aba0fa329454" wait:"1693026000"]
+---
+time 1692721510
+old [cost:"50.00" description:"Bake cake for christine" due:"1693458000" entry:"1692721003" modified:"1692721325" project:"baby-shower" scheduled:"1693112400" status:"pending" uuid:"e89d4d4f-ea17-485a-ac29-aba0fa329454" wait:"1693026000"]
+new [color:"red" cost:"50.00" description:"Bake cake for christine" due:"1693458000" entry:"1692721003" modified:"1692721510" project:"baby-shower" scheduled:"1693112400" status:"pending" uuid:"e89d4d4f-ea17-485a-ac29-aba0fa329454" wait:"1693026000"]
+---
+time 1692721531
+old [color:"red" cost:"50.00" description:"Bake cake for christine" due:"1693458000" entry:"1692721003" modified:"1692721510" project:"baby-shower" scheduled:"1693112400" status:"pending" uuid:"e89d4d4f-ea17-485a-ac29-aba0fa329454" wait:"1693026000"]
+new [color:"white" cost:"50.00" description:"Bake cake for christine" due:"1693458000" entry:"1692721003" modified:"1692721531" project:"baby-shower" scheduled:"1693112400" status:"pending" uuid:"e89d4d4f-ea17-485a-ac29-aba0fa329454" wait:"1693026000"]
+---

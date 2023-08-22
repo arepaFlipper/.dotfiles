@@ -2056,3 +2056,323 @@ Some of your .taskrc variables differ from the default values.
 ```
 
 ## Lesson 8: User Defined Attributes (UDAs)
+
+```
+❯ task 14 15 16 17 11 12 13 done
+This command will alter 7 tasks.
+  - End will be set to '2023-08-22'.
+  - Status will be changed from 'pending' to 'completed'.
+Complete task 11 'buy eggs'? (yes/no/all/quit) a
+Completed task 11 'buy eggs'.
+Completed task 12 'buy flour'.
+Completed task 13 'buy milk'.
+Completed task 14 'Bake cake for jessica'.
+Completed task 15 'buy eggs'.
+Completed task 16 'buy flour'.
+Completed task 17 'buy milk'.
+Completed 7 tasks.
+Warning: You have specified that the 'scheduled' date is after the 'end' date.
+The project '4' has changed.  Project '4' is 75% complete (1 of 4 tasks remaining).
+❯ twl
+
+ID Age   Project     Tags                                Due        Description             Urgency
+12  1min baby-shower christine christine,grocery grocery 2023-08-31 buy eggs                    6.9
+13  1min baby-shower christine christine,grocery grocery 2023-08-31 buy flour                   6.9
+14  1min baby-shower christine christine,grocery grocery 2023-08-31 buy milk                    6.9
+ 3 16h               grocery joe sally                              buy eggs                      1
+ 4 16h               grocery joe sally                              buy milk                      1
+ 5  1h                                                              buy flour                     0
+ 6  1h                                                              buy butter                    0
+ 7  1h                                                              buy sugar                     0
+ 1 16h   joe                                                        bake cake for joe             1
+ 2 16h   sally                                                      bake cake for sally           1
+
+10 tasks
+❯ task waiting
+
+ID Age   Project     Wait       Remaining Sched      Due        Description
+ 8 59min             2023-08-24      1d   2023-08-25 2023-08-29 Cake for John
+ 9 56min             2023-08-25      2d   2023-08-26 2023-08-30 Cake for John
+10 53min 4           2023-08-26      3d   2023-08-27 2023-08-31 Bake cake for Josh
+11  2min baby-shower 2023-08-26      3d   2023-08-27 2023-08-31 Bake cake for christine
+
+4 tasks
+❯ task 11
+
+Name          Value
+ID            11
+Description   Bake cake for christine
+Status        Waiting
+Project       baby-shower
+Entered       2023-08-22 11:16:43 (3min)
+Waiting until 2023-08-26 00:00:00
+Scheduled     2023-08-27 00:00:00
+Due           2023-08-31 00:00:00
+Last modified 2023-08-22 11:16:43 (3min)
+Virtual tags  MONTH PROJECT QUARTER SCHEDULED UNBLOCKED WAITING YEAR
+UUID          e89d4d4f-ea17-485a-ac29-aba0fa329454
+Urgency       2.902
+
+    project      1 *    1 =      1
+    waiting      1 *   -3 =     -3
+    due      0.408 *   12 =    4.9
+                            ------
+                             2.902
+
+❯ task config uda.cost.type numeric
+Are you sure you want to add 'uda.cost.type' with a value of 'numeric'? (yes/no) yes
+Config file /home/tovar/.taskrc modified.
+❯ task config uda.cost.label Cost
+Are you sure you want to add 'uda.cost.label' with a value of 'Cost'? (yes/no) yes
+Config file /home/tovar/.taskrc modified.
+❯ task 11
+
+Name          Value
+ID            11
+Description   Bake cake for christine
+Status        Waiting
+Project       baby-shower
+Entered       2023-08-22 11:16:43 (4min)
+Waiting until 2023-08-26 00:00:00
+Scheduled     2023-08-27 00:00:00
+Due           2023-08-31 00:00:00
+Last modified 2023-08-22 11:16:43 (4min)
+Virtual tags  MONTH PROJECT QUARTER SCHEDULED UNBLOCKED WAITING YEAR
+UUID          e89d4d4f-ea17-485a-ac29-aba0fa329454
+Urgency       2.902
+
+    project      1 *    1 =      1
+    waiting      1 *   -3 =     -3
+    due      0.409 *   12 =    4.9
+                            ------
+                             2.902
+
+❯ task 11 edit
+Launching 'NVIM_APPNAME=LazyVim nvim "task.e89d4d4f.task"' now...
+Editing complete.
+Edits were detected.
+UDA cost modified.
+❯ task 11
+
+Name          Value
+ID            11
+Description   Bake cake for christine
+Status        Waiting
+Project       baby-shower
+Entered       2023-08-22 11:16:43 (5min)
+Waiting until 2023-08-26 00:00:00
+Scheduled     2023-08-27 00:00:00
+Due           2023-08-31 00:00:00
+Last modified 2023-08-22 11:22:05 (3s)
+Virtual tags  MONTH PROJECT QUARTER SCHEDULED UDA UNBLOCKED WAITING YEAR
+UUID          e89d4d4f-ea17-485a-ac29-aba0fa329454
+Urgency       2.902
+Cost          50.00
+
+    project      1 *    1 =      1
+    waiting      1 *   -3 =     -3
+    due      0.409 *   12 =    4.9
+                            ------
+                             2.902
+
+Date                Modification
+2023-08-22 11:22:05 Cost set to '50.00'.
+
+❯ task 11
+
+Name          Value
+ID            11
+Description   Bake cake for christine
+Status        Waiting
+Project       baby-shower
+Entered       2023-08-22 11:16:43 (8min)
+Waiting until 2023-08-26 00:00:00
+Scheduled     2023-08-27 00:00:00
+Due           2023-08-31 00:00:00
+Last modified 2023-08-22 11:22:05 (2min)
+Virtual tags  MONTH PROJECT QUARTER SCHEDULED UDA UNBLOCKED WAITING YEAR
+UUID          e89d4d4f-ea17-485a-ac29-aba0fa329454
+Urgency       2.903
+Cost          50.00
+
+    project      1 *    1 =      1
+    waiting      1 *   -3 =     -3
+    due      0.409 *   12 =    4.9
+                            ------
+                             2.903
+
+Date                Modification
+2023-08-22 11:22:05 Cost set to '50.00'.
+
+❯ task 11 edit
+Launching 'NVIM_APPNAME=LazyVim nvim "task.e89d4d4f.task"' now...
+Editing complete.
+Edits were detected.
+UDA color modified.
+❯ task 11
+
+Name          Value
+ID            11
+Description   Bake cake for christine
+Status        Waiting
+Project       baby-shower
+Entered       2023-08-22 11:16:43 (8min)
+Waiting until 2023-08-26 00:00:00
+Scheduled     2023-08-27 00:00:00
+Due           2023-08-31 00:00:00
+Last modified 2023-08-22 11:25:10 (5s)
+Virtual tags  MONTH PROJECT QUARTER SCHEDULED UDA UNBLOCKED WAITING YEAR
+UUID          e89d4d4f-ea17-485a-ac29-aba0fa329454
+Urgency       2.903
+color         red
+Cost          50.00
+
+    project      1 *    1 =      1
+    waiting      1 *   -3 =     -3
+    due      0.409 *   12 =    4.9
+                            ------
+                             2.903
+
+Date                Modification
+2023-08-22 11:22:05 Cost set to '50.00'.
+2023-08-22 11:25:10 Color set to 'red'.
+
+❯ task 11 modify color:white
+Modifying task 11 'Bake cake for christine'.
+Modified 1 task.
+Project 'baby-shower' is 0% complete (4 of 4 tasks remaining).
+❯ task 11
+
+Name          Value
+ID            11
+Description   Bake cake for christine
+Status        Waiting
+Project       baby-shower
+Entered       2023-08-22 11:16:43 (8min)
+Waiting until 2023-08-26 00:00:00
+Scheduled     2023-08-27 00:00:00
+Due           2023-08-31 00:00:00
+Last modified 2023-08-22 11:25:31 (4s)
+Virtual tags  MONTH PROJECT QUARTER SCHEDULED UDA UNBLOCKED WAITING YEAR
+UUID          e89d4d4f-ea17-485a-ac29-aba0fa329454
+Urgency       2.903
+color         white
+Cost          50.00
+
+    project      1 *    1 =      1
+    waiting      1 *   -3 =     -3
+    due      0.409 *   12 =    4.9
+                            ------
+                             2.903
+
+Date                Modification
+2023-08-22 11:22:05 Cost set to '50.00'.
+2023-08-22 11:25:10 Color set to 'red'.
+2023-08-22 11:25:31 Color changed from 'red' to 'white'.
+
+❯ task 11 modify color:gray
+The 'color' attribute does not allow a value of 'gray'.
+❯ twl
+
+ID Age   Project     Tags                                Due        Description             Urgency
+12 11min baby-shower christine christine,grocery grocery 2023-08-31 buy eggs                    6.9
+13 11min baby-shower christine christine,grocery grocery 2023-08-31 buy flour                   6.9
+14 11min baby-shower christine christine,grocery grocery 2023-08-31 buy milk                    6.9
+ 3 16h               grocery joe sally                              buy eggs                      1
+ 4 16h               grocery joe sally                              buy milk                      1
+ 5  1h                                                              buy flour                     0
+ 6  1h                                                              buy butter                    0
+ 7  1h                                                              buy sugar                     0
+ 1 16h   joe                                                        bake cake for joe             1
+ 2 16h   sally                                                      bake cake for sally           1
+
+10 tasks
+❯ task waiting
+
+ID Age   Project     Wait       Remaining Sched      Due        Description
+ 8  1h               2023-08-24      1d   2023-08-25 2023-08-29 Cake for John
+ 9  1h               2023-08-25      2d   2023-08-26 2023-08-30 Cake for John
+10  1h   4           2023-08-26      3d   2023-08-27 2023-08-31 Bake cake for Josh
+11 11min baby-shower 2023-08-26      3d   2023-08-27 2023-08-31 Bake cake for christine
+
+4 tasks
+❯ task waiting list
+No matches.
+❯ task show waiting
+
+Config Variable             Value
+report.waiting.columns      id,start.active,entry.age,depends.indicator,priority,project,tags,recur.indicator,wait,wait.remaining,scheduled,due,until,description
+report.waiting.context      1
+report.waiting.description  Waiting (hidden) tasks
+report.waiting.filter       +WAITING
+report.waiting.labels       ID,A,Age,D,P,Project,Tags,R,Wait,Remaining,Sched,Due,Until,Description
+report.waiting.sort         due+,wait+,entry+
+urgency.waiting.coefficient -3.0
+
+
+❯ task show waiting
+
+Config Variable             Value
+report.waiting.columns      id,start.active,entry.age,depends.indicator,priority,project,tags,recur.indicator,wait,wait.remaining,scheduled,due,until,description, urgency
+  Default value             id,start.active,entry.age,depends.indicator,priority,project,tags,recur.indicator,wait,wait.remaining,scheduled,due,until,description
+report.waiting.context      1
+report.waiting.description  Waiting (hidden) tasks
+report.waiting.filter       +WAITING
+report.waiting.labels       ID,A,Age,D,P,Project,Tags,R,Wait,Remaining,Sched,Due,Until,Description,Urgency
+  Default value             ID,A,Age,D,P,Project,Tags,R,Wait,Remaining,Sched,Due,Until,Description
+report.waiting.sort         due+,wait+,entry+
+urgency.waiting.coefficient -3.0
+
+Some of your .taskrc variables differ from the default values.
+  These are highlighted in color above.
+
+
+❯ task waiting
+Unrecognized column name ' urgency'.
+❯ task waiting
+Unrecognized column name 'Urgency'.
+❯ task waiting
+Unrecognized column name 'Urgency'.
+❯ twl
+
+ID Age   Project     Tags                                Due        Description             Urgency
+12 15min baby-shower christine christine,grocery grocery 2023-08-31 buy eggs                   6.91
+13 15min baby-shower christine christine,grocery grocery 2023-08-31 buy flour                  6.91
+14 15min baby-shower christine christine,grocery grocery 2023-08-31 buy milk                   6.91
+ 3 16h               grocery joe sally                              buy eggs                      1
+ 4 16h               grocery joe sally                              buy milk                      1
+ 5  1h                                                              buy flour                     0
+ 6  1h                                                              buy butter                    0
+ 7  1h                                                              buy sugar                     0
+ 1 16h   joe                                                        bake cake for joe             1
+ 2 16h   sally                                                      bake cake for sally           1
+
+10 tasks
+❯ task waiting
+
+ID Age   Project     Wait       Remaining Sched      Due        Description
+ 8  1h               2023-08-24      1d   2023-08-25 2023-08-29 Cake for John
+ 9  1h               2023-08-25      2d   2023-08-26 2023-08-30 Cake for John
+10  1h   4           2023-08-26      3d   2023-08-27 2023-08-31 Bake cake for Josh
+11 15min baby-shower 2023-08-26      3d   2023-08-27 2023-08-31 Bake cake for christine
+
+4 tasks
+❯ task waiting
+
+ID Age   Project     Wait       Remaining Sched      Due        Description             Urgency
+ 8  1h               2023-08-24      1d   2023-08-25 2023-08-29 Cake for John              2.82
+ 9  1h               2023-08-25      2d   2023-08-26 2023-08-30 Cake for John              2.36
+10  1h   4           2023-08-26      3d   2023-08-27 2023-08-31 Bake cake for Josh         2.91
+11 15min baby-shower 2023-08-26      3d   2023-08-27 2023-08-31 Bake cake for christine    32.9
+
+4 tasks
+❯ task waiting
+
+ID Age   Project     Wait       Remaining Sched      Due        Description             Urgency
+ 8  1h               2023-08-24      1d   2023-08-25 2023-08-29 Cake for John              2.82
+ 9  1h               2023-08-25      2d   2023-08-26 2023-08-30 Cake for John              2.36
+10  1h   4           2023-08-26      3d   2023-08-27 2023-08-31 Bake cake for Josh         2.91
+11 17min baby-shower 2023-08-26      3d   2023-08-27 2023-08-31 Bake cake for christine    32.9
+
+4 tasks
+```

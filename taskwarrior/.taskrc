@@ -41,3 +41,18 @@ data.location=/home/tovar/.task
 editor = NVIM_APPNAME=LazyVim nvim
 news.version=2.6.0
 report.list.labels=ID,Active,Age,Dependency,Priority,Project,Tags,Recur,Schedule,Due,Until,Description,Urgency
+
+uda.cost.type=numeric
+uda.cost.label=Cost
+
+uda.color.type=string
+uda.color.label=color
+uda.color.values=red,white,blue,green,yellow
+
+urgency.uda.cost.coefficient=30
+urgency.color.label=Urgency
+
+
+report.waiting.columns=id,start.active,entry.age,depends.indicator,priority,project,tags,recur.indicator,wait,wait.remaining,scheduled,due,until,description,urgency
+report.waiting.labels=ID,A,Age,Dependency,P,Project,Tags,R,Wait,Remaining,Sched,Due,Until,Description,Urgency
+
