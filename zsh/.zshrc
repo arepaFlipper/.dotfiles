@@ -54,6 +54,15 @@ task_tag_function () {
 
 alias ttag="task_tag_function"
 
+newcakefunction () {
+    task add Bake cake for $1 due:$2 scheduled:due-4d wait:due-5d project:$3
+    task add buy eggs +$1,grocery due:$2 scheduled:due-1d wait:-2d project:$3
+    task add buy flour +$1,grocery due:$2 scheduled:due-1d wait:-2d project:$3
+    task add buy milk +$1,grocery due:$2 scheduled:due-1d wait:-2d project:$3
+}
+
+alias newcake=newcakefunction
+
 function nvims(){
   items=("default" "kickstart" "LazyVim" "NvChad" "AstroNvim" "packervim" "tuffgniuz" "benbrastmckie" "VimTeX" "ejmastnak")
   config=$(printf "%s\n" "${items[@]}" | fzf --prompt="Neovim Config >>" --height=~50% --layout=reverse --border --exit-0)

@@ -1614,3 +1614,198 @@ ID Age  Project Tag                                                            D
 ```
 
 ## lesson 6
+```
+❯ task 8
+
+Name          Value
+ID            8
+Description   Cake for John
+Status        Waiting
+Entered       2023-08-22 10:19:26 (7s)
+Waiting until 2023-08-24 00:00:00
+Scheduled     2023-08-25 00:00:00
+Due           2023-08-29 00:00:00
+Last modified 2023-08-22 10:19:26 (7s)
+Virtual tags  LATEST MONTH QUARTER SCHEDULED UNBLOCKED WAITING YEAR
+UUID          1656b983-7374-4fac-a19f-457d6bca9f4e
+Urgency       2.797
+
+    waiting      1 *   -3 =     -3
+    due      0.483 *   12 =    5.8
+                            ------
+                             2.797
+
+❯ twl
+
+ID Age   Project Tags              Description             Urg
+ 3 15h           grocery joe sally buy eggs                   1
+ 4 15h           grocery joe sally buy milk                   1
+ 5  7min                           buy flour                  0
+ 6  7min                           buy butter                 0
+ 7  6min                           buy sugar                  0
+ 1 15h   joe                       bake cake for joe          1
+ 2 15h   sally                     bake cake for sally        1
+
+7 tasks
+❯ task wait
+No matches.
+❯ tn Cake for John \
+due:2023-08-30 \
+scheduled:due-4d \
+wait:due-5d
+Created task 9.
+❯ task wait
+No matches.
+❯ twl
+
+ID Age   Project Tags              Description             Urg
+ 3 15h           grocery joe sally buy eggs                   1
+ 4 15h           grocery joe sally buy milk                   1
+ 5  9min                           buy flour                  0
+ 6  9min                           buy butter                 0
+ 7  9min                           buy sugar                  0
+ 1 15h   joe                       bake cake for joe          1
+ 2 15h   sally                     bake cake for sally        1
+
+7 tasks
+❯ task 9
+
+Name          Value
+ID            9
+Description   Cake for John
+Status        Waiting
+Entered       2023-08-22 10:22:05 (2min)
+Waiting until 2023-08-25 00:00:00
+Scheduled     2023-08-26 00:00:00
+Due           2023-08-30 00:00:00
+Last modified 2023-08-22 10:22:05 (2min)
+Virtual tags  LATEST MONTH QUARTER SCHEDULED UNBLOCKED WAITING YEAR
+UUID          da57628e-ebd1-4df3-8e46-41b731b562ee
+Urgency       2.341
+
+    waiting      1 *   -3 =     -3
+    due      0.445 *   12 =   5.34
+                            ------
+                             2.341
+
+❯ newcake Josh 2023-08-31 4 5
+Created task 10.
+The project '4' has changed.  Project '4' is 0% complete (1 task remaining).
+Created task 11.
+The project '4' has changed.  Project '4' is 0% complete (2 of 2 tasks remaining).
+Created task 12.
+The project '4' has changed.  Project '4' is 0% complete (3 of 3 tasks remaining).
+Created task 13.
+The project '4' has changed.  Project '4' is 0% complete (4 of 4 tasks remaining).
+❯ task 10
+
+Name          Value
+ID            10
+Description   Bake cake for Josh
+Status        Waiting
+Project       4
+Entered       2023-08-22 10:25:54 (21s)
+Waiting until 2023-08-26 00:00:00
+Scheduled     2023-08-27 00:00:00
+Due           2023-08-31 00:00:00
+Last modified 2023-08-22 10:25:54 (21s)
+Virtual tags  MONTH PROJECT QUARTER SCHEDULED UNBLOCKED WAITING YEAR
+UUID          a15c0192-a28a-43d2-a2cc-72ae5c345d8e
+Urgency       2.885
+
+    project      1 *    1 =      1
+    waiting      1 *   -3 =     -3
+    due      0.407 *   12 =   4.88
+                            ------
+                             2.885
+
+❯ twl
+
+ID Age   Project Tags                      Due        Description             Urg
+11  1min 4       Josh Josh,grocery grocery 2023-08-31 buy eggs                6.88
+12  1min 4       Josh Josh,grocery grocery 2023-08-31 buy flour               6.88
+13  1min 4       Josh Josh,grocery grocery 2023-08-31 buy milk                6.88
+ 3 15h           grocery joe sally                    buy eggs                   1
+ 4 15h           grocery joe sally                    buy milk                   1
+ 5 14min                                              buy flour                  0
+ 6 14min                                              buy butter                 0
+ 7 14min                                              buy sugar                  0
+ 1 15h   joe                                          bake cake for joe          1
+ 2 15h   sally                                        bake cake for sally        1
+
+10 tasks
+❯ task wait
+
+ID Age  Project Tag                       Due  Description Urg
+11 1min 4       Josh Josh,grocery grocery 8d   buy eggs    6.88
+12 1min 4       Josh Josh,grocery grocery 8d   buy flour   6.88
+13 1min 4       Josh Josh,grocery grocery 8d   buy milk    6.88
+
+3 tasks
+❯ newcake jessica 2023-08-23
+Created task 14.
+Created task 15.
+Created task 16.
+Created task 17.
+❯ twl
+
+ID Age   Project Tags                            Sch   Due        Description               Urg
+15  8s           grocery jessica jessica,grocery       2023-08-23 buy eggs                  14.5
+16  8s           grocery jessica jessica,grocery       2023-08-23 buy flour                 14.5
+17  8s           grocery jessica jessica,grocery       2023-08-23 buy milk                  14.5
+14  8s                                                 2023-08-23 Bake cake for jessica     13.5
+11  3min 4       Josh Josh,grocery grocery        7d   2023-08-31 buy eggs                  6.89
+12  3min 4       Josh Josh,grocery grocery        7d   2023-08-31 buy flour                 6.89
+13  3min 4       Josh Josh,grocery grocery        7d   2023-08-31 buy milk                  6.89
+ 3 15h           grocery joe sally                                buy eggs                     1
+ 4 15h           grocery joe sally                                buy milk                     1
+ 5 16min                                                          buy flour                    0
+ 6 16min                                                          buy butter                   0
+ 7 16min                                                          buy sugar                    0
+ 1 15h   joe                                                      bake cake for joe            1
+ 2 15h   sally                                                    bake cake for sally          1
+
+14 tasks
+❯ task +grocery
+
+ID Age   Project Tag                             S     Due   Description Urg
+15 21s           grocery jessica jessica,grocery       13h   buy eggs    14.5
+16 21s           grocery jessica jessica,grocery       13h   buy flour   14.5
+17 21s           grocery jessica jessica,grocery       13h   buy milk    14.5
+11  3min 4       Josh Josh,grocery grocery        7d    8d   buy eggs    6.89
+12  3min 4       Josh Josh,grocery grocery        7d    8d   buy flour   6.89
+13  3min 4       Josh Josh,grocery grocery        7d    8d   buy milk    6.89
+ 3 15h           grocery joe sally                           buy eggs       1
+ 4 15h           grocery joe sally                           buy milk       1
+
+8 tasks
+❯ type newcake
+newcake is an alias for newcakefunction
+❯ type newcakefunction
+newcakefunction is a shell function from /home/tovar/.zshrc
+❯ task wait
+
+ID Age  Project Tag                             S     Due   Description           Urg
+15 3min         grocery jessica jessica,grocery       13h   buy eggs              14.5
+16 3min         grocery jessica jessica,grocery       13h   buy flour             14.5
+17 3min         grocery jessica jessica,grocery       13h   buy milk              14.5
+14 3min                                               13h   Bake cake for jessica 13.5
+11 7min 4       Josh Josh,grocery grocery        7d    8d   buy eggs              6.89
+12 7min 4       Josh Josh,grocery grocery        7d    8d   buy flour             6.89
+13 7min 4       Josh Josh,grocery grocery        7d    8d   buy milk              6.89
+
+7 tasks
+❯ task calendar
+
+        August 2023             September 2023             October 2023              November 2023             December 2023             January 2024              February 2024
+
+     Su Mo Tu We Th Fr Sa      Su Mo Tu We Th Fr Sa      Su Mo Tu We Th Fr Sa      Su Mo Tu We Th Fr Sa      Su Mo Tu We Th Fr Sa      Su Mo Tu We Th Fr Sa      Su Mo Tu We Th Fr Sa
+  31        1  2  3  4  5   35                 1  2   40  1  2  3  4  5  6  7   44           1  2  3  4   48                 1  2    1     1  2  3  4  5  6    5              1  2  3
+  32  6  7  8  9 10 11 12   36  3  4  5  6  7  8  9   41  8  9 10 11 12 13 14   45  5  6  7  8  9 10 11   49  3  4  5  6  7  8  9    2  7  8  9 10 11 12 13    6  4  5  6  7  8  9 10
+  33 13 14 15 16 17 18 19   37 10 11 12 13 14 15 16   42 15 16 17 18 19 20 21   46 12 13 14 15 16 17 18   50 10 11 12 13 14 15 16    3 14 15 16 17 18 19 20    7 11 12 13 14 15 16 17
+  34 20 21 22 23 24 25 26   38 17 18 19 20 21 22 23   43 22 23 24 25 26 27 28   47 19 20 21 22 23 24 25   51 17 18 19 20 21 22 23    4 21 22 23 24 25 26 27    8 18 19 20 21 22 23 24
+  35 27 28 29 30 31         39 24 25 26 27 28 29 30   44 29 30 31               48 26 27 28 29 30         52 24 25 26 27 28 29 30    5 28 29 30 31             9 25 26 27 28 29
+                                                                                                          52 31
+
+Legend: today, weekend, due, due-today, overdue, scheduled, weeknumber.
+```
