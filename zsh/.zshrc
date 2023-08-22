@@ -49,7 +49,7 @@ task_project_function () {
 alias tproj="task_project_function"
 
 task_tag_function () {
-  task $1 modify tag:"$2 $3 $4"
+  task $1 modify +$2 +$3 +$4
 }
 
 alias ttag="task_tag_function"

@@ -1202,3 +1202,412 @@ ID Age   Project Tags                     Description             Urg
 
 4 tasks
 ```
+### Corrections
+
+```
+❯ twl
+
+ID Age   Project Tags                     Description             Urg
+ 3 29min         Dactyl Manuform          buy eggs                 0.8
+ 4 29min         Dactyl Manuform Keyboard buy milk                 0.8
+ 1 35min joe                              bake cake for joe          1
+ 2 32min sally                            bake cake for sally        1
+
+4 tasks
+```
+
+We could filter task by tag using `task +<tag>`
+```
+❯ task +Dactyl
+No matches.
+```
+
+The issue here is that it is not a good idea to use capital letters
+for tag names
+
+```
+❯ task +"Dactyl"
+No matches.
+```
+Not even wrapping the filter into quotes helps.
+
+Anyway, we can append new tag into an existing list of tags in a task 
+by using `task <task> modify +<tag>:
+```
+❯ task 1 modify +next
+The 'next' special tag will boost the urgency of this task so it appears on the 'next' report.
+Modifying task 1 'bake cake for joe'.
+Modified 1 task.
+Project 'joe' is 0% complete (1 task remaining).
+```
+
+Let's check the changes out:
+```
+❯ twl
+
+ID Age   Project Tags                     Description             Urg
+ 3 54min         Dactyl Manuform          buy eggs                 0.8
+ 4 54min         Dactyl Manuform Keyboard buy milk                 0.8
+ 1  1h   joe     next                     bake cake for joe       16.8
+ 2 57min sally                            bake cake for sally        1
+
+4 tasks
+```
+
+Repeat the process for the 3rd task:
+```
+❯ task 3 modify +next
+The 'next' special tag will boost the urgency of this task so it appears on the 'next' report.
+Modifying task 3 'buy eggs'.
+Modified 1 task.
+```
+
+```
+❯ twl
+
+ID Age   Project Tags                     Description             Urg
+ 3 55min         Dactyl Manuform next     buy eggs                15.9
+ 4 55min         Dactyl Manuform Keyboard buy milk                 0.8
+ 1  1h   joe     next                     bake cake for joe       16.8
+ 2 57min sally                            bake cake for sally        1
+
+4 tasks
+```
+
+Awesome!, now filter our tasks by "next" tag:
+```
+❯ task +next
+
+ID Age   Project Tag                  Description       Urg
+ 1  1h   joe     next                 bake cake for joe 16.8
+ 3 55min         Dactyl Manuform next buy eggs          15.9
+
+2 tasks
+```
+
+Let's remove the broken tags in 4th task:
+```
+❯ task 4 edit
+Launching 'NVIM_APPNAME=LazyVim nvim "task.c7bc741b.task"' now...
+Editing complete.
+Edits were detected.
+```
+
+Check the changes in 4th task:
+```
+❯ twl
+
+ID Age   Project Tags                 Description             Urg
+ 3 56min         Dactyl Manuform next buy eggs                15.9
+ 4 56min                              buy milk                   0
+ 1  1h   joe     next                 bake cake for joe       16.8
+ 2 59min sally                        bake cake for sally        1
+
+4 tasks
+```
+
+```
+❯ task 4 edit
+Launching 'NVIM_APPNAME=LazyVim nvim "task.c7bc741b.task"' now...
+Editing complete.
+Edits were detected.
+```
+
+Set an specific list of tags to 4th task:
+```
+❯ task 4 modify +grocery +joe +sally
+Modifying task 4 'buy milk'.
+Modified 1 task.
+```
+
+```
+❯ twl
+
+ID Age   Project Tags                 Description             Urg
+ 3 58min         Dactyl Manuform next buy eggs                15.9
+ 4 58min         grocery joe sally    buy milk                   1
+ 1  1h   joe     next                 bake cake for joe       16.8
+ 2  1h   sally                        bake cake for sally        1
+
+4 tasks
+```
+
+Let's filter by `grocery` tag:
+```
+❯ task +grocery
+
+ID Age   Tag               Description Urg
+ 4 58min grocery joe sally buy milk       1
+
+1 task
+```
+
+Let's filter by `joe` tag:
+```
+❯ task +joe
+
+ID Age   Tag               Description Urg
+ 4 59min grocery joe sally buy milk       1
+
+1 task
+```
+
+Add 3 tags into 2nd task:
+```
+❯ ttag 2 Dactyl Manuform Keyboard
+Modifying task 2 'bake cake for sally'.
+Modified 1 task.
+Project 'sally' is 0% complete (1 task remaining).
+```
+
+```
+❯ twl
+
+ID Age  Project Tags                     Description             Urg
+ 3 1h           Dactyl Manuform next     buy eggs                15.9
+ 4 1h           grocery joe sally        buy milk                   1
+ 1 1h   joe     next                     bake cake for joe       16.8
+ 2 1h   sally   Dactyl Manuform Keyboard bake cake for sally      1.8
+
+4 tasks
+```
+
+Here we realize why is a bad idea to use capital letters for tag names:
+```
+❯ task +Dactyl
+No matches.
+```
+
+We compare the result with a tag assigned without any capital letters:
+```
+❯ task +joe
+
+ID Age  Tag               Description Urg
+ 4 1h   grocery joe sally buy milk       1
+
+1 task
+```
+
+Not even wrapping the filter into quotes helps.
+```
+❯ task +"Dactyl"
+No matches.
+```
+
+```
+❯ task +next
+
+ID Age  Project Tag                  Description       Urg
+ 1 1h   joe     next                 bake cake for joe 16.8
+ 3 1h           Dactyl Manuform next buy eggs          15.9
+
+2 tasks
+```
+
+```
+❯ task +'Dactyl'
+No matches.
+```
+
+```
+❯ task +Dactyl
+No matches.
+```
+
+So, finally we started to give up with the capital letters for tags,
+and remove this mess:
+```
+❯ task 4 edit
+Launching 'NVIM_APPNAME=LazyVim nvim "task.c7bc741b.task"' now...
+Editing complete.
+No edits were detected.
+```
+
+```
+❯ task 5 edit
+No matches.
+```
+
+```
+❯ twl
+
+ID Age  Project Tags                     Description             Urg
+ 3 1h           Dactyl Manuform next     buy eggs                15.9
+ 4 1h           grocery joe sally        buy milk                   1
+ 1 1h   joe     next                     bake cake for joe       16.8
+ 2 1h   sally   Dactyl Manuform Keyboard bake cake for sally      1.8
+
+4 tasks
+```
+
+```
+❯ task 2 edit
+Launching 'NVIM_APPNAME=LazyVim nvim "task.e27be2f6.task"' now...
+Editing complete.
+Edits were detected.
+```
+
+```
+❯ task 2 edit
+Launching 'NVIM_APPNAME=LazyVim nvim "task.e27be2f6.task"' now...
+Editing complete.
+No edits were detected.
+```
+
+```
+❯ task 3 edit
+Launching 'NVIM_APPNAME=LazyVim nvim "task.cd82bb73.task"' now...
+Editing complete.
+Edits were detected.
+```
+
+Now that we remove the broken tags, let's filter by `dactyl` tag:
+```
+❯ task +dactyl
+
+ID Age  Project Tag                      Description         Urg
+ 3 1h           dactyl manuform next     buy eggs              16
+ 2 1h   sally   dactyl keyboard manuform bake cake for sally    2
+
+2 tasks
+```
+
+Great, now let's filter by `keyboard` tag:
+```
+❯ task +keyboard
+
+ID Age  Project Tag                      Description         Urg
+ 2 1h   sally   dactyl keyboard manuform bake cake for sally    2
+
+1 task
+```
+
+Awesome, lastly let's filter by `manuform` tag:
+```
+❯ task +manuform
+
+ID Age  Project Tag                      Description         Urg
+ 3 1h           dactyl manuform next     buy eggs              16
+ 2 1h   sally   dactyl keyboard manuform bake cake for sally    2
+
+2 tasks
+```
+
+Excellent!, now check the current state of the task list:
+```
+❯ twl
+
+ID Age  Project Tags                     Description             Urg
+ 3 1h           dactyl manuform next     buy eggs                  16
+ 4 1h           grocery joe sally        buy milk                   1
+ 1 1h   joe     next                     bake cake for joe       16.8
+ 2 1h   sally   dactyl keyboard manuform bake cake for sally        2
+
+4 tasks
+```
+
+Well, now I wonder what is going to happen if I add a set of tags
+separated by a comma like this:
+```
+❯ ttag 4 +keyboard,manuform,dactyl
+Modifying task 4 'buy milk'.
+Modified 1 task.
+```
+
+```
+❯ twl
+
+ID Age  Project Tags                      Description             Urg
+ 3 1h           dactyl manuform next      buy eggs                  16
+ 4 1h           +keyboard dactyl manuform buy milk                   1
+ 1 1h   joe     next                      bake cake for joe       16.8
+ 2 1h   sally   dactyl keyboard manuform  bake cake for sally        2
+
+4 tasks
+```
+
+Oh jezz, we screw up combining the `+` character with the `ttag` shortcut.
+
+But the rest of the tags seems to be added correctly.
+
+Let's filter by `keyboard` tag:
+```
+❯ task +keyboard
+
+ID Age  Project Tag                      Description         Urg
+ 2 1h   sally   dactyl keyboard manuform bake cake for sally    2
+
+1 task
+```
+It does not recognize the `+keyboard` tag
+
+```
+❯ task +manuform
+
+ID Age  Project Tag                       Description         Urg
+ 3 1h           dactyl manuform next      buy eggs              16
+ 2 1h   sally   dactyl keyboard manuform  bake cake for sally    2
+ 4 1h           +keyboard dactyl manuform buy milk               1
+
+3 tasks
+```
+
+Fix the issue by set an specify set of tags to 4th task:
+```
+❯ ttag 4 keyboard,manuform,dactyl
+Modifying task 4 'buy milk'.
+Modified 1 task.
+```
+
+Cool, now check the current state of the task list:
+```
+❯ twl
+
+ID Age  Project Tags                     Description             Urg
+ 3 1h           dactyl manuform next     buy eggs                  16
+ 4 1h           dactyl keyboard manuform buy milk                   1
+ 1 1h   joe     next                     bake cake for joe       16.8
+ 2 1h   sally   dactyl keyboard manuform bake cake for sally        2
+
+4 tasks
+```
+
+Add multiple tags with the `modify` option:
+```
+❯ task 4 modify +domestic,home_made
+Modifying task 4 'buy milk'.
+Modified 1 task.
+```
+
+```
+❯ twl
+
+ID Age  Project Tags                                                           Description             Urg
+ 3 1h           dactyl manuform next                                           buy eggs                  16
+ 4 1h           dactyl domestic domestic,home_made home_made keyboard manuform buy milk                   1
+ 1 1h   joe     next                                                           bake cake for joe       16.8
+ 2 1h   sally   dactyl keyboard manuform                                       bake cake for sally        2
+
+4 tasks
+```
+It seems weird, the tags were added twice?
+
+```
+❯ task +domestic
+
+ID Age  Tag                                                            Description Urg
+ 4 1h   dactyl domestic domestic,home_made home_made keyboard manuform buy milk       1
+
+1 task
+```
+It filters by `domestic` tag though
+
+```
+❯ task +dactyl
+
+ID Age  Project Tag                                                            Description         Urg
+ 3 1h           dactyl manuform next                                           buy eggs              16
+ 2 1h   sally   dactyl keyboard manuform                                       bake cake for sally    2
+ 4 1h           dactyl domestic domestic,home_made home_made keyboard manuform buy milk               1
+
+3 tasks
