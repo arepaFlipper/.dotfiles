@@ -348,3 +348,7 @@ new [description:"buy flour" due:"1692766800" entry:"1692718160" modified:"16927
 time 1692718160
 new [description:"buy milk" due:"1692766800" entry:"1692718160" modified:"1692718160" scheduled:"1692680400" status:"pending" tags:"jessica,grocery" tags_jessica,grocery:"x" uuid:"df1ab6e1-2d1d-4c4e-bb05-0631a1c16920" wait:"1692545360"]
 ---
+time 1692720304
+old [description:"Bake cake for jessica" due:"1692766800" entry:"1692718160" modified:"1692718160" scheduled:"1692421200" status:"pending" uuid:"0090aa73-8fb5-419d-a371-07dd3c5e5bd8" wait:"1692334800"]
+new [description:"Bake cake for jessica" due:"1692766800" entry:"1692718160" modified:"1692720304" scheduled:"1692421200" start:"1692720304" status:"pending" uuid:"0090aa73-8fb5-419d-a371-07dd3c5e5bd8" wait:"1692334800"]
+---

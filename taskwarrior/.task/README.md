@@ -957,7 +957,7 @@ sally      1
 (4 tasks)
 ```
 
-## Lesson 5
+## Lesson 5: TaskWarrior & bash
 
 Check the current list:
 ```
@@ -1613,7 +1613,7 @@ ID Age  Project Tag                                                            D
 3 tasks
 ```
 
-## lesson 6
+## lesson 6: Command Staking
 ```
 ❯ task 8
 
@@ -1809,3 +1809,250 @@ ID Age  Project Tag                             S     Due   Description         
 
 Legend: today, weekend, due, due-today, overdue, scheduled, weeknumber.
 ```
+
+## lesson 7: Reports
+
+```
+❯ twl
+
+ID Age   Project Tags                            Sch   Due        Description               Urg
+15 32min         grocery jessica jessica,grocery       2023-08-23 buy eggs                  14.6
+16 32min         grocery jessica jessica,grocery       2023-08-23 buy flour                 14.6
+17 32min         grocery jessica jessica,grocery       2023-08-23 buy milk                  14.6
+14 32min                                               2023-08-23 Bake cake for jessica     13.6
+11 36min 4       Josh Josh,grocery grocery        7d   2023-08-31 buy eggs                   6.9
+12 36min 4       Josh Josh,grocery grocery        7d   2023-08-31 buy flour                  6.9
+13 36min 4       Josh Josh,grocery grocery        7d   2023-08-31 buy milk                   6.9
+ 3 16h           grocery joe sally                                buy eggs                     1
+ 4 16h           grocery joe sally                                buy milk                     1
+ 5 49min                                                          buy flour                    0
+ 6 49min                                                          buy butter                   0
+ 7 48min                                                          buy sugar                    0
+ 1 16h   joe                                                      bake cake for joe            1
+ 2 16h   sally                                                    bake cake for sally          1
+
+14 tasks
+❯ task report
+
+Report           Description
+active           Active tasks
+all              All tasks
+blocked          Blocked tasks
+blocking         Blocking tasks
+burndown.daily   Shows a graphical burndown chart, by day
+burndown.monthly Shows a graphical burndown chart, by month
+burndown.weekly  Shows a graphical burndown chart, by week
+completed        Completed tasks
+ghistory.annual  Shows a graphical report of task history, by year
+ghistory.monthly Shows a graphical report of task history, by month
+history.annual   Shows a report of task history, by year
+history.monthly  Shows a report of task history, by month
+information      Shows all data and metadata
+list             Most details of tasks
+long             All details of tasks
+ls               Few details of tasks
+minimal          Minimal details of tasks
+newest           Newest tasks
+next             Most urgent tasks
+oldest           Oldest tasks
+overdue          Overdue tasks
+projects         Shows all project names used
+ready            Most urgent actionable tasks
+recurring        Recurring Tasks
+summary          Shows a report of task status by project
+tags             Shows a list of all tags used
+unblocked        Unblocked tasks
+waiting          Waiting (hidden) tasks
+
+28 reports
+❯ task all
+
+ID St UUID     A Age   Done  P Project Tags Wait Sch  Due        Description
+14 P  0090aa73   33min                                2023-08-23 Bake cake for jessica
+15 P  d4d5b6b0   33min                  [3]           2023-08-23 buy eggs
+16 P  4337eaf9   33min                  [3]           2023-08-23 buy flour
+17 P  df1ab6e1   33min                  [3]           2023-08-23 buy milk
+10 W  a15c0192   37min         4            3d   4d   2023-08-31 Bake cake for Josh
+11 P  3abbceb7   37min         4        [3]      7d   2023-08-31 buy eggs
+12 P  105e60c9   37min         4        [3]      7d   2023-08-31 buy flour
+13 P  fd3c2a43   37min         4        [3]      7d   2023-08-31 buy milk
+ 9 W  da57628e   41min                      2d   3d   2023-08-30 Cake for John
+ 8 W  1656b983   43min                      1d   2d   2023-08-29 Cake for John
+ 7 P  d249dbbf   50min                                           buy sugar
+ 6 P  16e03f8e   50min                                           buy butter
+ 5 P  a4acdb5a   50min                                           buy flour
+ - D  5bd2ca3a   15h   15h                                       cd -5 6
+                                                                   2023-08-21 cd -5
+ - D  30be94ac   15h   15h                                       cd -5
+                                                                   2023-08-21 cd -5
+ - D  487870a1   15h   15h                                       welcome to costco
+                                                                   2023-08-21 cd -5
+ 4 P  c7bc741b   16h                    [3]                      buy milk
+ 3 P  cd82bb73   16h                    [3]                      buy eggs
+ 2 P  e27be2f6   16h           sally                             bake cake for sally
+ 1 P  2f586544   16h           joe                               bake cake for joe
+ - D  c7777110   17h   16h   H party    [1]                      MUST bake cake for Sally
+                                                                   2023-08-21 grocery
+ - D  a22ae088   17h   17h     party                             get birthday card
+ - D  19f619d8   21h   16h   H party    [1]                      MUST bake cake for Joe
+                                                                   2023-08-21 grocery
+ - D  28ecb42d   21h   16h     grocery  [2]                      buy eggs
+                                                                   2023-08-21 grocery
+ - D  9eb8ea44   21h   16h     grocery  [2]                      buy milk
+                                                                   2023-08-21 buy 2% milk
+                                                                   2023-08-21 grocery
+ - D  d0de7ba3   22h   22h                                       bake cake
+ - D  31a109a3   22h   22h                                       bake cake
+ - D  ffef9144   22h   22h                                       buy eggs
+ - D  c99b4c15   22h   22h                                       buy milk
+ - D  02f8ffad   22h   22h                                       get milk
+
+30 tasks
+❯ task waiting
+
+ID Age   Project Wait       Remaining Sched      Due        Description
+ 8 43min         2023-08-24      1d   2023-08-25 2023-08-29 Cake for John
+ 9 41min         2023-08-25      2d   2023-08-26 2023-08-30 Cake for John
+10 37min 4       2023-08-26      3d   2023-08-27 2023-08-31 Bake cake for Josh
+
+3 tasks
+❯ task calendar
+
+        August 2023             September 2023             October 2023              November 2023             December 2023             January 2024              February 2024
+
+     Su Mo Tu We Th Fr Sa      Su Mo Tu We Th Fr Sa      Su Mo Tu We Th Fr Sa      Su Mo Tu We Th Fr Sa      Su Mo Tu We Th Fr Sa      Su Mo Tu We Th Fr Sa      Su Mo Tu We Th Fr Sa
+  31        1  2  3  4  5   35                 1  2   40  1  2  3  4  5  6  7   44           1  2  3  4   48                 1  2    1     1  2  3  4  5  6    5              1  2  3
+  32  6  7  8  9 10 11 12   36  3  4  5  6  7  8  9   41  8  9 10 11 12 13 14   45  5  6  7  8  9 10 11   49  3  4  5  6  7  8  9    2  7  8  9 10 11 12 13    6  4  5  6  7  8  9 10
+  33 13 14 15 16 17 18 19   37 10 11 12 13 14 15 16   42 15 16 17 18 19 20 21   46 12 13 14 15 16 17 18   50 10 11 12 13 14 15 16    3 14 15 16 17 18 19 20    7 11 12 13 14 15 16 17
+  34 20 21 22 23 24 25 26   38 17 18 19 20 21 22 23   43 22 23 24 25 26 27 28   47 19 20 21 22 23 24 25   51 17 18 19 20 21 22 23    4 21 22 23 24 25 26 27    8 18 19 20 21 22 23 24
+  35 27 28 29 30 31         39 24 25 26 27 28 29 30   44 29 30 31               48 26 27 28 29 30         52 24 25 26 27 28 29 30    5 28 29 30 31             9 25 26 27 28 29
+                                                                                                          52 31
+
+Legend: today, weekend, due, due-today, overdue, scheduled, weeknumber.
+
+❯ task active
+No matches.
+❯ twl
+
+ID Age   Project Tags                            Sch   Due        Description               Urg
+15 35min         grocery jessica jessica,grocery       2023-08-23 buy eggs                  14.6
+16 35min         grocery jessica jessica,grocery       2023-08-23 buy flour                 14.6
+17 35min         grocery jessica jessica,grocery       2023-08-23 buy milk                  14.6
+14 35min                                               2023-08-23 Bake cake for jessica     13.6
+11 38min 4       Josh Josh,grocery grocery        7d   2023-08-31 buy eggs                   6.9
+12 38min 4       Josh Josh,grocery grocery        7d   2023-08-31 buy flour                  6.9
+13 38min 4       Josh Josh,grocery grocery        7d   2023-08-31 buy milk                   6.9
+ 3 16h           grocery joe sally                                buy eggs                     1
+ 4 16h           grocery joe sally                                buy milk                     1
+ 5 51min                                                          buy flour                    0
+ 6 51min                                                          buy butter                   0
+ 7 51min                                                          buy sugar                    0
+ 1 16h   joe                                                      bake cake for joe            1
+ 2 16h   sally                                                    bake cake for sally          1
+
+14 tasks
+❯ task 14 start
+Starting task 14 'Bake cake for jessica'.
+Started 1 task.
+You have more urgent tasks.
+❯ task active
+
+ID Started    Active Age   W          Due        Description
+14 2023-08-22   8s   35min 2023-08-18 2023-08-23 Bake cake for jessica
+
+1 task
+❯ task show list
+
+Config Variable         Value
+list.all.projects       0
+list.all.tags           0
+report.list.columns     id,start.age,entry.age,depends.indicator,priority,project,tags,recur.indicator,scheduled.countdown,due,until.remaining,description.count,urgency
+report.list.context     1
+report.list.description Most details of tasks
+report.list.filter      status:pending -WAITING
+report.list.labels      ID,Active,Age,D,P,Project,Tags,R,Sch,Due,Until,Description,Urg
+report.list.sort        start-,due+,project+,urgency-
+
+
+❯ task show calendar
+
+Config Variable           Value
+calendar.details          sparse
+calendar.details.report   list
+calendar.holidays         none
+calendar.legend           1
+calendar.offset           0
+calendar.offset.value     -1
+color.calendar.due        color0 on color1
+color.calendar.due.today  color15 on color1
+color.calendar.holiday    color0 on color11
+color.calendar.overdue    color0 on color9
+color.calendar.scheduled  rgb013 on color15
+color.calendar.today      color15 on rgb013
+color.calendar.weekend    on color235
+color.calendar.weeknumber rgb013
+
+
+❯ task calendar.details
+No matches.
+❯ task calendar.report
+No matches.
+❯ task config report.list.labels
+No entry named 'report.list.labels' found.
+❯ task config report.list.labels
+No entry named 'report.list.labels' found.
+❯ task config report.list.labels 'ID,Active,Age,D,P,Project,Tags,R,Sch,Due,Until,Description,Urg'
+Are you sure you want to add 'report.list.labels' with a value of 'ID,Active,Age,D,P,Project,Tags,R,Sch,Due,Until,Description,Urg'? (yes/no) yes
+Config file /home/tovar/.taskrc modified.
+❯ task config report.list.labels
+Are you sure you want to remove 'report.list.labels'? (yes/no) n
+No changes made.
+```
+
+Set the column labels for the `task list` command:
+```
+❯ task config report.list.labels 'ID,Active,Age,Dependency,Priority,Project,Tags,Recur,Schedule,Due,Until,Description,Urgency'
+Are you sure you want to change the value of 'report.list.labels' from 'ID,Active,Age,D,P,Project,Tags,R,Sch,Due,Until,Description,Urg' to 'ID,Active,Age,Dependency,Priority,Project,Tags,Recur,Schedule,Due,Until,Description,Urgency'? (yes/no) yes
+Config file /home/tovar/.taskrc modified.
+```
+
+This way you can see the details of the tasks in the `task list` command:
+```
+❯ twl
+
+ID Active Age   Project Tags                            Schedule Due        Description               Urgency
+14   4min 40min                                                  2023-08-23 Bake cake for jessica        17.6
+15        40min         grocery jessica jessica,grocery          2023-08-23 buy eggs                     14.6
+16        40min         grocery jessica jessica,grocery          2023-08-23 buy flour                    14.6
+17        40min         grocery jessica jessica,grocery          2023-08-23 buy milk                     14.6
+11        43min 4       Josh Josh,grocery grocery           7d   2023-08-31 buy eggs                      6.9
+12        43min 4       Josh Josh,grocery grocery           7d   2023-08-31 buy flour                     6.9
+13        43min 4       Josh Josh,grocery grocery           7d   2023-08-31 buy milk                      6.9
+ 3        16h           grocery joe sally                                   buy eggs                        1
+ 4        16h           grocery joe sally                                   buy milk                        1
+ 5        56min                                                             buy flour                       0
+ 6        56min                                                             buy butter                      0
+ 7        56min                                                             buy sugar                       0
+ 1        16h   joe                                                         bake cake for joe               1
+ 2        16h   sally                                                       bake cake for sally             1
+
+14 tasks
+❯ task show list
+
+Config Variable         Value
+list.all.projects       0
+list.all.tags           0
+report.list.columns     id,start.age,entry.age,depends.indicator,priority,project,tags,recur.indicator,scheduled.countdown,due,until.remaining,description.count,urgency
+report.list.context     1
+report.list.description Most details of tasks
+report.list.filter      status:pending -WAITING
+report.list.labels      ID,Active,Age,Dependency,Priority,Project,Tags,Recur,Schedule,Due,Until,Description,Urgency
+  Default value         ID,Active,Age,D,P,Project,Tags,R,Sch,Due,Until,Description,Urg
+report.list.sort        start-,due+,project+,urgency-
+
+Some of your .taskrc variables differ from the default values.
+  These are highlighted in color above.
+
+```
+
+## Lesson 8: User Defined Attributes (UDAs)
