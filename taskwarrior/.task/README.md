@@ -1,4 +1,4 @@
-# Task Manager lessons
+# Task_Warrior: Task Manager lessons
 
 - Add a new task:
 ```
@@ -955,4 +955,250 @@ sally      1
 
 6 tags
 (4 tasks)
+```
+
+## Lesson 5
+
+Check the current list:
+```
+❯ task completed
+
+ID UUID     Created    Completed  Age  Project Description
+ - a22ae088 2023-08-21 2023-08-21 1h   party   get birthday card
+
+1 task
+```
+We want the list empty
+
+We also can delete by ID as well:
+```
+❯ task delete a22ae088
+Delete task a22ae088 'get birthday card'? (yes/no) yes
+Deleting task a22ae088 'get birthday card'.
+Deleted 1 task.
+Note: Modified task a22ae088 is completed. You may wish to make this task pending with: task a22ae088 modify status:pending
+The project 'party' has changed.  Project 'party' is 0% complete (2 of 2 tasks remaining).
+
+```
+
+Check the projects list out:
+```
+❯ task projects
+
+Project Tasks
+grocery     2
+party       2
+
+2 projects (4 tasks)
+```
+
+We may an entire project and the tasks associated with
+by running:
+```
+
+❯ task delete grocery
+This command has no filter, and will modify all (including completed and deleted) tasks.  Are you sure? (yes/no) yes
+This command will alter 10 tasks.
+Delete task 1 'buy milk'? (yes/no/all/quit) y
+Deleting task 1 'buy milk'.
+
+Delete task 2 'buy eggs'? (yes/no/all/quit) y
+Deleting task 2 'buy eggs'.
+Unblocked 3 'MUST bake cake for Joe'.
+Unblocked 4 'MUST bake cake for Sally'.
+
+Delete task 3 'MUST bake cake for Joe'? (yes/no/all/quit) y
+Deleting task 3 'MUST bake cake for Joe'.
+
+Delete task 4 'MUST bake cake for Sally'? (yes/no/all/quit) y
+Deleting task 4 'MUST bake cake for Sally'.
+Task c99b4c15 'buy milk' is not deletable.
+Task ffef9144 'buy eggs' is not deletable.
+Task 31a109a3 'bake cake' is not deletable.
+Task d0de7ba3 'bake cake' is not deletable.
+Task 02f8ffad 'get milk' is not deletable.
+Task a22ae088 'get birthday card' is not deletable.
+Deleted 4 tasks.
+The project 'grocery' has changed.  Project 'grocery' is 0% complete (0 of 0 tasks remaining).
+The project 'party' has changed.  Project 'party' is 0% complete (0 of 0 tasks remaining).
+```
+```
+❯ task list
+No matches.
+```
+```
+❯ task projects
+No projects.
+```
+
+Now add a task:
+```
+❯ task add "bake cake for joe"
+Created task 1.
+```
+```
+❯ task list
+
+ID Age   Description           Urg
+ 1 17s   bake cake for joe        0
+
+1 task
+```
+```
+❯ source ~/.zshrc
+```
+```
+❯ task list
+
+ID Age  Description           Urg
+ 1 2min bake cake for joe        0
+
+1 task
+```
+
+We can use the aliases bash functionality to create a shortcut
+for `task add` command
+```
+❯ tn "bake cake for sally"
+Created task 2.
+```
+```
+❯ task list
+
+ID Age   Description             Urg
+ 1  3min bake cake for joe          0
+ 2 10s   bake cake for sally        0
+
+2 tasks
+```
+Refresh the .zshrc file:
+```
+❯ source ~/.zshrc
+```
+
+This alias `tl` is actually used by `tmux` to list all sessions:
+```
+❯ tl
+dotfiles: 1 windows (created Mon Aug 21 16:52:03 2023) (attached)
+```
+
+Refresh the .zshrc file:
+```
+❯ source ~/.zshrc
+```
+
+Alias `twl` to shortcut for `task list`:
+```
+❯ twl
+
+ID Age  Description             Urg
+ 1 4min bake cake for joe          0
+ 2 1min bake cake for sally        0
+
+2 tasks
+```
+
+```
+❯ tn "buy eggs"
+Created task 3.
+```
+
+```
+❯ tn "buy milk"
+Created task 4.
+```
+```
+❯ twl
+
+ID Age   Description             Urg
+ 1  6min bake cake for joe          0
+ 2  2min bake cake for sally        0
+ 3 13s   buy eggs                   0
+ 4  6s   buy milk                   0
+
+4 tasks
+```
+```
+❯ source ~/.zshrc
+```
+
+Now `tproj` is a shortcut for `task modify project:<arg>`
+```
+❯ tproj 1 joe
+Modifying task 1 'bake cake for joe'.
+Modified 1 task.
+The project 'joe' has changed.  Project 'joe' is 0% complete (1 task remaining).
+```
+
+```
+❯ twl
+
+ID Age  Project Description             Urg
+ 2 5min         bake cake for sally        0
+ 3 2min         buy eggs                   0
+ 4 2min         buy milk                   0
+ 1 8min joe     bake cake for joe          1
+
+4 tasks
+```
+
+```
+❯ tproj 2 sally
+Modifying task 2 'bake cake for sally'.
+Modified 1 task.
+The project 'sally' has changed.  Project 'sally' is 0% complete (1 task remaining).
+```
+
+```
+❯ twl
+
+ID Age  Project Description             Urg
+ 3 3min         buy eggs                   0
+ 4 3min         buy milk                   0
+ 1 9min joe     bake cake for joe          1
+ 2 6min sally   bake cake for sally        1
+
+4 tasks
+```
+
+Let's modify the tag of the 3rd task:
+```
+❯ task 3 modify tag:"Dactyl Manuform"
+Modifying task 3 'buy eggs'.
+Modified 1 task.
+```
+
+```
+❯ twl
+
+ID Age   Project Tags            Description             Urg
+ 3  5min         Dactyl Manuform buy eggs                 0.8
+ 4  5min                         buy milk                   0
+ 1 11min joe                     bake cake for joe          1
+ 2  7min sally                   bake cake for sally        1
+
+4 tasks
+```
+
+```
+❯ source ~/.zshrc
+```
+
+Now `ttag` is a shortcut for `task modify tag:<arg>`
+```
+❯ ttag 4 Dactyl Manuform Keyboard
+Modifying task 4 'buy milk'.
+Modified 1 task.
+```
+
+```
+❯ twl
+
+ID Age   Project Tags                     Description             Urg
+ 3  9min         Dactyl Manuform          buy eggs                 0.8
+ 4  9min         Dactyl Manuform Keyboard buy milk                 0.8
+ 1 15min joe                              bake cake for joe          1
+ 2 11min sally                            bake cake for sally        1
+
+4 tasks
 ```

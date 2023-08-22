@@ -38,6 +38,22 @@ alias texvim="NVIM_APPNAME=benbrastmckie nvim"
 alias ejvim="NVIM_APPNAME=ejmastnak nvim"
 alias vimtex="NVIM_APPNAME=VimTeX nvim"
 
+alias tn="task add $1"
+alias td="task delete $1"
+alias twl="task list"
+
+task_project_function () {
+  task $1 modify project:$2
+}
+
+alias tproj="task_project_function"
+
+task_tag_function () {
+  task $1 modify tag:"$2 $3 $4"
+}
+
+alias ttag="task_tag_function"
+
 function nvims(){
   items=("default" "kickstart" "LazyVim" "NvChad" "AstroNvim" "packervim" "tuffgniuz" "benbrastmckie" "VimTeX" "ejmastnak")
   config=$(printf "%s\n" "${items[@]}" | fzf --prompt="Neovim Config >>" --height=~50% --layout=reverse --border --exit-0)
@@ -172,3 +188,5 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export OPENAI_API_KEY="$(gpg --decrypt $HOME/.gpt_key.gpg 2>&1| tail -n 1)"
+
+
