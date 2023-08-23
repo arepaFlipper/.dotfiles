@@ -1,0 +1,87 @@
+time 1692783550
+new [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692783550" status:"pending" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+---
+time 1692783591
+new [description:"fix the vpn shell" entry:"1692783591" modified:"1692783591" status:"pending" uuid:"dce431d9-ee6f-4cdc-99d6-8a3289c19f4c"]
+---
+time 1692783681
+new [description:"buy spinach" entry:"1692783681" modified:"1692783681" status:"pending" uuid:"b8df98b8-31fa-41a8-9bbf-ca949fb28091"]
+---
+time 1692783746
+new [description:"buy chard" entry:"1692783746" modified:"1692783746" status:"pending" uuid:"672cb28d-2d6c-408b-891b-1b462b98dd9f"]
+---
+time 1692783844
+new [description:"buy mushrooms" entry:"1692783844" modified:"1692783844" status:"pending" uuid:"81b8923f-c984-4eb5-83b8-ebb3171bcc32"]
+---
+time 1692783862
+new [description:"buy onions" entry:"1692783862" modified:"1692783862" status:"pending" uuid:"5bfbb64b-3880-4542-98f8-f422f2533ec8"]
+---
+time 1692783904
+new [description:"call Luisa to ask for the Loan charge" entry:"1692783904" modified:"1692783904" status:"pending" uuid:"6ab7a9d7-5079-4103-bb04-102d4a98bd15"]
+---
+time 1692783938
+old [description:"call Luisa to ask for the Loan charge" entry:"1692783904" modified:"1692783904" status:"pending" uuid:"6ab7a9d7-5079-4103-bb04-102d4a98bd15"]
+new [description:"call Luisa to ask for the Loan and CC charges." entry:"1692783904" modified:"1692783938" status:"pending" uuid:"6ab7a9d7-5079-4103-bb04-102d4a98bd15"]
+---
+time 1692783998
+new [description:"sweep the kitchen" entry:"1692783998" modified:"1692783998" status:"pending" uuid:"ad7fded1-af62-41a4-a9f9-c6255e2a0be0"]
+---
+time 1692784009
+new [description:"Do laundry" entry:"1692784009" modified:"1692784009" status:"pending" uuid:"d9c517f7-c503-4ef4-a962-09a66da12e20"]
+---
+time 1692784079
+old [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692783550" status:"pending" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+new [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784079" status:"pending" tags:"next" tags_next:"x" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+---
+time 1692784081
+old [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784079" status:"pending" tags:"next" tags_next:"x" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+new [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784081" status:"pending" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+---
+time 1692784082
+old [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784081" status:"pending" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+new [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784082" status:"pending" tags:"next" tags_next:"x" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+---
+time 1692784083
+old [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784082" status:"pending" tags:"next" tags_next:"x" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+new [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784083" status:"pending" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+---
+time 1692784086
+old [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784083" status:"pending" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+new [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784086" status:"pending" tags:"next" tags_next:"x" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+---
+time 1692784096
+old [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784086" status:"pending" tags:"next" tags_next:"x" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+new [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784096" status:"pending" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+---
+time 1692784097
+old [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784096" status:"pending" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+new [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784097" status:"pending" tags:"next" tags_next:"x" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+---
+time 1692784099
+old [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784097" status:"pending" tags:"next" tags_next:"x" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+new [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784099" status:"pending" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+---
+time 1692784279
+new [description:"solve a leetcode problem" entry:"1692784279" modified:"1692784279" status:"pending" uuid:"241ce2bd-cdf6-4593-bd9f-6f6716060527"]
+---
+time 1692784379
+old [description:"solve a leetcode problem" entry:"1692784279" modified:"1692784279" status:"pending" uuid:"241ce2bd-cdf6-4593-bd9f-6f6716060527"]
+new [dep_09b8abe7-b72a-494e-90b6-47c598d4a985:"x" depends:"09b8abe7-b72a-494e-90b6-47c598d4a985" description:"solve a leetcode problem" entry:"1692784279" modified:"1692784379" status:"pending" uuid:"241ce2bd-cdf6-4593-bd9f-6f6716060527"]
+---
+time 1692784456
+new [description:"Do cardio workout" entry:"1692784456" modified:"1692784456" status:"pending" uuid:"9e4c4188-b6e7-4e8d-8e65-44d24382346a"]
+---
+time 1692784522
+new [description:"Do strength workout" entry:"1692784522" modified:"1692784522" status:"pending" uuid:"ae4c974a-4e7e-46bd-bac3-c3d6dc856624"]
+---
+time 1692784577
+new [description:"improve your task warrior skills" entry:"1692784577" modified:"1692784577" status:"pending" uuid:"ba462c11-f8e6-408a-bc27-b03f11fc0b9a"]
+---
+time 1692784689
+old [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784099" status:"pending" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+new [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784689" status:"pending" tags:"next" tags_next:"x" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+---
+time 1692784691
+old [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784689" status:"pending" tags:"next" tags_next:"x" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+new [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784691" status:"pending" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+---
