@@ -1,5 +1,0 @@
-[description:"Cake for John" due:"1693285200" entry:"1692717566" modified:"1692717566" scheduled:"1692939600" status:"pending" uuid:"1656b983-7374-4fac-a19f-457d6bca9f4e" wait:"1692853200"]
-[description:"Cake for John" due:"1693371600" entry:"1692717725" modified:"1692717725" scheduled:"1693026000" status:"pending" uuid:"da57628e-ebd1-4df3-8e46-41b731b562ee" wait:"1692939600"]
-[description:"Bake cake for Josh" due:"1693458000" entry:"1692717954" modified:"1692717954" project:"4" scheduled:"1693112400" status:"pending" uuid:"a15c0192-a28a-43d2-a2cc-72ae5c345d8e" wait:"1693026000"]
-[color:"white" cost:"50.00" description:"Bake cake for christine" due:"1693458000" entry:"1692721003" modified:"1692721531" project:"baby-shower" scheduled:"1693112400" status:"pending" uuid:"e89d4d4f-ea17-485a-ac29-aba0fa329454" wait:"1693026000"]
-[description:"fix the kali ssh connection" entry:"1692783030" modified:"1692783030" status:"pending" uuid:"2dac229f-01a4-4370-a5c8-778d63c29035"]
