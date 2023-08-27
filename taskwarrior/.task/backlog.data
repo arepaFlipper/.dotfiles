@@ -1,0 +1,47 @@
+{"description":"fix the kali ssh connection","entry":"20230823T093910Z","modified":"20230823T093910Z","status":"pending","uuid":"09b8abe7-b72a-494e-90b6-47c598d4a985"}
+{"description":"fix the vpn shell","entry":"20230823T093951Z","modified":"20230823T093951Z","status":"pending","uuid":"dce431d9-ee6f-4cdc-99d6-8a3289c19f4c"}
+{"description":"buy spinach","entry":"20230823T094121Z","modified":"20230823T094121Z","status":"pending","uuid":"b8df98b8-31fa-41a8-9bbf-ca949fb28091"}
+{"description":"buy chard","entry":"20230823T094226Z","modified":"20230823T094226Z","status":"pending","uuid":"672cb28d-2d6c-408b-891b-1b462b98dd9f"}
+{"description":"buy mushrooms","entry":"20230823T094404Z","modified":"20230823T094404Z","status":"pending","uuid":"81b8923f-c984-4eb5-83b8-ebb3171bcc32"}
+{"description":"buy onions","entry":"20230823T094422Z","modified":"20230823T094422Z","status":"pending","uuid":"5bfbb64b-3880-4542-98f8-f422f2533ec8"}
+{"description":"call Luisa to ask for the Loan charge","entry":"20230823T094504Z","modified":"20230823T094504Z","status":"pending","uuid":"6ab7a9d7-5079-4103-bb04-102d4a98bd15"}
+{"description":"call Luisa to ask for the Loan and CC charges.","entry":"20230823T094504Z","modified":"20230823T094538Z","status":"pending","uuid":"6ab7a9d7-5079-4103-bb04-102d4a98bd15"}
+{"description":"sweep the kitchen","entry":"20230823T094638Z","modified":"20230823T094638Z","status":"pending","uuid":"ad7fded1-af62-41a4-a9f9-c6255e2a0be0"}
+{"description":"Do laundry","entry":"20230823T094649Z","modified":"20230823T094649Z","status":"pending","uuid":"d9c517f7-c503-4ef4-a962-09a66da12e20"}
+{"description":"fix the kali ssh connection","entry":"20230823T093910Z","modified":"20230823T094759Z","status":"pending","uuid":"09b8abe7-b72a-494e-90b6-47c598d4a985","tags":["next"]}
+{"description":"fix the kali ssh connection","entry":"20230823T093910Z","modified":"20230823T094801Z","status":"pending","uuid":"09b8abe7-b72a-494e-90b6-47c598d4a985"}
+{"description":"fix the kali ssh connection","entry":"20230823T093910Z","modified":"20230823T094802Z","status":"pending","uuid":"09b8abe7-b72a-494e-90b6-47c598d4a985","tags":["next"]}
+{"description":"fix the kali ssh connection","entry":"20230823T093910Z","modified":"20230823T094803Z","status":"pending","uuid":"09b8abe7-b72a-494e-90b6-47c598d4a985"}
+{"description":"fix the kali ssh connection","entry":"20230823T093910Z","modified":"20230823T094806Z","status":"pending","uuid":"09b8abe7-b72a-494e-90b6-47c598d4a985","tags":["next"]}
+{"description":"fix the kali ssh connection","entry":"20230823T093910Z","modified":"20230823T094816Z","status":"pending","uuid":"09b8abe7-b72a-494e-90b6-47c598d4a985"}
+{"description":"fix the kali ssh connection","entry":"20230823T093910Z","modified":"20230823T094817Z","status":"pending","uuid":"09b8abe7-b72a-494e-90b6-47c598d4a985","tags":["next"]}
+{"description":"fix the kali ssh connection","entry":"20230823T093910Z","modified":"20230823T094819Z","status":"pending","uuid":"09b8abe7-b72a-494e-90b6-47c598d4a985"}
+{"description":"solve a leetcode problem","entry":"20230823T095119Z","modified":"20230823T095119Z","status":"pending","uuid":"241ce2bd-cdf6-4593-bd9f-6f6716060527"}
+{"description":"solve a leetcode problem","entry":"20230823T095119Z","modified":"20230823T095259Z","status":"pending","uuid":"241ce2bd-cdf6-4593-bd9f-6f6716060527","depends":["09b8abe7-b72a-494e-90b6-47c598d4a985"]}
+{"description":"Do cardio workout","entry":"20230823T095416Z","modified":"20230823T095416Z","status":"pending","uuid":"9e4c4188-b6e7-4e8d-8e65-44d24382346a"}
+{"description":"Do strength workout","entry":"20230823T095522Z","modified":"20230823T095522Z","status":"pending","uuid":"ae4c974a-4e7e-46bd-bac3-c3d6dc856624"}
+{"description":"improve your task warrior skills","entry":"20230823T095617Z","modified":"20230823T095617Z","status":"pending","uuid":"ba462c11-f8e6-408a-bc27-b03f11fc0b9a"}
+{"description":"fix the kali ssh connection","entry":"20230823T093910Z","modified":"20230823T095809Z","status":"pending","uuid":"09b8abe7-b72a-494e-90b6-47c598d4a985","tags":["next"]}
+{"description":"fix the kali ssh connection","entry":"20230823T093910Z","modified":"20230823T095811Z","status":"pending","uuid":"09b8abe7-b72a-494e-90b6-47c598d4a985"}
+{"description":"buy 'arepas' at Carulla","entry":"20230823T104135Z","modified":"20230823T104135Z","status":"pending","uuid":"31a2b91e-87f5-4f3a-9e61-3687193a3249"}
+{"description":"cook breakfast","entry":"20230823T104203Z","modified":"20230823T104203Z","status":"pending","uuid":"009a1081-1152-461c-b2b2-15e7162a4e4b"}
+{"description":"Research React Hook Form","entry":"20230823T110606Z","modified":"20230823T110606Z","status":"pending","uuid":"27cb97ef-56f1-4bf9-9c72-df5a538c0523"}
+{"description":"research taskwarrior for android","entry":"20230823T113941Z","modified":"20230823T113941Z","status":"pending","uuid":"ee28d3cb-ba60-4d00-a8db-82f256c9d3e9"}
+{"description":"call to cancel 'Bancolombia a la mano'","entry":"20230823T125814Z","modified":"20230823T125814Z","status":"pending","uuid":"9ee3c74e-a9d0-46c2-8fec-9f5f273123cb"}
+{"description":"buy spinach","end":"20230823T131516Z","entry":"20230823T094121Z","modified":"20230823T131516Z","status":"completed","uuid":"b8df98b8-31fa-41a8-9bbf-ca949fb28091"}
+{"description":"buy chard","end":"20230823T131520Z","entry":"20230823T094226Z","modified":"20230823T131520Z","status":"completed","uuid":"672cb28d-2d6c-408b-891b-1b462b98dd9f"}
+{"description":"buy mushrooms","end":"20230823T131523Z","entry":"20230823T094404Z","modified":"20230823T131523Z","status":"completed","uuid":"81b8923f-c984-4eb5-83b8-ebb3171bcc32"}
+{"description":"buy onions","end":"20230823T131526Z","entry":"20230823T094422Z","modified":"20230823T131526Z","status":"completed","uuid":"5bfbb64b-3880-4542-98f8-f422f2533ec8"}
+{"description":"buy meat to cook with potatos","entry":"20230823T131705Z","modified":"20230823T131705Z","status":"pending","uuid":"93a7c290-06b7-4d66-a2a5-4af9709261f8"}
+{"description":"cook breakfast","end":"20230823T135104Z","entry":"20230823T104203Z","modified":"20230823T135104Z","status":"completed","uuid":"009a1081-1152-461c-b2b2-15e7162a4e4b"}
+{"description":"TypeScript Generics research","entry":"20230823T151531Z","modified":"20230823T151531Z","status":"pending","uuid":"53c771ef-7d41-401d-abed-997039ac8d1e"}
+{"description":"call Luisa to ask for the Loan and CC charges.","entry":"20230823T094504Z","modified":"20230823T185642Z","start":"20230823T185642Z","status":"pending","uuid":"6ab7a9d7-5079-4103-bb04-102d4a98bd15"}
+{"description":"Do cardio workout","end":"20230823T185652Z","entry":"20230823T095416Z","modified":"20230823T185652Z","status":"completed","uuid":"9e4c4188-b6e7-4e8d-8e65-44d24382346a"}
+{"description":"call to cancel 'Bancolombia a la mano'","entry":"20230823T125814Z","modified":"20230823T185715Z","start":"20230823T185715Z","status":"pending","uuid":"9ee3c74e-a9d0-46c2-8fec-9f5f273123cb"}
+{"description":"call Luisa to ask for the Loan and CC charges.","end":"20230825T152322Z","entry":"20230823T094504Z","modified":"20230825T152322Z","status":"completed","uuid":"6ab7a9d7-5079-4103-bb04-102d4a98bd15"}
+{"description":"fix the vpn shell","end":"20230825T152324Z","entry":"20230823T093951Z","modified":"20230825T152324Z","status":"completed","uuid":"dce431d9-ee6f-4cdc-99d6-8a3289c19f4c"}
+{"description":"fix the vpn shell","entry":"20230823T093951Z","modified":"20230823T093951Z","status":"pending","uuid":"dce431d9-ee6f-4cdc-99d6-8a3289c19f4c"}
+{"description":"call to cancel 'Bancolombia a la mano'","end":"20230825T152335Z","entry":"20230823T125814Z","modified":"20230825T152335Z","status":"completed","uuid":"9ee3c74e-a9d0-46c2-8fec-9f5f273123cb"}
+{"description":"fix the kali ssh connection","end":"20230825T152338Z","entry":"20230823T093910Z","modified":"20230825T152338Z","status":"completed","uuid":"09b8abe7-b72a-494e-90b6-47c598d4a985"}
+{"description":"sweep the kitchen","end":"20230825T152341Z","entry":"20230823T094638Z","modified":"20230825T152341Z","status":"completed","uuid":"ad7fded1-af62-41a4-a9f9-c6255e2a0be0"}
+{"description":"Do laundry","end":"20230825T152342Z","entry":"20230823T094649Z","modified":"20230825T152342Z","status":"completed","uuid":"d9c517f7-c503-4ef4-a962-09a66da12e20"}

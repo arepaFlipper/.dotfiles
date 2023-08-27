@@ -1,34 +1,51 @@
 #!/bin/sh
+# This script sets up Tmux sessions, windows, and panes for a development environment.
+
 # -t: tag
 # -n: name
 # -d: dettach
+
+# Session name and window names
 session_name="abacus"
 session1="${session_name}_logs"
 window11="logs"
 pane111=${window00}.1
 window12="lazygit"
-window13="neovim"
+window13="task_warrior"
 session2="${session_name}_code"
 window21="lazygit"
-path="$HOME/Documents/ABEXUS/${session_name}/"
-# tmux kill-session -t $session0;
-cd "${path}"
-# tmux new -s $session0;
+window22="neovim"
+path="$HOME/Documents/ABEXUS/${session_name}"
+task_data="$path/.task"
 
+# Navigate to the working directory
+cd "${path}/"
+
+# Session 1: Docker, Node.js, and Testing Environment
 tmux new -s $session1 -n $window11 -d
+tmux set-environment -t $session1 TASKDATA $task_data
 tmux send-keys -t $window11 'docker-compose up -d && docker-compose logs -f' C-m
 tmux split-window -v -t $window11 'cd ./frontend/client/ && npm run start'
-tmux split-pane -h -t $window11.2
-tmux split-pane -t $session1:1.1 'docker attach abacus_dj'
+tmux split-pane -h -t $window11.2 'cd ./frontend/pollster/ && npm run start'
+tmux split-pane -v -t $window11.1 'docker attach abacus_dj'
+tmux split-pane -h -t $window11.1 'cd ./tests/ && npm run test'
 
+# Window 2: LazyGit
+tmux new-window -n $window12 -c "$PWD"
+tmux send-keys -t $window12 'lazygit' C-m
+
+# Window 3: task_warrior
 tmux new-window -n $window13 -c "$PWD"
-tmux send-keys -t $window13 'lvim .' C-m
+tmux send-keys -t $window13 'taskwarrior-tui' C-m
 
-# session 2
+# Session 2: Code Editing and Version Control
 tmux new -s $session2 -n $window21 -d
+tmux set-environment -t $session2 TASKDATA $task_data
 tmux send-keys -t $window21 'lazygit' C-m
 
-tmux new-window -n $window13 -c "$PWD"
-tmux send-keys -t $window13 'lvim .' C-m
+# Window 2: Neovim
+tmux new-window -n $window22 -c "$PWD"
+tmux send-keys -t $session2:2 'lvim .' C-m
 
-tmux attach -t $session1:1
+# Attach to Session 1 to start development environment
+tmux attach -t $session1:3

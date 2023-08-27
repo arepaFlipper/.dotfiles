@@ -1,0 +1,15 @@
+[package]
+name = "hello_world"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[lib]
+name = "mylibrary"
+path = "src/lib.rs"
+
+[[bin]]
+name = "myexecutable"
+path = "src/main.rs"
+

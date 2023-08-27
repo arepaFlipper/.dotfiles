@@ -29,7 +29,11 @@ end, { noremap = true, silent = true, desc = "Resume" })
 
 vim.keymap.set("n", "<leader>gg", function()
   Util.float_term({ "lazygit" }, { cwd = Util.get_root(), border = "double" })
-end, { noremap = true, silent = true, desc = "Resume" })
+end, { noremap = true, silent = true, desc = "Open lazygit in floating window" })
+
+vim.keymap.set("n", "<leader>tt", function()
+  Util.float_term({ "taskwarrior-tui" }, { cwd = Util.get_root(), border = "double" })
+end, { noremap = true, silent = true, desc = "Open taskwarrior in floating window" })
 
 local status_ok, rest = pcall(require, "rest-nvim")
 vim.api.nvim_create_autocmd("FileType", {

@@ -24,7 +24,7 @@
 	better-blame = !sh ~/better-blame.sh
 
 [merge]
-	tool = nvimdiff
+	tool = NVIM_APPNAME=LazyVim nvimdiff
 	condlictstyle = diff3
 
 [diff]

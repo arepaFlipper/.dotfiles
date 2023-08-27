@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.cargo/bin:$HOME/.config/git/git-log-compact:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.cargo/bin:$HOME/.config/git/git-log-compact:/usr/local/bin:/usr/bin:$PATH
 
 
 #Aliases
@@ -27,6 +27,7 @@ alias jupy="~/Documents/jupyter_notes/jupyter-init.sh"
 alias dotfiles="~/dotfiles.tmux.ses"
 alias keyboard="~/qmk.tmux.ses"
 alias V="/usr/bin/nvim"
+alias rk="~/.cargo/bin/rust-kanban"
 
 alias lvim="NVIM_APPNAME=LazyVim nvim"
 alias kvim="NVIM_APPNAME=kickstart nvim"
@@ -38,6 +39,31 @@ alias texvim="NVIM_APPNAME=benbrastmckie nvim"
 alias ejvim="NVIM_APPNAME=ejmastnak nvim"
 alias vimtex="NVIM_APPNAME=VimTeX nvim"
 alias leetvim="NVIM_APPNAME=leetvim nvim"
+
+alias tn="task add $1"
+alias td="task delete $1"
+alias twl="task list"
+
+task_project_function () {
+  task $1 modify project:$2
+}
+
+alias tproj="task_project_function"
+
+task_tag_function () {
+  task $1 modify +$2 +$3 +$4
+}
+
+alias ttag="task_tag_function"
+
+newcakefunction () {
+    task add Bake cake for $1 due:$2 scheduled:due-4d wait:due-5d project:$3
+    task add buy eggs +$1,grocery due:$2 scheduled:due-1d wait:-2d project:$3
+    task add buy flour +$1,grocery due:$2 scheduled:due-1d wait:-2d project:$3
+    task add buy milk +$1,grocery due:$2 scheduled:due-1d wait:-2d project:$3
+}
+
+alias newcake=newcakefunction
 
 function nvims(){
   items=("default" "kickstart" "LazyVim" "NvChad" "AstroNvim" "packervim" "tuffgniuz" "benbrastmckie" "VimTeX" "ejmastnak" "leetvim")
@@ -165,9 +191,13 @@ source ~/.dotfiles/zsh/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # set vim as default IDE
-export EDITOR=vim
+export EDITOR=nvim
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export OPENAI_API_KEY="$(gpg --decrypt $HOME/.gpt_key.gpg 2>&1| tail -n 1)"
+
+

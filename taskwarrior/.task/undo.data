@@ -1,0 +1,160 @@
+time 1692783550
+new [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692783550" status:"pending" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+---
+time 1692783591
+new [description:"fix the vpn shell" entry:"1692783591" modified:"1692783591" status:"pending" uuid:"dce431d9-ee6f-4cdc-99d6-8a3289c19f4c"]
+---
+time 1692783681
+new [description:"buy spinach" entry:"1692783681" modified:"1692783681" status:"pending" uuid:"b8df98b8-31fa-41a8-9bbf-ca949fb28091"]
+---
+time 1692783746
+new [description:"buy chard" entry:"1692783746" modified:"1692783746" status:"pending" uuid:"672cb28d-2d6c-408b-891b-1b462b98dd9f"]
+---
+time 1692783844
+new [description:"buy mushrooms" entry:"1692783844" modified:"1692783844" status:"pending" uuid:"81b8923f-c984-4eb5-83b8-ebb3171bcc32"]
+---
+time 1692783862
+new [description:"buy onions" entry:"1692783862" modified:"1692783862" status:"pending" uuid:"5bfbb64b-3880-4542-98f8-f422f2533ec8"]
+---
+time 1692783904
+new [description:"call Luisa to ask for the Loan charge" entry:"1692783904" modified:"1692783904" status:"pending" uuid:"6ab7a9d7-5079-4103-bb04-102d4a98bd15"]
+---
+time 1692783938
+old [description:"call Luisa to ask for the Loan charge" entry:"1692783904" modified:"1692783904" status:"pending" uuid:"6ab7a9d7-5079-4103-bb04-102d4a98bd15"]
+new [description:"call Luisa to ask for the Loan and CC charges." entry:"1692783904" modified:"1692783938" status:"pending" uuid:"6ab7a9d7-5079-4103-bb04-102d4a98bd15"]
+---
+time 1692783998
+new [description:"sweep the kitchen" entry:"1692783998" modified:"1692783998" status:"pending" uuid:"ad7fded1-af62-41a4-a9f9-c6255e2a0be0"]
+---
+time 1692784009
+new [description:"Do laundry" entry:"1692784009" modified:"1692784009" status:"pending" uuid:"d9c517f7-c503-4ef4-a962-09a66da12e20"]
+---
+time 1692784079
+old [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692783550" status:"pending" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+new [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784079" status:"pending" tags:"next" tags_next:"x" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+---
+time 1692784081
+old [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784079" status:"pending" tags:"next" tags_next:"x" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+new [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784081" status:"pending" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+---
+time 1692784082
+old [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784081" status:"pending" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+new [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784082" status:"pending" tags:"next" tags_next:"x" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+---
+time 1692784083
+old [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784082" status:"pending" tags:"next" tags_next:"x" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+new [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784083" status:"pending" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+---
+time 1692784086
+old [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784083" status:"pending" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+new [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784086" status:"pending" tags:"next" tags_next:"x" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+---
+time 1692784096
+old [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784086" status:"pending" tags:"next" tags_next:"x" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+new [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784096" status:"pending" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+---
+time 1692784097
+old [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784096" status:"pending" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+new [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784097" status:"pending" tags:"next" tags_next:"x" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+---
+time 1692784099
+old [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784097" status:"pending" tags:"next" tags_next:"x" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+new [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784099" status:"pending" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+---
+time 1692784279
+new [description:"solve a leetcode problem" entry:"1692784279" modified:"1692784279" status:"pending" uuid:"241ce2bd-cdf6-4593-bd9f-6f6716060527"]
+---
+time 1692784379
+old [description:"solve a leetcode problem" entry:"1692784279" modified:"1692784279" status:"pending" uuid:"241ce2bd-cdf6-4593-bd9f-6f6716060527"]
+new [dep_09b8abe7-b72a-494e-90b6-47c598d4a985:"x" depends:"09b8abe7-b72a-494e-90b6-47c598d4a985" description:"solve a leetcode problem" entry:"1692784279" modified:"1692784379" status:"pending" uuid:"241ce2bd-cdf6-4593-bd9f-6f6716060527"]
+---
+time 1692784456
+new [description:"Do cardio workout" entry:"1692784456" modified:"1692784456" status:"pending" uuid:"9e4c4188-b6e7-4e8d-8e65-44d24382346a"]
+---
+time 1692784522
+new [description:"Do strength workout" entry:"1692784522" modified:"1692784522" status:"pending" uuid:"ae4c974a-4e7e-46bd-bac3-c3d6dc856624"]
+---
+time 1692784577
+new [description:"improve your task warrior skills" entry:"1692784577" modified:"1692784577" status:"pending" uuid:"ba462c11-f8e6-408a-bc27-b03f11fc0b9a"]
+---
+time 1692784689
+old [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784099" status:"pending" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+new [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784689" status:"pending" tags:"next" tags_next:"x" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+---
+time 1692784691
+old [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784689" status:"pending" tags:"next" tags_next:"x" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+new [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784691" status:"pending" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+---
+time 1692787295
+new [description:"buy 'arepas' at Carulla" entry:"1692787295" modified:"1692787295" status:"pending" uuid:"31a2b91e-87f5-4f3a-9e61-3687193a3249"]
+---
+time 1692787323
+new [description:"cook breakfast" entry:"1692787323" modified:"1692787323" status:"pending" uuid:"009a1081-1152-461c-b2b2-15e7162a4e4b"]
+---
+time 1692788766
+new [description:"Research React Hook Form" entry:"1692788766" modified:"1692788766" status:"pending" uuid:"27cb97ef-56f1-4bf9-9c72-df5a538c0523"]
+---
+time 1692790781
+new [description:"research taskwarrior for android" entry:"1692790781" modified:"1692790781" status:"pending" uuid:"ee28d3cb-ba60-4d00-a8db-82f256c9d3e9"]
+---
+time 1692795494
+new [description:"call to cancel 'Bancolombia a la mano'" entry:"1692795494" modified:"1692795494" status:"pending" uuid:"9ee3c74e-a9d0-46c2-8fec-9f5f273123cb"]
+---
+time 1692796516
+old [description:"buy spinach" entry:"1692783681" modified:"1692783681" status:"pending" uuid:"b8df98b8-31fa-41a8-9bbf-ca949fb28091"]
+new [description:"buy spinach" end:"1692796516" entry:"1692783681" modified:"1692796516" status:"completed" uuid:"b8df98b8-31fa-41a8-9bbf-ca949fb28091"]
+---
+time 1692796520
+old [description:"buy chard" entry:"1692783746" modified:"1692783746" status:"pending" uuid:"672cb28d-2d6c-408b-891b-1b462b98dd9f"]
+new [description:"buy chard" end:"1692796520" entry:"1692783746" modified:"1692796520" status:"completed" uuid:"672cb28d-2d6c-408b-891b-1b462b98dd9f"]
+---
+time 1692796523
+old [description:"buy mushrooms" entry:"1692783844" modified:"1692783844" status:"pending" uuid:"81b8923f-c984-4eb5-83b8-ebb3171bcc32"]
+new [description:"buy mushrooms" end:"1692796523" entry:"1692783844" modified:"1692796523" status:"completed" uuid:"81b8923f-c984-4eb5-83b8-ebb3171bcc32"]
+---
+time 1692796526
+old [description:"buy onions" entry:"1692783862" modified:"1692783862" status:"pending" uuid:"5bfbb64b-3880-4542-98f8-f422f2533ec8"]
+new [description:"buy onions" end:"1692796526" entry:"1692783862" modified:"1692796526" status:"completed" uuid:"5bfbb64b-3880-4542-98f8-f422f2533ec8"]
+---
+time 1692796625
+new [description:"buy meat to cook with potatos" entry:"1692796625" modified:"1692796625" status:"pending" uuid:"93a7c290-06b7-4d66-a2a5-4af9709261f8"]
+---
+time 1692798664
+old [description:"cook breakfast" entry:"1692787323" modified:"1692787323" status:"pending" uuid:"009a1081-1152-461c-b2b2-15e7162a4e4b"]
+new [description:"cook breakfast" end:"1692798664" entry:"1692787323" modified:"1692798664" status:"completed" uuid:"009a1081-1152-461c-b2b2-15e7162a4e4b"]
+---
+time 1692803731
+new [description:"TypeScript Generics research" entry:"1692803731" modified:"1692803731" status:"pending" uuid:"53c771ef-7d41-401d-abed-997039ac8d1e"]
+---
+time 1692817002
+old [description:"call Luisa to ask for the Loan and CC charges." entry:"1692783904" modified:"1692783938" status:"pending" uuid:"6ab7a9d7-5079-4103-bb04-102d4a98bd15"]
+new [description:"call Luisa to ask for the Loan and CC charges." entry:"1692783904" modified:"1692817002" start:"1692817002" status:"pending" uuid:"6ab7a9d7-5079-4103-bb04-102d4a98bd15"]
+---
+time 1692817012
+old [description:"Do cardio workout" entry:"1692784456" modified:"1692784456" status:"pending" uuid:"9e4c4188-b6e7-4e8d-8e65-44d24382346a"]
+new [description:"Do cardio workout" end:"1692817012" entry:"1692784456" modified:"1692817012" status:"completed" uuid:"9e4c4188-b6e7-4e8d-8e65-44d24382346a"]
+---
+time 1692817035
+old [description:"call to cancel 'Bancolombia a la mano'" entry:"1692795494" modified:"1692795494" status:"pending" uuid:"9ee3c74e-a9d0-46c2-8fec-9f5f273123cb"]
+new [description:"call to cancel 'Bancolombia a la mano'" entry:"1692795494" modified:"1692817035" start:"1692817035" status:"pending" uuid:"9ee3c74e-a9d0-46c2-8fec-9f5f273123cb"]
+---
+time 1692977002
+old [description:"call Luisa to ask for the Loan and CC charges." entry:"1692783904" modified:"1692817002" start:"1692817002" status:"pending" uuid:"6ab7a9d7-5079-4103-bb04-102d4a98bd15"]
+new [description:"call Luisa to ask for the Loan and CC charges." end:"1692977002" entry:"1692783904" modified:"1692977002" status:"completed" uuid:"6ab7a9d7-5079-4103-bb04-102d4a98bd15"]
+---
+time 1692977015
+old [description:"call to cancel 'Bancolombia a la mano'" entry:"1692795494" modified:"1692817035" start:"1692817035" status:"pending" uuid:"9ee3c74e-a9d0-46c2-8fec-9f5f273123cb"]
+new [description:"call to cancel 'Bancolombia a la mano'" end:"1692977015" entry:"1692795494" modified:"1692977015" status:"completed" uuid:"9ee3c74e-a9d0-46c2-8fec-9f5f273123cb"]
+---
+time 1692977018
+old [description:"fix the kali ssh connection" entry:"1692783550" modified:"1692784691" status:"pending" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+new [description:"fix the kali ssh connection" end:"1692977018" entry:"1692783550" modified:"1692977018" status:"completed" uuid:"09b8abe7-b72a-494e-90b6-47c598d4a985"]
+---
+time 1692977021
+old [description:"sweep the kitchen" entry:"1692783998" modified:"1692783998" status:"pending" uuid:"ad7fded1-af62-41a4-a9f9-c6255e2a0be0"]
+new [description:"sweep the kitchen" end:"1692977021" entry:"1692783998" modified:"1692977021" status:"completed" uuid:"ad7fded1-af62-41a4-a9f9-c6255e2a0be0"]
+---
+time 1692977022
+old [description:"Do laundry" entry:"1692784009" modified:"1692784009" status:"pending" uuid:"d9c517f7-c503-4ef4-a962-09a66da12e20"]
+new [description:"Do laundry" end:"1692977022" entry:"1692784009" modified:"1692977022" status:"completed" uuid:"d9c517f7-c503-4ef4-a962-09a66da12e20"]
+---
