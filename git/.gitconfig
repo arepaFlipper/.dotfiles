@@ -24,8 +24,11 @@
 	better-blame = !sh ~/better-blame.sh
 
 [merge]
-	tool = NVIM_APPNAME=LazyVim nvimdiff
+	tool = nvimdiff4
 	condlictstyle = diff3
+
+[mergetool "nvimdiff4"]
+  cmd = NVIM_APPNAME=LazyVim nvim -d $LOCAL $BASE $REMOTE $MERGED -c '$wincmd w' -c '$wincmd J'
 
 [diff]
 	colorMoved = default
