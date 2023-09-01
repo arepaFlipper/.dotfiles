@@ -45,3 +45,246 @@
 {"description":"fix the kali ssh connection","end":"20230825T152338Z","entry":"20230823T093910Z","modified":"20230825T152338Z","status":"completed","uuid":"09b8abe7-b72a-494e-90b6-47c598d4a985"}
 {"description":"sweep the kitchen","end":"20230825T152341Z","entry":"20230823T094638Z","modified":"20230825T152341Z","status":"completed","uuid":"ad7fded1-af62-41a4-a9f9-c6255e2a0be0"}
 {"description":"Do laundry","end":"20230825T152342Z","entry":"20230823T094649Z","modified":"20230825T152342Z","status":"completed","uuid":"d9c517f7-c503-4ef4-a962-09a66da12e20"}
+{"description":"Do strength workout","end":"20230828T122151Z","entry":"20230823T095522Z","modified":"20230828T122151Z","status":"completed","uuid":"ae4c974a-4e7e-46bd-bac3-c3d6dc856624"}
+{"description":"fix the vpn shell","end":"20230828T122203Z","entry":"20230823T093951Z","modified":"20230828T122203Z","status":"completed","uuid":"dce431d9-ee6f-4cdc-99d6-8a3289c19f4c"}
+{"description":"buy 'arepas' at Carulla","end":"20230828T122209Z","entry":"20230823T104135Z","modified":"20230828T122209Z","status":"deleted","uuid":"31a2b91e-87f5-4f3a-9e61-3687193a3249"}
+{"description":"cardio workout","entry":"20230828T122406Z","modified":"20230828T122406Z","priority":"M","status":"pending","uuid":"63d83c98-9e2b-49cc-97e4-03a04e322fd1"}
+{"description":"cardio workout","entry":"20230828T122406Z","modified":"20230828T122412Z","priority":"M","status":"pending","uuid":"63d83c98-9e2b-49cc-97e4-03a04e322fd1","tags":["next"]}
+{"description":"wash dishes","entry":"20230828T123053Z","modified":"20230828T123053Z","status":"pending","uuid":"02e556e5-1ec9-40c3-b510-dd22d42be480"}
+{"description":"wash dishes","entry":"20230828T123053Z","modified":"20230828T123059Z","status":"pending","uuid":"02e556e5-1ec9-40c3-b510-dd22d42be480","tags":["next"]}
+{"description":"cardio workout","entry":"20230828T122406Z","modified":"20230828T123101Z","priority":"M","start":"20230828T123101Z","status":"pending","uuid":"63d83c98-9e2b-49cc-97e4-03a04e322fd1","tags":["next"]}
+{"description":"cardio workout","entry":"20230828T122406Z","modified":"20230828T123105Z","priority":"M","start":"20230828T123101Z","status":"pending","uuid":"63d83c98-9e2b-49cc-97e4-03a04e322fd1"}
+{"description":"prepare a german speech","entry":"20230828T131357Z","modified":"20230828T131357Z","priority":"L","status":"pending","uuid":"3e746ed4-6b9f-4d54-bd74-9b9eb71ccf13"}
+{"description":"cardio workout","end":"20230828T131405Z","entry":"20230828T122406Z","modified":"20230828T131405Z","priority":"M","status":"completed","uuid":"63d83c98-9e2b-49cc-97e4-03a04e322fd1"}
+{"description":"take a cold shower and use lotion","entry":"20230828T131448Z","modified":"20230828T131448Z","priority":"H","status":"pending","uuid":"aa38128a-e261-4c6f-bc42-8e3646afb5d4"}
+{"description":"take a cold shower and use lotion","entry":"20230828T131448Z","modified":"20230828T131455Z","priority":"H","start":"20230828T131455Z","status":"pending","uuid":"aa38128a-e261-4c6f-bc42-8e3646afb5d4"}
+{"description":"take a cold shower and use lotion","end":"20230828T133840Z","entry":"20230828T131448Z","modified":"20230828T133840Z","priority":"H","status":"completed","uuid":"aa38128a-e261-4c6f-bc42-8e3646afb5d4"}
+{"description":"prepare a german speech","end":"20230828T144509Z","entry":"20230828T131357Z","modified":"20230828T144509Z","priority":"L","status":"completed","uuid":"3e746ed4-6b9f-4d54-bd74-9b9eb71ccf13"}
+{"description":"prepare a german speech","entry":"20230828T131357Z","modified":"20230828T131357Z","priority":"L","status":"pending","uuid":"3e746ed4-6b9f-4d54-bd74-9b9eb71ccf13"}
+{"description":"wash dishes","end":"20230828T144518Z","entry":"20230828T123053Z","modified":"20230828T144518Z","status":"completed","uuid":"02e556e5-1ec9-40c3-b510-dd22d42be480","tags":["next"]}
+{"description":"solve a leetcode problem","entry":"20230823T095119Z","modified":"20230828T144523Z","start":"20230828T144523Z","status":"pending","uuid":"241ce2bd-cdf6-4593-bd9f-6f6716060527","depends":["09b8abe7-b72a-494e-90b6-47c598d4a985"]}
+{"description":"TypeScript Generics research","end":"20230828T144534Z","entry":"20230823T151531Z","modified":"20230828T144534Z","status":"deleted","uuid":"53c771ef-7d41-401d-abed-997039ac8d1e"}
+{"description":"Research React Hook Form","entry":"20230823T110606Z","modified":"20230828T144554Z","priority":"M","status":"pending","uuid":"27cb97ef-56f1-4bf9-9c72-df5a538c0523"}
+{"description":"reset vpn auth-o","entry":"20230828T144723Z","modified":"20230828T144723Z","status":"pending","uuid":"9a2661c9-1ec6-4a4e-8409-205ad8d28425"}
+{"description":"reset vpn authorized_keys","entry":"20230828T144723Z","modified":"20230828T144906Z","status":"pending","uuid":"9a2661c9-1ec6-4a4e-8409-205ad8d28425"}
+{"description":"set an special tmux script for task warrior","entry":"20230828T145010Z","modified":"20230828T145010Z","status":"pending","uuid":"2754543e-df11-4a62-a3ff-ca687d6bebf6"}
+{"description":"buy meat to cook with potatos","end":"20230828T183028Z","entry":"20230823T131705Z","modified":"20230828T183028Z","status":"completed","uuid":"93a7c290-06b7-4d66-a2a5-4af9709261f8"}
+{"description":"buy meat to cook with potatos","entry":"20230823T131705Z","modified":"20230823T131705Z","status":"pending","uuid":"93a7c290-06b7-4d66-a2a5-4af9709261f8"}
+{"description":"solve a leetcode problem","end":"20230828T183035Z","entry":"20230823T095119Z","modified":"20230828T183035Z","status":"completed","uuid":"241ce2bd-cdf6-4593-bd9f-6f6716060527","depends":["09b8abe7-b72a-494e-90b6-47c598d4a985"]}
+{"description":"Take the React testing course by Codevolution","entry":"20230829T003441Z","modified":"20230829T003441Z","status":"pending","uuid":"7f3ab857-e8a1-48df-9ebb-726b70c8859b"}
+{"description":"Take the React testing course by Codevolution","entry":"20230829T003441Z","modified":"20230829T003454Z","priority":"L","status":"pending","uuid":"7f3ab857-e8a1-48df-9ebb-726b70c8859b"}
+{"description":"improve your task warrior skills","entry":"20230823T095617Z","modified":"20230829T003521Z","priority":"M","status":"pending","uuid":"ba462c11-f8e6-408a-bc27-b03f11fc0b9a"}
+{"description":"Take the React Hook tuto part 6","entry":"20230829T010200Z","modified":"20230829T010200Z","priority":"L","status":"pending","uuid":"70b6ed21-9423-41d1-ae87-71025d7c2596"}
+{"description":"Research React Hook Form","end":"20230829T010209Z","entry":"20230823T110606Z","modified":"20230829T010209Z","priority":"M","status":"completed","uuid":"27cb97ef-56f1-4bf9-9c72-df5a538c0523"}
+{"description":"Take the React Hook tuto part 7","entry":"20230829T010233Z","modified":"20230829T010233Z","priority":"L","status":"pending","uuid":"ab24425d-cd2e-4ef0-9dcc-9243afce05fd"}
+{"description":"Take the React Hook tuto part 8","entry":"20230829T010247Z","modified":"20230829T010247Z","priority":"L","status":"pending","uuid":"54a117d5-ec57-41b5-b37d-f9fab1b749a5"}
+{"description":"Take the React Hook tuto part 9","entry":"20230829T010308Z","modified":"20230829T010308Z","priority":"L","status":"pending","uuid":"83b76c8d-d87f-4860-ab88-0f9e352aa813"}
+{"description":"Take the React Hook tuto part 10","entry":"20230829T010327Z","modified":"20230829T010327Z","priority":"L","status":"pending","uuid":"3ea7994e-0841-424d-b900-d1c2bcc290db"}
+{"description":"buy meat to cook with potatos","end":"20230829T092215Z","entry":"20230823T131705Z","modified":"20230829T092215Z","status":"deleted","uuid":"93a7c290-06b7-4d66-a2a5-4af9709261f8"}
+{"description":"wash the blue rag to map the kitchen","entry":"20230829T092417Z","modified":"20230829T092417Z","status":"pending","uuid":"b13360ce-5358-4c6b-9d4f-ffb4e2ac3e4c"}
+{"description":"sweep the rooms","entry":"20230829T092450Z","modified":"20230829T092450Z","status":"pending","uuid":"074c7c69-c453-4c41-9727-ce83104a6cff"}
+{"description":"wash the blue rag to map the kitchen","entry":"20230829T092417Z","modified":"20230829T092509Z","priority":"H","status":"pending","uuid":"b13360ce-5358-4c6b-9d4f-ffb4e2ac3e4c"}
+{"description":"sweep the rooms","entry":"20230829T092450Z","modified":"20230829T092522Z","priority":"H","status":"pending","uuid":"074c7c69-c453-4c41-9727-ce83104a6cff"}
+{"description":"sweep the hall","entry":"20230829T092547Z","modified":"20230829T092547Z","priority":"H","status":"pending","uuid":"e048379f-fb02-43d4-88b5-8d5f7d0b5e83"}
+{"description":"sweep the kitchen","entry":"20230829T092611Z","modified":"20230829T092611Z","priority":"H","status":"pending","uuid":"0a012bf0-5da5-4f28-8a0b-1c3510476d1c"}
+{"description":"mop the rooms","entry":"20230829T092722Z","modified":"20230829T092722Z","priority":"H","status":"pending","uuid":"07b7c577-e7a1-47a1-aa89-fdfa19a22f4c","depends":["b13360ce-5358-4c6b-9d4f-ffb4e2ac3e4c"]}
+{"description":"mop the kitchen","entry":"20230829T092756Z","modified":"20230829T092756Z","priority":"H","status":"pending","uuid":"26c80bfc-f1de-4287-87e5-9f1a4381bdea","depends":["b13360ce-5358-4c6b-9d4f-ffb4e2ac3e4c"]}
+{"description":"solve daily leetcode problem","entry":"20230829T092908Z","modified":"20230829T092908Z","priority":"M","status":"pending","uuid":"6c03d018-86da-4974-826e-93f27778c644"}
+{"description":"20 min cardio","entry":"20230829T093325Z","modified":"20230829T093325Z","priority":"M","status":"pending","uuid":"96cb4e91-2a81-4823-b8dd-38e43eb1e7f6"}
+{"description":"20 min cardio","entry":"20230829T093325Z","modified":"20230829T093329Z","priority":"M","status":"pending","uuid":"96cb4e91-2a81-4823-b8dd-38e43eb1e7f6","tags":["next"]}
+{"description":"20 min cardio Tags:workout","entry":"20230829T093325Z","modified":"20230829T093415Z","priority":"M","status":"pending","uuid":"96cb4e91-2a81-4823-b8dd-38e43eb1e7f6","tags":["next"]}
+{"description":"20 min cardio","entry":"20230829T093325Z","modified":"20230829T093515Z","priority":"M","status":"pending","uuid":"96cb4e91-2a81-4823-b8dd-38e43eb1e7f6","tags":["workout"]}
+{"description":"solve daily leetcode problem","end":"20230829T111403Z","entry":"20230829T092908Z","modified":"20230829T111403Z","priority":"M","status":"completed","uuid":"6c03d018-86da-4974-826e-93f27778c644"}
+{"description":"wash the blue rag to map the kitchen","entry":"20230829T092417Z","modified":"20230829T111410Z","priority":"H","start":"20230829T111410Z","status":"pending","uuid":"b13360ce-5358-4c6b-9d4f-ffb4e2ac3e4c"}
+{"description":"wash the blue rag to map the kitchen","end":"20230829T113931Z","entry":"20230829T092417Z","modified":"20230829T113931Z","priority":"H","start":"20230829T111410Z","status":"deleted","uuid":"b13360ce-5358-4c6b-9d4f-ffb4e2ac3e4c"}
+{"description":"sweep the rooms","entry":"20230829T092450Z","modified":"20230829T113934Z","priority":"H","start":"20230829T113934Z","status":"pending","uuid":"074c7c69-c453-4c41-9727-ce83104a6cff"}
+{"description":"wash dishes","entry":"20230829T120620Z","modified":"20230829T120620Z","status":"pending","uuid":"7cf6330d-be5f-4093-a5d6-5f5c7c37e14e"}
+{"description":"wash dishes","entry":"20230829T120620Z","modified":"20230829T120713Z","priority":"H","status":"pending","uuid":"7cf6330d-be5f-4093-a5d6-5f5c7c37e14e","tags":["domestic"]}
+{"description":"wash dishes","end":"20230829T120732Z","entry":"20230829T120620Z","modified":"20230829T120732Z","priority":"H","status":"completed","uuid":"7cf6330d-be5f-4093-a5d6-5f5c7c37e14e","tags":["domestic"]}
+{"description":"wash dishes","entry":"20230829T120620Z","modified":"20230829T120713Z","priority":"H","status":"pending","uuid":"7cf6330d-be5f-4093-a5d6-5f5c7c37e14e","tags":["domestic"]}
+{"description":"sweep the rooms","end":"20230829T120740Z","entry":"20230829T092450Z","modified":"20230829T120740Z","priority":"H","status":"completed","uuid":"074c7c69-c453-4c41-9727-ce83104a6cff"}
+{"description":"reset vpn authorized_keys","entry":"20230828T144723Z","modified":"20230829T163027Z","start":"20230829T163027Z","status":"pending","uuid":"9a2661c9-1ec6-4a4e-8409-205ad8d28425"}
+{"description":"reset vpn authorized_keys","end":"20230829T164918Z","entry":"20230828T144723Z","modified":"20230829T164918Z","status":"completed","uuid":"9a2661c9-1ec6-4a4e-8409-205ad8d28425"}
+{"description":"sweep the hall","end":"20230829T164948Z","entry":"20230829T092547Z","modified":"20230829T164948Z","priority":"H","status":"completed","uuid":"e048379f-fb02-43d4-88b5-8d5f7d0b5e83"}
+{"description":"sweep the kitchen","end":"20230829T164950Z","entry":"20230829T092611Z","modified":"20230829T164950Z","priority":"H","status":"completed","uuid":"0a012bf0-5da5-4f28-8a0b-1c3510476d1c"}
+{"description":"mop the rooms","end":"20230829T164952Z","entry":"20230829T092722Z","modified":"20230829T164952Z","priority":"H","status":"completed","uuid":"07b7c577-e7a1-47a1-aa89-fdfa19a22f4c","depends":["b13360ce-5358-4c6b-9d4f-ffb4e2ac3e4c"]}
+{"description":"mop the kitchen","end":"20230829T164954Z","entry":"20230829T092756Z","modified":"20230829T164954Z","priority":"H","status":"completed","uuid":"26c80bfc-f1de-4287-87e5-9f1a4381bdea","depends":["b13360ce-5358-4c6b-9d4f-ffb4e2ac3e4c"]}
+{"description":"wash dishes","end":"20230829T164956Z","entry":"20230829T120620Z","modified":"20230829T164956Z","priority":"H","status":"completed","uuid":"7cf6330d-be5f-4093-a5d6-5f5c7c37e14e","tags":["domestic"]}
+{"description":"20 min cardio","end":"20230829T164957Z","entry":"20230829T093325Z","modified":"20230829T164957Z","priority":"M","status":"completed","uuid":"96cb4e91-2a81-4823-b8dd-38e43eb1e7f6","tags":["workout"]}
+{"description":"prepare a german speech","entry":"20230828T131357Z","modified":"20230829T200417Z","priority":"L","start":"20230829T200417Z","status":"pending","uuid":"3e746ed4-6b9f-4d54-bd74-9b9eb71ccf13"}
+{"description":"prepare a german speech","entry":"20230828T131357Z","modified":"20230829T200436Z","priority":"L","status":"pending","uuid":"3e746ed4-6b9f-4d54-bd74-9b9eb71ccf13"}
+{"description":"test new task","entry":"20230829T200456Z","modified":"20230829T200456Z","status":"pending","uuid":"c2e28ada-5599-4ade-9d87-c235c27a901b"}
+{"description":"test new task","end":"20230829T200503Z","entry":"20230829T200456Z","modified":"20230829T200503Z","status":"deleted","uuid":"c2e28ada-5599-4ade-9d87-c235c27a901b"}
+{"description":"medical appointment -tags:domestic","entry":"20230829T200736Z","modified":"20230829T200736Z","status":"pending","uuid":"0835d63b-c066-4600-9a68-4c266b47ce94"}
+{"description":"medical appointment -Tags:domestic","entry":"20230829T200736Z","modified":"20230829T200758Z","status":"pending","uuid":"0835d63b-c066-4600-9a68-4c266b47ce94"}
+{"description":"medical appointment Tags:domestic","entry":"20230829T200736Z","modified":"20230829T200815Z","status":"pending","uuid":"0835d63b-c066-4600-9a68-4c266b47ce94"}
+{"description":"medical appointment","entry":"20230829T200736Z","modified":"20230829T200854Z","status":"pending","uuid":"0835d63b-c066-4600-9a68-4c266b47ce94","tags":["domestic"]}
+{"description":"renue visa Tag:domestic","entry":"20230829T200953Z","modified":"20230829T200953Z","priority":"H","status":"pending","uuid":"3a2705a5-9da5-468d-8743-0b0ffff8b99d"}
+{"description":"renue visa","entry":"20230829T200953Z","modified":"20230829T201024Z","priority":"H","status":"pending","uuid":"3a2705a5-9da5-468d-8743-0b0ffff8b99d","tags":["domestic"]}
+{"description":"renew visa","entry":"20230829T200953Z","modified":"20230829T204637Z","priority":"H","status":"pending","uuid":"3a2705a5-9da5-468d-8743-0b0ffff8b99d","tags":["domestic"]}
+{"description":"renew visas","entry":"20230829T200953Z","modified":"20230829T204648Z","priority":"H","status":"pending","uuid":"3a2705a5-9da5-468d-8743-0b0ffff8b99d","tags":["domestic"]}
+{"description":"solve leetcode problem","entry":"20230830T084315Z","modified":"20230830T084315Z","status":"pending","uuid":"917a24d8-6d68-46a7-b3cd-59a485257de4"}
+{"description":"solve leetcode problem","entry":"20230830T084315Z","modified":"20230830T084859Z","priority":"M","status":"pending","uuid":"917a24d8-6d68-46a7-b3cd-59a485257de4","tags":["growth"]}
+{"description":"cardio workout","entry":"20230830T085048Z","modified":"20230830T085048Z","priority":"M","status":"pending","uuid":"5e11b7e1-c14c-4961-9211-ee1d7b4c6e2c","tags":["growth"]}
+{"description":"cardio workout","entry":"20230830T085048Z","modified":"20230830T085109Z","priority":"M","status":"pending","uuid":"5e11b7e1-c14c-4961-9211-ee1d7b4c6e2c","tags":["routine"]}
+{"description":"cold shower","entry":"20230830T085245Z","modified":"20230830T085245Z","priority":"H","status":"pending","uuid":"7d12646e-1ddb-45a3-814c-b2ce50cc26df","tags":["routine"]}
+{"description":"prepare a german speech","entry":"20230828T131357Z","modified":"20230830T085348Z","priority":"L","status":"pending","uuid":"3e746ed4-6b9f-4d54-bd74-9b9eb71ccf13","tags":["growth"]}
+{"description":"Listen 20 min German","entry":"20230830T085445Z","modified":"20230830T085445Z","priority":"M","status":"pending","uuid":"c1eed555-3a9e-41be-823d-7720bbf85470","tags":["growth"]}
+{"description":"Read Homo-deus cahpter 4","entry":"20230830T085651Z","modified":"20230830T085651Z","priority":"M","status":"pending","uuid":"5bcc5d5f-3047-4797-8646-f09fce261349","tags":["growth"]}
+{"description":"Take the React testing course by Codevolution","entry":"20230829T003441Z","modified":"20230830T085759Z","priority":"L","status":"pending","uuid":"7f3ab857-e8a1-48df-9ebb-726b70c8859b","tags":["growth"]}
+{"description":"Take the React Hook tuto part 6","entry":"20230829T010200Z","modified":"20230830T085818Z","priority":"L","status":"pending","uuid":"70b6ed21-9423-41d1-ae87-71025d7c2596","tags":["growth"]}
+{"description":"Take the React Hook tuto part 7","entry":"20230829T010233Z","modified":"20230830T085831Z","priority":"L","status":"pending","uuid":"ab24425d-cd2e-4ef0-9dcc-9243afce05fd","tags":["growth"]}
+{"description":"Take the React Hook tuto part 8","entry":"20230829T010247Z","modified":"20230830T085911Z","priority":"L","status":"pending","uuid":"54a117d5-ec57-41b5-b37d-f9fab1b749a5","tags":["growth"]}
+{"description":"Take the React Hook tuto part 9","entry":"20230829T010308Z","modified":"20230830T085930Z","priority":"L","status":"pending","uuid":"83b76c8d-d87f-4860-ab88-0f9e352aa813","tags":["growth"]}
+{"description":"Take the React Hook tuto part 10","entry":"20230829T010327Z","modified":"20230830T090002Z","priority":"L","status":"pending","uuid":"3ea7994e-0841-424d-b900-d1c2bcc290db","tags":["growth"]}
+{"description":"improve your task warrior skills","entry":"20230823T095617Z","modified":"20230830T091510Z","priority":"M","status":"pending","uuid":"ba462c11-f8e6-408a-bc27-b03f11fc0b9a","tags":["growth"]}
+{"description":"solve leetcode problem","entry":"20230830T084315Z","modified":"20230830T091717Z","priority":"M","status":"pending","uuid":"917a24d8-6d68-46a7-b3cd-59a485257de4","tags":["growth","next"]}
+{"description":"solve leetcode problem","entry":"20230830T084315Z","modified":"20230830T091735Z","priority":"M","start":"20230830T091735Z","status":"pending","uuid":"917a24d8-6d68-46a7-b3cd-59a485257de4","tags":["growth","next"]}
+{"description":"solve leetcode problem","entry":"20230830T084315Z","modified":"20230830T091737Z","priority":"M","start":"20230830T091735Z","status":"pending","uuid":"917a24d8-6d68-46a7-b3cd-59a485257de4","tags":["growth"]}
+{"description":"set an special tmux script for task warrior","entry":"20230828T145010Z","modified":"20230830T091801Z","status":"pending","uuid":"2754543e-df11-4a62-a3ff-ca687d6bebf6","tags":["next"]}
+{"description":"medical appointment","end":"20230830T094154Z","entry":"20230829T200736Z","modified":"20230830T094154Z","status":"deleted","uuid":"0835d63b-c066-4600-9a68-4c266b47ce94","tags":["domestic"]}
+{"description":"research taskwarrior for android","end":"20230830T111255Z","entry":"20230823T113941Z","modified":"20230830T111255Z","status":"completed","uuid":"ee28d3cb-ba60-4d00-a8db-82f256c9d3e9"}
+{"description":"research taskwarrior for android","entry":"20230823T113941Z","modified":"20230823T113941Z","status":"pending","uuid":"ee28d3cb-ba60-4d00-a8db-82f256c9d3e9"}
+{"description":"solve leetcode problem","end":"20230830T111301Z","entry":"20230830T084315Z","modified":"20230830T111301Z","priority":"M","status":"completed","uuid":"917a24d8-6d68-46a7-b3cd-59a485257de4","tags":["growth"]}
+{"description":"prepare a german speech","entry":"20230828T131357Z","modified":"20230830T111424Z","priority":"L","status":"pending","uuid":"3e746ed4-6b9f-4d54-bd74-9b9eb71ccf13","tags":["growth","next"]}
+{"description":"set an special tmux script for task warrior","entry":"20230828T145010Z","modified":"20230830T111434Z","start":"20230830T111434Z","status":"pending","uuid":"2754543e-df11-4a62-a3ff-ca687d6bebf6","tags":["next"]}
+{"description":"set an special tmux script for task warrior","entry":"20230828T145010Z","modified":"20230830T111436Z","start":"20230830T111434Z","status":"pending","uuid":"2754543e-df11-4a62-a3ff-ca687d6bebf6"}
+{"description":"set an special tmux script for task warrior","entry":"20230828T145010Z","modified":"20230830T111514Z","status":"pending","uuid":"2754543e-df11-4a62-a3ff-ca687d6bebf6"}
+{"description":"set git credentials into vpn","entry":"20230830T111543Z","modified":"20230830T111543Z","status":"pending","uuid":"50c68f8f-2709-4951-8b81-042cf351effc"}
+{"description":"set git credentials into vpn","entry":"20230830T111543Z","modified":"20230830T111545Z","start":"20230830T111545Z","status":"pending","uuid":"50c68f8f-2709-4951-8b81-042cf351effc"}
+{"description":"sync the dotfiles repositories","entry":"20230830T111708Z","modified":"20230830T111708Z","status":"pending","uuid":"bbeeffb9-a681-4261-85c3-f745d0b859d9"}
+{"description":"sync the dotfiles repositories","entry":"20230830T111708Z","modified":"20230830T111731Z","status":"pending","uuid":"bbeeffb9-a681-4261-85c3-f745d0b859d9","tags":["setup"]}
+{"description":"set git credentials into vpn","entry":"20230830T111543Z","modified":"20230830T111744Z","start":"20230830T111545Z","status":"pending","uuid":"50c68f8f-2709-4951-8b81-042cf351effc","tags":["setup"]}
+{"description":"research taskwarrior for android","entry":"20230823T113941Z","modified":"20230830T111807Z","status":"pending","uuid":"ee28d3cb-ba60-4d00-a8db-82f256c9d3e9","tags":["setup"]}
+{"description":"set an special tmux script for task warrior","entry":"20230828T145010Z","modified":"20230830T111828Z","status":"pending","uuid":"2754543e-df11-4a62-a3ff-ca687d6bebf6","tags":["setup"]}
+{"description":"set git credentials into vpn","end":"20230830T113459Z","entry":"20230830T111543Z","modified":"20230830T113459Z","status":"completed","uuid":"50c68f8f-2709-4951-8b81-042cf351effc","tags":["setup"]}
+{"description":"cardio workout","entry":"20230830T085048Z","modified":"20230830T113749Z","priority":"M","start":"20230830T113749Z","status":"pending","uuid":"5e11b7e1-c14c-4961-9211-ee1d7b4c6e2c","tags":["routine"]}
+{"description":"cardio workout 20 min","entry":"20230830T085048Z","modified":"20230830T115315Z","priority":"M","start":"20230830T113749Z","status":"pending","uuid":"5e11b7e1-c14c-4961-9211-ee1d7b4c6e2c","tags":["routine"]}
+{"description":"cardio workout 20 min","end":"20230830T122414Z","entry":"20230830T085048Z","modified":"20230830T122414Z","priority":"M","status":"completed","uuid":"5e11b7e1-c14c-4961-9211-ee1d7b4c6e2c","tags":["routine"]}
+{"description":"cold shower","entry":"20230830T085245Z","modified":"20230830T122427Z","priority":"H","status":"pending","uuid":"7d12646e-1ddb-45a3-814c-b2ce50cc26df","tags":["next","routine"]}
+{"description":"Listen 20 min German","entry":"20230830T085445Z","modified":"20230830T122435Z","priority":"M","status":"pending","uuid":"c1eed555-3a9e-41be-823d-7720bbf85470","tags":["growth","next"]}
+{"description":"cold shower","entry":"20230830T085245Z","modified":"20230830T122445Z","priority":"H","start":"20230830T122445Z","status":"pending","uuid":"7d12646e-1ddb-45a3-814c-b2ce50cc26df","tags":["next","routine"]}
+{"description":"Listen 20 min German","entry":"20230830T085445Z","modified":"20230830T122446Z","priority":"M","start":"20230830T122446Z","status":"pending","uuid":"c1eed555-3a9e-41be-823d-7720bbf85470","tags":["growth","next"]}
+{"description":"Listen 20 min German","end":"20230830T123635Z","entry":"20230830T085445Z","modified":"20230830T123635Z","priority":"M","status":"completed","uuid":"c1eed555-3a9e-41be-823d-7720bbf85470","tags":["growth","next"]}
+{"description":"cold shower","end":"20230830T123637Z","entry":"20230830T085245Z","modified":"20230830T123637Z","priority":"H","status":"completed","uuid":"7d12646e-1ddb-45a3-814c-b2ce50cc26df","tags":["next","routine"]}
+{"description":"prepare a german speech","entry":"20230828T131357Z","modified":"20230830T123651Z","priority":"L","status":"pending","uuid":"3e746ed4-6b9f-4d54-bd74-9b9eb71ccf13","tags":["growth"]}
+{"description":"cook breakfast","entry":"20230830T123734Z","modified":"20230830T123734Z","priority":"H","status":"pending","uuid":"c941d604-87be-4152-a787-4adc9642fa75","tags":["domestic"]}
+{"description":"meditate 20 MIN","entry":"20230830T123830Z","modified":"20230830T123830Z","priority":"H","status":"pending","uuid":"4fbc4675-8825-4cf2-9032-392368fb363a","tags":["health"]}
+{"description":"cook breakfast","entry":"20230830T123734Z","modified":"20230830T123848Z","priority":"H","status":"pending","uuid":"c941d604-87be-4152-a787-4adc9642fa75","tags":["health"]}
+{"description":"cook breakfast","end":"20230830T131440Z","entry":"20230830T123734Z","modified":"20230830T131440Z","priority":"H","status":"completed","uuid":"c941d604-87be-4152-a787-4adc9642fa75","tags":["health"]}
+{"description":"meditate 20 MIN","entry":"20230830T123830Z","modified":"20230830T131447Z","priority":"H","start":"20230830T131447Z","status":"pending","uuid":"4fbc4675-8825-4cf2-9032-392368fb363a","tags":["health"]}
+{"description":"meditate 20 MIN","end":"20230830T134025Z","entry":"20230830T123830Z","modified":"20230830T134025Z","priority":"H","status":"completed","uuid":"4fbc4675-8825-4cf2-9032-392368fb363a","tags":["health"]}
+{"description":"meditate 20 MIN at 12","entry":"20230830T134500Z","modified":"20230830T134500Z","priority":"H","status":"pending","uuid":"ecaef034-bdf4-4334-b5b5-3b5b18975529","tags":["health"]}
+{"description":"BBVA","entry":"20230830T141014Z","modified":"20230830T141014Z","status":"pending","uuid":"ee518a30-487f-4c04-b7db-adaadb6e68b9"}
+{"description":"clothes shopping","entry":"20230830T141043Z","modified":"20230830T141043Z","status":"pending","uuid":"58aa8252-b0f9-4413-b3b3-1aa03888b24e"}
+{"description":"BBVA","entry":"20230830T141014Z","modified":"20230830T141109Z","status":"pending","uuid":"ee518a30-487f-4c04-b7db-adaadb6e68b9","tags":["domestic"]}
+{"description":"clothes shopping","entry":"20230830T141043Z","modified":"20230830T141132Z","status":"pending","uuid":"58aa8252-b0f9-4413-b3b3-1aa03888b24e","tags":["personal growth"]}
+{"description":"clothes shopping","entry":"20230830T141043Z","modified":"20230830T141159Z","status":"pending","uuid":"58aa8252-b0f9-4413-b3b3-1aa03888b24e","tags":["growth"]}
+{"description":"BBVA","entry":"20230830T141014Z","modified":"20230830T141348Z","priority":"L","status":"pending","uuid":"ee518a30-487f-4c04-b7db-adaadb6e68b9","tags":["domestic"]}
+{"description":"clothes shopping","entry":"20230830T141043Z","modified":"20230830T141512Z","priority":"M","status":"pending","uuid":"58aa8252-b0f9-4413-b3b3-1aa03888b24e","tags":["growth"]}
+{"description":"research taskwarrior for android","entry":"20230823T113941Z","modified":"20230830T141540Z","priority":"M","status":"pending","uuid":"ee28d3cb-ba60-4d00-a8db-82f256c9d3e9","tags":["setup"]}
+{"description":"set an special tmux script for task warrior","entry":"20230828T145010Z","modified":"20230830T141555Z","priority":"M","status":"pending","uuid":"2754543e-df11-4a62-a3ff-ca687d6bebf6","tags":["setup"]}
+{"description":"restore the keyboards work","entry":"20230830T142003Z","modified":"20230830T142003Z","priority":"H","status":"pending","uuid":"3a58a605-ba95-4a88-8fb3-46bdffda8e66"}
+{"description":"wash the sneakers up","entry":"20230830T144718Z","modified":"20230830T144718Z","priority":"H","status":"pending","uuid":"26c3f1f5-5eb1-42fa-832f-ca293a94d49c","tags":["growth"]}
+{"description":"meditate 20 MIN at 12","entry":"20230830T134500Z","modified":"20230830T194734Z","priority":"H","start":"20230830T194734Z","status":"pending","uuid":"ecaef034-bdf4-4334-b5b5-3b5b18975529","tags":["health"]}
+{"description":"BBVA","end":"20230830T194757Z","entry":"20230830T141014Z","modified":"20230830T194757Z","priority":"L","status":"completed","uuid":"ee518a30-487f-4c04-b7db-adaadb6e68b9","tags":["domestic"]}
+{"description":"meditate 20 MIN at 12","end":"20230830T224250Z","entry":"20230830T134500Z","modified":"20230830T224250Z","priority":"H","status":"completed","uuid":"ecaef034-bdf4-4334-b5b5-3b5b18975529","tags":["health"]}
+{"description":"Take the React Hook tuto part 6","entry":"20230829T010200Z","modified":"20230830T224308Z","priority":"L","start":"20230830T224308Z","status":"pending","uuid":"70b6ed21-9423-41d1-ae87-71025d7c2596","tags":["growth"]}
+{"description":"Read the article about React Strict Mode","entry":"20230830T224744Z","modified":"20230830T224744Z","priority":"L","status":"pending","uuid":"7fd19477-624d-4016-b0d0-6cb0d4ca7b46","tags":["growth"]}
+{"description":"Take the React Hook tuto part 6","end":"20230830T225413Z","entry":"20230829T010200Z","modified":"20230830T225413Z","priority":"L","status":"completed","uuid":"70b6ed21-9423-41d1-ae87-71025d7c2596","tags":["growth"]}
+{"description":"solve leetcode 42","entry":"20230831T092419Z","modified":"20230831T092419Z","priority":"M","status":"pending","uuid":"4363ce08-dcbd-4d32-9456-81daa07173fa","tags":["growth"]}
+{"description":"20 MIN cardio workout","entry":"20230831T092525Z","modified":"20230831T092525Z","priority":"M","status":"pending","uuid":"7b656609-13f0-4a73-aac2-2739891bd008","tags":["routine"]}
+{"description":"cold shower","entry":"20230831T092624Z","modified":"20230831T092624Z","priority":"M","status":"pending","uuid":"1b23ae2f-5359-4974-8f01-294fe1a295a3","tags":["routine"]}
+{"description":"listen German","entry":"20230831T092708Z","modified":"20230831T092708Z","priority":"M","status":"pending","uuid":"dceafa8e-c6f0-4f56-b168-29970428c49f","tags":["M"]}
+{"description":"Meditation 20 Min at 8","entry":"20230831T092752Z","modified":"20230831T092752Z","status":"pending","uuid":"c9058d2d-0337-4cf0-b726-961ee338e52f"}
+{"description":"Meditation 20 Min at 12","entry":"20230831T092836Z","modified":"20230831T092836Z","priority":"M","status":"pending","uuid":"ee870dea-75fd-4109-866f-01e5fa1c2de5","tags":["M"]}
+{"description":"Meditation 20 Min at 4","entry":"20230831T092908Z","modified":"20230831T092908Z","priority":"M","status":"pending","uuid":"80273a4a-132e-4c11-94e4-7564c41cee8a","tags":["routine"]}
+{"description":"Meditation 20 Min at 12","entry":"20230831T092836Z","modified":"20230831T092934Z","priority":"M","status":"pending","uuid":"ee870dea-75fd-4109-866f-01e5fa1c2de5","tags":["routine"]}
+{"description":"Meditation 20 Min at 8","entry":"20230831T092752Z","modified":"20230831T093007Z","priority":"M","status":"pending","uuid":"c9058d2d-0337-4cf0-b726-961ee338e52f","tags":["routine"]}
+{"description":"listen German","entry":"20230831T092708Z","modified":"20230831T093101Z","priority":"M","status":"pending","uuid":"dceafa8e-c6f0-4f56-b168-29970428c49f","tags":["routine"]}
+{"description":"restore the keyboards work","entry":"20230830T142003Z","modified":"20230831T093158Z","priority":"H","status":"pending","uuid":"3a58a605-ba95-4a88-8fb3-46bdffda8e66","tags":["setup"]}
+{"description":"solve leetcode 42","entry":"20230831T092419Z","modified":"20230831T093238Z","priority":"M","start":"20230831T093238Z","status":"pending","uuid":"4363ce08-dcbd-4d32-9456-81daa07173fa","tags":["growth"]}
+{"description":"go to meeting","entry":"20230831T093523Z","modified":"20230831T093523Z","priority":"H","status":"pending","uuid":"c9d665c8-a7ff-4600-98cc-b39794af5516","tags":["networking"]}
+{"description":"sync the dotfiles repositories","entry":"20230830T111708Z","modified":"20230831T093559Z","priority":"H","status":"pending","uuid":"bbeeffb9-a681-4261-85c3-f745d0b859d9","tags":["setup"]}
+{"description":"Listen Alux","entry":"20230831T094241Z","modified":"20230831T094241Z","priority":"H","status":"pending","uuid":"88de542f-c1a6-40b2-8a48-b55bcc02cbfa","tags":["growth","routine"]}
+{"description":"go to meeting","end":"20230831T132130Z","entry":"20230831T093523Z","modified":"20230831T132130Z","priority":"H","status":"completed","uuid":"c9d665c8-a7ff-4600-98cc-b39794af5516","tags":["networking"]}
+{"description":"go to meeting","entry":"20230831T093523Z","modified":"20230831T093523Z","priority":"H","status":"pending","uuid":"c9d665c8-a7ff-4600-98cc-b39794af5516","tags":["networking"]}
+{"description":"solve leetcode 42","end":"20230831T132138Z","entry":"20230831T092419Z","modified":"20230831T132138Z","priority":"M","status":"completed","uuid":"4363ce08-dcbd-4d32-9456-81daa07173fa","tags":["growth"]}
+{"description":"Meditation 20 Min at 8","entry":"20230831T092752Z","modified":"20230831T132446Z","priority":"M","status":"pending","uuid":"c9058d2d-0337-4cf0-b726-961ee338e52f","tags":["next","routine"]}
+{"description":"Listen Alux","entry":"20230831T094241Z","modified":"20230831T132741Z","priority":"H","status":"pending","uuid":"88de542f-c1a6-40b2-8a48-b55bcc02cbfa","tags":["growth","next","routine"]}
+{"description":"20 MIN cardio workout","entry":"20230831T092525Z","modified":"20230831T132800Z","priority":"M","status":"pending","uuid":"7b656609-13f0-4a73-aac2-2739891bd008","tags":["next","routine"]}
+{"description":"cold shower","entry":"20230831T092624Z","modified":"20230831T132810Z","priority":"M","status":"pending","uuid":"1b23ae2f-5359-4974-8f01-294fe1a295a3","tags":["next","routine"]}
+{"description":"listen German","entry":"20230831T092708Z","modified":"20230831T132827Z","priority":"M","status":"pending","uuid":"dceafa8e-c6f0-4f56-b168-29970428c49f","tags":["next","routine"]}
+{"description":"Read the article about React Strict Mode","end":"20230831T173341Z","entry":"20230830T224744Z","modified":"20230831T173341Z","priority":"L","status":"completed","uuid":"7fd19477-624d-4016-b0d0-6cb0d4ca7b46","tags":["growth"]}
+{"description":"Read the article about React Strict Mode","entry":"20230830T224744Z","modified":"20230830T224744Z","priority":"L","status":"pending","uuid":"7fd19477-624d-4016-b0d0-6cb0d4ca7b46","tags":["growth"]}
+{"description":"Listen Alux","end":"20230831T173348Z","entry":"20230831T094241Z","modified":"20230831T173348Z","priority":"H","status":"completed","uuid":"88de542f-c1a6-40b2-8a48-b55bcc02cbfa","tags":["growth","next","routine"]}
+{"description":"20 MIN cardio workout","end":"20230831T173354Z","entry":"20230831T092525Z","modified":"20230831T173354Z","priority":"M","status":"completed","uuid":"7b656609-13f0-4a73-aac2-2739891bd008","tags":["next","routine"]}
+{"description":"cold shower","end":"20230831T173359Z","entry":"20230831T092624Z","modified":"20230831T173359Z","priority":"M","status":"completed","uuid":"1b23ae2f-5359-4974-8f01-294fe1a295a3","tags":["next","routine"]}
+{"description":"listen German","end":"20230831T173402Z","entry":"20230831T092708Z","modified":"20230831T173402Z","priority":"M","status":"completed","uuid":"dceafa8e-c6f0-4f56-b168-29970428c49f","tags":["next","routine"]}
+{"description":"Meditation 20 Min at 8","end":"20230831T173408Z","entry":"20230831T092752Z","modified":"20230831T173408Z","priority":"M","status":"completed","uuid":"c9058d2d-0337-4cf0-b726-961ee338e52f","tags":["next","routine"]}
+{"description":"Read the article about React Strict Mode","entry":"20230830T224744Z","modified":"20230831T173450Z","priority":"L","status":"pending","uuid":"7fd19477-624d-4016-b0d0-6cb0d4ca7b46","tags":["growth","next"]}
+{"description":"Meditation 20 Min at 4","end":"20230831T214001Z","entry":"20230831T092908Z","modified":"20230831T214001Z","priority":"M","status":"completed","uuid":"80273a4a-132e-4c11-94e4-7564c41cee8a","tags":["routine"]}
+{"description":"Meditation 20 Min at 12","end":"20230831T214003Z","entry":"20230831T092836Z","modified":"20230831T214003Z","priority":"M","status":"completed","uuid":"ee870dea-75fd-4109-866f-01e5fa1c2de5","tags":["routine"]}
+{"description":"go to meeting","entry":"20230831T093523Z","modified":"20230831T214013Z","priority":"H","start":"20230831T214013Z","status":"pending","uuid":"c9d665c8-a7ff-4600-98cc-b39794af5516","tags":["networking"]}
+{"description":"restore the keyboards work","end":"20230901T041709Z","entry":"20230830T142003Z","modified":"20230901T041709Z","priority":"H","status":"completed","uuid":"3a58a605-ba95-4a88-8fb3-46bdffda8e66","tags":["setup"]}
+{"description":"restore the keyboards work","entry":"20230830T142003Z","modified":"20230831T093158Z","priority":"H","status":"pending","uuid":"3a58a605-ba95-4a88-8fb3-46bdffda8e66","tags":["setup"]}
+{"description":"go to meeting","end":"20230901T041715Z","entry":"20230831T093523Z","modified":"20230901T041715Z","priority":"H","status":"completed","uuid":"c9d665c8-a7ff-4600-98cc-b39794af5516","tags":["networking"]}
+{"description":"Cardio workout","entry":"20230901T124740Z","modified":"20230901T124740Z","priority":"H","status":"pending","uuid":"6ed57cf6-6ea4-4acf-954c-480394638b3c","tags":["routine"]}
+{"description":"cold shower","entry":"20230901T124809Z","modified":"20230901T124809Z","priority":"H","status":"pending","uuid":"1dfce53f-0ab0-438c-8c90-195b074e9c43","tags":["routine"]}
+{"description":"solve leetcode problem","entry":"20230901T124854Z","modified":"20230901T124854Z","priority":"M","status":"pending","uuid":"6a21b9cd-1b4c-4c71-b81a-26b6a395baca","tags":["growth"]}
+{"description":"Listen Alux","entry":"20230901T124931Z","modified":"20230901T124931Z","priority":"H","status":"pending","uuid":"2edcdb87-6bff-4938-9419-09faa37c2b2f","tags":["routine"]}
+{"description":"Listen German","entry":"20230901T124958Z","modified":"20230901T124958Z","priority":"H","status":"pending","uuid":"4b6f72f0-866f-440e-bd4c-f47243dcfd34","tags":["routine"]}
+{"description":"pay apartment management","entry":"20230901T125102Z","modified":"20230901T125102Z","priority":"H","status":"pending","uuid":"583c33a4-1bf3-4040-986a-5193d45287ff","tags":["bills"]}
+{"description":"pay apartment management","entry":"20230901T125102Z","modified":"20230901T125120Z","priority":"H","status":"pending","uuid":"583c33a4-1bf3-4040-986a-5193d45287ff","tags":["billing"]}
+{"description":"pay mother's loan","entry":"20230901T125205Z","modified":"20230901T125205Z","priority":"H","status":"pending","uuid":"a6a269d9-7904-47e9-8124-042062785ccb","tags":["billing"]}
+{"description":"Cardio workout","entry":"20230901T124740Z","modified":"20230901T130632Z","priority":"H","start":"20230901T130632Z","status":"pending","uuid":"6ed57cf6-6ea4-4acf-954c-480394638b3c","tags":["routine"]}
+{"description":"Listen Alux","entry":"20230901T124931Z","modified":"20230901T130639Z","priority":"H","start":"20230901T130639Z","status":"pending","uuid":"2edcdb87-6bff-4938-9419-09faa37c2b2f","tags":["routine"]}
+{"description":"Listen Alux","end":"20230901T133050Z","entry":"20230901T124931Z","modified":"20230901T133050Z","priority":"H","status":"completed","uuid":"2edcdb87-6bff-4938-9419-09faa37c2b2f","tags":["routine"]}
+{"description":"Cardio workout","end":"20230901T133051Z","entry":"20230901T124740Z","modified":"20230901T133051Z","priority":"H","status":"completed","uuid":"6ed57cf6-6ea4-4acf-954c-480394638b3c","tags":["routine"]}
+{"description":"send CV to linkedin guy","entry":"20230901T133212Z","modified":"20230901T133212Z","priority":"H","status":"pending","uuid":"4045366b-5395-4d3c-9f0b-c718bc884c08","tags":["branding"]}
+{"description":"find the mother's loan info","entry":"20230901T134350Z","modified":"20230901T134350Z","status":"pending","uuid":"6810fc98-00c2-4d68-8dd2-ea848427bddc"}
+{"description":"buy shampoo","entry":"20230901T135934Z","modified":"20230901T135934Z","priority":"M","status":"pending","uuid":"600daf6d-78d5-484e-9e2f-82ebb7746a61","tags":["grocery"]}
+{"description":"buy shampoo","entry":"20230901T135934Z","modified":"20230901T135951Z","priority":"M","status":"pending","uuid":"600daf6d-78d5-484e-9e2f-82ebb7746a61","tags":["groceries"]}
+{"description":"cold shower","entry":"20230901T124809Z","modified":"20230901T140036Z","priority":"H","start":"20230901T140036Z","status":"pending","uuid":"1dfce53f-0ab0-438c-8c90-195b074e9c43","tags":["routine"]}
+{"description":"cold shower","end":"20230901T140039Z","entry":"20230901T124809Z","modified":"20230901T140039Z","priority":"H","status":"completed","uuid":"1dfce53f-0ab0-438c-8c90-195b074e9c43","tags":["routine"]}
+{"description":"Listen German","entry":"20230901T124958Z","modified":"20230901T140044Z","priority":"H","start":"20230901T140044Z","status":"pending","uuid":"4b6f72f0-866f-440e-bd4c-f47243dcfd34","tags":["routine"]}
+{"description":"Listen German","end":"20230901T140045Z","entry":"20230901T124958Z","modified":"20230901T140045Z","priority":"H","status":"completed","uuid":"4b6f72f0-866f-440e-bd4c-f47243dcfd34","tags":["routine"]}
+{"description":"solve leetcode problem","entry":"20230901T124854Z","modified":"20230901T140052Z","priority":"M","start":"20230901T140052Z","status":"pending","uuid":"6a21b9cd-1b4c-4c71-b81a-26b6a395baca","tags":["growth"]}
+{"description":"toilet paper","entry":"20230901T144513Z","modified":"20230901T144513Z","priority":"H","status":"pending","uuid":"b3a1e290-1396-4006-b923-8f622a297594","tags":["groceries"]}
+{"description":"buy flush teeth","entry":"20230901T144556Z","modified":"20230901T144556Z","priority":"H","status":"pending","uuid":"6f19c701-fd26-4f08-b724-82d852e1f3dd","tags":["groceries"]}
+{"description":"Read the article about React Strict Mode","entry":"20230830T224744Z","modified":"20230901T144749Z","priority":"L","status":"pending","uuid":"7fd19477-624d-4016-b0d0-6cb0d4ca7b46","tags":["growth"]}
+{"description":"buy toilet paper","entry":"20230901T144949Z","modified":"20230901T144949Z","status":"pending","uuid":"15796a83-48fa-4a8d-93b2-c0219d21d895"}
+{"description":"kkk","entry":"20230901T155741Z","modified":"20230901T155741Z","status":"pending","uuid":"7d002b98-0186-439b-9eb8-d93d9a2ee8ff"}
+{"description":"buy toilet paper","end":"20230901T155745Z","entry":"20230901T144949Z","modified":"20230901T155745Z","status":"completed","uuid":"15796a83-48fa-4a8d-93b2-c0219d21d895"}
+{"description":"buy shampoo","end":"20230901T155746Z","entry":"20230901T135934Z","modified":"20230901T155746Z","priority":"M","status":"completed","uuid":"600daf6d-78d5-484e-9e2f-82ebb7746a61","tags":["groceries"]}
+{"description":"buy flush teeth","end":"20230901T155747Z","entry":"20230901T144556Z","modified":"20230901T155747Z","priority":"H","status":"completed","uuid":"6f19c701-fd26-4f08-b724-82d852e1f3dd","tags":["groceries"]}
+{"description":"solve leetcode problem","entry":"20230901T124854Z","modified":"20230901T155827Z","priority":"M","status":"pending","uuid":"6a21b9cd-1b4c-4c71-b81a-26b6a395baca","tags":["growth"]}
+{"description":"kkk","end":"20230901T155833Z","entry":"20230901T155741Z","modified":"20230901T155833Z","status":"deleted","uuid":"7d002b98-0186-439b-9eb8-d93d9a2ee8ff"}
+{"description":"solve leetcode problem","end":"20230901T155940Z","entry":"20230901T124854Z","modified":"20230901T155940Z","priority":"M","status":"completed","uuid":"6a21b9cd-1b4c-4c71-b81a-26b6a395baca","tags":["growth"]}
+{"description":"pay apartment management","entry":"20230901T125102Z","modified":"20230901T160053Z","priority":"H","start":"20230901T160053Z","status":"pending","uuid":"583c33a4-1bf3-4040-986a-5193d45287ff","tags":["billing"]}
+{"description":"pay apartment management","end":"20230901T161146Z","entry":"20230901T125102Z","modified":"20230901T161146Z","priority":"H","status":"completed","uuid":"583c33a4-1bf3-4040-986a-5193d45287ff","tags":["billing"]}
+{"description":"toilet paper","end":"20230901T161202Z","entry":"20230901T144513Z","modified":"20230901T161202Z","priority":"H","status":"completed","uuid":"b3a1e290-1396-4006-b923-8f622a297594","tags":["groceries"]}
+{"description":"install dadbod plugin into Neovim","entry":"20230901T164137Z","modified":"20230901T164137Z","status":"pending","uuid":"ca3fbf68-a25c-436f-a1c0-adf212faa095"}
+{"description":"Read the article about React Strict Mode","entry":"20230830T224744Z","modified":"20230901T164205Z","priority":"L","start":"20230901T164205Z","status":"pending","uuid":"7fd19477-624d-4016-b0d0-6cb0d4ca7b46","tags":["growth"]}
+{"description":"learn to quick filter tasks","entry":"20230901T164253Z","modified":"20230901T164253Z","status":"pending","uuid":"f284a076-78df-4795-9d77-ca66b905728e","tags":["growth"]}
+{"description":"meditate 20 MIN at 12","entry":"20230901T164342Z","modified":"20230901T164342Z","priority":"H","status":"pending","uuid":"e967105a-5ed8-46c1-9cdd-1d866b664aea","tags":["health"]}
+{"description":"meditate 20 MIN at 4","entry":"20230901T164421Z","modified":"20230901T164421Z","priority":"H","status":"pending","uuid":"ff471b23-d584-4d89-8d59-543a56ae8eed","tags":["health"]}
+{"description":"Read the article about React Strict Mode","entry":"20230830T224744Z","modified":"20230901T164430Z","priority":"L","status":"pending","uuid":"7fd19477-624d-4016-b0d0-6cb0d4ca7b46","tags":["growth"]}
+{"description":"meditate 20 MIN at 12","entry":"20230901T164342Z","modified":"20230901T164435Z","priority":"H","status":"pending","uuid":"e967105a-5ed8-46c1-9cdd-1d866b664aea","tags":["health","next"]}
+{"description":"meditate 20 MIN at 12","entry":"20230901T164342Z","modified":"20230901T164439Z","priority":"H","start":"20230901T164439Z","status":"pending","uuid":"e967105a-5ed8-46c1-9cdd-1d866b664aea","tags":["health","next"]}
+{"description":"meditate 20 MIN at 12","entry":"20230901T164342Z","modified":"20230901T164442Z","priority":"H","start":"20230901T164439Z","status":"pending","uuid":"e967105a-5ed8-46c1-9cdd-1d866b664aea","tags":["health"]}
+{"description":"Read the article about React Strict Mode","entry":"20230830T224744Z","modified":"20230901T164450Z","priority":"L","status":"pending","uuid":"7fd19477-624d-4016-b0d0-6cb0d4ca7b46","tags":["growth","next"]}
+{"description":"Read the article about React Strict Mode","end":"20230901T174143Z","entry":"20230830T224744Z","modified":"20230901T174143Z","priority":"L","status":"completed","uuid":"7fd19477-624d-4016-b0d0-6cb0d4ca7b46","tags":["growth","next"]}
+{"description":"meditate 20 MIN at 12","end":"20230901T174147Z","entry":"20230901T164342Z","modified":"20230901T174147Z","priority":"H","status":"completed","uuid":"e967105a-5ed8-46c1-9cdd-1d866b664aea","tags":["health"]}
+{"description":"find the mother's loan info","entry":"20230901T134350Z","modified":"20230901T174210Z","status":"pending","uuid":"6810fc98-00c2-4d68-8dd2-ea848427bddc","tags":["billing"]}
+{"description":"install dadbod plugin into Neovim","entry":"20230901T164137Z","modified":"20230901T174223Z","status":"pending","uuid":"ca3fbf68-a25c-436f-a1c0-adf212faa095","tags":["setup"]}
+{"description":"wash the sneakers up","entry":"20230830T144718Z","modified":"20230901T174302Z","priority":"H","status":"pending","uuid":"26c3f1f5-5eb1-42fa-832f-ca293a94d49c","tags":["growth","next"]}
+{"description":"pay 'mi planilla'","entry":"20230901T193015Z","modified":"20230901T193015Z","priority":"H","status":"pending","uuid":"8aeaeb8d-e81b-4f0c-aeac-6a112b0e8998","tags":["billing"]}
+{"description":"clothes shopping","entry":"20230830T141043Z","modified":"20230901T193059Z","priority":"M","start":"20230901T193059Z","status":"pending","uuid":"58aa8252-b0f9-4413-b3b3-1aa03888b24e","tags":["growth"]}
+{"description":"wash the sneakers up","entry":"20230830T144718Z","modified":"20230901T193114Z","priority":"H","status":"pending","uuid":"26c3f1f5-5eb1-42fa-832f-ca293a94d49c","tags":["growth"]}
+{"description":"clothes shopping","entry":"20230830T141043Z","modified":"20230901T193117Z","priority":"M","status":"pending","uuid":"58aa8252-b0f9-4413-b3b3-1aa03888b24e","tags":["growth"]}
+{"description":"clothes shopping","entry":"20230830T141043Z","modified":"20230901T193119Z","priority":"M","status":"pending","uuid":"58aa8252-b0f9-4413-b3b3-1aa03888b24e","tags":["growth","next"]}
+{"description":"learn to quick filter tasks","entry":"20230901T164253Z","modified":"20230901T193130Z","start":"20230901T193130Z","status":"pending","uuid":"f284a076-78df-4795-9d77-ca66b905728e","tags":["growth"]}
+{"description":"pay mother's loan","entry":"20230901T125205Z","modified":"20230901T194030Z","priority":"H","status":"pending","uuid":"a6a269d9-7904-47e9-8124-042062785ccb","tags":["billing"],"depends":["6810fc98-00c2-4d68-8dd2-ea848427bddc"]}
+{"description":"install dadbod plugin into Neovim","entry":"20230901T164137Z","modified":"20230901T194229Z","priority":"L","status":"pending","uuid":"ca3fbf68-a25c-436f-a1c0-adf212faa095","tags":["setup"]}
+{"description":"learn to quick filter tasks","end":"20230901T194842Z","entry":"20230901T164253Z","modified":"20230901T194842Z","status":"completed","uuid":"f284a076-78df-4795-9d77-ca66b905728e","tags":["growth"]}
