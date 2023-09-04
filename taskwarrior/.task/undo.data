@@ -1007,3 +1007,179 @@ time 1693597722
 old [description:"learn to quick filter tasks" entry:"1693586573" modified:"1693596690" start:"1693596690" status:"pending" tags:"growth" tags_growth:"x" uuid:"f284a076-78df-4795-9d77-ca66b905728e"]
 new [description:"learn to quick filter tasks" end:"1693597722" entry:"1693586573" modified:"1693597722" status:"completed" tags:"growth" tags_growth:"x" uuid:"f284a076-78df-4795-9d77-ca66b905728e"]
 ---
+time 1693598240
+old [description:"Read Homo-deus cahpter 4" entry:"1693385811" modified:"1693385811" priority:"M" status:"pending" tags:"growth" tags_growth:"x" uuid:"5bcc5d5f-3047-4797-8646-f09fce261349"]
+new [description:"Read Homo-deus cahpter 4" entry:"1693385811" modified:"1693598240" priority:"M" start:"1693598240" status:"pending" tags:"growth" tags_growth:"x" uuid:"5bcc5d5f-3047-4797-8646-f09fce261349"]
+---
+time 1693613860
+old [description:"clothes shopping" entry:"1693404643" modified:"1693596679" priority:"M" status:"pending" tags:"growth,next" tags_growth:"x" tags_next:"x" uuid:"58aa8252-b0f9-4413-b3b3-1aa03888b24e"]
+new [description:"clothes shopping" end:"1693613860" entry:"1693404643" modified:"1693613860" priority:"M" status:"completed" tags:"growth,next" tags_growth:"x" tags_next:"x" uuid:"58aa8252-b0f9-4413-b3b3-1aa03888b24e"]
+---
+time 1693613939
+new [description:"ask loan fees projections" entry:"1693613939" modified:"1693613939" status:"pending" uuid:"7f85f548-b426-49b4-bc26-052192ea566b"]
+---
+time 1693613975
+old [description:"ask loan fees projections" entry:"1693613939" modified:"1693613939" status:"pending" uuid:"7f85f548-b426-49b4-bc26-052192ea566b"]
+new [description:"ask loan fees projections" entry:"1693613939" modified:"1693613975" status:"pending" tags:"billing" tags_billing:"x" uuid:"7f85f548-b426-49b4-bc26-052192ea566b"]
+---
+time 1693613991
+old [description:"ask loan fees projections" entry:"1693613939" modified:"1693613975" status:"pending" tags:"billing" tags_billing:"x" uuid:"7f85f548-b426-49b4-bc26-052192ea566b"]
+new [description:"ask loan fees projections" entry:"1693613939" modified:"1693613991" priority:"L" status:"pending" tags:"billing" tags_billing:"x" uuid:"7f85f548-b426-49b4-bc26-052192ea566b"]
+---
+time 1693635165
+old [description:"Read Homo-deus cahpter 4" entry:"1693385811" modified:"1693598240" priority:"M" start:"1693598240" status:"pending" tags:"growth" tags_growth:"x" uuid:"5bcc5d5f-3047-4797-8646-f09fce261349"]
+new [description:"Read Homo-deus cahpter 4" end:"1693635165" entry:"1693385811" modified:"1693635165" priority:"M" status:"completed" tags:"growth" tags_growth:"x" uuid:"5bcc5d5f-3047-4797-8646-f09fce261349"]
+---
+time 1693635185
+old [description:"Take the React testing course by Codevolution" entry:"1693269281" modified:"1693385879" priority:"L" status:"pending" tags:"growth" tags_growth:"x" uuid:"7f3ab857-e8a1-48df-9ebb-726b70c8859b"]
+new [description:"Take the React testing course by Codevolution" end:"1693635185" entry:"1693269281" modified:"1693635185" priority:"L" status:"completed" tags:"growth" tags_growth:"x" uuid:"7f3ab857-e8a1-48df-9ebb-726b70c8859b"]
+---
+time 1693635265
+new [description:"Read Homo-deus cahpter 5" entry:"1693635265" modified:"1693635265" priority:"M" status:"pending" tags:"growth" tags_growth:"x" uuid:"8c6f67ee-4872-4ded-b822-60f758cac713"]
+---
+time 1693635272
+old [description:"Read Homo-deus cahpter 5" entry:"1693635265" modified:"1693635265" priority:"M" status:"pending" tags:"growth" tags_growth:"x" uuid:"8c6f67ee-4872-4ded-b822-60f758cac713"]
+new [description:"Read Homo-deus cahpter 5" entry:"1693635265" modified:"1693635272" priority:"M" start:"1693635272" status:"pending" tags:"growth" tags_growth:"x" uuid:"8c6f67ee-4872-4ded-b822-60f758cac713"]
+---
+time 1693638236
+old [description:"Read Homo-deus cahpter 5" entry:"1693635265" modified:"1693635272" priority:"M" start:"1693635272" status:"pending" tags:"growth" tags_growth:"x" uuid:"8c6f67ee-4872-4ded-b822-60f758cac713"]
+new [description:"Read Homo-deus cahpter 5" end:"1693638236" entry:"1693635265" modified:"1693638236" priority:"M" status:"completed" tags:"growth" tags_growth:"x" uuid:"8c6f67ee-4872-4ded-b822-60f758cac713"]
+---
+time 1693656986
+new [description:"Cardio workout 20 min" entry:"1693656986" modified:"1693656986" priority:"M" status:"pending" tags:"routine" tags_routine:"x" uuid:"aae6355c-709f-4c0c-9200-71c7612a588d"]
+---
+time 1693657023
+new [description:"Listen Alux" entry:"1693657023" modified:"1693657023" priority:"M" status:"pending" tags:"growth" tags_growth:"x" uuid:"ef320aed-82f7-446b-9e8b-0248012f5811"]
+---
+time 1693657066
+new [description:"Cold shower" entry:"1693657066" modified:"1693657066" priority:"M" status:"pending" tags:"routine" tags_routine:"x" uuid:"0a4ffbc4-6179-4dff-bfd7-3a83f49b5570"]
+---
+time 1693657079
+new [description:"Listen 20 min German" entry:"1693657079" modified:"1693657079" priority:"M" status:"pending" tags:"growth" tags_growth:"x" uuid:"7c4c9d4c-9455-43df-946d-16355652a3ca"]
+---
+time 1693657210
+new [description:"Solve leetcode 3" entry:"1693657210" modified:"1693657210" priority:"M" status:"pending" tags:"growth" tags_growth:"x" uuid:"ced56ef2-d92b-4519-bacc-96fa168eb845"]
+---
+time 1693657361
+old [description:"Listen Alux" entry:"1693657023" modified:"1693657023" priority:"M" status:"pending" tags:"growth" tags_growth:"x" uuid:"ef320aed-82f7-446b-9e8b-0248012f5811"]
+new [description:"Listen Alux" entry:"1693657023" modified:"1693657361" priority:"M" status:"pending" tags:"growth,next" tags_growth:"x" tags_next:"x" uuid:"ef320aed-82f7-446b-9e8b-0248012f5811"]
+---
+time 1693657366
+old [description:"Listen 20 min German" entry:"1693657079" modified:"1693657079" priority:"M" status:"pending" tags:"growth" tags_growth:"x" uuid:"7c4c9d4c-9455-43df-946d-16355652a3ca"]
+new [description:"Listen 20 min German" entry:"1693657079" modified:"1693657366" priority:"M" status:"pending" tags:"growth,next" tags_growth:"x" tags_next:"x" uuid:"7c4c9d4c-9455-43df-946d-16355652a3ca"]
+---
+time 1693657378
+old [description:"Cold shower" entry:"1693657066" modified:"1693657066" priority:"M" status:"pending" tags:"routine" tags_routine:"x" uuid:"0a4ffbc4-6179-4dff-bfd7-3a83f49b5570"]
+new [description:"Cold shower" entry:"1693657066" modified:"1693657378" priority:"M" status:"pending" tags:"next,routine" tags_next:"x" tags_routine:"x" uuid:"0a4ffbc4-6179-4dff-bfd7-3a83f49b5570"]
+---
+time 1693657379
+old [description:"Cardio workout 20 min" entry:"1693656986" modified:"1693656986" priority:"M" status:"pending" tags:"routine" tags_routine:"x" uuid:"aae6355c-709f-4c0c-9200-71c7612a588d"]
+new [description:"Cardio workout 20 min" entry:"1693656986" modified:"1693657379" priority:"M" status:"pending" tags:"next,routine" tags_next:"x" tags_routine:"x" uuid:"aae6355c-709f-4c0c-9200-71c7612a588d"]
+---
+time 1693665386
+old [description:"Cardio workout 20 min" entry:"1693656986" modified:"1693657379" priority:"M" status:"pending" tags:"next,routine" tags_next:"x" tags_routine:"x" uuid:"aae6355c-709f-4c0c-9200-71c7612a588d"]
+new [description:"Cardio workout 20 min" end:"1693665386" entry:"1693656986" modified:"1693665386" priority:"M" status:"completed" tags:"next,routine" tags_next:"x" tags_routine:"x" uuid:"aae6355c-709f-4c0c-9200-71c7612a588d"]
+---
+time 1693665387
+old [description:"Listen Alux" entry:"1693657023" modified:"1693657361" priority:"M" status:"pending" tags:"growth,next" tags_growth:"x" tags_next:"x" uuid:"ef320aed-82f7-446b-9e8b-0248012f5811"]
+new [description:"Listen Alux" end:"1693665387" entry:"1693657023" modified:"1693665387" priority:"M" status:"completed" tags:"growth,next" tags_growth:"x" tags_next:"x" uuid:"ef320aed-82f7-446b-9e8b-0248012f5811"]
+---
+time 1693665390
+old [description:"Cold shower" entry:"1693657066" modified:"1693657378" priority:"M" status:"pending" tags:"next,routine" tags_next:"x" tags_routine:"x" uuid:"0a4ffbc4-6179-4dff-bfd7-3a83f49b5570"]
+new [description:"Cold shower" end:"1693665390" entry:"1693657066" modified:"1693665390" priority:"M" status:"completed" tags:"next,routine" tags_next:"x" tags_routine:"x" uuid:"0a4ffbc4-6179-4dff-bfd7-3a83f49b5570"]
+---
+time 1693665391
+old [description:"Listen 20 min German" entry:"1693657079" modified:"1693657366" priority:"M" status:"pending" tags:"growth,next" tags_growth:"x" tags_next:"x" uuid:"7c4c9d4c-9455-43df-946d-16355652a3ca"]
+new [description:"Listen 20 min German" end:"1693665391" entry:"1693657079" modified:"1693665391" priority:"M" status:"completed" tags:"growth,next" tags_growth:"x" tags_next:"x" uuid:"7c4c9d4c-9455-43df-946d-16355652a3ca"]
+---
+time 1693667332
+old [description:"Solve leetcode 3" entry:"1693657210" modified:"1693657210" priority:"M" status:"pending" tags:"growth" tags_growth:"x" uuid:"ced56ef2-d92b-4519-bacc-96fa168eb845"]
+new [description:"Solve leetcode 3" entry:"1693657210" modified:"1693667332" priority:"M" start:"1693667332" status:"pending" tags:"growth" tags_growth:"x" uuid:"ced56ef2-d92b-4519-bacc-96fa168eb845"]
+---
+time 1693670698
+new [description:"Unlock bank account dynamic token" entry:"1693670698" modified:"1693670698" priority:"H" status:"pending" tags:"billing" tags_billing:"x" uuid:"c6f12421-a68f-4ad1-91a0-d61778b5a053"]
+---
+time 1693670714
+old [description:"pay 'mi planilla'" entry:"1693596615" modified:"1693596615" priority:"H" status:"pending" tags:"billing" tags_billing:"x" uuid:"8aeaeb8d-e81b-4f0c-aeac-6a112b0e8998"]
+new [description:"pay 'mi planilla'" entry:"1693596615" modified:"1693670714" priority:"H" status:"pending" tags:"billing,next" tags_billing:"x" tags_next:"x" uuid:"8aeaeb8d-e81b-4f0c-aeac-6a112b0e8998"]
+---
+time 1693670720
+old [description:"find the mother's loan info" entry:"1693575830" modified:"1693590130" status:"pending" tags:"billing" tags_billing:"x" uuid:"6810fc98-00c2-4d68-8dd2-ea848427bddc"]
+new [description:"find the mother's loan info" entry:"1693575830" modified:"1693670720" status:"pending" tags:"billing,next" tags_billing:"x" tags_next:"x" uuid:"6810fc98-00c2-4d68-8dd2-ea848427bddc"]
+---
+time 1693670723
+old [description:"Unlock bank account dynamic token" entry:"1693670698" modified:"1693670698" priority:"H" status:"pending" tags:"billing" tags_billing:"x" uuid:"c6f12421-a68f-4ad1-91a0-d61778b5a053"]
+new [description:"Unlock bank account dynamic token" entry:"1693670698" modified:"1693670723" priority:"H" status:"pending" tags:"billing,next" tags_billing:"x" tags_next:"x" uuid:"c6f12421-a68f-4ad1-91a0-d61778b5a053"]
+---
+time 1693670726
+old [description:"ask loan fees projections" entry:"1693613939" modified:"1693613991" priority:"L" status:"pending" tags:"billing" tags_billing:"x" uuid:"7f85f548-b426-49b4-bc26-052192ea566b"]
+new [description:"ask loan fees projections" end:"1693670726" entry:"1693613939" modified:"1693670726" priority:"L" status:"completed" tags:"billing" tags_billing:"x" uuid:"7f85f548-b426-49b4-bc26-052192ea566b"]
+---
+time 1693678670
+old [description:"Unlock bank account dynamic token" entry:"1693670698" modified:"1693670723" priority:"H" status:"pending" tags:"billing,next" tags_billing:"x" tags_next:"x" uuid:"c6f12421-a68f-4ad1-91a0-d61778b5a053"]
+new [description:"Unlock bank account dynamic token" end:"1693678670" entry:"1693670698" modified:"1693678670" priority:"H" status:"completed" tags:"billing,next" tags_billing:"x" tags_next:"x" uuid:"c6f12421-a68f-4ad1-91a0-d61778b5a053"]
+---
+time 1693678673
+old [description:"pay 'mi planilla'" entry:"1693596615" modified:"1693670714" priority:"H" status:"pending" tags:"billing,next" tags_billing:"x" tags_next:"x" uuid:"8aeaeb8d-e81b-4f0c-aeac-6a112b0e8998"]
+new [description:"pay 'mi planilla'" end:"1693678673" entry:"1693596615" modified:"1693678673" priority:"H" status:"completed" tags:"billing,next" tags_billing:"x" tags_next:"x" uuid:"8aeaeb8d-e81b-4f0c-aeac-6a112b0e8998"]
+---
+time 1693678682
+old [description:"find the mother's loan info" entry:"1693575830" modified:"1693670720" status:"pending" tags:"billing,next" tags_billing:"x" tags_next:"x" uuid:"6810fc98-00c2-4d68-8dd2-ea848427bddc"]
+new [description:"find the mother's loan info" end:"1693678682" entry:"1693575830" modified:"1693678682" status:"completed" tags:"billing,next" tags_billing:"x" tags_next:"x" uuid:"6810fc98-00c2-4d68-8dd2-ea848427bddc"]
+---
+time 1693678688
+old [description:"install dadbod plugin into Neovim" entry:"1693586497" modified:"1693597349" priority:"L" status:"pending" tags:"setup" tags_setup:"x" uuid:"ca3fbf68-a25c-436f-a1c0-adf212faa095"]
+new [description:"install dadbod plugin into Neovim" end:"1693678688" entry:"1693586497" modified:"1693678688" priority:"L" status:"completed" tags:"setup" tags_setup:"x" uuid:"ca3fbf68-a25c-436f-a1c0-adf212faa095"]
+---
+time 1693742189
+new [description:"Cardio workout 20 min" entry:"1693742189" modified:"1693742189" priority:"M" status:"pending" tags:"routine" tags_routine:"x" uuid:"dfd6654e-62f6-49a5-aa50-27eac4b45087"]
+---
+time 1693742205
+new [description:"Listen 20 min German" entry:"1693742205" modified:"1693742205" priority:"M" status:"pending" tags:"growth" tags_growth:"x" uuid:"ab961cb4-8199-4bd2-b423-49b2e91bdde0"]
+---
+time 1693742221
+new [description:"Listen Alux" entry:"1693742221" modified:"1693742221" priority:"M" status:"pending" tags:"growth" tags_growth:"x" uuid:"c9aff383-4828-414c-b95c-4abf0b70d36b"]
+---
+time 1693742230
+new [description:"Cold shower" entry:"1693742230" modified:"1693742230" priority:"M" status:"pending" tags:"routine" tags_routine:"x" uuid:"744cf1c3-8d5b-4729-9004-f8a53655dd52"]
+---
+time 1693820216
+old [description:"Cardio workout 20 min" entry:"1693742189" modified:"1693742189" priority:"M" status:"pending" tags:"routine" tags_routine:"x" uuid:"dfd6654e-62f6-49a5-aa50-27eac4b45087"]
+new [description:"Cardio workout 20 min" entry:"1693742189" modified:"1693820216" priority:"M" status:"pending" tags:"next,routine" tags_next:"x" tags_routine:"x" uuid:"dfd6654e-62f6-49a5-aa50-27eac4b45087"]
+---
+time 1693820218
+old [description:"Cardio workout 20 min" entry:"1693742189" modified:"1693820216" priority:"M" status:"pending" tags:"next,routine" tags_next:"x" tags_routine:"x" uuid:"dfd6654e-62f6-49a5-aa50-27eac4b45087"]
+new [description:"Cardio workout 20 min" entry:"1693742189" modified:"1693820218" priority:"M" status:"pending" tags:"routine" tags_routine:"x" uuid:"dfd6654e-62f6-49a5-aa50-27eac4b45087"]
+---
+time 1693820247
+old [description:"Take the React Hook tuto part 7" entry:"1693270953" modified:"1693385911" priority:"L" status:"pending" tags:"growth" tags_growth:"x" uuid:"ab24425d-cd2e-4ef0-9dcc-9243afce05fd"]
+new [description:"Take the React Hook tuto part 7" end:"1693820247" entry:"1693270953" modified:"1693820247" priority:"L" status:"completed" tags:"growth" tags_growth:"x" uuid:"ab24425d-cd2e-4ef0-9dcc-9243afce05fd"]
+---
+time 1693820248
+old [description:"Take the React Hook tuto part 8" entry:"1693270967" modified:"1693385951" priority:"L" status:"pending" tags:"growth" tags_growth:"x" uuid:"54a117d5-ec57-41b5-b37d-f9fab1b749a5"]
+new [description:"Take the React Hook tuto part 8" end:"1693820248" entry:"1693270967" modified:"1693820248" priority:"L" status:"completed" tags:"growth" tags_growth:"x" uuid:"54a117d5-ec57-41b5-b37d-f9fab1b749a5"]
+---
+time 1693820249
+old [description:"Take the React Hook tuto part 9" entry:"1693270988" modified:"1693385970" priority:"L" status:"pending" tags:"growth" tags_growth:"x" uuid:"83b76c8d-d87f-4860-ab88-0f9e352aa813"]
+new [description:"Take the React Hook tuto part 9" end:"1693820249" entry:"1693270988" modified:"1693820249" priority:"L" status:"completed" tags:"growth" tags_growth:"x" uuid:"83b76c8d-d87f-4860-ab88-0f9e352aa813"]
+---
+time 1693820250
+old [description:"Take the React Hook tuto part 10" entry:"1693271007" modified:"1693386002" priority:"L" status:"pending" tags:"growth" tags_growth:"x" uuid:"3ea7994e-0841-424d-b900-d1c2bcc290db"]
+new [description:"Take the React Hook tuto part 10" end:"1693820250" entry:"1693271007" modified:"1693820250" priority:"L" status:"completed" tags:"growth" tags_growth:"x" uuid:"3ea7994e-0841-424d-b900-d1c2bcc290db"]
+---
+time 1693820280
+old [description:"wash the sneakers up" entry:"1693406838" modified:"1693596674" priority:"H" status:"pending" tags:"growth" tags_growth:"x" uuid:"26c3f1f5-5eb1-42fa-832f-ca293a94d49c"]
+new [description:"wash the sneakers up" entry:"1693406838" modified:"1693820280" priority:"H" status:"pending" tags:"growth,next" tags_growth:"x" tags_next:"x" uuid:"26c3f1f5-5eb1-42fa-832f-ca293a94d49c"]
+---
+time 1693820329
+old [dep_6810fc98-00c2-4d68-8dd2-ea848427bddc:"x" depends:"6810fc98-00c2-4d68-8dd2-ea848427bddc" description:"pay mother's loan" entry:"1693572725" modified:"1693597230" priority:"H" status:"pending" tags:"billing" tags_billing:"x" uuid:"a6a269d9-7904-47e9-8124-042062785ccb"]
+new [dep_6810fc98-00c2-4d68-8dd2-ea848427bddc:"x" depends:"6810fc98-00c2-4d68-8dd2-ea848427bddc" description:"pay mother's loan" end:"1693820329" entry:"1693572725" modified:"1693820329" priority:"H" status:"completed" tags:"billing" tags_billing:"x" uuid:"a6a269d9-7904-47e9-8124-042062785ccb"]
+---
+time 1693820340
+old [description:"renew visas" entry:"1693339793" modified:"1693342008" priority:"H" status:"pending" tags:"domestic" tags_domestic:"x" uuid:"3a2705a5-9da5-468d-8743-0b0ffff8b99d"]
+new [description:"renew visas" end:"1693820340" entry:"1693339793" modified:"1693820340" priority:"H" status:"completed" tags:"domestic" tags_domestic:"x" uuid:"3a2705a5-9da5-468d-8743-0b0ffff8b99d"]
+---
+time 1693820361
+old [description:"improve your task warrior skills" entry:"1692784577" modified:"1693386910" priority:"M" status:"pending" tags:"growth" tags_growth:"x" uuid:"ba462c11-f8e6-408a-bc27-b03f11fc0b9a"]
+new [description:"improve your task warrior skills" entry:"1692784577" modified:"1693820361" priority:"M" status:"pending" tags:"growth,next" tags_growth:"x" tags_next:"x" uuid:"ba462c11-f8e6-408a-bc27-b03f11fc0b9a"]
+---
