@@ -19,6 +19,7 @@ alias bashtouch="yes 'touch $0' | chmod +x $0"
 alias econ="~/econ.tmux.ses"
 alias forms="~/forms.tmux.ses"
 alias tuto="~/tuto.tmux.ses"
+alias leetcode="~/leetcode.tmux.ses"
 alias abacus="~/abacus.tmux.ses"
 alias p18="~/p18.tmux.ses"
 alias bot="~/bot_Ax.tmux.ses"
@@ -37,6 +38,7 @@ alias tvim="NVIM_APPNAME=tuffgniuz nvim"
 alias texvim="NVIM_APPNAME=benbrastmckie nvim"
 alias ejvim="NVIM_APPNAME=ejmastnak nvim"
 alias vimtex="NVIM_APPNAME=VimTeX nvim"
+alias leetvim="NVIM_APPNAME=leetvim nvim"
 
 alias tn="task add $1"
 alias td="task delete $1"
@@ -64,7 +66,7 @@ newcakefunction () {
 alias newcake=newcakefunction
 
 function nvims(){
-  items=("default" "kickstart" "LazyVim" "NvChad" "AstroNvim" "packervim" "tuffgniuz" "benbrastmckie" "VimTeX" "ejmastnak")
+  items=("default" "kickstart" "LazyVim" "NvChad" "AstroNvim" "packervim" "tuffgniuz" "benbrastmckie" "VimTeX" "ejmastnak" "leetvim")
   config=$(printf "%s\n" "${items[@]}" | fzf --prompt="Neovim Config >>" --height=~50% --layout=reverse --border --exit-0)
   if [[ -z $config ]]; then
     echo "Nothing selected"

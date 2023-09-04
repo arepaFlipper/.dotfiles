@@ -38,7 +38,7 @@ data.location=$HOME/.task
 #include solarized-dark-256.theme
 #include solarized-light-256.theme
 #include no-color.theme
-editor = NVIM_APPNAME=LazyVim nvim
+editor = nvim
 news.version=2.6.0
 report.list.labels=ID,Active,Age,Dependency,Priority,Project,Tags,Recur,Schedule,Due,Until,Description,Urgency
 

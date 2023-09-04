@@ -2378,3 +2378,6 @@ ID Age   Project     Wait       Remaining Sched      Due        Description     
 ```
 
 ## Lesson 9: Reports and UDAs
+
+# Remember
+Use the character "+" to filter tasks.
