@@ -86,7 +86,13 @@ because they are not considered to be either filter, modification or miscellaneo
 does not see the overrides, instead they are handled before the command runs.
 
 `task` `rc.confirmation:off` `+home status:pending modify priority:H due:eom`
+
+---
+
 `task +home status:pending` `rc.confirmation:off ` `modify priority:H due:eom`
+
+---
+
 `task +home status:pending modify priority:H due:eom` `rc.confirmation:off`
 
 There can be any number of overrides on the command line, and they have no effect on the syntax.
