@@ -3,7 +3,8 @@
 # -n: name
 # -d: dettach
 session1="tuto_logs"
-folder_name="js_mastery/project_3D_developer_portfolio"
+
+folder_name="EdRoh/portfolio"
 window11="lazygit"
 pane111=${window00}.1
 window12="lazygit"
