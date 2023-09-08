@@ -89,6 +89,12 @@ changes you could make:
 ```
 task config urgency.user.tag.<problem>.coefficient 4.5
 ```
+
+In `.taskrc`:
+```
+urgency.user.tag.<problem>.coefficient 4.5
+```
+
 This means that any task having the `+problem` tag gets an urgency
 boost. 
 
@@ -98,10 +104,20 @@ unimportant tasks, using negative coefficients:
 task config urgency.user.tag.<later>.coefficient -6.0
 ```
 
+In `.taskrc`:
+```
+urgency.user.tag.<later>.coefficient -6.0
+```
+
 If you have a project that is more important, 
 you can boost the whole project:
 ```
 task config urgency.user.project.<domestic>.coefficient 2.9
+```
+
+In `.taskrc`:
+```
+urgency.user.project.<domestic>.coefficient 2.9
 ```
 
 Suppose you do not agree that a blocked task should have 

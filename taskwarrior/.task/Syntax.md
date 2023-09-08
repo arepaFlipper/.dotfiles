@@ -34,10 +34,10 @@ Taskwarrior looks for the first argument on the command line that looks like an 
 name, and failing that, looks for an abbreviated command name. It is better to 
 use the full name of a command to avoid ambiguity (pressing `<tab>` will autocomplete the command).
 
-It is the position of the command argument, and the type of ccommand 
+It is the position of the command argument, and the type of command 
 that determines how the arguments area understood.
 
-## Fileter
+## Filter
 
 A filter is a means of addressing a subset of tasks. Because filters are optional, 
 the simplest case is no filter. A command with no filter addresses all tasks.
