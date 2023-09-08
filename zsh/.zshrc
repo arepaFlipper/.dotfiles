@@ -44,6 +44,7 @@ alias tn="task add $1"
 alias td="task delete $1"
 alias twl="task list"
 
+alias routine_tasks="bash ~/.dotfiles/taskwarrior/.task/routine.sh"
 task_project_function () {
   task $1 modify project:$2
 }
