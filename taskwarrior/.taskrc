@@ -30,7 +30,7 @@ data.location=$HOME/.task
 #include dark-256.theme
 #include dark-red-256.theme
 #include dark-green-256.theme
-#include dark-blue-256.theme
+include dark-blue-256.theme
 #include dark-violets-256.theme
 #include dark-yellow-green.theme
 #include dark-gray-256.theme
@@ -47,10 +47,8 @@ uda.cost.label=Cost
 
 uda.color.type=string
 uda.color.label=color
-uda.color.values=red,white,blue,green,yellow
+uda.color.values=red,white,blue,green,yellow,cyan
 
-urgency.uda.cost.coefficient=30
-urgency.color.label=Urgency
 
 
 report.waiting.columns=id,start.active,entry.age,depends.indicator,priority,project,tags,recur.indicator,wait,wait.remaining,scheduled,due,until,description,urgency
@@ -87,3 +85,6 @@ uda.taskwarrior-tui.task-report.reset-filter-on-esc=true
 uda.taskwarrior-tui.context-menu.select-on-move=false
 uda.taskwarrior-tui.tabs.change-focus-rotate=false
 
+urgency.uda.priority.L.coefficient=0.4 # low Priority
+urgency.uda.project.routine.coefficient=-5.0
+color.project.routine=rgb354
