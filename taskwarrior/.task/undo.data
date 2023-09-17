@@ -1780,3 +1780,1012 @@ time 1694188454
 old [description:"Add taskwarrior script to add routine tasks" entry:"1694089947" modified:"1694101694" priority:"M" status:"pending" tags:"setup" tags_setup:"x" uuid:"4c216e31-8b7e-4e98-9547-3932bd272722"]
 new [description:"Add taskwarrior script to add routine tasks" entry:"1694089947" modified:"1694188454" priority:"M" start:"1694188454" status:"pending" tags:"setup" tags_setup:"x" uuid:"4c216e31-8b7e-4e98-9547-3932bd272722"]
 ---
+time 1694413459
+old [description:"Grind the portfolio until 1:43:00" entry:"1694088144" modified:"1694088180" priority:"M" status:"pending" tags:"growth" tags_growth:"x" uuid:"61196845-0aaa-422e-8600-a220cb1298c5"]
+new [description:"Grind the portfolio until 1:43:00" end:"1694413459" entry:"1694088144" modified:"1694413459" priority:"M" status:"completed" tags:"growth" tags_growth:"x" uuid:"61196845-0aaa-422e-8600-a220cb1298c5"]
+---
+time 1694413466
+old [description:"Grind the Usage Examples section of Taskwarrior docs" entry:"1694088333" modified:"1694088333" priority:"M" status:"pending" tags:"growth" tags_growth:"x" uuid:"19488655-5998-434a-81ec-4e22437a1b45"]
+new [description:"Grind the Usage Examples section of Taskwarrior docs" end:"1694413466" entry:"1694088333" modified:"1694413466" priority:"M" status:"completed" tags:"growth" tags_growth:"x" uuid:"19488655-5998-434a-81ec-4e22437a1b45"]
+---
+time 1694413474
+old [description:"review the written taskwarrior to specify the .taskrc file" entry:"1694088628" modified:"1694088628" priority:"H" status:"pending" tags:"growth" tags_growth:"x" uuid:"a9b23e24-2203-427c-8cca-c6e64954a40d"]
+new [description:"review the written taskwarrior to specify the .taskrc file" end:"1694413474" entry:"1694088628" modified:"1694413474" priority:"H" status:"completed" tags:"growth" tags_growth:"x" uuid:"a9b23e24-2203-427c-8cca-c6e64954a40d"]
+---
+time 1694413491
+old [description:"Meditation 20 min at 4" entry:"1694178054" modified:"1694178054" priority:"M" status:"pending" uuid:"02b595a7-a8d4-4b5d-9de3-635b95c81187"]
+new [description:"Meditation 20 min at 4" end:"1694413491" entry:"1694178054" modified:"1694413491" priority:"M" status:"deleted" uuid:"02b595a7-a8d4-4b5d-9de3-635b95c81187"]
+---
+time 1694413492
+old [description:"Meditation 20 min at 12" entry:"1694178043" modified:"1694178043" priority:"M" status:"pending" uuid:"a5f15644-59ef-4c9c-b58b-a68574de0913"]
+new [description:"Meditation 20 min at 12" end:"1694413492" entry:"1694178043" modified:"1694413492" priority:"M" status:"deleted" uuid:"a5f15644-59ef-4c9c-b58b-a68574de0913"]
+---
+time 1694413500
+old [description:"Add taskwarrior script to add routine tasks" entry:"1694089947" modified:"1694188454" priority:"M" start:"1694188454" status:"pending" tags:"setup" tags_setup:"x" uuid:"4c216e31-8b7e-4e98-9547-3932bd272722"]
+new [description:"Add taskwarrior script to add routine tasks" end:"1694413500" entry:"1694089947" modified:"1694413500" priority:"M" status:"completed" tags:"setup" tags_setup:"x" uuid:"4c216e31-8b7e-4e98-9547-3932bd272722"]
+---
+time 1694413504
+old [description:"clean the workspace up" entry:"1694188046" modified:"1694188381" priority:"L" status:"pending" tags:"domestic,next" tags_domestic:"x" tags_next:"x" uuid:"63272160-2297-4e80-96f6-9fbd03a05dac"]
+new [description:"clean the workspace up" end:"1694413504" entry:"1694188046" modified:"1694413504" priority:"L" status:"deleted" tags:"domestic,next" tags_domestic:"x" tags_next:"x" uuid:"63272160-2297-4e80-96f6-9fbd03a05dac"]
+---
+time 1694413527
+new [description:"Cardio 20 Min" entry:"1694413527" modified:"1694413527" priority:"M" project:"routine" status:"pending" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"191f60ec-5d43-4d61-baff-a2b785235781"]
+---
+time 1694413527
+new [description:"Listen Alux" entry:"1694413527" modified:"1694413527" priority:"M" project:"routine" status:"pending" tags:"mindset" tags_mindset:"x" uuid:"2cd3ede7-8ebf-4762-8600-bb7f2125104e"]
+---
+time 1694413527
+new [description:"Cold shower" entry:"1694413527" modified:"1694413527" priority:"M" project:"routine" status:"pending" tags:"care" tags_care:"x" uuid:"ab4e2b01-d5e2-4ded-b902-7e5bc7f34ec8"]
+---
+time 1694413527
+new [description:"Listen German" entry:"1694413527" modified:"1694413527" priority:"M" project:"routine" status:"pending" tags:"education" tags_education:"x" uuid:"b854791e-4151-451a-b0c2-31b055234e43"]
+---
+time 1694413532
+new [description:"Meditate 15 at 8" due:"1694419200" entry:"1694413532" modified:"1694413532" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"8508fd6f-95c0-47be-8b77-1464e7379daf"]
+---
+time 1694413533
+new [description:"Meditate 15 at 12" due:"1694433600" entry:"1694413533" modified:"1694413533" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"980b7464-d377-4132-9c63-3d1d68577b3d"]
+---
+time 1694413533
+new [description:"Meditate 15 at 4" due:"1694491200" entry:"1694413533" modified:"1694413533" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"5392dd69-edf6-4b0e-ad6c-94217ca18fae"]
+---
+time 1694413606
+new [description:"Solve leetcode 1343" entry:"1694413606" modified:"1694413606" project:"leetcode" status:"pending" tags:"Education,growth" tags_Education:"x" tags_growth:"x" uuid:"b5711a9c-eb92-41e0-90ec-2614aef7a254"]
+---
+time 1694413648
+new [description:"Solve leetcode 1343" entry:"1694413648" modified:"1694413648" project:"Algorithms" status:"pending" tags:"Education,growth" tags_Education:"x" tags_growth:"x" uuid:"115addd9-de45-4fcf-a9a6-956ea43dd62e"]
+---
+time 1694413652
+old [description:"Solve leetcode 1343" entry:"1694413606" modified:"1694413606" project:"leetcode" status:"pending" tags:"Education,growth" tags_Education:"x" tags_growth:"x" uuid:"b5711a9c-eb92-41e0-90ec-2614aef7a254"]
+new [description:"Solve leetcode 1343" end:"1694413652" entry:"1694413606" modified:"1694413652" project:"leetcode" status:"deleted" tags:"Education,growth" tags_Education:"x" tags_growth:"x" uuid:"b5711a9c-eb92-41e0-90ec-2614aef7a254"]
+---
+time 1694413742
+old [description:"review the written taskwarrior to specify the .taskrc file" entry:"1694088602" modified:"1694101730" status:"pending" tags:"growth" tags_growth:"x" uuid:"52969b4e-57b8-4d81-9ac3-7463c0df6ad0"]
+new [description:"review the written taskwarrior to specify the .taskrc file" end:"1694413742" entry:"1694088602" modified:"1694413742" status:"completed" tags:"growth" tags_growth:"x" uuid:"52969b4e-57b8-4d81-9ac3-7463c0df6ad0"]
+---
+time 1694414035
+new [description:"make bed" entry:"1694414035" modified:"1694414035" project:"domestic" status:"pending" tags:"clean" tags_clean:"x" uuid:"dac1ca73-8c3d-46b4-8285-0faf3134d9c3"]
+---
+time 1694414045
+new [description:"clean my room mess" entry:"1694414045" modified:"1694414045" project:"domestic" status:"pending" tags:"clean" tags_clean:"x" uuid:"4e44fc10-6201-4220-b2a3-dd86dd35361a"]
+---
+time 1694414060
+new [description:"Cook breakfast" entry:"1694414060" modified:"1694414060" priority:"M" status:"pending" tags:"domestic" tags_domestic:"x" uuid:"95ab1611-1dea-4c46-aec4-7ec5f0a6dfa9"]
+---
+time 1694414092
+old [description:"clean my room mess" entry:"1694414045" modified:"1694414045" project:"domestic" status:"pending" tags:"clean" tags_clean:"x" uuid:"4e44fc10-6201-4220-b2a3-dd86dd35361a"]
+new [description:"clean my room mess" entry:"1694414045" modified:"1694414092" project:"domestic" status:"pending" tags:"clean,domestic" tags_clean:"x" tags_domestic:"x" uuid:"4e44fc10-6201-4220-b2a3-dd86dd35361a"]
+---
+time 1694414101
+old [description:"make bed" entry:"1694414035" modified:"1694414035" project:"domestic" status:"pending" tags:"clean" tags_clean:"x" uuid:"dac1ca73-8c3d-46b4-8285-0faf3134d9c3"]
+new [description:"make bed" entry:"1694414035" modified:"1694414101" project:"domestic" status:"pending" tags:"clean,domestic" tags_clean:"x" tags_domestic:"x" uuid:"dac1ca73-8c3d-46b4-8285-0faf3134d9c3"]
+---
+time 1694415014
+new [description:"Read workflow examples of taskwarrior docs" entry:"1694415014" modified:"1694415014" priority:"M" status:"pending" tags:"growth" tags_growth:"x" uuid:"c047ee6e-930e-42fc-bc1b-3fab376e7785"]
+---
+time 1694415024
+old [description:"Read workflow examples of taskwarrior docs" entry:"1694415014" modified:"1694415014" priority:"M" status:"pending" tags:"growth" tags_growth:"x" uuid:"c047ee6e-930e-42fc-bc1b-3fab376e7785"]
+new [description:"Read workflow examples of taskwarrior docs" entry:"1694415014" modified:"1694415024" priority:"M" start:"1694415024" status:"pending" tags:"growth" tags_growth:"x" uuid:"c047ee6e-930e-42fc-bc1b-3fab376e7785"]
+---
+time 1694416046
+old [description:"Read workflow examples of taskwarrior docs" entry:"1694415014" modified:"1694415024" priority:"M" start:"1694415024" status:"pending" tags:"growth" tags_growth:"x" uuid:"c047ee6e-930e-42fc-bc1b-3fab376e7785"]
+new [description:"Read workflow examples of taskwarrior docs" entry:"1694415014" modified:"1694416046" priority:"M" status:"pending" tags:"growth" tags_growth:"x" uuid:"c047ee6e-930e-42fc-bc1b-3fab376e7785"]
+---
+time 1694416048
+old [description:"Read workflow examples of taskwarrior docs" entry:"1694415014" modified:"1694416046" priority:"M" status:"pending" tags:"growth" tags_growth:"x" uuid:"c047ee6e-930e-42fc-bc1b-3fab376e7785"]
+new [description:"Read workflow examples of taskwarrior docs" entry:"1694415014" modified:"1694416048" priority:"M" start:"1694416048" status:"pending" tags:"growth" tags_growth:"x" uuid:"c047ee6e-930e-42fc-bc1b-3fab376e7785"]
+---
+time 1694417358
+old [description:"Read workflow examples of taskwarrior docs" entry:"1694415014" modified:"1694416048" priority:"M" start:"1694416048" status:"pending" tags:"growth" tags_growth:"x" uuid:"c047ee6e-930e-42fc-bc1b-3fab376e7785"]
+new [description:"Read workflow examples of taskwarrior docs" end:"1694417358" entry:"1694415014" modified:"1694417358" priority:"M" status:"completed" tags:"growth" tags_growth:"x" uuid:"c047ee6e-930e-42fc-bc1b-3fab376e7785"]
+---
+time 1694417396
+old [description:"Cardio 20 Min" entry:"1694413527" modified:"1694413527" priority:"M" project:"routine" status:"pending" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"191f60ec-5d43-4d61-baff-a2b785235781"]
+new [description:"Cardio 20 Min" entry:"1694413527" modified:"1694417396" priority:"M" project:"routine" start:"1694417396" status:"pending" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"191f60ec-5d43-4d61-baff-a2b785235781"]
+---
+time 1694417402
+old [description:"Listen Alux" entry:"1694413527" modified:"1694413527" priority:"M" project:"routine" status:"pending" tags:"mindset" tags_mindset:"x" uuid:"2cd3ede7-8ebf-4762-8600-bb7f2125104e"]
+new [description:"Listen Alux" entry:"1694413527" modified:"1694417402" priority:"M" project:"routine" start:"1694417402" status:"pending" tags:"mindset" tags_mindset:"x" uuid:"2cd3ede7-8ebf-4762-8600-bb7f2125104e"]
+---
+time 1694421837
+old [description:"Cardio 20 Min" entry:"1694413527" modified:"1694417396" priority:"M" project:"routine" start:"1694417396" status:"pending" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"191f60ec-5d43-4d61-baff-a2b785235781"]
+new [description:"Cardio 20 Min" end:"1694421837" entry:"1694413527" modified:"1694421837" priority:"M" project:"routine" status:"completed" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"191f60ec-5d43-4d61-baff-a2b785235781"]
+---
+time 1694421838
+old [description:"Listen Alux" entry:"1694413527" modified:"1694417402" priority:"M" project:"routine" start:"1694417402" status:"pending" tags:"mindset" tags_mindset:"x" uuid:"2cd3ede7-8ebf-4762-8600-bb7f2125104e"]
+new [description:"Listen Alux" end:"1694421838" entry:"1694413527" modified:"1694421838" priority:"M" project:"routine" status:"completed" tags:"mindset" tags_mindset:"x" uuid:"2cd3ede7-8ebf-4762-8600-bb7f2125104e"]
+---
+time 1694421843
+old [description:"Cold shower" entry:"1694413527" modified:"1694413527" priority:"M" project:"routine" status:"pending" tags:"care" tags_care:"x" uuid:"ab4e2b01-d5e2-4ded-b902-7e5bc7f34ec8"]
+new [description:"Cold shower" end:"1694421843" entry:"1694413527" modified:"1694421843" priority:"M" project:"routine" status:"completed" tags:"care" tags_care:"x" uuid:"ab4e2b01-d5e2-4ded-b902-7e5bc7f34ec8"]
+---
+time 1694421845
+old [description:"Listen German" entry:"1694413527" modified:"1694413527" priority:"M" project:"routine" status:"pending" tags:"education" tags_education:"x" uuid:"b854791e-4151-451a-b0c2-31b055234e43"]
+new [description:"Listen German" end:"1694421845" entry:"1694413527" modified:"1694421845" priority:"M" project:"routine" status:"completed" tags:"education" tags_education:"x" uuid:"b854791e-4151-451a-b0c2-31b055234e43"]
+---
+time 1694421886
+new [description:"wo sind sie schon gewessen" entry:"1694421886" modified:"1694421886" status:"pending" uuid:"a15e23ce-c7ec-4969-81eb-a70675e348bf"]
+---
+time 1694421888
+old [description:"wo sind sie schon gewessen" entry:"1694421886" modified:"1694421886" status:"pending" uuid:"a15e23ce-c7ec-4969-81eb-a70675e348bf"]
+new [description:"wo sind sie schon gewessen" end:"1694421888" entry:"1694421886" modified:"1694421888" status:"deleted" uuid:"a15e23ce-c7ec-4969-81eb-a70675e348bf"]
+---
+time 1694421999
+old [description:"Meditate 15 at 8" due:"1694419200" entry:"1694413532" modified:"1694413532" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"8508fd6f-95c0-47be-8b77-1464e7379daf"]
+new [description:"Meditate 15 at 8" due:"1694419200" entry:"1694413532" modified:"1694421999" priority:"L" project:"routine" start:"1694421999" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"8508fd6f-95c0-47be-8b77-1464e7379daf"]
+---
+time 1694423885
+old [description:"Meditate 15 at 8" due:"1694419200" entry:"1694413532" modified:"1694421999" priority:"L" project:"routine" start:"1694421999" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"8508fd6f-95c0-47be-8b77-1464e7379daf"]
+new [description:"Meditate 15 at 8" due:"1694419200" end:"1694423885" entry:"1694413532" modified:"1694423885" priority:"L" project:"routine" status:"completed" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"8508fd6f-95c0-47be-8b77-1464e7379daf"]
+---
+time 1694423901
+old [description:"Cook breakfast" entry:"1694414060" modified:"1694414060" priority:"M" status:"pending" tags:"domestic" tags_domestic:"x" uuid:"95ab1611-1dea-4c46-aec4-7ec5f0a6dfa9"]
+new [description:"Cook breakfast" entry:"1694414060" modified:"1694423901" priority:"M" start:"1694423901" status:"pending" tags:"domestic" tags_domestic:"x" uuid:"95ab1611-1dea-4c46-aec4-7ec5f0a6dfa9"]
+---
+time 1694429012
+new [description:"subscribe to hackaton" entry:"1694429012" modified:"1694429012" status:"pending" uuid:"2674f058-2bb9-46d1-abe6-b52e3974601b"]
+---
+time 1694446774
+old [description:"Meditate 15 at 12" due:"1694433600" entry:"1694413533" modified:"1694413533" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"980b7464-d377-4132-9c63-3d1d68577b3d"]
+new [description:"Meditate 15 at 12" due:"1694433600" end:"1694446774" entry:"1694413533" modified:"1694446774" priority:"L" project:"routine" status:"completed" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"980b7464-d377-4132-9c63-3d1d68577b3d"]
+---
+time 1694459716
+old [description:"Cook breakfast" entry:"1694414060" modified:"1694423901" priority:"M" start:"1694423901" status:"pending" tags:"domestic" tags_domestic:"x" uuid:"95ab1611-1dea-4c46-aec4-7ec5f0a6dfa9"]
+new [description:"Cook breakfast" end:"1694459716" entry:"1694414060" modified:"1694459716" priority:"M" status:"completed" tags:"domestic" tags_domestic:"x" uuid:"95ab1611-1dea-4c46-aec4-7ec5f0a6dfa9"]
+---
+time 1694459719
+old [description:"Meditate 15 at 4" due:"1694491200" entry:"1694413533" modified:"1694413533" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"5392dd69-edf6-4b0e-ad6c-94217ca18fae"]
+new [description:"Meditate 15 at 4" due:"1694491200" end:"1694459719" entry:"1694413533" modified:"1694459719" priority:"L" project:"routine" status:"completed" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"5392dd69-edf6-4b0e-ad6c-94217ca18fae"]
+---
+time 1694459722
+old [description:"Cook lunch" entry:"1694178000" modified:"1694178000" priority:"M" status:"pending" tags:"domestic" tags_domestic:"x" uuid:"3c35aab2-5854-4983-a989-e1d9fe399455"]
+new [description:"Cook lunch" end:"1694459722" entry:"1694178000" modified:"1694459722" priority:"M" status:"completed" tags:"domestic" tags_domestic:"x" uuid:"3c35aab2-5854-4983-a989-e1d9fe399455"]
+---
+time 1694459732
+old [description:"subscribe to hackaton" entry:"1694429012" modified:"1694429012" status:"pending" uuid:"2674f058-2bb9-46d1-abe6-b52e3974601b"]
+new [description:"subscribe to hackaton" end:"1694459732" entry:"1694429012" modified:"1694459732" status:"deleted" uuid:"2674f058-2bb9-46d1-abe6-b52e3974601b"]
+---
+time 1694459756
+old [description:"make bed" entry:"1694414035" modified:"1694414101" project:"domestic" status:"pending" tags:"clean,domestic" tags_clean:"x" tags_domestic:"x" uuid:"dac1ca73-8c3d-46b4-8285-0faf3134d9c3"]
+new [description:"make bed" end:"1694459756" entry:"1694414035" modified:"1694459756" project:"domestic" status:"deleted" tags:"clean,domestic" tags_clean:"x" tags_domestic:"x" uuid:"dac1ca73-8c3d-46b4-8285-0faf3134d9c3"]
+---
+time 1694461402
+old [description:"Solve leetcode 1343" entry:"1694413648" modified:"1694413648" project:"Algorithms" status:"pending" tags:"Education,growth" tags_Education:"x" tags_growth:"x" uuid:"115addd9-de45-4fcf-a9a6-956ea43dd62e"]
+new [description:"Solve leetcode 1343" end:"1694461402" entry:"1694413648" modified:"1694461402" project:"Algorithms" status:"completed" tags:"Education,growth" tags_Education:"x" tags_growth:"x" uuid:"115addd9-de45-4fcf-a9a6-956ea43dd62e"]
+---
+time 1694510351
+new [description:"Cardio 20 Min" entry:"1694510351" modified:"1694510351" priority:"M" project:"routine" status:"pending" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"ef579c9a-7a29-4353-a737-4b74bb37f903"]
+---
+time 1694510351
+new [description:"Listen Alux" entry:"1694510351" modified:"1694510351" priority:"M" project:"routine" status:"pending" tags:"mindset" tags_mindset:"x" uuid:"12c4b8ba-f673-4a5e-b171-f2e1583315d5"]
+---
+time 1694510351
+new [description:"Cold shower" entry:"1694510351" modified:"1694510351" priority:"M" project:"routine" status:"pending" tags:"care" tags_care:"x" uuid:"2d8604a6-eb04-46c2-aca6-92d30791f81a"]
+---
+time 1694510351
+new [description:"Listen German" entry:"1694510351" modified:"1694510351" priority:"M" project:"routine" status:"pending" tags:"education" tags_education:"x" uuid:"5fd1d70a-0722-46e9-b9e4-3b2561f9748b"]
+---
+time 1694510356
+new [description:"Meditate 15 at 8" due:"1694523600" entry:"1694510356" modified:"1694510356" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"06d0feb4-457f-4683-a4ba-7c1e6710af5e"]
+---
+time 1694510356
+new [description:"Meditate 15 at 12" due:"1694538000" entry:"1694510356" modified:"1694510356" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"d2f74165-71c4-408e-93d6-b4479ac4f887"]
+---
+time 1694510356
+new [description:"Meditate 15 at 4" due:"1694595600" entry:"1694510356" modified:"1694510356" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"994290e5-a483-45de-bbff-f3f974c662b2"]
+---
+time 1694510486
+new [description:"text Henrique to ask for job opening status and ask for feedback use gpt for this" entry:"1694510486" modified:"1694510486" status:"pending" uuid:"3fcef2cd-5e0f-40a7-ad97-a1a5818f08c7"]
+---
+time 1694510519
+old [description:"text Henrique to ask for job opening status and ask for feedback use gpt for this" entry:"1694510486" modified:"1694510486" status:"pending" uuid:"3fcef2cd-5e0f-40a7-ad97-a1a5818f08c7"]
+new [description:"text Henrique to ask for job opening status and ask for feedback use gpt for this" entry:"1694510486" modified:"1694510519" project:"portfolio" status:"pending" uuid:"3fcef2cd-5e0f-40a7-ad97-a1a5818f08c7"]
+---
+time 1694510910
+new [description:"Replace Jane image w\/ 3D" entry:"1694510910" modified:"1694510910" project:"portfolio" status:"pending" tags:"website" tags_website:"x" uuid:"9bea7030-4888-4be0-bfcc-d98c22db5ff9"]
+---
+time 1694510987
+new [description:"Clean the room mess" entry:"1694510987" modified:"1694510987" project:"domestic" status:"pending" uuid:"0c2626da-cf37-49cb-9535-d8dc9faa6229"]
+---
+time 1694511075
+new [description:"Colors background" entry:"1694511075" modified:"1694511075" project:"portfolio" status:"pending" uuid:"a02542a2-77d8-44c6-a797-22b6817f10ce"]
+---
+time 1694511178
+new [description:"Solve leetcode 424" entry:"1694511178" modified:"1694511178" project:"Algorithms" status:"pending" tags:"Education,growth" tags_Education:"x" tags_growth:"x" uuid:"f1fc4de6-7b6d-441a-8c74-8405bff76c1c"]
+---
+time 1694511255
+new [description:"Cook breakfast" entry:"1694511255" modified:"1694511255" priority:"M" project:"domestic" status:"pending" uuid:"67b55e5a-28ef-48bf-a160-f2fe4c5558ce"]
+---
+time 1694511286
+new [description:"Cook lunch" entry:"1694511286" modified:"1694511286" priority:"M" project:"domestic" status:"pending" uuid:"f705cdf3-d697-4e31-a168-4e6bc7303a32"]
+---
+time 1694511366
+new [description:"Text Bro to go Gringo's Tuesdays" entry:"1694511366" modified:"1694511366" project:"portofolio" status:"pending" uuid:"760ca928-d52a-43d5-8abe-aa9de49c7d20"]
+---
+time 1694511447
+new [description:"Go to Gringo's Tuesdays" due:"1694552400" entry:"1694511447" modified:"1694511447" project:"portfolio" status:"pending" uuid:"c046d444-dc48-4cfb-bdcd-c4042a68012b"]
+---
+time 1694511466
+old [description:"Text Bro to go Gringo's Tuesdays" entry:"1694511366" modified:"1694511366" project:"portofolio" status:"pending" uuid:"760ca928-d52a-43d5-8abe-aa9de49c7d20"]
+new [description:"Text Bro to go Gringo's Tuesdays" entry:"1694511366" modified:"1694511466" project:"portfolio" status:"pending" uuid:"760ca928-d52a-43d5-8abe-aa9de49c7d20"]
+---
+time 1694512651
+new [description:"Grind the 'Using Dates Effectively' section of Taskwarrior docs" entry:"1694512651" modified:"1694512651" priority:"M" status:"pending" tags:"Education,growth" tags_Education:"x" tags_growth:"x" uuid:"7b877af9-5a88-4efd-885c-928c3a925b5a"]
+---
+time 1694512718
+old [description:"Grind the 'Using Dates Effectively' section of Taskwarrior docs" entry:"1694512651" modified:"1694512651" priority:"M" status:"pending" tags:"Education,growth" tags_Education:"x" tags_growth:"x" uuid:"7b877af9-5a88-4efd-885c-928c3a925b5a"]
+new [description:"Grind the 'Using Dates Effectively' section of Taskwarrior docs" entry:"1694512651" modified:"1694512718" priority:"M" project:"Taskwoarrior" status:"pending" tags:"Education,growth" tags_Education:"x" tags_growth:"x" uuid:"7b877af9-5a88-4efd-885c-928c3a925b5a"]
+---
+time 1694512757
+old [description:"Go to Gringo's Tuesdays" due:"1694552400" entry:"1694511447" modified:"1694511447" project:"portfolio" status:"pending" uuid:"c046d444-dc48-4cfb-bdcd-c4042a68012b"]
+new [description:"Go to Gringo's Tuesdays" due:"1694552400" entry:"1694511447" modified:"1694512757" status:"pending" uuid:"c046d444-dc48-4cfb-bdcd-c4042a68012b"]
+---
+time 1694512784
+old [description:"Go to Gringo's Tuesdays" due:"1694552400" entry:"1694511447" modified:"1694512757" status:"pending" uuid:"c046d444-dc48-4cfb-bdcd-c4042a68012b"]
+new [description:"Go to Gringo's Tuesdays" due:"1694552400" entry:"1694511447" modified:"1694512784" project:"routine" status:"pending" uuid:"c046d444-dc48-4cfb-bdcd-c4042a68012b"]
+---
+time 1694512820
+old [description:"Solve leetcode 424" entry:"1694511178" modified:"1694511178" project:"Algorithms" status:"pending" tags:"Education,growth" tags_Education:"x" tags_growth:"x" uuid:"f1fc4de6-7b6d-441a-8c74-8405bff76c1c"]
+new [description:"Solve leetcode 424" entry:"1694511178" modified:"1694512820" project:"Algorithms" start:"1694512820" status:"pending" tags:"Education,growth" tags_Education:"x" tags_growth:"x" uuid:"f1fc4de6-7b6d-441a-8c74-8405bff76c1c"]
+---
+time 1694513132
+old [description:"Solve leetcode 424" entry:"1694511178" modified:"1694512820" project:"Algorithms" start:"1694512820" status:"pending" tags:"Education,growth" tags_Education:"x" tags_growth:"x" uuid:"f1fc4de6-7b6d-441a-8c74-8405bff76c1c"]
+new [description:"Solve leetcode 424" entry:"1694511178" modified:"1694513132" project:"Algorithms" status:"pending" tags:"Education,growth" tags_Education:"x" tags_growth:"x" uuid:"f1fc4de6-7b6d-441a-8c74-8405bff76c1c"]
+---
+time 1694513143
+old [description:"Grind the 'Using Dates Effectively' section of Taskwarrior docs" entry:"1694512651" modified:"1694512718" priority:"M" project:"Taskwoarrior" status:"pending" tags:"Education,growth" tags_Education:"x" tags_growth:"x" uuid:"7b877af9-5a88-4efd-885c-928c3a925b5a"]
+new [description:"Grind the 'Using Dates Effectively' section of Taskwarrior docs" entry:"1694512651" modified:"1694513143" priority:"M" project:"Taskwoarrior" start:"1694513143" status:"pending" tags:"Education,growth" tags_Education:"x" tags_growth:"x" uuid:"7b877af9-5a88-4efd-885c-928c3a925b5a"]
+---
+time 1694513367
+old [description:"set an special tmux script for task warrior" entry:"1693234210" modified:"1693404955" priority:"M" status:"pending" tags:"setup" tags_setup:"x" uuid:"2754543e-df11-4a62-a3ff-ca687d6bebf6"]
+new [description:"set an special tmux script for task warrior" entry:"1693234210" modified:"1694513367" priority:"M" project:"Taskwarrior" status:"pending" tags:"setup" tags_setup:"x" uuid:"2754543e-df11-4a62-a3ff-ca687d6bebf6"]
+---
+time 1694513392
+old [description:"Grind the 'Using Dates Effectively' section of Taskwarrior docs" entry:"1694512651" modified:"1694513143" priority:"M" project:"Taskwoarrior" start:"1694513143" status:"pending" tags:"Education,growth" tags_Education:"x" tags_growth:"x" uuid:"7b877af9-5a88-4efd-885c-928c3a925b5a"]
+new [description:"Grind the 'Using Dates Effectively' section of Taskwarrior docs" entry:"1694512651" modified:"1694513392" priority:"M" project:"Taskwarrior" start:"1694513143" status:"pending" tags:"Education,growth" tags_Education:"x" tags_growth:"x" uuid:"7b877af9-5a88-4efd-885c-928c3a925b5a"]
+---
+time 1694520240
+old [description:"Grind the 'Using Dates Effectively' section of Taskwarrior docs" entry:"1694512651" modified:"1694513392" priority:"M" project:"Taskwarrior" start:"1694513143" status:"pending" tags:"Education,growth" tags_Education:"x" tags_growth:"x" uuid:"7b877af9-5a88-4efd-885c-928c3a925b5a"]
+new [description:"Grind the 'Using Dates Effectively' section of Taskwarrior docs" end:"1694520240" entry:"1694512651" modified:"1694520240" priority:"M" project:"Taskwarrior" status:"completed" tags:"Education,growth" tags_Education:"x" tags_growth:"x" uuid:"7b877af9-5a88-4efd-885c-928c3a925b5a"]
+---
+time 1694520255
+old [description:"Cardio 20 Min" entry:"1694510351" modified:"1694510351" priority:"M" project:"routine" status:"pending" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"ef579c9a-7a29-4353-a737-4b74bb37f903"]
+new [description:"Cardio 20 Min" entry:"1694510351" modified:"1694520255" priority:"M" project:"routine" start:"1694520255" status:"pending" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"ef579c9a-7a29-4353-a737-4b74bb37f903"]
+---
+time 1694520257
+old [description:"Listen Alux" entry:"1694510351" modified:"1694510351" priority:"M" project:"routine" status:"pending" tags:"mindset" tags_mindset:"x" uuid:"12c4b8ba-f673-4a5e-b171-f2e1583315d5"]
+new [description:"Listen Alux" entry:"1694510351" modified:"1694520257" priority:"M" project:"routine" start:"1694520257" status:"pending" tags:"mindset" tags_mindset:"x" uuid:"12c4b8ba-f673-4a5e-b171-f2e1583315d5"]
+---
+time 1694522489
+old [description:"Cardio 20 Min" entry:"1694510351" modified:"1694520255" priority:"M" project:"routine" start:"1694520255" status:"pending" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"ef579c9a-7a29-4353-a737-4b74bb37f903"]
+new [description:"Cardio 20 Min" end:"1694522489" entry:"1694510351" modified:"1694522489" priority:"M" project:"routine" status:"completed" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"ef579c9a-7a29-4353-a737-4b74bb37f903"]
+---
+time 1694522490
+old [description:"Listen Alux" entry:"1694510351" modified:"1694520257" priority:"M" project:"routine" start:"1694520257" status:"pending" tags:"mindset" tags_mindset:"x" uuid:"12c4b8ba-f673-4a5e-b171-f2e1583315d5"]
+new [description:"Listen Alux" end:"1694522490" entry:"1694510351" modified:"1694522490" priority:"M" project:"routine" status:"completed" tags:"mindset" tags_mindset:"x" uuid:"12c4b8ba-f673-4a5e-b171-f2e1583315d5"]
+---
+time 1694522507
+old [description:"Cold shower" entry:"1694510351" modified:"1694510351" priority:"M" project:"routine" status:"pending" tags:"care" tags_care:"x" uuid:"2d8604a6-eb04-46c2-aca6-92d30791f81a"]
+new [description:"Cold shower" entry:"1694510351" modified:"1694522507" priority:"M" project:"routine" start:"1694522507" status:"pending" tags:"care" tags_care:"x" uuid:"2d8604a6-eb04-46c2-aca6-92d30791f81a"]
+---
+time 1694522511
+old [description:"Listen German" entry:"1694510351" modified:"1694510351" priority:"M" project:"routine" status:"pending" tags:"education" tags_education:"x" uuid:"5fd1d70a-0722-46e9-b9e4-3b2561f9748b"]
+new [description:"Listen German" entry:"1694510351" modified:"1694522511" priority:"M" project:"routine" start:"1694522511" status:"pending" tags:"education" tags_education:"x" uuid:"5fd1d70a-0722-46e9-b9e4-3b2561f9748b"]
+---
+time 1694526894
+old [description:"Meditate 15 at 8" due:"1694523600" entry:"1694510356" modified:"1694510356" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"06d0feb4-457f-4683-a4ba-7c1e6710af5e"]
+new [description:"Meditate 15 at 8" due:"1694523600" entry:"1694510356" modified:"1694526894" priority:"L" project:"routine" start:"1694526894" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"06d0feb4-457f-4683-a4ba-7c1e6710af5e"]
+---
+time 1694526895
+old [description:"Meditate 15 at 8" due:"1694523600" entry:"1694510356" modified:"1694526894" priority:"L" project:"routine" start:"1694526894" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"06d0feb4-457f-4683-a4ba-7c1e6710af5e"]
+new [description:"Meditate 15 at 8" due:"1694523600" entry:"1694510356" modified:"1694526895" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"06d0feb4-457f-4683-a4ba-7c1e6710af5e"]
+---
+time 1694526901
+old [description:"Meditate 15 at 8" due:"1694523600" entry:"1694510356" modified:"1694526895" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"06d0feb4-457f-4683-a4ba-7c1e6710af5e"]
+new [description:"Meditate 15 at 8" due:"1694523600" end:"1694526901" entry:"1694510356" modified:"1694526901" priority:"L" project:"routine" status:"completed" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"06d0feb4-457f-4683-a4ba-7c1e6710af5e"]
+---
+time 1694526907
+old [description:"Cold shower" entry:"1694510351" modified:"1694522507" priority:"M" project:"routine" start:"1694522507" status:"pending" tags:"care" tags_care:"x" uuid:"2d8604a6-eb04-46c2-aca6-92d30791f81a"]
+new [description:"Cold shower" end:"1694526907" entry:"1694510351" modified:"1694526907" priority:"M" project:"routine" status:"completed" tags:"care" tags_care:"x" uuid:"2d8604a6-eb04-46c2-aca6-92d30791f81a"]
+---
+time 1694526908
+old [description:"Listen German" entry:"1694510351" modified:"1694522511" priority:"M" project:"routine" start:"1694522511" status:"pending" tags:"education" tags_education:"x" uuid:"5fd1d70a-0722-46e9-b9e4-3b2561f9748b"]
+new [description:"Listen German" end:"1694526908" entry:"1694510351" modified:"1694526908" priority:"M" project:"routine" status:"completed" tags:"education" tags_education:"x" uuid:"5fd1d70a-0722-46e9-b9e4-3b2561f9748b"]
+---
+time 1694526912
+old [description:"Cook breakfast" entry:"1694511255" modified:"1694511255" priority:"M" project:"domestic" status:"pending" uuid:"67b55e5a-28ef-48bf-a160-f2fe4c5558ce"]
+new [description:"Cook breakfast" end:"1694526912" entry:"1694511255" modified:"1694526912" priority:"M" project:"domestic" status:"completed" uuid:"67b55e5a-28ef-48bf-a160-f2fe4c5558ce"]
+---
+time 1694526960
+new [description:"Shave" entry:"1694526960" modified:"1694526960" priority:"M" project:"routine" status:"pending" tags:"grooming" tags_grooming:"x" uuid:"b01d1873-f031-4ce6-a03a-b659519aa074"]
+---
+time 1694526986
+old [description:"text Henrique to ask for job opening status and ask for feedback use gpt for this" entry:"1694510486" modified:"1694510519" project:"portfolio" status:"pending" uuid:"3fcef2cd-5e0f-40a7-ad97-a1a5818f08c7"]
+new [description:"text Henrique to ask for job opening status and ask for feedback use gpt for this" entry:"1694510486" modified:"1694526986" project:"portfolio" start:"1694526986" status:"pending" uuid:"3fcef2cd-5e0f-40a7-ad97-a1a5818f08c7"]
+---
+time 1694528182
+old [description:"text Henrique to ask for job opening status and ask for feedback use gpt for this" entry:"1694510486" modified:"1694526986" project:"portfolio" start:"1694526986" status:"pending" uuid:"3fcef2cd-5e0f-40a7-ad97-a1a5818f08c7"]
+new [description:"email Henrique to ask for job opening status and ask for feedback" entry:"1694510486" modified:"1694528182" project:"portfolio" start:"1694526986" status:"pending" uuid:"3fcef2cd-5e0f-40a7-ad97-a1a5818f08c7"]
+---
+time 1694528185
+old [description:"email Henrique to ask for job opening status and ask for feedback" entry:"1694510486" modified:"1694528182" project:"portfolio" start:"1694526986" status:"pending" uuid:"3fcef2cd-5e0f-40a7-ad97-a1a5818f08c7"]
+new [description:"email Henrique to ask for job opening status and ask for feedback" end:"1694528185" entry:"1694510486" modified:"1694528185" project:"portfolio" status:"completed" uuid:"3fcef2cd-5e0f-40a7-ad97-a1a5818f08c7"]
+---
+time 1694529731
+new [description:"pay GAS billing" due:"1695099600" entry:"1694529731" modified:"1694529731" status:"pending" uuid:"d8fdf807-8ce4-407c-9e73-b8a5b5349e29"]
+---
+time 1694532104
+new [description:"add 👷 emoji to started task" entry:"1694532104" modified:"1694532104" project:"Taskwarrior" status:"pending" tags:"setup" tags_setup:"x" uuid:"1f3ba185-97a7-4242-9f1b-d7cafe12b5ba"]
+---
+time 1694535415
+old [description:"Shave" entry:"1694526960" modified:"1694526960" priority:"M" project:"routine" status:"pending" tags:"grooming" tags_grooming:"x" uuid:"b01d1873-f031-4ce6-a03a-b659519aa074"]
+new [description:"Shave" entry:"1694526960" modified:"1694535415" priority:"M" project:"routine" start:"1694535415" status:"pending" tags:"grooming" tags_grooming:"x" uuid:"b01d1873-f031-4ce6-a03a-b659519aa074"]
+---
+time 1694535876
+old [description:"Shave" entry:"1694526960" modified:"1694535415" priority:"M" project:"routine" start:"1694535415" status:"pending" tags:"grooming" tags_grooming:"x" uuid:"b01d1873-f031-4ce6-a03a-b659519aa074"]
+new [description:"Shave" end:"1694535876" entry:"1694526960" modified:"1694535876" priority:"M" project:"routine" status:"completed" tags:"grooming" tags_grooming:"x" uuid:"b01d1873-f031-4ce6-a03a-b659519aa074"]
+---
+time 1694536004
+old [description:"pay GAS billing" due:"1695099600" entry:"1694529731" modified:"1694529731" status:"pending" uuid:"d8fdf807-8ce4-407c-9e73-b8a5b5349e29"]
+new [description:"pay GAS billing" due:"1695099600" entry:"1694529731" modified:"1694536004" start:"1694536004" status:"pending" uuid:"d8fdf807-8ce4-407c-9e73-b8a5b5349e29"]
+---
+time 1694536007
+old [description:"Meditate 15 at 12" due:"1694538000" entry:"1694510356" modified:"1694510356" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"d2f74165-71c4-408e-93d6-b4479ac4f887"]
+new [description:"Meditate 15 at 12" due:"1694538000" entry:"1694510356" modified:"1694536007" priority:"L" project:"routine" start:"1694536007" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"d2f74165-71c4-408e-93d6-b4479ac4f887"]
+---
+time 1694536017
+old [description:"pay GAS billing" due:"1695099600" entry:"1694529731" modified:"1694536004" start:"1694536004" status:"pending" uuid:"d8fdf807-8ce4-407c-9e73-b8a5b5349e29"]
+new [description:"pay GAS billing" due:"1695099600" entry:"1694529731" modified:"1694536017" status:"pending" uuid:"d8fdf807-8ce4-407c-9e73-b8a5b5349e29"]
+---
+time 1694536057
+old [description:"Solve leetcode 424" entry:"1694511178" modified:"1694513132" project:"Algorithms" status:"pending" tags:"Education,growth" tags_Education:"x" tags_growth:"x" uuid:"f1fc4de6-7b6d-441a-8c74-8405bff76c1c"]
+new [description:"Solve leetcode 424" entry:"1694511178" modified:"1694536057" project:"Algorithms" start:"1694536057" status:"pending" tags:"Education,growth" tags_Education:"x" tags_growth:"x" uuid:"f1fc4de6-7b6d-441a-8c74-8405bff76c1c"]
+---
+time 1694536394
+new [description:"Wash dishes" entry:"1694536394" modified:"1694536394" project:"domestic" status:"pending" tags:"clean" tags_clean:"x" uuid:"b6bc1e2e-4db0-41f0-8cc2-5c582f108574"]
+---
+time 1694537736
+old [description:"Meditate 15 at 12" due:"1694538000" entry:"1694510356" modified:"1694536007" priority:"L" project:"routine" start:"1694536007" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"d2f74165-71c4-408e-93d6-b4479ac4f887"]
+new [description:"Meditate 15 at 12" due:"1694538000" end:"1694537736" entry:"1694510356" modified:"1694537736" priority:"L" project:"routine" status:"completed" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"d2f74165-71c4-408e-93d6-b4479ac4f887"]
+---
+time 1694537765
+old [description:"Clean the room mess" entry:"1694510987" modified:"1694510987" project:"domestic" status:"pending" uuid:"0c2626da-cf37-49cb-9535-d8dc9faa6229"]
+new [description:"Clean the room mess" entry:"1694510987" modified:"1694537765" project:"domestic" start:"1694537765" status:"pending" uuid:"0c2626da-cf37-49cb-9535-d8dc9faa6229"]
+---
+time 1694537863
+old [description:"Clean the room mess" entry:"1694510987" modified:"1694537765" project:"domestic" start:"1694537765" status:"pending" uuid:"0c2626da-cf37-49cb-9535-d8dc9faa6229"]
+new [description:"Clean the room mess" entry:"1694510987" modified:"1694537863" project:"domestic" status:"pending" uuid:"0c2626da-cf37-49cb-9535-d8dc9faa6229"]
+---
+time 1694544244
+old [description:"Solve leetcode 424" entry:"1694511178" modified:"1694536057" project:"Algorithms" start:"1694536057" status:"pending" tags:"Education,growth" tags_Education:"x" tags_growth:"x" uuid:"f1fc4de6-7b6d-441a-8c74-8405bff76c1c"]
+new [description:"Solve leetcode 424" end:"1694544244" entry:"1694511178" modified:"1694544244" project:"Algorithms" status:"completed" tags:"Education,growth" tags_Education:"x" tags_growth:"x" uuid:"f1fc4de6-7b6d-441a-8c74-8405bff76c1c"]
+---
+time 1694544270
+old [description:"Cook lunch" entry:"1694511286" modified:"1694511286" priority:"M" project:"domestic" status:"pending" uuid:"f705cdf3-d697-4e31-a168-4e6bc7303a32"]
+new [description:"Cook lunch" entry:"1694511286" modified:"1694544270" priority:"M" project:"domestic" start:"1694544270" status:"pending" uuid:"f705cdf3-d697-4e31-a168-4e6bc7303a32"]
+---
+time 1694547900
+old [description:"Cook lunch" entry:"1694511286" modified:"1694544270" priority:"M" project:"domestic" start:"1694544270" status:"pending" uuid:"f705cdf3-d697-4e31-a168-4e6bc7303a32"]
+new [description:"Cook lunch" end:"1694547900" entry:"1694511286" modified:"1694547900" priority:"M" project:"domestic" status:"completed" uuid:"f705cdf3-d697-4e31-a168-4e6bc7303a32"]
+---
+time 1694547910
+old [description:"clean my room mess" entry:"1694414045" modified:"1694414092" project:"domestic" status:"pending" tags:"clean,domestic" tags_clean:"x" tags_domestic:"x" uuid:"4e44fc10-6201-4220-b2a3-dd86dd35361a"]
+new [description:"clean my room mess" end:"1694547910" entry:"1694414045" modified:"1694547910" project:"domestic" status:"deleted" tags:"clean,domestic" tags_clean:"x" tags_domestic:"x" uuid:"4e44fc10-6201-4220-b2a3-dd86dd35361a"]
+---
+time 1694547914
+old [description:"Wash dishes" entry:"1694536394" modified:"1694536394" project:"domestic" status:"pending" tags:"clean" tags_clean:"x" uuid:"b6bc1e2e-4db0-41f0-8cc2-5c582f108574"]
+new [description:"Wash dishes" end:"1694547914" entry:"1694536394" modified:"1694547914" project:"domestic" status:"completed" tags:"clean" tags_clean:"x" uuid:"b6bc1e2e-4db0-41f0-8cc2-5c582f108574"]
+---
+time 1694547918
+old [description:"Clean the room mess" entry:"1694510987" modified:"1694537863" project:"domestic" status:"pending" uuid:"0c2626da-cf37-49cb-9535-d8dc9faa6229"]
+new [description:"Clean the room mess" end:"1694547918" entry:"1694510987" modified:"1694547918" project:"domestic" status:"deleted" uuid:"0c2626da-cf37-49cb-9535-d8dc9faa6229"]
+---
+time 1694550650
+old [description:"Text Bro to go Gringo's Tuesdays" entry:"1694511366" modified:"1694511466" project:"portfolio" status:"pending" uuid:"760ca928-d52a-43d5-8abe-aa9de49c7d20"]
+new [description:"Text Bro to go Gringo's Tuesdays" end:"1694550650" entry:"1694511366" modified:"1694550650" project:"portfolio" status:"completed" uuid:"760ca928-d52a-43d5-8abe-aa9de49c7d20"]
+---
+time 1694555392
+old [description:"Go to Gringo's Tuesdays" due:"1694552400" entry:"1694511447" modified:"1694512784" project:"routine" status:"pending" uuid:"c046d444-dc48-4cfb-bdcd-c4042a68012b"]
+new [description:"Go to Gringo's Tuesdays" due:"1694552400" end:"1694555392" entry:"1694511447" modified:"1694555392" project:"routine" status:"deleted" uuid:"c046d444-dc48-4cfb-bdcd-c4042a68012b"]
+---
+time 1694555401
+old [description:"Replace Jane image w\/ 3D" entry:"1694510910" modified:"1694510910" project:"portfolio" status:"pending" tags:"website" tags_website:"x" uuid:"9bea7030-4888-4be0-bfcc-d98c22db5ff9"]
+new [description:"Replace Jane image w\/ 3D" end:"1694555401" entry:"1694510910" modified:"1694555401" project:"portfolio" status:"completed" tags:"website" tags_website:"x" uuid:"9bea7030-4888-4be0-bfcc-d98c22db5ff9"]
+---
+time 1694555416
+old [description:"Meditate 15 at 4" due:"1694595600" entry:"1694510356" modified:"1694510356" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"994290e5-a483-45de-bbff-f3f974c662b2"]
+new [description:"Meditate 15 at 4" due:"1694595600" entry:"1694510356" modified:"1694555416" priority:"L" project:"routine" start:"1694555416" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"994290e5-a483-45de-bbff-f3f974c662b2"]
+---
+time 1694596653
+old [description:"Colors background" entry:"1694511075" modified:"1694511075" project:"portfolio" status:"pending" uuid:"a02542a2-77d8-44c6-a797-22b6817f10ce"]
+new [description:"Colors background" end:"1694596653" entry:"1694511075" modified:"1694596653" project:"portfolio" status:"completed" uuid:"a02542a2-77d8-44c6-a797-22b6817f10ce"]
+---
+time 1694596666
+old [description:"Meditate 15 at 4" due:"1694595600" entry:"1694510356" modified:"1694555416" priority:"L" project:"routine" start:"1694555416" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"994290e5-a483-45de-bbff-f3f974c662b2"]
+new [description:"Meditate 15 at 4" due:"1694595600" end:"1694596666" entry:"1694510356" modified:"1694596666" priority:"L" project:"routine" start:"1694555416" status:"deleted" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"994290e5-a483-45de-bbff-f3f974c662b2"]
+---
+time 1694596686
+new [description:"Cardio 20 Min" entry:"1694596686" modified:"1694596686" priority:"M" project:"routine" status:"pending" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"370856f3-3ef5-463b-bf2c-b1f4f81f86e1"]
+---
+time 1694596686
+new [description:"Listen Alux" entry:"1694596686" modified:"1694596686" priority:"M" project:"routine" status:"pending" tags:"mindset" tags_mindset:"x" uuid:"eb43f954-0762-40ca-a07b-1fa2ed863dbb"]
+---
+time 1694596686
+new [description:"Cold shower" entry:"1694596686" modified:"1694596686" priority:"M" project:"routine" status:"pending" tags:"care" tags_care:"x" uuid:"c5551f20-5b37-45c3-9508-b08e600e1eaf"]
+---
+time 1694596686
+new [description:"Listen German" entry:"1694596686" modified:"1694596686" priority:"M" project:"routine" status:"pending" tags:"education" tags_education:"x" uuid:"ee6e902a-55df-414a-8c94-b65533cc5e70"]
+---
+time 1694596692
+new [description:"Meditate 15 at 8" due:"1694610000" entry:"1694596692" modified:"1694596692" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"3864af47-3726-457b-9137-ab755aafe05a"]
+---
+time 1694596692
+new [description:"Meditate 15 at 12" due:"1694624400" entry:"1694596692" modified:"1694596692" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"f0d8a967-6f93-46f5-92b0-1adbcf0a5cb3"]
+---
+time 1694596692
+new [description:"Meditate 15 at 4" due:"1694682000" entry:"1694596692" modified:"1694596692" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"50f2724f-6a7d-42b7-80a8-982810c66261"]
+---
+time 1694596736
+new [description:"Cook lunch" entry:"1694596736" modified:"1694596736" priority:"M" project:"domestic" status:"pending" uuid:"dbced37e-7381-463b-83cd-7e831bcaeac2"]
+---
+time 1694596749
+new [description:"Cook breakfast" entry:"1694596749" modified:"1694596749" priority:"M" project:"domestic" status:"pending" uuid:"e16fb099-5df9-449e-b145-d0b3cc6889ef"]
+---
+time 1694596809
+new [description:"make bed" entry:"1694596809" modified:"1694596809" project:"domestic" status:"pending" uuid:"3982d598-761c-420c-be73-86223a6d98ec"]
+---
+time 1694597015
+new [description:"Review the 'Unicode' section of Taskwarrior docs" entry:"1694597015" modified:"1694597015" project:"Taskwarrior" status:"pending" uuid:"fb1932de-67c2-4bf0-9182-2234041e04bc"]
+---
+time 1694597049
+new [description:"Review the 'Searching' section of Taskwarrior docs" entry:"1694597049" modified:"1694597049" project:"Taskwarrior" status:"pending" tags:"review" tags_review:"x" uuid:"1386e637-c127-4b11-b1dd-949e9dbf113f"]
+---
+time 1694597069
+new [description:"Review the 'Reports' section of Taskwarrior docs" entry:"1694597069" modified:"1694597069" project:"Taskwarrior" status:"pending" tags:"review" tags_review:"x" uuid:"4cc87c87-ab65-44dc-8dcc-a617c89e1d1a"]
+---
+time 1694597093
+old [description:"Review the 'Unicode' section of Taskwarrior docs" entry:"1694597015" modified:"1694597015" project:"Taskwarrior" status:"pending" uuid:"fb1932de-67c2-4bf0-9182-2234041e04bc"]
+new [description:"Review the 'Unicode' section of Taskwarrior docs" entry:"1694597015" modified:"1694597093" project:"Taskwarrior" status:"pending" tags:"review" tags_review:"x" uuid:"fb1932de-67c2-4bf0-9182-2234041e04bc"]
+---
+time 1694597125
+old [description:"Cook lunch" entry:"1694596736" modified:"1694596736" priority:"M" project:"domestic" status:"pending" uuid:"dbced37e-7381-463b-83cd-7e831bcaeac2"]
+new [description:"Cook lunch" entry:"1694596736" modified:"1694597125" priority:"M" project:"domestic" status:"pending" tags:"cook" tags_cook:"x" uuid:"dbced37e-7381-463b-83cd-7e831bcaeac2"]
+---
+time 1694597146
+old [description:"Cook breakfast" entry:"1694596749" modified:"1694596749" priority:"M" project:"domestic" status:"pending" uuid:"e16fb099-5df9-449e-b145-d0b3cc6889ef"]
+new [description:"Cook breakfast" entry:"1694596749" modified:"1694597146" priority:"M" project:"domestic" status:"pending" tags:"cook" tags_cook:"x" uuid:"e16fb099-5df9-449e-b145-d0b3cc6889ef"]
+---
+time 1694597160
+old [description:"pay GAS billing" due:"1695099600" entry:"1694529731" modified:"1694536017" status:"pending" uuid:"d8fdf807-8ce4-407c-9e73-b8a5b5349e29"]
+new [description:"pay GAS billing" due:"1695099600" entry:"1694529731" modified:"1694597160" status:"pending" tags:"billing" tags_billing:"x" uuid:"d8fdf807-8ce4-407c-9e73-b8a5b5349e29"]
+---
+time 1694597176
+old [description:"make bed" entry:"1694596809" modified:"1694596809" project:"domestic" status:"pending" uuid:"3982d598-761c-420c-be73-86223a6d98ec"]
+new [description:"make bed" entry:"1694596809" modified:"1694597176" project:"domestic" status:"pending" tags:"clean" tags_clean:"x" uuid:"3982d598-761c-420c-be73-86223a6d98ec"]
+---
+time 1694597383
+new [description:"get more technology logos" entry:"1694597382" modified:"1694597382" project:"portfolio" status:"pending" tags:"web_research" tags_web_research:"x" uuid:"aede6140-5052-4099-8c0b-ec54a2765d1f"]
+---
+time 1694597456
+new [description:"remove non-correponding technology logos" entry:"1694597456" modified:"1694597456" project:"portfolio" status:"pending" uuid:"560d410e-b728-451e-a131-e40a25024f51"]
+---
+time 1694597481
+old [description:"pay GAS billing" due:"1695099600" entry:"1694529731" modified:"1694597160" status:"pending" tags:"billing" tags_billing:"x" uuid:"d8fdf807-8ce4-407c-9e73-b8a5b5349e29"]
+new [description:"pay GAS billing" due:"1695099600" entry:"1694529731" modified:"1694597481" project:"domestic" status:"pending" tags:"billing" tags_billing:"x" uuid:"d8fdf807-8ce4-407c-9e73-b8a5b5349e29"]
+---
+time 1694597513
+old [description:"prepare a german speech" entry:"1693228437" modified:"1693399011" priority:"L" status:"pending" tags:"growth" tags_growth:"x" uuid:"3e746ed4-6b9f-4d54-bd74-9b9eb71ccf13"]
+new [description:"prepare a german speech" entry:"1693228437" modified:"1694597513" priority:"L" project:"Deutsch" status:"pending" tags:"growth" tags_growth:"x" uuid:"3e746ed4-6b9f-4d54-bd74-9b9eb71ccf13"]
+---
+time 1694597558
+old [description:"Listen German" entry:"1694596686" modified:"1694596686" priority:"M" project:"routine" status:"pending" tags:"education" tags_education:"x" uuid:"ee6e902a-55df-414a-8c94-b65533cc5e70"]
+new [description:"Listen German" entry:"1694596686" modified:"1694597558" priority:"M" project:"routine,Deutsch" status:"pending" tags:"education" tags_education:"x" uuid:"ee6e902a-55df-414a-8c94-b65533cc5e70"]
+---
+time 1694597730
+new [description:"Replace dummy lorem descriptions" entry:"1694597730" modified:"1694597730" project:"portfolio" status:"pending" uuid:"c09c8e3d-06c1-495d-b88f-e4028368d375"]
+---
+time 1694597757
+old [description:"Replace dummy lorem descriptions" entry:"1694597730" modified:"1694597730" project:"portfolio" status:"pending" uuid:"c09c8e3d-06c1-495d-b88f-e4028368d375"]
+new [description:"Replace dummy lorem descriptions" entry:"1694597730" modified:"1694597757" project:"portfolio" status:"pending" tags:"GPT" tags_GPT:"x" uuid:"c09c8e3d-06c1-495d-b88f-e4028368d375"]
+---
+time 1694597789
+old [description:"Replace dummy lorem descriptions" entry:"1694597730" modified:"1694597757" project:"portfolio" status:"pending" tags:"GPT" tags_GPT:"x" uuid:"c09c8e3d-06c1-495d-b88f-e4028368d375"]
+new [description:"Replace dummy lorem descriptions" entry:"1694597730" modified:"1694597789" project:"portfolio" status:"pending" tags:"AI" tags_AI:"x" uuid:"c09c8e3d-06c1-495d-b88f-e4028368d375"]
+---
+time 1694597818
+old [description:"prepare a german speech" entry:"1693228437" modified:"1694597513" priority:"L" project:"Deutsch" status:"pending" tags:"growth" tags_growth:"x" uuid:"3e746ed4-6b9f-4d54-bd74-9b9eb71ccf13"]
+new [description:"prepare a german speech" entry:"1693228437" modified:"1694597818" priority:"L" project:"Deutsch" status:"pending" tags:"AI" tags_AI:"x" uuid:"3e746ed4-6b9f-4d54-bd74-9b9eb71ccf13"]
+---
+time 1694597969
+new [description:"Replace the pink colors w\/ green" entry:"1694597969" modified:"1694597969" project:"portfolio" status:"pending" tags:"Dev" tags_Dev:"x" uuid:"2f258310-a874-435b-a854-6289257834c8"]
+---
+time 1694597985
+old [description:"remove non-correponding technology logos" entry:"1694597456" modified:"1694597456" project:"portfolio" status:"pending" uuid:"560d410e-b728-451e-a131-e40a25024f51"]
+new [description:"remove non-correponding technology logos" entry:"1694597456" modified:"1694597985" project:"portfolio" status:"pending" tags:"Dev" tags_Dev:"x" uuid:"560d410e-b728-451e-a131-e40a25024f51"]
+---
+time 1694597996
+old [description:"Replace dummy lorem descriptions" entry:"1694597730" modified:"1694597789" project:"portfolio" status:"pending" tags:"AI" tags_AI:"x" uuid:"c09c8e3d-06c1-495d-b88f-e4028368d375"]
+new [description:"Replace dummy lorem descriptions" entry:"1694597730" modified:"1694597996" project:"portfolio" status:"pending" tags:"AI,Dev" tags_AI:"x" tags_Dev:"x" uuid:"c09c8e3d-06c1-495d-b88f-e4028368d375"]
+---
+time 1694598187
+new [description:"Solve leetcode 567" entry:"1694598187" modified:"1694598187" project:"Algorithms" status:"pending" tags:"Education,growth" tags_Education:"x" tags_growth:"x" uuid:"077720e4-5a03-4b7c-b7bb-826ad9d82fbe"]
+---
+time 1694598234
+old [description:"Solve leetcode 567" entry:"1694598187" modified:"1694598187" project:"Algorithms" status:"pending" tags:"Education,growth" tags_Education:"x" tags_growth:"x" uuid:"077720e4-5a03-4b7c-b7bb-826ad9d82fbe"]
+new [description:"Solve leetcode 567 Permutation" entry:"1694598187" modified:"1694598234" project:"Algorithms" status:"pending" tags:"Education,growth" tags_Education:"x" tags_growth:"x" uuid:"077720e4-5a03-4b7c-b7bb-826ad9d82fbe"]
+---
+time 1694598309
+new [description:"Use a real email" entry:"1694598309" modified:"1694598309" project:"portfolio" status:"pending" tags:"Dev" tags_Dev:"x" uuid:"59f3bcdc-8a29-4ad4-9edb-17a1e96c875a"]
+---
+time 1694598534
+new [description:"Fix the mobile media query, put MainText first" entry:"1694598534" modified:"1694598534" project:"portfolio" status:"pending" tags:"Dev" tags_Dev:"x" uuid:"d02eb057-d093-4f2f-ada3-c5447724743e"]
+---
+time 1694599428
+old [description:"Review the 'Unicode' section of Taskwarrior docs" entry:"1694597015" modified:"1694597093" project:"Taskwarrior" status:"pending" tags:"review" tags_review:"x" uuid:"fb1932de-67c2-4bf0-9182-2234041e04bc"]
+new [description:"Review the 'Unicode' section of Taskwarrior docs" entry:"1694597015" modified:"1694599428" project:"Taskwarrior" start:"1694599428" status:"pending" tags:"review" tags_review:"x" uuid:"fb1932de-67c2-4bf0-9182-2234041e04bc"]
+---
+time 1694599432
+old [description:"Review the 'Searching' section of Taskwarrior docs" entry:"1694597049" modified:"1694597049" project:"Taskwarrior" status:"pending" tags:"review" tags_review:"x" uuid:"1386e637-c127-4b11-b1dd-949e9dbf113f"]
+new [description:"Review the 'Searching' section of Taskwarrior docs" entry:"1694597049" modified:"1694599432" project:"Taskwarrior" start:"1694599432" status:"pending" tags:"review" tags_review:"x" uuid:"1386e637-c127-4b11-b1dd-949e9dbf113f"]
+---
+time 1694599436
+old [description:"Review the 'Reports' section of Taskwarrior docs" entry:"1694597069" modified:"1694597069" project:"Taskwarrior" status:"pending" tags:"review" tags_review:"x" uuid:"4cc87c87-ab65-44dc-8dcc-a617c89e1d1a"]
+new [description:"Review the 'Reports' section of Taskwarrior docs" entry:"1694597069" modified:"1694599436" project:"Taskwarrior" start:"1694599436" status:"pending" tags:"review" tags_review:"x" uuid:"4cc87c87-ab65-44dc-8dcc-a617c89e1d1a"]
+---
+time 1694600325
+old [description:"Review the 'Unicode' section of Taskwarrior docs" entry:"1694597015" modified:"1694599428" project:"Taskwarrior" start:"1694599428" status:"pending" tags:"review" tags_review:"x" uuid:"fb1932de-67c2-4bf0-9182-2234041e04bc"]
+new [description:"Review the 'Unicode' section of Taskwarrior docs" end:"1694600325" entry:"1694597015" modified:"1694600325" project:"Taskwarrior" status:"completed" tags:"review" tags_review:"x" uuid:"fb1932de-67c2-4bf0-9182-2234041e04bc"]
+---
+time 1694607112
+old [description:"Review the 'Searching' section of Taskwarrior docs" entry:"1694597049" modified:"1694599432" project:"Taskwarrior" start:"1694599432" status:"pending" tags:"review" tags_review:"x" uuid:"1386e637-c127-4b11-b1dd-949e9dbf113f"]
+new [description:"Review the 'Searching' section of Taskwarrior docs" end:"1694607112" entry:"1694597049" modified:"1694607112" project:"Taskwarrior" status:"completed" tags:"review" tags_review:"x" uuid:"1386e637-c127-4b11-b1dd-949e9dbf113f"]
+---
+time 1694607113
+old [description:"Review the 'Reports' section of Taskwarrior docs" entry:"1694597069" modified:"1694599436" project:"Taskwarrior" start:"1694599436" status:"pending" tags:"review" tags_review:"x" uuid:"4cc87c87-ab65-44dc-8dcc-a617c89e1d1a"]
+new [description:"Review the 'Reports' section of Taskwarrior docs" end:"1694607113" entry:"1694597069" modified:"1694607113" project:"Taskwarrior" status:"completed" tags:"review" tags_review:"x" uuid:"4cc87c87-ab65-44dc-8dcc-a617c89e1d1a"]
+---
+time 1694607134
+old [description:"Cardio 20 Min" entry:"1694596686" modified:"1694596686" priority:"M" project:"routine" status:"pending" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"370856f3-3ef5-463b-bf2c-b1f4f81f86e1"]
+new [description:"Cardio 20 Min" entry:"1694596686" modified:"1694607134" priority:"M" project:"routine" start:"1694607134" status:"pending" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"370856f3-3ef5-463b-bf2c-b1f4f81f86e1"]
+---
+time 1694607140
+old [description:"Listen Alux" entry:"1694596686" modified:"1694596686" priority:"M" project:"routine" status:"pending" tags:"mindset" tags_mindset:"x" uuid:"eb43f954-0762-40ca-a07b-1fa2ed863dbb"]
+new [description:"Listen Alux" entry:"1694596686" modified:"1694607140" priority:"M" project:"routine" start:"1694607140" status:"pending" tags:"mindset" tags_mindset:"x" uuid:"eb43f954-0762-40ca-a07b-1fa2ed863dbb"]
+---
+time 1694612911
+old [description:"Cardio 20 Min" entry:"1694596686" modified:"1694607134" priority:"M" project:"routine" start:"1694607134" status:"pending" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"370856f3-3ef5-463b-bf2c-b1f4f81f86e1"]
+new [description:"Cardio 20 Min" end:"1694612911" entry:"1694596686" modified:"1694612911" priority:"M" project:"routine" status:"completed" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"370856f3-3ef5-463b-bf2c-b1f4f81f86e1"]
+---
+time 1694612913
+old [description:"Listen Alux" entry:"1694596686" modified:"1694607140" priority:"M" project:"routine" start:"1694607140" status:"pending" tags:"mindset" tags_mindset:"x" uuid:"eb43f954-0762-40ca-a07b-1fa2ed863dbb"]
+new [description:"Listen Alux" end:"1694612913" entry:"1694596686" modified:"1694612913" priority:"M" project:"routine" status:"completed" tags:"mindset" tags_mindset:"x" uuid:"eb43f954-0762-40ca-a07b-1fa2ed863dbb"]
+---
+time 1694612918
+old [description:"Cook breakfast" entry:"1694596749" modified:"1694597146" priority:"M" project:"domestic" status:"pending" tags:"cook" tags_cook:"x" uuid:"e16fb099-5df9-449e-b145-d0b3cc6889ef"]
+new [description:"Cook breakfast" end:"1694612918" entry:"1694596749" modified:"1694612918" priority:"M" project:"domestic" status:"completed" tags:"cook" tags_cook:"x" uuid:"e16fb099-5df9-449e-b145-d0b3cc6889ef"]
+---
+time 1694612925
+old [description:"Meditate 15 at 8" due:"1694610000" entry:"1694596692" modified:"1694596692" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"3864af47-3726-457b-9137-ab755aafe05a"]
+new [description:"Meditate 15 at 8" due:"1694610000" end:"1694612925" entry:"1694596692" modified:"1694612925" priority:"L" project:"routine" status:"completed" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"3864af47-3726-457b-9137-ab755aafe05a"]
+---
+time 1694612932
+old [description:"Listen German" entry:"1694596686" modified:"1694597558" priority:"M" project:"routine,Deutsch" status:"pending" tags:"education" tags_education:"x" uuid:"ee6e902a-55df-414a-8c94-b65533cc5e70"]
+new [description:"Listen German" end:"1694612932" entry:"1694596686" modified:"1694612932" priority:"M" project:"routine,Deutsch" status:"completed" tags:"education" tags_education:"x" uuid:"ee6e902a-55df-414a-8c94-b65533cc5e70"]
+---
+time 1694612942
+old [description:"Cold shower" entry:"1694596686" modified:"1694596686" priority:"M" project:"routine" status:"pending" tags:"care" tags_care:"x" uuid:"c5551f20-5b37-45c3-9508-b08e600e1eaf"]
+new [description:"Cold shower" end:"1694612942" entry:"1694596686" modified:"1694612942" priority:"M" project:"routine" status:"completed" tags:"care" tags_care:"x" uuid:"c5551f20-5b37-45c3-9508-b08e600e1eaf"]
+---
+time 1694612976
+old [description:"make bed" entry:"1694596809" modified:"1694597176" project:"domestic" status:"pending" tags:"clean" tags_clean:"x" uuid:"3982d598-761c-420c-be73-86223a6d98ec"]
+new [description:"make bed" entry:"1694596809" modified:"1694612976" project:"domestic" start:"1694612976" status:"pending" tags:"clean" tags_clean:"x" uuid:"3982d598-761c-420c-be73-86223a6d98ec"]
+---
+time 1694617606
+old [description:"make bed" entry:"1694596809" modified:"1694612976" project:"domestic" start:"1694612976" status:"pending" tags:"clean" tags_clean:"x" uuid:"3982d598-761c-420c-be73-86223a6d98ec"]
+new [description:"make bed" end:"1694617606" entry:"1694596809" modified:"1694617606" project:"domestic" status:"completed" tags:"clean" tags_clean:"x" uuid:"3982d598-761c-420c-be73-86223a6d98ec"]
+---
+time 1694617669
+old [description:"Replace the pink colors w\/ green" entry:"1694597969" modified:"1694597969" project:"portfolio" status:"pending" tags:"Dev" tags_Dev:"x" uuid:"2f258310-a874-435b-a854-6289257834c8"]
+new [description:"Replace the pink colors w\/ green" entry:"1694597969" modified:"1694617669" project:"portfolio" start:"1694617669" status:"pending" tags:"Dev" tags_Dev:"x" uuid:"2f258310-a874-435b-a854-6289257834c8"]
+---
+time 1694618654
+old [description:"Replace the pink colors w\/ green" entry:"1694597969" modified:"1694617669" project:"portfolio" start:"1694617669" status:"pending" tags:"Dev" tags_Dev:"x" uuid:"2f258310-a874-435b-a854-6289257834c8"]
+new [description:"Replace the pink colors w\/ green" end:"1694618654" entry:"1694597969" modified:"1694618654" project:"portfolio" status:"completed" tags:"Dev" tags_Dev:"x" uuid:"2f258310-a874-435b-a854-6289257834c8"]
+---
+time 1694618878
+new [description:"preprare QA" entry:"1694618878" modified:"1694618878" priority:"H" project:"sealight" status:"pending" tags:"AI,Q&A" tags_AI:"x" tags_Q&A:"x" uuid:"bbd36fd6-c286-4061-9f83-4145a5e7c26c"]
+---
+time 1694618917
+new [dep_bbd36fd6-c286-4061-9f83-4145a5e7c26c:"x" depends:"bbd36fd6-c286-4061-9f83-4145a5e7c26c" description:"what is the most important to consider in the company?" entry:"1694618917" modified:"1694618917" status:"pending" uuid:"dbce0172-f02a-4703-8023-ec049d930fe0"]
+---
+time 1694631010
+old [description:"get more technology logos" entry:"1694597382" modified:"1694597382" project:"portfolio" status:"pending" tags:"web_research" tags_web_research:"x" uuid:"aede6140-5052-4099-8c0b-ec54a2765d1f"]
+new [description:"get more technology logos" entry:"1694597382" modified:"1694631010" project:"portfolio" start:"1694631010" status:"pending" tags:"web_research" tags_web_research:"x" uuid:"aede6140-5052-4099-8c0b-ec54a2765d1f"]
+---
+time 1694631013
+old [description:"remove non-correponding technology logos" entry:"1694597456" modified:"1694597985" project:"portfolio" status:"pending" tags:"Dev" tags_Dev:"x" uuid:"560d410e-b728-451e-a131-e40a25024f51"]
+new [description:"remove non-correponding technology logos" entry:"1694597456" modified:"1694631013" project:"portfolio" start:"1694631013" status:"pending" tags:"Dev" tags_Dev:"x" uuid:"560d410e-b728-451e-a131-e40a25024f51"]
+---
+time 1694631015
+old [description:"get more technology logos" entry:"1694597382" modified:"1694631010" project:"portfolio" start:"1694631010" status:"pending" tags:"web_research" tags_web_research:"x" uuid:"aede6140-5052-4099-8c0b-ec54a2765d1f"]
+new [description:"get more technology logos" end:"1694631015" entry:"1694597382" modified:"1694631015" project:"portfolio" status:"completed" tags:"web_research" tags_web_research:"x" uuid:"aede6140-5052-4099-8c0b-ec54a2765d1f"]
+---
+time 1694631015
+old [description:"remove non-correponding technology logos" entry:"1694597456" modified:"1694631013" project:"portfolio" start:"1694631013" status:"pending" tags:"Dev" tags_Dev:"x" uuid:"560d410e-b728-451e-a131-e40a25024f51"]
+new [description:"remove non-correponding technology logos" end:"1694631015" entry:"1694597456" modified:"1694631015" project:"portfolio" status:"completed" tags:"Dev" tags_Dev:"x" uuid:"560d410e-b728-451e-a131-e40a25024f51"]
+---
+time 1694634225
+old [description:"Replace dummy lorem descriptions" entry:"1694597730" modified:"1694597996" project:"portfolio" status:"pending" tags:"AI,Dev" tags_AI:"x" tags_Dev:"x" uuid:"c09c8e3d-06c1-495d-b88f-e4028368d375"]
+new [description:"Replace dummy lorem descriptions" entry:"1694597730" modified:"1694634225" project:"portfolio" start:"1694634225" status:"pending" tags:"AI,Dev" tags_AI:"x" tags_Dev:"x" uuid:"c09c8e3d-06c1-495d-b88f-e4028368d375"]
+---
+time 1694683632
+old [description:"Meditate 15 at 4" due:"1694682000" entry:"1694596692" modified:"1694596692" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"50f2724f-6a7d-42b7-80a8-982810c66261"]
+new [description:"Meditate 15 at 4" due:"1694682000" end:"1694683632" entry:"1694596692" modified:"1694683632" priority:"L" project:"routine" status:"completed" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"50f2724f-6a7d-42b7-80a8-982810c66261"]
+---
+time 1694683633
+old [description:"Meditate 15 at 12" due:"1694624400" entry:"1694596692" modified:"1694596692" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"f0d8a967-6f93-46f5-92b0-1adbcf0a5cb3"]
+new [description:"Meditate 15 at 12" due:"1694624400" end:"1694683633" entry:"1694596692" modified:"1694683633" priority:"L" project:"routine" status:"completed" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"f0d8a967-6f93-46f5-92b0-1adbcf0a5cb3"]
+---
+time 1694683745
+old [description:"preprare QA" entry:"1694618878" modified:"1694618878" priority:"H" project:"sealight" status:"pending" tags:"AI,Q&A" tags_AI:"x" tags_Q&A:"x" uuid:"bbd36fd6-c286-4061-9f83-4145a5e7c26c"]
+new [description:"preprare QA" entry:"1694618878" modified:"1694683745" priority:"H" project:"sealight" status:"pending" tags:"AI,Q&A" tags_AI:"x" tags_Q&A:"x" uuid:"bbd36fd6-c286-4061-9f83-4145a5e7c26c" wait:"1695272400"]
+---
+time 1694683785
+old [description:"Cook lunch" entry:"1694596736" modified:"1694597125" priority:"M" project:"domestic" status:"pending" tags:"cook" tags_cook:"x" uuid:"dbced37e-7381-463b-83cd-7e831bcaeac2"]
+new [description:"Cook lunch" end:"1694683785" entry:"1694596736" modified:"1694683785" priority:"M" project:"domestic" status:"completed" tags:"cook" tags_cook:"x" uuid:"dbced37e-7381-463b-83cd-7e831bcaeac2"]
+---
+time 1694683813
+old [dep_bbd36fd6-c286-4061-9f83-4145a5e7c26c:"x" depends:"bbd36fd6-c286-4061-9f83-4145a5e7c26c" description:"what is the most important to consider in the company?" entry:"1694618917" modified:"1694618917" status:"pending" uuid:"dbce0172-f02a-4703-8023-ec049d930fe0"]
+new [dep_bbd36fd6-c286-4061-9f83-4145a5e7c26c:"x" depends:"bbd36fd6-c286-4061-9f83-4145a5e7c26c" description:"what is the most important to consider in the company?" entry:"1694618917" modified:"1694683813" status:"pending" uuid:"dbce0172-f02a-4703-8023-ec049d930fe0" wait:"1695272400"]
+---
+time 1694683856
+new [description:"Cardio 20 Min" entry:"1694683856" modified:"1694683856" priority:"M" project:"routine" status:"pending" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"93a1a667-8339-4133-ae20-172c2879d74f"]
+---
+time 1694683856
+new [description:"Listen Alux" entry:"1694683856" modified:"1694683856" priority:"M" project:"routine" status:"pending" tags:"mindset" tags_mindset:"x" uuid:"b3546ca9-57cf-46c7-8ad5-ec1fd44e988a"]
+---
+time 1694683856
+new [description:"Cold shower" entry:"1694683856" modified:"1694683856" priority:"M" project:"routine" status:"pending" tags:"care" tags_care:"x" uuid:"dedeb924-052a-4fbb-bbed-b6880fa5a284"]
+---
+time 1694683856
+new [description:"Listen German" entry:"1694683856" modified:"1694683856" priority:"M" project:"routine" status:"pending" tags:"education" tags_education:"x" uuid:"a3955b4f-3dbb-410e-b9ab-edffb2068000"]
+---
+time 1694683871
+new [description:"Meditate 15 at 8" due:"1694696400" entry:"1694683871" modified:"1694683871" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"13ff5e36-6340-4794-9eb7-c5a09aebc883"]
+---
+time 1694683871
+new [description:"Meditate 15 at 12" due:"1694710800" entry:"1694683871" modified:"1694683871" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"3865434f-d770-42d5-a6fe-5186a59e1b13"]
+---
+time 1694683871
+new [description:"Meditate 15 at 4" due:"1694768400" entry:"1694683871" modified:"1694683871" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"6a4455e9-f891-4a11-ac57-17c0a072dc04"]
+---
+time 1694684022
+new [description:"text boss for meeting" entry:"1694684022" modified:"1694684022" project:"Job" status:"pending" uuid:"7796d319-265d-4997-98b0-ce52148801f3"]
+---
+time 1694684171
+new [description:"Review the 'filters' section of Taskwarrior docs" entry:"1694684171" modified:"1694684171" project:"Taskwarrior" status:"pending" tags:"review" tags_review:"x" uuid:"b4466022-ec81-49a5-8123-3a29442d6740"]
+---
+time 1694684246
+old [description:"text boss for meeting" entry:"1694684022" modified:"1694684022" project:"Job" status:"pending" uuid:"7796d319-265d-4997-98b0-ce52148801f3"]
+new [description:"text boss for meeting" entry:"1694684022" modified:"1694684246" project:"Job" status:"pending" tags:"draft" tags_draft:"x" uuid:"7796d319-265d-4997-98b0-ce52148801f3"]
+---
+time 1694684621
+new [description:"Go to Gestium and solve the Bio management affair" entry:"1694684621" modified:"1694684621" priority:"H" status:"pending" tags:"issue" tags_issue:"x" uuid:"858e8dc6-7bd8-43c7-a53a-9bb66b498a5c"]
+---
+time 1694684842
+new [description:"go to language exchange meeting" due:"1694727000" entry:"1694684842" modified:"1694684842" project:"network" status:"pending" tags:"networking" tags_networking:"x" uuid:"e9cfe8e8-0cd3-488d-8aa8-ba1ca7603582"]
+---
+time 1694684888
+old [description:"pay GAS billing" due:"1695099600" entry:"1694529731" modified:"1694597481" project:"domestic" status:"pending" tags:"billing" tags_billing:"x" uuid:"d8fdf807-8ce4-407c-9e73-b8a5b5349e29"]
+new [description:"pay GAS bill" due:"1695099600" entry:"1694529731" modified:"1694684888" project:"domestic" status:"pending" tags:"billing" tags_billing:"x" uuid:"d8fdf807-8ce4-407c-9e73-b8a5b5349e29"]
+---
+time 1694685077
+new [description:"Cook breakfast" entry:"1694685077" modified:"1694685077" project:"domestic" status:"pending" tags:"cook" tags_cook:"x" uuid:"738ed2d7-cab0-4306-8cfe-cf395f21b7e3"]
+---
+time 1694685839
+new [description:"Review the 'priority' section of Taskwarrior docs" entry:"1694685839" modified:"1694685839" project:"Taskwarrior" status:"pending" tags:"review" tags_review:"x" uuid:"785a7830-a42e-48ad-aaa0-8df125edbdbe"]
+---
+time 1694685876
+new [description:"Review the 'Tags & vitual tags' section of Taskwarrior docs" entry:"1694685876" modified:"1694685876" project:"Taskwarrior" status:"pending" tags:"review" tags_review:"x" uuid:"2ba7025b-cc83-48f5-924d-3b17c1a95000"]
+---
+time 1694687404
+old [description:"Review the 'filters' section of Taskwarrior docs" entry:"1694684171" modified:"1694684171" project:"Taskwarrior" status:"pending" tags:"review" tags_review:"x" uuid:"b4466022-ec81-49a5-8123-3a29442d6740"]
+new [description:"Review the 'filters' section of Taskwarrior docs" entry:"1694684171" modified:"1694687404" project:"Taskwarrior" start:"1694687404" status:"pending" tags:"review" tags_review:"x" uuid:"b4466022-ec81-49a5-8123-3a29442d6740"]
+---
+time 1694687409
+old [description:"Replace dummy lorem descriptions" entry:"1694597730" modified:"1694634225" project:"portfolio" start:"1694634225" status:"pending" tags:"AI,Dev" tags_AI:"x" tags_Dev:"x" uuid:"c09c8e3d-06c1-495d-b88f-e4028368d375"]
+new [description:"Replace dummy lorem descriptions" entry:"1694597730" modified:"1694687409" project:"portfolio" status:"pending" tags:"AI,Dev" tags_AI:"x" tags_Dev:"x" uuid:"c09c8e3d-06c1-495d-b88f-e4028368d375"]
+---
+time 1694691878
+old [description:"Review the 'filters' section of Taskwarrior docs" entry:"1694684171" modified:"1694687404" project:"Taskwarrior" start:"1694687404" status:"pending" tags:"review" tags_review:"x" uuid:"b4466022-ec81-49a5-8123-3a29442d6740"]
+new [description:"Review the 'filters' section of Taskwarrior docs" end:"1694691878" entry:"1694684171" modified:"1694691878" project:"Taskwarrior" status:"completed" tags:"review" tags_review:"x" uuid:"b4466022-ec81-49a5-8123-3a29442d6740"]
+---
+time 1694693442
+old [description:"Review the 'priority' section of Taskwarrior docs" entry:"1694685839" modified:"1694685839" project:"Taskwarrior" status:"pending" tags:"review" tags_review:"x" uuid:"785a7830-a42e-48ad-aaa0-8df125edbdbe"]
+new [description:"Review the 'priority' section of Taskwarrior docs" end:"1694693442" entry:"1694685839" modified:"1694693442" project:"Taskwarrior" status:"completed" tags:"review" tags_review:"x" uuid:"785a7830-a42e-48ad-aaa0-8df125edbdbe"]
+---
+time 1694693484
+old [description:"Review the 'Tags & vitual tags' section of Taskwarrior docs" entry:"1694685876" modified:"1694685876" project:"Taskwarrior" status:"pending" tags:"review" tags_review:"x" uuid:"2ba7025b-cc83-48f5-924d-3b17c1a95000"]
+new [description:"Review the 'Tags & vitual tags' section of Taskwarrior docs" entry:"1694685876" modified:"1694693484" project:"Taskwarrior" status:"pending" tags:"review" tags_review:"x" uuid:"2ba7025b-cc83-48f5-924d-3b17c1a95000" wait:"1694754000"]
+---
+time 1694693495
+old [description:"Cardio 20 Min" entry:"1694683856" modified:"1694683856" priority:"M" project:"routine" status:"pending" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"93a1a667-8339-4133-ae20-172c2879d74f"]
+new [description:"Cardio 20 Min" entry:"1694683856" modified:"1694693495" priority:"M" project:"routine" start:"1694693495" status:"pending" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"93a1a667-8339-4133-ae20-172c2879d74f"]
+---
+time 1694693498
+old [description:"Listen Alux" entry:"1694683856" modified:"1694683856" priority:"M" project:"routine" status:"pending" tags:"mindset" tags_mindset:"x" uuid:"b3546ca9-57cf-46c7-8ad5-ec1fd44e988a"]
+new [description:"Listen Alux" entry:"1694683856" modified:"1694693498" priority:"M" project:"routine" start:"1694693498" status:"pending" tags:"mindset" tags_mindset:"x" uuid:"b3546ca9-57cf-46c7-8ad5-ec1fd44e988a"]
+---
+time 1694697644
+old [description:"Cardio 20 Min" entry:"1694683856" modified:"1694693495" priority:"M" project:"routine" start:"1694693495" status:"pending" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"93a1a667-8339-4133-ae20-172c2879d74f"]
+new [description:"Cardio 20 Min" end:"1694697644" entry:"1694683856" modified:"1694697644" priority:"M" project:"routine" status:"completed" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"93a1a667-8339-4133-ae20-172c2879d74f"]
+---
+time 1694697645
+old [description:"Listen Alux" entry:"1694683856" modified:"1694693498" priority:"M" project:"routine" start:"1694693498" status:"pending" tags:"mindset" tags_mindset:"x" uuid:"b3546ca9-57cf-46c7-8ad5-ec1fd44e988a"]
+new [description:"Listen Alux" end:"1694697645" entry:"1694683856" modified:"1694697645" priority:"M" project:"routine" status:"completed" tags:"mindset" tags_mindset:"x" uuid:"b3546ca9-57cf-46c7-8ad5-ec1fd44e988a"]
+---
+time 1694697648
+old [description:"Cold shower" entry:"1694683856" modified:"1694683856" priority:"M" project:"routine" status:"pending" tags:"care" tags_care:"x" uuid:"dedeb924-052a-4fbb-bbed-b6880fa5a284"]
+new [description:"Cold shower" end:"1694697648" entry:"1694683856" modified:"1694697648" priority:"M" project:"routine" status:"completed" tags:"care" tags_care:"x" uuid:"dedeb924-052a-4fbb-bbed-b6880fa5a284"]
+---
+time 1694697648
+old [description:"Listen German" entry:"1694683856" modified:"1694683856" priority:"M" project:"routine" status:"pending" tags:"education" tags_education:"x" uuid:"a3955b4f-3dbb-410e-b9ab-edffb2068000"]
+new [description:"Listen German" end:"1694697648" entry:"1694683856" modified:"1694697648" priority:"M" project:"routine" status:"completed" tags:"education" tags_education:"x" uuid:"a3955b4f-3dbb-410e-b9ab-edffb2068000"]
+---
+time 1694697656
+old [description:"Meditate 15 at 8" due:"1694696400" entry:"1694683871" modified:"1694683871" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"13ff5e36-6340-4794-9eb7-c5a09aebc883"]
+new [description:"Meditate 15 at 8" due:"1694696400" entry:"1694683871" modified:"1694697656" priority:"L" project:"routine" start:"1694697656" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"13ff5e36-6340-4794-9eb7-c5a09aebc883"]
+---
+time 1694705042
+old [description:"Meditate 15 at 8" due:"1694696400" entry:"1694683871" modified:"1694697656" priority:"L" project:"routine" start:"1694697656" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"13ff5e36-6340-4794-9eb7-c5a09aebc883"]
+new [description:"Meditate 15 at 8" due:"1694696400" end:"1694705042" entry:"1694683871" modified:"1694705042" priority:"L" project:"routine" status:"completed" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"13ff5e36-6340-4794-9eb7-c5a09aebc883"]
+---
+time 1694708014
+old [description:"pay GAS bill" due:"1695099600" entry:"1694529731" modified:"1694684888" project:"domestic" status:"pending" tags:"billing" tags_billing:"x" uuid:"d8fdf807-8ce4-407c-9e73-b8a5b5349e29"]
+new [description:"pay GAS bill" due:"1695099600" entry:"1694529731" modified:"1694708014" project:"domestic" start:"1694708014" status:"pending" tags:"billing" tags_billing:"x" uuid:"d8fdf807-8ce4-407c-9e73-b8a5b5349e29"]
+---
+time 1694708015
+old [description:"pay GAS bill" due:"1695099600" entry:"1694529731" modified:"1694708014" project:"domestic" start:"1694708014" status:"pending" tags:"billing" tags_billing:"x" uuid:"d8fdf807-8ce4-407c-9e73-b8a5b5349e29"]
+new [description:"pay GAS bill" due:"1695099600" entry:"1694529731" modified:"1694708015" project:"domestic" status:"pending" tags:"billing" tags_billing:"x" uuid:"d8fdf807-8ce4-407c-9e73-b8a5b5349e29"]
+---
+time 1694708016
+old [description:"pay GAS bill" due:"1695099600" entry:"1694529731" modified:"1694708015" project:"domestic" status:"pending" tags:"billing" tags_billing:"x" uuid:"d8fdf807-8ce4-407c-9e73-b8a5b5349e29"]
+new [description:"pay GAS bill" due:"1695099600" entry:"1694529731" modified:"1694708016" project:"domestic" start:"1694708016" status:"pending" tags:"billing" tags_billing:"x" uuid:"d8fdf807-8ce4-407c-9e73-b8a5b5349e29"]
+---
+time 1694708017
+old [description:"pay GAS bill" due:"1695099600" entry:"1694529731" modified:"1694708016" project:"domestic" start:"1694708016" status:"pending" tags:"billing" tags_billing:"x" uuid:"d8fdf807-8ce4-407c-9e73-b8a5b5349e29"]
+new [description:"pay GAS bill" due:"1695099600" end:"1694708017" entry:"1694529731" modified:"1694708017" project:"domestic" status:"completed" tags:"billing" tags_billing:"x" uuid:"d8fdf807-8ce4-407c-9e73-b8a5b5349e29"]
+---
+time 1694713033
+old [description:"Solve leetcode 567 Permutation" entry:"1694598187" modified:"1694598234" project:"Algorithms" status:"pending" tags:"Education,growth" tags_Education:"x" tags_growth:"x" uuid:"077720e4-5a03-4b7c-b7bb-826ad9d82fbe"]
+new [description:"Solve leetcode 567 Permutation" end:"1694713033" entry:"1694598187" modified:"1694713033" project:"Algorithms" status:"completed" tags:"Education,growth" tags_Education:"x" tags_growth:"x" uuid:"077720e4-5a03-4b7c-b7bb-826ad9d82fbe"]
+---
+time 1694713038
+old [description:"Meditate 15 at 12" due:"1694710800" entry:"1694683871" modified:"1694683871" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"3865434f-d770-42d5-a6fe-5186a59e1b13"]
+new [description:"Meditate 15 at 12" due:"1694710800" end:"1694713038" entry:"1694683871" modified:"1694713038" priority:"L" project:"routine" status:"completed" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"3865434f-d770-42d5-a6fe-5186a59e1b13"]
+---
+time 1694713055
+old [description:"text boss for meeting" entry:"1694684022" modified:"1694684246" project:"Job" status:"pending" tags:"draft" tags_draft:"x" uuid:"7796d319-265d-4997-98b0-ce52148801f3"]
+new [description:"text boss for meeting" end:"1694713055" entry:"1694684022" modified:"1694713055" project:"Job" status:"completed" tags:"draft" tags_draft:"x" uuid:"7796d319-265d-4997-98b0-ce52148801f3"]
+---
+time 1694713063
+old [description:"Cook breakfast" entry:"1694685077" modified:"1694685077" project:"domestic" status:"pending" tags:"cook" tags_cook:"x" uuid:"738ed2d7-cab0-4306-8cfe-cf395f21b7e3"]
+new [description:"Cook breakfast" end:"1694713063" entry:"1694685077" modified:"1694713063" project:"domestic" status:"completed" tags:"cook" tags_cook:"x" uuid:"738ed2d7-cab0-4306-8cfe-cf395f21b7e3"]
+---
+time 1694783307
+old [description:"go to language exchange meeting" due:"1694727000" entry:"1694684842" modified:"1694684842" project:"network" status:"pending" tags:"networking" tags_networking:"x" uuid:"e9cfe8e8-0cd3-488d-8aa8-ba1ca7603582"]
+new [description:"go to language exchange meeting" due:"1694727000" end:"1694783307" entry:"1694684842" modified:"1694783307" project:"network" status:"completed" tags:"networking" tags_networking:"x" uuid:"e9cfe8e8-0cd3-488d-8aa8-ba1ca7603582"]
+---
+time 1694783310
+old [description:"Meditate 15 at 4" due:"1694768400" entry:"1694683871" modified:"1694683871" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"6a4455e9-f891-4a11-ac57-17c0a072dc04"]
+new [description:"Meditate 15 at 4" due:"1694768400" end:"1694783310" entry:"1694683871" modified:"1694783310" priority:"L" project:"routine" status:"completed" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"6a4455e9-f891-4a11-ac57-17c0a072dc04"]
+---
+time 1694856805
+new [description:"Cardio 20 Min" entry:"1694856805" modified:"1694856805" priority:"M" project:"routine" status:"pending" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"3af0282b-c158-4111-ac5d-d42ab1573468"]
+---
+time 1694856805
+new [description:"Listen Alux" entry:"1694856805" modified:"1694856805" priority:"M" project:"routine" status:"pending" tags:"mindset" tags_mindset:"x" uuid:"e4e9dfc7-7e76-4ad9-8cdd-ab56962cccb8"]
+---
+time 1694856805
+new [description:"Cold shower" entry:"1694856805" modified:"1694856805" priority:"M" project:"routine" status:"pending" tags:"care" tags_care:"x" uuid:"564c8593-309b-4f11-a40c-c4482fa8cd43"]
+---
+time 1694856805
+new [description:"Listen German" entry:"1694856805" modified:"1694856805" priority:"M" project:"routine" status:"pending" tags:"education" tags_education:"x" uuid:"8ce3194c-9ed7-4baa-946c-3da954ea4550"]
+---
+time 1694856816
+new [description:"Meditate 15 at 8" due:"1694869200" entry:"1694856816" modified:"1694856816" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"3fa7e474-5fc7-495d-903f-91940817263c"]
+---
+time 1694856816
+new [description:"Meditate 15 at 12" due:"1694883600" entry:"1694856816" modified:"1694856816" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"49b1763a-27ce-4b38-b634-38a61f776f53"]
+---
+time 1694856816
+new [description:"Meditate 15 at 4" due:"1694941200" entry:"1694856816" modified:"1694856816" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"76755223-7296-48ea-8678-dd5769960de2"]
+---
+time 1694856832
+old [description:"Go to Gestium and solve the Bio management affair" entry:"1694684621" modified:"1694684621" priority:"H" status:"pending" tags:"issue" tags_issue:"x" uuid:"858e8dc6-7bd8-43c7-a53a-9bb66b498a5c"]
+new [description:"Go to Gestium and solve the Bio management affair" end:"1694856832" entry:"1694684621" modified:"1694856832" priority:"H" status:"completed" tags:"issue" tags_issue:"x" uuid:"858e8dc6-7bd8-43c7-a53a-9bb66b498a5c"]
+---
+time 1694856837
+old [description:"Meditate 15 at 4" due:"1694941200" entry:"1694856816" modified:"1694856816" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"76755223-7296-48ea-8678-dd5769960de2"]
+new [description:"Meditate 15 at 4" due:"1694941200" end:"1694856837" entry:"1694856816" modified:"1694856837" priority:"L" project:"routine" status:"deleted" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"76755223-7296-48ea-8678-dd5769960de2"]
+---
+time 1694856957
+new [description:"Make bed" entry:"1694856957" modified:"1694856957" project:"domestic" status:"pending" tags:"clean" tags_clean:"x" uuid:"d930effd-3cbb-4383-98c2-1f7bcf8c7eec"]
+---
+time 1694857134
+new [description:"Sweep rooms" entry:"1694857134" modified:"1694857134" project:"domestic" status:"pending" tags:"clean" tags_clean:"x" uuid:"9ccc429e-486e-4837-bee3-8c2074c7b972"]
+---
+time 1694857198
+new [description:"Clean the studio mess" entry:"1694857198" modified:"1694857198" project:"domestic" status:"pending" tags:"clean" tags_clean:"x" uuid:"759978a5-0ce9-4fe1-9f9b-3a1f0b64cc5e"]
+---
+time 1694857247
+new [description:"Wash dishes" entry:"1694857247" modified:"1694857247" project:"domestic" status:"pending" tags:"clean" tags_clean:"x" uuid:"003a8770-12e2-43d2-8318-312a5cd72f0c"]
+---
+time 1694857260
+new [description:"Cook breakfast" entry:"1694857260" modified:"1694857260" project:"domestic" status:"pending" tags:"cook" tags_cook:"x" uuid:"225f1d6c-804c-4189-a238-0debfef11d35"]
+---
+time 1694857327
+new [description:"Clean the kitchen mess" entry:"1694857327" modified:"1694857327" project:"domestic" status:"pending" tags:"clean" tags_clean:"x" uuid:"7a5dc08b-cf1b-4b5c-8d32-120e8cbe8365"]
+---
+time 1694857343
+new [description:"Sweep kitchen" entry:"1694857343" modified:"1694857343" project:"domestic" status:"pending" tags:"clean" tags_clean:"x" uuid:"c6b496a9-0546-4e87-b2f4-5cd38cd029b0"]
+---
+time 1694857493
+new [description:"Prepare the QA for Sealight" entry:"1694857493" modified:"1694857493" priority:"H" project:"Sealight" status:"pending" tags:"job_reasearch" tags_job_reasearch:"x" uuid:"282d7726-0dc9-4bfb-9a33-cbc191eee7ed"]
+---
+time 1694857544
+old [description:"Prepare the QA for Sealight" entry:"1694857493" modified:"1694857493" priority:"H" project:"Sealight" status:"pending" tags:"job_reasearch" tags_job_reasearch:"x" uuid:"282d7726-0dc9-4bfb-9a33-cbc191eee7ed"]
+new [description:"Prepare 4 Question for Sealight interview" entry:"1694857493" modified:"1694857544" priority:"H" project:"Sealight" status:"pending" tags:"job_reasearch" tags_job_reasearch:"x" uuid:"282d7726-0dc9-4bfb-9a33-cbc191eee7ed"]
+---
+time 1694857571
+old [description:"Prepare 4 Question for Sealight interview" entry:"1694857493" modified:"1694857544" priority:"H" project:"Sealight" status:"pending" tags:"job_reasearch" tags_job_reasearch:"x" uuid:"282d7726-0dc9-4bfb-9a33-cbc191eee7ed"]
+new [description:"Prepare 4 Question for Sealight interview" entry:"1694857493" modified:"1694857571" priority:"H" project:"Sealight" status:"pending" tags:"AI,job_reasearch" tags_AI:"x" tags_job_reasearch:"x" uuid:"282d7726-0dc9-4bfb-9a33-cbc191eee7ed"]
+---
+time 1694857590
+old [description:"Review the 'Tags & vitual tags' section of Taskwarrior docs" entry:"1694685876" modified:"1694693484" project:"Taskwarrior" status:"pending" tags:"review" tags_review:"x" uuid:"2ba7025b-cc83-48f5-924d-3b17c1a95000" wait:"1694754000"]
+new [description:"Review the 'Tags & vitual tags' section of Taskwarrior docs" entry:"1694685876" modified:"1694857590" project:"Taskwarrior" start:"1694857590" status:"pending" tags:"review" tags_review:"x" uuid:"2ba7025b-cc83-48f5-924d-3b17c1a95000" wait:"1694754000"]
+---
+time 1694857913
+new [description:"Gauge bike lubricant oil level" due:"1694880000" entry:"1694857913" modified:"1694857913" project:"domestic" status:"pending" tags:"bike" tags_bike:"x" uuid:"a69b5616-8191-4e43-8b94-5f9e5b6f6062"]
+---
+time 1694857931
+old [description:"Gauge bike lubricant oil level" due:"1694880000" entry:"1694857913" modified:"1694857913" project:"domestic" status:"pending" tags:"bike" tags_bike:"x" uuid:"a69b5616-8191-4e43-8b94-5f9e5b6f6062"]
+new [description:"Gauge bike lubricant oil level" due:"1694880000" entry:"1694857913" modified:"1694857931" priority:"H" project:"domestic" status:"pending" tags:"bike" tags_bike:"x" uuid:"a69b5616-8191-4e43-8b94-5f9e5b6f6062"]
+---
+time 1694857992
+new [description:"Do laundry" entry:"1694857992" modified:"1694857992" project:"domestic" status:"pending" tags:"clean" tags_clean:"x" uuid:"44c17e3f-52b1-419e-bfdb-84998ab638d8"]
+---
+time 1694861831
+old [description:"Review the 'Tags & vitual tags' section of Taskwarrior docs" entry:"1694685876" modified:"1694857590" project:"Taskwarrior" start:"1694857590" status:"pending" tags:"review" tags_review:"x" uuid:"2ba7025b-cc83-48f5-924d-3b17c1a95000" wait:"1694754000"]
+new [description:"Review the 'Tags & vitual tags' section of Taskwarrior docs" end:"1694861831" entry:"1694685876" modified:"1694861831" project:"Taskwarrior" status:"completed" tags:"review" tags_review:"x" uuid:"2ba7025b-cc83-48f5-924d-3b17c1a95000" wait:"1694754000"]
+---
+time 1694861837
+old [description:"set an special tmux script for task warrior" entry:"1693234210" modified:"1694513367" priority:"M" project:"Taskwarrior" status:"pending" tags:"setup" tags_setup:"x" uuid:"2754543e-df11-4a62-a3ff-ca687d6bebf6"]
+new [description:"set an special tmux script for task warrior" entry:"1693234210" modified:"1694861837" priority:"M" project:"Taskwarrior" start:"1694861837" status:"pending" tags:"setup" tags_setup:"x" uuid:"2754543e-df11-4a62-a3ff-ca687d6bebf6"]
+---
+time 1694864435
+old [description:"set an special tmux script for task warrior" entry:"1693234210" modified:"1694861837" priority:"M" project:"Taskwarrior" start:"1694861837" status:"pending" tags:"setup" tags_setup:"x" uuid:"2754543e-df11-4a62-a3ff-ca687d6bebf6"]
+new [description:"set an special tmux script for task warrior" end:"1694864435" entry:"1693234210" modified:"1694864435" priority:"M" project:"Taskwarrior" status:"completed" tags:"setup" tags_setup:"x" uuid:"2754543e-df11-4a62-a3ff-ca687d6bebf6"]
+---
+time 1694864476
+old [description:"Replace dummy lorem descriptions" entry:"1694597730" modified:"1694687409" project:"portfolio" status:"pending" tags:"AI,Dev" tags_AI:"x" tags_Dev:"x" uuid:"c09c8e3d-06c1-495d-b88f-e4028368d375"]
+new [description:"Replace dummy lorem descriptions" entry:"1694597730" modified:"1694864476" project:"portfolio" start:"1694864476" status:"pending" tags:"AI,Dev" tags_AI:"x" tags_Dev:"x" uuid:"c09c8e3d-06c1-495d-b88f-e4028368d375"]
+---
+time 1694864759
+new [description:"Sync the dotfiles" entry:"1694864759" modified:"1694864759" project:"setup" status:"pending" tags:"Dev" tags_Dev:"x" uuid:"79d7416a-3d05-4b36-9803-df7c379e8f88"]
+---
+time 1694869915
+old [description:"Listen German" entry:"1694856805" modified:"1694856805" priority:"M" project:"routine" status:"pending" tags:"education" tags_education:"x" uuid:"8ce3194c-9ed7-4baa-946c-3da954ea4550"]
+new [description:"Listen German" end:"1694869915" entry:"1694856805" modified:"1694869915" priority:"M" project:"routine" status:"completed" tags:"education" tags_education:"x" uuid:"8ce3194c-9ed7-4baa-946c-3da954ea4550"]
+---
+time 1694869917
+old [description:"Cold shower" entry:"1694856805" modified:"1694856805" priority:"M" project:"routine" status:"pending" tags:"care" tags_care:"x" uuid:"564c8593-309b-4f11-a40c-c4482fa8cd43"]
+new [description:"Cold shower" end:"1694869917" entry:"1694856805" modified:"1694869917" priority:"M" project:"routine" status:"completed" tags:"care" tags_care:"x" uuid:"564c8593-309b-4f11-a40c-c4482fa8cd43"]
+---
+time 1694869917
+old [description:"Listen Alux" entry:"1694856805" modified:"1694856805" priority:"M" project:"routine" status:"pending" tags:"mindset" tags_mindset:"x" uuid:"e4e9dfc7-7e76-4ad9-8cdd-ab56962cccb8"]
+new [description:"Listen Alux" end:"1694869917" entry:"1694856805" modified:"1694869917" priority:"M" project:"routine" status:"completed" tags:"mindset" tags_mindset:"x" uuid:"e4e9dfc7-7e76-4ad9-8cdd-ab56962cccb8"]
+---
+time 1694869918
+old [description:"Cardio 20 Min" entry:"1694856805" modified:"1694856805" priority:"M" project:"routine" status:"pending" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"3af0282b-c158-4111-ac5d-d42ab1573468"]
+new [description:"Cardio 20 Min" end:"1694869918" entry:"1694856805" modified:"1694869918" priority:"M" project:"routine" status:"completed" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"3af0282b-c158-4111-ac5d-d42ab1573468"]
+---
+time 1694869924
+old [description:"Replace dummy lorem descriptions" entry:"1694597730" modified:"1694864476" project:"portfolio" start:"1694864476" status:"pending" tags:"AI,Dev" tags_AI:"x" tags_Dev:"x" uuid:"c09c8e3d-06c1-495d-b88f-e4028368d375"]
+new [description:"Replace dummy lorem descriptions" entry:"1694597730" modified:"1694869924" project:"portfolio" status:"pending" tags:"AI,Dev" tags_AI:"x" tags_Dev:"x" uuid:"c09c8e3d-06c1-495d-b88f-e4028368d375"]
+---
+time 1694869926
+old [description:"Meditate 15 at 8" due:"1694869200" entry:"1694856816" modified:"1694856816" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"3fa7e474-5fc7-495d-903f-91940817263c"]
+new [description:"Meditate 15 at 8" due:"1694869200" end:"1694869926" entry:"1694856816" modified:"1694869926" priority:"L" project:"routine" status:"completed" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"3fa7e474-5fc7-495d-903f-91940817263c"]
+---
+time 1694869934
+old [description:"Cook breakfast" entry:"1694857260" modified:"1694857260" project:"domestic" status:"pending" tags:"cook" tags_cook:"x" uuid:"225f1d6c-804c-4189-a238-0debfef11d35"]
+new [description:"Cook breakfast" entry:"1694857260" modified:"1694869934" project:"domestic" start:"1694869934" status:"pending" tags:"cook" tags_cook:"x" uuid:"225f1d6c-804c-4189-a238-0debfef11d35"]
+---
+time 1694871737
+old [description:"Cook breakfast" entry:"1694857260" modified:"1694869934" project:"domestic" start:"1694869934" status:"pending" tags:"cook" tags_cook:"x" uuid:"225f1d6c-804c-4189-a238-0debfef11d35"]
+new [description:"Cook breakfast" end:"1694871737" entry:"1694857260" modified:"1694871737" project:"domestic" status:"completed" tags:"cook" tags_cook:"x" uuid:"225f1d6c-804c-4189-a238-0debfef11d35"]
+---
+time 1694873691
+old [description:"Clean the studio mess" entry:"1694857198" modified:"1694857198" project:"domestic" status:"pending" tags:"clean" tags_clean:"x" uuid:"759978a5-0ce9-4fe1-9f9b-3a1f0b64cc5e"]
+new [description:"Clean the studio mess" entry:"1694857198" modified:"1694873691" project:"domestic" start:"1694873691" status:"pending" tags:"clean" tags_clean:"x" uuid:"759978a5-0ce9-4fe1-9f9b-3a1f0b64cc5e"]
+---
+time 1694874500
+old [description:"Clean the studio mess" entry:"1694857198" modified:"1694873691" project:"domestic" start:"1694873691" status:"pending" tags:"clean" tags_clean:"x" uuid:"759978a5-0ce9-4fe1-9f9b-3a1f0b64cc5e"]
+new [description:"Clean the studio mess" end:"1694874500" entry:"1694857198" modified:"1694874500" project:"domestic" status:"completed" tags:"clean" tags_clean:"x" uuid:"759978a5-0ce9-4fe1-9f9b-3a1f0b64cc5e"]
+---
+time 1694874943
+old [description:"Sweep rooms" entry:"1694857134" modified:"1694857134" project:"domestic" status:"pending" tags:"clean" tags_clean:"x" uuid:"9ccc429e-486e-4837-bee3-8c2074c7b972"]
+new [description:"Sweep rooms" entry:"1694857134" modified:"1694874943" project:"domestic" start:"1694874943" status:"pending" tags:"clean" tags_clean:"x" uuid:"9ccc429e-486e-4837-bee3-8c2074c7b972"]
+---
+time 1694876132
+old [description:"Sweep rooms" entry:"1694857134" modified:"1694874943" project:"domestic" start:"1694874943" status:"pending" tags:"clean" tags_clean:"x" uuid:"9ccc429e-486e-4837-bee3-8c2074c7b972"]
+new [description:"Sweep rooms" end:"1694876132" entry:"1694857134" modified:"1694876132" project:"domestic" status:"completed" tags:"clean" tags_clean:"x" uuid:"9ccc429e-486e-4837-bee3-8c2074c7b972"]
+---
+time 1694876140
+old [description:"Clean the kitchen mess" entry:"1694857327" modified:"1694857327" project:"domestic" status:"pending" tags:"clean" tags_clean:"x" uuid:"7a5dc08b-cf1b-4b5c-8d32-120e8cbe8365"]
+new [description:"Clean the kitchen mess" entry:"1694857327" modified:"1694876140" project:"domestic" start:"1694876140" status:"pending" tags:"clean" tags_clean:"x" uuid:"7a5dc08b-cf1b-4b5c-8d32-120e8cbe8365"]
+---
+time 1694876141
+old [description:"Clean the kitchen mess" entry:"1694857327" modified:"1694876140" project:"domestic" start:"1694876140" status:"pending" tags:"clean" tags_clean:"x" uuid:"7a5dc08b-cf1b-4b5c-8d32-120e8cbe8365"]
+new [description:"Clean the kitchen mess" entry:"1694857327" modified:"1694876141" project:"domestic" status:"pending" tags:"clean" tags_clean:"x" uuid:"7a5dc08b-cf1b-4b5c-8d32-120e8cbe8365"]
+---
+time 1694876144
+old [description:"Wash dishes" entry:"1694857247" modified:"1694857247" project:"domestic" status:"pending" tags:"clean" tags_clean:"x" uuid:"003a8770-12e2-43d2-8318-312a5cd72f0c"]
+new [description:"Wash dishes" entry:"1694857247" modified:"1694876144" project:"domestic" start:"1694876144" status:"pending" tags:"clean" tags_clean:"x" uuid:"003a8770-12e2-43d2-8318-312a5cd72f0c"]
+---
+time 1694876149
+old [description:"Wash dishes" entry:"1694857247" modified:"1694876144" project:"domestic" start:"1694876144" status:"pending" tags:"clean" tags_clean:"x" uuid:"003a8770-12e2-43d2-8318-312a5cd72f0c"]
+new [description:"Wash dishes" end:"1694876149" entry:"1694857247" modified:"1694876149" project:"domestic" status:"completed" tags:"clean" tags_clean:"x" uuid:"003a8770-12e2-43d2-8318-312a5cd72f0c"]
+---
+time 1694876153
+old [description:"Clean the kitchen mess" entry:"1694857327" modified:"1694876141" project:"domestic" status:"pending" tags:"clean" tags_clean:"x" uuid:"7a5dc08b-cf1b-4b5c-8d32-120e8cbe8365"]
+new [description:"Clean the kitchen mess" entry:"1694857327" modified:"1694876153" project:"domestic" start:"1694876153" status:"pending" tags:"clean" tags_clean:"x" uuid:"7a5dc08b-cf1b-4b5c-8d32-120e8cbe8365"]
+---
+time 1694878172
+old [description:"Clean the kitchen mess" entry:"1694857327" modified:"1694876153" project:"domestic" start:"1694876153" status:"pending" tags:"clean" tags_clean:"x" uuid:"7a5dc08b-cf1b-4b5c-8d32-120e8cbe8365"]
+new [description:"Clean the kitchen mess" end:"1694878172" entry:"1694857327" modified:"1694878172" project:"domestic" status:"completed" tags:"clean" tags_clean:"x" uuid:"7a5dc08b-cf1b-4b5c-8d32-120e8cbe8365"]
+---
+time 1694878362
+new [description:"thread shoe laces" entry:"1694878362" modified:"1694878362" priority:"M" project:"domestic" status:"pending" tags:"Grooming" tags_Grooming:"x" uuid:"c2cf9f1e-5f3a-443e-aee7-7dc9d30c965b"]
+---
+time 1694878371
+old [description:"Gauge bike lubricant oil level" due:"1694880000" entry:"1694857913" modified:"1694857931" priority:"H" project:"domestic" status:"pending" tags:"bike" tags_bike:"x" uuid:"a69b5616-8191-4e43-8b94-5f9e5b6f6062"]
+new [description:"Gauge bike lubricant oil level" due:"1694880000" entry:"1694857913" modified:"1694878371" priority:"H" project:"domestic" start:"1694878371" status:"pending" tags:"bike" tags_bike:"x" uuid:"a69b5616-8191-4e43-8b94-5f9e5b6f6062"]
+---
+time 1694879602
+old [description:"Gauge bike lubricant oil level" due:"1694880000" entry:"1694857913" modified:"1694878371" priority:"H" project:"domestic" start:"1694878371" status:"pending" tags:"bike" tags_bike:"x" uuid:"a69b5616-8191-4e43-8b94-5f9e5b6f6062"]
+new [description:"Gauge bike lubricant oil level" due:"1694880000" end:"1694879602" entry:"1694857913" modified:"1694879602" priority:"H" project:"domestic" status:"completed" tags:"bike" tags_bike:"x" uuid:"a69b5616-8191-4e43-8b94-5f9e5b6f6062"]
+---
+time 1694880326
+old [description:"thread shoe laces" entry:"1694878362" modified:"1694878362" priority:"M" project:"domestic" status:"pending" tags:"Grooming" tags_Grooming:"x" uuid:"c2cf9f1e-5f3a-443e-aee7-7dc9d30c965b"]
+new [description:"thread shoe laces" end:"1694880326" entry:"1694878362" modified:"1694880326" priority:"M" project:"domestic" status:"completed" tags:"Grooming" tags_Grooming:"x" uuid:"c2cf9f1e-5f3a-443e-aee7-7dc9d30c965b"]
+---
+time 1694880337
+old [description:"Sweep kitchen" entry:"1694857343" modified:"1694857343" project:"domestic" status:"pending" tags:"clean" tags_clean:"x" uuid:"c6b496a9-0546-4e87-b2f4-5cd38cd029b0"]
+new [description:"Sweep kitchen" entry:"1694857343" modified:"1694880337" project:"domestic" start:"1694880337" status:"pending" tags:"clean" tags_clean:"x" uuid:"c6b496a9-0546-4e87-b2f4-5cd38cd029b0"]
+---
+time 1694880340
+old [description:"Sweep kitchen" entry:"1694857343" modified:"1694880337" project:"domestic" start:"1694880337" status:"pending" tags:"clean" tags_clean:"x" uuid:"c6b496a9-0546-4e87-b2f4-5cd38cd029b0"]
+new [description:"Sweep kitchen" end:"1694880340" entry:"1694857343" modified:"1694880340" project:"domestic" status:"completed" tags:"clean" tags_clean:"x" uuid:"c6b496a9-0546-4e87-b2f4-5cd38cd029b0"]
+---
+time 1694882129
+old [description:"Do laundry" entry:"1694857992" modified:"1694857992" project:"domestic" status:"pending" tags:"clean" tags_clean:"x" uuid:"44c17e3f-52b1-419e-bfdb-84998ab638d8"]
+new [description:"Do laundry" end:"1694882129" entry:"1694857992" modified:"1694882129" project:"domestic" status:"completed" tags:"clean" tags_clean:"x" uuid:"44c17e3f-52b1-419e-bfdb-84998ab638d8"]
+---
+time 1694882138
+old [description:"Meditate 15 at 12" due:"1694883600" entry:"1694856816" modified:"1694856816" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"49b1763a-27ce-4b38-b634-38a61f776f53"]
+new [description:"Meditate 15 at 12" due:"1694883600" entry:"1694856816" modified:"1694882138" priority:"L" project:"routine" start:"1694882138" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"49b1763a-27ce-4b38-b634-38a61f776f53"]
+---
+time 1694883732
+old [description:"Meditate 15 at 12" due:"1694883600" entry:"1694856816" modified:"1694882138" priority:"L" project:"routine" start:"1694882138" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"49b1763a-27ce-4b38-b634-38a61f776f53"]
+new [description:"Meditate 15 at 12" due:"1694883600" end:"1694883732" entry:"1694856816" modified:"1694883732" priority:"L" project:"routine" status:"completed" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"49b1763a-27ce-4b38-b634-38a61f776f53"]
+---
+time 1694883738
+old [description:"Make bed" entry:"1694856957" modified:"1694856957" project:"domestic" status:"pending" tags:"clean" tags_clean:"x" uuid:"d930effd-3cbb-4383-98c2-1f7bcf8c7eec"]
+new [description:"Make bed" entry:"1694856957" modified:"1694883738" project:"domestic" start:"1694883738" status:"pending" tags:"clean" tags_clean:"x" uuid:"d930effd-3cbb-4383-98c2-1f7bcf8c7eec"]
+---
+time 1694989649
+old [description:"Make bed" entry:"1694856957" modified:"1694883738" project:"domestic" start:"1694883738" status:"pending" tags:"clean" tags_clean:"x" uuid:"d930effd-3cbb-4383-98c2-1f7bcf8c7eec"]
+new [description:"Make bed" end:"1694989649" entry:"1694856957" modified:"1694989649" project:"domestic" status:"completed" tags:"clean" tags_clean:"x" uuid:"d930effd-3cbb-4383-98c2-1f7bcf8c7eec"]
+---
