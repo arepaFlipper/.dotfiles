@@ -49,12 +49,14 @@ uda.color.type=string
 uda.color.label=color
 uda.color.values=red,white,blue,green,yellow,cyan
 
+color.active = white on rgb510
 
 
 report.waiting.columns=id,start.active,entry.age,depends.indicator,priority,project,tags,recur.indicator,wait,wait.remaining,scheduled,due,until,description,urgency
 report.waiting.labels= ID,A,           Age,      Dependency,       P,       Project,Tags,R,              Wait,Remaining,     Sched,    Due,Until,Description,Urgency
 
 uda.taskwarrior-tui.selection.indicator=👉
+uda.taskwarrior-tui.active.indicator=👷
 uda.taskwarrior-tui.selection.bold=yes
 uda.taskwarrior-tui.selection.italic=yes
 uda.taskwarrior-tui.selection.dim=yes
