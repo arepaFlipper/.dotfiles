@@ -30,7 +30,7 @@ data.location=$HOME/.task
 #include dark-256.theme
 #include dark-red-256.theme
 #include dark-green-256.theme
-include dark-blue-256.theme
+# include dark-blue-256.theme
 #include dark-violets-256.theme
 #include dark-yellow-green.theme
 #include dark-gray-256.theme
@@ -49,7 +49,7 @@ uda.color.type=string
 uda.color.label=color
 uda.color.values=red,white,blue,green,yellow,cyan
 
-color.active = white on rgb510
+color.active = rgb510
 
 
 report.waiting.columns=id,start.active,entry.age,depends.indicator,priority,project,tags,recur.indicator,wait,wait.remaining,scheduled,due,until,description,urgency
@@ -59,7 +59,7 @@ uda.taskwarrior-tui.selection.indicator=👉
 uda.taskwarrior-tui.active.indicator=👷
 uda.taskwarrior-tui.selection.bold=yes
 uda.taskwarrior-tui.selection.italic=yes
-uda.taskwarrior-tui.selection.dim=yes
+uda.taskwarrior-tui.selection.dim=no
 uda.taskwarrior-tui.selection.blink=yes
 uda.taskwarrior-tui.selection.reverse=yes
 uda.taskwarrior-tui.mark.indicator=📌
