@@ -414,3 +414,71 @@ PKI (Public Key Infrastructure) is the set of mechanisms and policies built arou
 certificates, including their creation, validation and handling.
 
 [See PKI](https://en.wikipedia.org/wiki/Public_key_infrastructure)
+
+## ready
+Ready is the name of a report that shows ready tasks. A task is considered ready
+if it is pending, is not blocked, and either has no [scheduled](#scheduled) date or
+has one that is before now.
+
+## regex
+A regex, or **Reg**ular **Ex**pression is a very powerful mechanism for searching and 
+matching text. It is a complex language that describes search patterns, and
+allows for sophisticated searching.
+
+Suppose you were solving a crossword puzzle, and needed a five-letter word that
+started and ended in a vowel, you could represent that in regex, and it could look
+something like:
+```
+[aeiou]...[aeiou]
+```
+
+See [Wikipedia: Regular expression](https://en.wikipedia.org/wiki/Regular_expression).
+TaskWarrior uses [POSIX Extended Regular Expressions](https://en.wikibooks.org/wiki/Regular_Expressions/POSIX-Extended_Regular_Expressions)
+
+## RPN
+**R**everse **P**ost **N**otation is a stack-based notation for evaluating math
+expressions. This example:
+```
+1 2 +
+```
+Represents the sum of two digits, with the `+` operator in the postfix position, last.
+
+Writing software to evaluate postfix expressions is significantly easier than for
+infix notation, which is easier for humans to read.
+
+## scheduled
+The `scheduled` date represents the first opportunity to begin work on a task,
+and therefore typically is set to be on or after the `wait` date, but before the [due](#due) date.
+
+If you add a scheduled date to a task, like this:
+```
+❯ task 1 modify scheduled:2023-09-29
+```
+Then this task will be considered ready after that date. The [virtual tag](#virtual-tags) `READY` 
+reflects this, and the report `ready` shows such tasks.
+
+## shell
+The shell is your command interpreter. Most likely you are using the `bash` shell,
+but there are many others.
+
+Any program that has complex argument processing will likely face several
+problems that are shell-related. The shell modifies the entered text before
+passing it on to the program. For example, consider these two commands:
+```
+❯ ls my_file
+Created task 50.
+❯ ls 'my_file'
+```
+
+In both cases, the `ls` command sees the same command line argument,
+`my_file`, because the shell removes the quotes. There are many other cases to
+be aware of also.
+
+## shadow file
+The shadow file is an old feature of Taskwarrior, which automatically ran a report
+whenever the data changed. That report was configurable, and the output placed
+in a text file. This was typically used to display a task list on the desktop using
+`Conky`, or similar tools.
+
+Shadow file support has been removed, in favor of a hook-based solution, an example
+of which is provided with the source.
