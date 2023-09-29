@@ -4,7 +4,7 @@
 # -d: dettach
 session1="tuto_logs"
 
-folder_name="EdRoh/portfolio"
+folder_name="Codevolution/react_testing"
 window11="lazygit"
 pane111=${window00}.1
 window12="lazygit"
