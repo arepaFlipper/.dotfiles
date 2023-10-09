@@ -3,14 +3,14 @@
 # -n: name
 # -d: dettach
 session1="leetcode"
-folder_name="MIT_bare/main/"
+folder_name="neetcode/leetcoding/"
 window11="logs"
 pane111=${window00}.1
 window12="lazygit"
 window13="neovim"
 session2="leetgit"
 window21="lazygit"
-path="$HOME/.leetcode/"
+path="$HOME/Documents/yt-tutos/$folder_name"
 # tmux kill-session -t $session0;
 cd ${path}
 # tmux new -s $session0;

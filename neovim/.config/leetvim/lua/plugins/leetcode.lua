@@ -6,8 +6,18 @@ return {
       "nvim-telescope/telescope.nvim",
     },
     config = function()
+      local sep = require("plenary.path").path.sep
       require("leetbuddy").setup({
         language = "py",
+        directory = vim.loop.os_homedir()
+          .. sep
+          .. "Documents"
+          .. sep
+          .. "yt-tutos"
+          .. sep
+          .. "neetcode"
+          .. sep
+          .. "leetcoding",
       })
     end,
     keys = {
