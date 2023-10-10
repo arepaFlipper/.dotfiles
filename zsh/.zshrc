@@ -205,3 +205,5 @@ export OPENAI_API_KEY="$(gpg --decrypt $HOME/.gpt_key.gpg 2>&1| tail -n 1)"
 
 alias vimdiff="NVIM_APPNAME=LazyVim nvim -d"
 
+## Taskwarrior
+export TASKDDATA="/var/taskd"
