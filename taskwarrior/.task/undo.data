@@ -4172,3 +4172,259 @@ time 1696935843
 old [description:"Solve leetcode 74. Search a 2D Matrix" entry:"1696932912" modified:"1696932912" project:"algorithms" status:"pending" tags:"Dev" tags_Dev:"x" uuid:"8de64da9-6fc2-43df-93c4-542ad15affb7"]
 new [description:"Solve leetcode 74. Search a 2D Matrix" end:"1696935843" entry:"1696932912" modified:"1696935843" project:"algorithms" status:"completed" tags:"Dev" tags_Dev:"x" uuid:"8de64da9-6fc2-43df-93c4-542ad15affb7"]
 ---
+time 1696937868
+old [description:"Cardio 20 Min" entry:"1696755959" modified:"1696755959" priority:"M" project:"routine" status:"pending" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"c5902554-79c5-4ef7-92c7-c2501e352602"]
+new [description:"Cardio 20 Min" end:"1696937868" entry:"1696755959" modified:"1696937868" priority:"M" project:"routine" status:"completed" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"c5902554-79c5-4ef7-92c7-c2501e352602"]
+---
+time 1696937871
+old [description:"Cardio 20 Min" entry:"1696846875" modified:"1696846875" priority:"M" project:"routine" status:"pending" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"510a1172-0344-4f34-81db-496e9389f509"]
+new [description:"Cardio 20 Min" end:"1696937871" entry:"1696846875" modified:"1696937871" priority:"M" project:"routine" status:"deleted" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"510a1172-0344-4f34-81db-496e9389f509"]
+---
+time 1696937881
+old [description:"Listen Alux" entry:"1696755959" modified:"1696755959" priority:"M" project:"routine" status:"pending" tags:"mindset" tags_mindset:"x" uuid:"495a1cf8-e9ae-466f-8676-addc6db24dda"]
+new [description:"Listen Alux" end:"1696937881" entry:"1696755959" modified:"1696937881" priority:"M" project:"routine" status:"deleted" tags:"mindset" tags_mindset:"x" uuid:"495a1cf8-e9ae-466f-8676-addc6db24dda"]
+---
+time 1696937882
+old [description:"Cold shower" entry:"1696755959" modified:"1696755959" priority:"M" project:"routine" status:"pending" tags:"care" tags_care:"x" uuid:"fb709ad1-fb1b-44ea-8ab7-847c872f1f20"]
+new [description:"Cold shower" end:"1696937882" entry:"1696755959" modified:"1696937882" priority:"M" project:"routine" status:"deleted" tags:"care" tags_care:"x" uuid:"fb709ad1-fb1b-44ea-8ab7-847c872f1f20"]
+---
+time 1696937898
+old [description:"Listen German" entry:"1696755959" modified:"1696755959" priority:"M" project:"routine" status:"pending" tags:"education" tags_education:"x" uuid:"728a2b78-36c1-4b9e-ac22-3f966a98b61b"]
+new [description:"Listen German" end:"1696937898" entry:"1696755959" modified:"1696937898" priority:"M" project:"routine" status:"deleted" tags:"education" tags_education:"x" uuid:"728a2b78-36c1-4b9e-ac22-3f966a98b61b"]
+---
+time 1696937900
+old [description:"Listen German" entry:"1696846875" modified:"1696846875" priority:"M" project:"routine" status:"pending" tags:"education" tags_education:"x" uuid:"50ccc309-e7a2-4977-91c0-e900c579fd5b"]
+new [description:"Listen German" end:"1696937900" entry:"1696846875" modified:"1696937900" priority:"M" project:"routine" status:"deleted" tags:"education" tags_education:"x" uuid:"50ccc309-e7a2-4977-91c0-e900c579fd5b"]
+---
+time 1696937902
+old [description:"Cold shower" entry:"1696846875" modified:"1696846875" priority:"M" project:"routine" status:"pending" tags:"care" tags_care:"x" uuid:"fd8e915d-025b-427c-add2-ae9ee7639f52"]
+new [description:"Cold shower" end:"1696937902" entry:"1696846875" modified:"1696937902" priority:"M" project:"routine" status:"deleted" tags:"care" tags_care:"x" uuid:"fd8e915d-025b-427c-add2-ae9ee7639f52"]
+---
+time 1696937903
+old [description:"Listen Alux" entry:"1696846875" modified:"1696846875" priority:"M" project:"routine" status:"pending" tags:"mindset" tags_mindset:"x" uuid:"bc45aaa1-6286-4e07-88b2-1044fb526308"]
+new [description:"Listen Alux" end:"1696937903" entry:"1696846875" modified:"1696937903" priority:"M" project:"routine" status:"deleted" tags:"mindset" tags_mindset:"x" uuid:"bc45aaa1-6286-4e07-88b2-1044fb526308"]
+---
+time 1696937929
+new [description:"Cardio 20 Min" entry:"1696937929" modified:"1696937929" priority:"M" project:"routine" status:"pending" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"fcc5b8be-5f0e-4ec8-8b02-4a8a94965b04"]
+---
+time 1696937929
+new [description:"Listen Alux" entry:"1696937929" modified:"1696937929" priority:"M" project:"routine" status:"pending" tags:"mindset" tags_mindset:"x" uuid:"f5687b7e-f97c-44fe-856b-3666852e7b4c"]
+---
+time 1696937929
+new [description:"Cold shower" entry:"1696937929" modified:"1696937929" priority:"M" project:"routine" status:"pending" tags:"care" tags_care:"x" uuid:"c676c51e-2c41-44d0-8632-c448fd7bc42a"]
+---
+time 1696937929
+new [description:"Listen German" entry:"1696937929" modified:"1696937929" priority:"M" project:"routine" status:"pending" tags:"education" tags_education:"x" uuid:"09465848-1e72-4f48-9000-874abaf8793d"]
+---
+time 1696937929
+new [description:"ABS 5 minutes" entry:"1696937929" modified:"1696937929" priority:"M" project:"routine" status:"pending" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"c543afd1-5553-4a0c-9e0f-b539767d77ba"]
+---
+time 1696937954
+old [description:"Routines script w\/ flag arguments --ABS --upper --legs" entry:"1696673072" modified:"1696673098" project:"setup" status:"pending" tags:"Dev" tags_Dev:"x" uuid:"54373750-1e5d-4d03-bc22-efc60e78d73f"]
+new [description:"Routines script w\/ flag arguments --ABS --upper --legs" end:"1696937954" entry:"1696673072" modified:"1696937954" project:"setup" status:"completed" tags:"Dev" tags_Dev:"x" uuid:"54373750-1e5d-4d03-bc22-efc60e78d73f"]
+---
+time 1696951978
+old [description:"Cardio 20 Min" entry:"1696937929" modified:"1696937929" priority:"M" project:"routine" status:"pending" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"fcc5b8be-5f0e-4ec8-8b02-4a8a94965b04"]
+new [description:"Cardio 20 Min" end:"1696951978" entry:"1696937929" modified:"1696951978" priority:"M" project:"routine" status:"completed" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"fcc5b8be-5f0e-4ec8-8b02-4a8a94965b04"]
+---
+time 1696951980
+old [description:"ABS 5 minutes" entry:"1696937929" modified:"1696937929" priority:"M" project:"routine" status:"pending" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"c543afd1-5553-4a0c-9e0f-b539767d77ba"]
+new [description:"ABS 5 minutes" end:"1696951980" entry:"1696937929" modified:"1696951980" priority:"M" project:"routine" status:"completed" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"c543afd1-5553-4a0c-9e0f-b539767d77ba"]
+---
+time 1696951981
+old [description:"Listen Alux" entry:"1696937929" modified:"1696937929" priority:"M" project:"routine" status:"pending" tags:"mindset" tags_mindset:"x" uuid:"f5687b7e-f97c-44fe-856b-3666852e7b4c"]
+new [description:"Listen Alux" end:"1696951981" entry:"1696937929" modified:"1696951981" priority:"M" project:"routine" status:"completed" tags:"mindset" tags_mindset:"x" uuid:"f5687b7e-f97c-44fe-856b-3666852e7b4c"]
+---
+time 1696951982
+old [description:"Cold shower" entry:"1696937929" modified:"1696937929" priority:"M" project:"routine" status:"pending" tags:"care" tags_care:"x" uuid:"c676c51e-2c41-44d0-8632-c448fd7bc42a"]
+new [description:"Cold shower" end:"1696951982" entry:"1696937929" modified:"1696951982" priority:"M" project:"routine" status:"completed" tags:"care" tags_care:"x" uuid:"c676c51e-2c41-44d0-8632-c448fd7bc42a"]
+---
+time 1696951983
+old [description:"Listen German" entry:"1696937929" modified:"1696937929" priority:"M" project:"routine" status:"pending" tags:"education" tags_education:"x" uuid:"09465848-1e72-4f48-9000-874abaf8793d"]
+new [description:"Listen German" end:"1696951983" entry:"1696937929" modified:"1696951983" priority:"M" project:"routine" status:"completed" tags:"education" tags_education:"x" uuid:"09465848-1e72-4f48-9000-874abaf8793d"]
+---
+time 1697019343
+old [description:"Meditate 15 at 8" due:"1696942800" entry:"1696932780" modified:"1696932780" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"507aace6-6a20-46cf-acc2-40bbae4bf399"]
+new [description:"Meditate 15 at 8" due:"1696942800" end:"1697019343" entry:"1696932780" modified:"1697019343" priority:"L" project:"routine" status:"completed" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"507aace6-6a20-46cf-acc2-40bbae4bf399"]
+---
+time 1697019344
+old [description:"Meditate 15 at 12" due:"1696957200" entry:"1696932780" modified:"1696932780" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"fd799919-aba7-46e4-bf06-0ee7fdf7f5c7"]
+new [description:"Meditate 15 at 12" due:"1696957200" end:"1697019344" entry:"1696932780" modified:"1697019344" priority:"L" project:"routine" status:"completed" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"fd799919-aba7-46e4-bf06-0ee7fdf7f5c7"]
+---
+time 1697019344
+old [description:"Meditate 15 at 4" due:"1696971600" entry:"1696932780" modified:"1696932780" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"53df33c2-f157-4360-a7a9-a5353d715cd9"]
+new [description:"Meditate 15 at 4" due:"1696971600" end:"1697019344" entry:"1696932780" modified:"1697019344" priority:"L" project:"routine" status:"completed" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"53df33c2-f157-4360-a7a9-a5353d715cd9"]
+---
+time 1697019372
+new [description:"Cardio 20 Min" entry:"1697019372" modified:"1697019372" priority:"M" project:"routine" status:"pending" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"b3060564-1499-45d3-92b4-4a801faafccc"]
+---
+time 1697019372
+new [description:"Listen Alux" entry:"1697019372" modified:"1697019372" priority:"M" project:"routine" status:"pending" tags:"mindset" tags_mindset:"x" uuid:"4cb76de9-11c6-4ba3-9b24-fc2ac1236e91"]
+---
+time 1697019372
+new [description:"Cold shower" entry:"1697019372" modified:"1697019372" priority:"M" project:"routine" status:"pending" tags:"care" tags_care:"x" uuid:"fce6054d-9c66-495f-ab95-1e67ce8c7ef4"]
+---
+time 1697019372
+new [description:"Listen German" entry:"1697019372" modified:"1697019372" priority:"M" project:"routine" status:"pending" tags:"education" tags_education:"x" uuid:"82d89b4c-f06d-43b5-8ee0-9967539d6f4d"]
+---
+time 1697019372
+new [description:"ABS 5 minutes" entry:"1697019372" modified:"1697019372" priority:"M" project:"routine" status:"pending" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"a28a84e7-15c5-4bb7-91a8-7dd4b75582bf"]
+---
+time 1697019376
+new [description:"Meditate 15 at 8" due:"1697029200" entry:"1697019376" modified:"1697019376" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"5a675dc0-9ea8-498f-b8fa-943d39451c8a"]
+---
+time 1697019377
+new [description:"Meditate 15 at 12" due:"1697043600" entry:"1697019377" modified:"1697019377" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"263f1fd1-1a15-4997-a788-84097f7b5a7d"]
+---
+time 1697019377
+new [description:"Meditate 15 at 4" due:"1697058000" entry:"1697019377" modified:"1697019377" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"09cff637-8e21-415c-8346-72fb5411c061"]
+---
+time 1697019469
+new [description:"Solve leetcode 875. Koko Eating Bananas" entry:"1697019469" modified:"1697019469" project:"algorithms" status:"pending" tags:"Dev" tags_Dev:"x" uuid:"8712993c-4331-47f0-a214-8cbd7612cbe5"]
+---
+time 1697024373
+old [description:"Solve leetcode 875. Koko Eating Bananas" entry:"1697019469" modified:"1697019469" project:"algorithms" status:"pending" tags:"Dev" tags_Dev:"x" uuid:"8712993c-4331-47f0-a214-8cbd7612cbe5"]
+new [description:"Solve leetcode 875. Koko Eating Bananas" end:"1697024373" entry:"1697019469" modified:"1697024373" project:"algorithms" status:"completed" tags:"Dev" tags_Dev:"x" uuid:"8712993c-4331-47f0-a214-8cbd7612cbe5"]
+---
+time 1697024394
+old [description:"Set fonts" entry:"1696683134" modified:"1696683134" project:"setup" status:"pending" uuid:"ceb07fce-fe31-4602-b0ca-543808076b05"]
+new [description:"Set fonts" end:"1697024394" entry:"1696683134" modified:"1697024394" project:"setup" status:"deleted" uuid:"ceb07fce-fe31-4602-b0ca-543808076b05"]
+---
+time 1697026678
+old [description:"Ask AI to Write tests in vitest for your website" entry:"1695810338" modified:"1696672732" project:"Portfolio" status:"pending" tags:"Dev" tags_Dev:"x" uuid:"da71b0d7-ec9f-43ac-9448-bfbeae3c1ea2"]
+new [description:"Ask AI to Write tests in vitest for your website" end:"1697026678" entry:"1695810338" modified:"1697026678" project:"Portfolio" status:"completed" tags:"Dev" tags_Dev:"x" uuid:"da71b0d7-ec9f-43ac-9448-bfbeae3c1ea2"]
+---
+time 1697052946
+old [description:"Cardio 20 Min" entry:"1697019372" modified:"1697019372" priority:"M" project:"routine" status:"pending" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"b3060564-1499-45d3-92b4-4a801faafccc"]
+new [description:"Cardio 20 Min" end:"1697052946" entry:"1697019372" modified:"1697052946" priority:"M" project:"routine" status:"completed" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"b3060564-1499-45d3-92b4-4a801faafccc"]
+---
+time 1697052947
+old [description:"ABS 5 minutes" entry:"1697019372" modified:"1697019372" priority:"M" project:"routine" status:"pending" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"a28a84e7-15c5-4bb7-91a8-7dd4b75582bf"]
+new [description:"ABS 5 minutes" end:"1697052947" entry:"1697019372" modified:"1697052947" priority:"M" project:"routine" status:"completed" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"a28a84e7-15c5-4bb7-91a8-7dd4b75582bf"]
+---
+time 1697052951
+old [description:"Listen Alux" entry:"1697019372" modified:"1697019372" priority:"M" project:"routine" status:"pending" tags:"mindset" tags_mindset:"x" uuid:"4cb76de9-11c6-4ba3-9b24-fc2ac1236e91"]
+new [description:"Listen Alux" end:"1697052951" entry:"1697019372" modified:"1697052951" priority:"M" project:"routine" status:"deleted" tags:"mindset" tags_mindset:"x" uuid:"4cb76de9-11c6-4ba3-9b24-fc2ac1236e91"]
+---
+time 1697052954
+old [description:"Cold shower" entry:"1697019372" modified:"1697019372" priority:"M" project:"routine" status:"pending" tags:"care" tags_care:"x" uuid:"fce6054d-9c66-495f-ab95-1e67ce8c7ef4"]
+new [description:"Cold shower" end:"1697052954" entry:"1697019372" modified:"1697052954" priority:"M" project:"routine" status:"completed" tags:"care" tags_care:"x" uuid:"fce6054d-9c66-495f-ab95-1e67ce8c7ef4"]
+---
+time 1697052955
+old [description:"Listen German" entry:"1697019372" modified:"1697019372" priority:"M" project:"routine" status:"pending" tags:"education" tags_education:"x" uuid:"82d89b4c-f06d-43b5-8ee0-9967539d6f4d"]
+new [description:"Listen German" end:"1697052955" entry:"1697019372" modified:"1697052955" priority:"M" project:"routine" status:"completed" tags:"education" tags_education:"x" uuid:"82d89b4c-f06d-43b5-8ee0-9967539d6f4d"]
+---
+time 1697052957
+old [description:"Meditate 15 at 8" due:"1697029200" entry:"1697019376" modified:"1697019376" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"5a675dc0-9ea8-498f-b8fa-943d39451c8a"]
+new [description:"Meditate 15 at 8" due:"1697029200" end:"1697052957" entry:"1697019376" modified:"1697052957" priority:"L" project:"routine" status:"completed" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"5a675dc0-9ea8-498f-b8fa-943d39451c8a"]
+---
+time 1697052959
+old [description:"Meditate 15 at 12" due:"1697043600" entry:"1697019377" modified:"1697019377" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"263f1fd1-1a15-4997-a788-84097f7b5a7d"]
+new [description:"Meditate 15 at 12" due:"1697043600" end:"1697052959" entry:"1697019377" modified:"1697052959" priority:"L" project:"routine" status:"deleted" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"263f1fd1-1a15-4997-a788-84097f7b5a7d"]
+---
+time 1697104382
+old [description:"Meditate 15 at 4" due:"1697058000" entry:"1697019377" modified:"1697019377" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"09cff637-8e21-415c-8346-72fb5411c061"]
+new [description:"Meditate 15 at 4" due:"1697058000" end:"1697104382" entry:"1697019377" modified:"1697104382" priority:"L" project:"routine" status:"completed" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"09cff637-8e21-415c-8346-72fb5411c061"]
+---
+time 1697104404
+new [description:"Cardio 20 Min" entry:"1697104404" modified:"1697104404" priority:"M" project:"routine" status:"pending" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"6503d215-4b33-400c-928f-eda5ecee138e"]
+---
+time 1697104405
+new [description:"Listen Alux" entry:"1697104405" modified:"1697104405" priority:"M" project:"routine" status:"pending" tags:"mindset" tags_mindset:"x" uuid:"47ab26c2-5a91-4634-86cd-25616e9f1051"]
+---
+time 1697104405
+new [description:"Cold shower" entry:"1697104405" modified:"1697104405" priority:"M" project:"routine" status:"pending" tags:"care" tags_care:"x" uuid:"cd170d49-0114-4187-b750-8acc7cd377a6"]
+---
+time 1697104405
+new [description:"Listen German" entry:"1697104405" modified:"1697104405" priority:"M" project:"routine" status:"pending" tags:"education" tags_education:"x" uuid:"09d84990-19d0-4aa5-b5fb-a113319f5341"]
+---
+time 1697104405
+new [description:"ABS 5 minutes" entry:"1697104405" modified:"1697104405" priority:"M" project:"routine" status:"pending" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"a520f8fa-90fc-4b57-b5a1-c85f9c197ed3"]
+---
+time 1697104415
+new [description:"Meditate 15 at 8" due:"1697115600" entry:"1697104415" modified:"1697104415" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"7e1d954e-8070-443e-b7f6-339c4b537d03"]
+---
+time 1697104415
+new [description:"Meditate 15 at 12" due:"1697130000" entry:"1697104415" modified:"1697104415" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"b0d20d85-2ffd-4cad-b17e-1ea80d923ee9"]
+---
+time 1697104415
+new [description:"Meditate 15 at 4" due:"1697144400" entry:"1697104415" modified:"1697104415" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"2731fd59-2109-4d5b-ae79-bc1b64e338cf"]
+---
+time 1697104531
+new [description:"make bed" entry:"1697104531" modified:"1697104531" project:"domestic" status:"pending" tags:"clean" tags_clean:"x" uuid:"256c3110-68b7-4312-a825-e29622d30d0b"]
+---
+time 1697104595
+new [description:"wash dishes" entry:"1697104595" modified:"1697104595" project:"domestic" status:"pending" tags:"clean" tags_clean:"x" uuid:"83c84ace-819a-4870-920e-49182d65cb59"]
+---
+time 1697104778
+new [description:"Solve leetcode 153.Find Minimum in Rotated Sorted Array" entry:"1697104778" modified:"1697104778" project:"algorithms" status:"pending" tags:"Dev" tags_Dev:"x" uuid:"f6ed87ef-bdb9-444f-9c8a-0da1c92b3e9d"]
+---
+time 1697104894
+new [description:"Guitar Lesson w\/ rests" entry:"1697104894" modified:"1697104894" project:"Music" status:"pending" tags:"mindset" tags_mindset:"x" uuid:"5c4259b3-8156-4ac5-91cf-23133225d3cd"]
+---
+time 1697105006
+new [description:"Practice dnc" entry:"1697105006" modified:"1697105006" project:"Music" status:"pending" tags:"mindset" tags_mindset:"x" uuid:"9d19a1c9-80f3-4558-9757-6fa5014cc884"]
+---
+time 1697105448
+new [description:"download 'silva method' book .pub into phone" entry:"1697105448" modified:"1697105448" project:"ebooks" status:"pending" tags:"research" tags_research:"x" uuid:"baee6c6c-79b6-48c5-a507-97bba412f50e"]
+---
+time 1697117185
+old [description:"Meditate 15 at 8" due:"1697115600" entry:"1697104415" modified:"1697104415" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"7e1d954e-8070-443e-b7f6-339c4b537d03"]
+new [description:"Meditate 15 at 8" due:"1697115600" end:"1697117185" entry:"1697104415" modified:"1697117185" priority:"L" project:"routine" status:"completed" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"7e1d954e-8070-443e-b7f6-339c4b537d03"]
+---
+time 1697117189
+old [description:"Cardio 20 Min" entry:"1697104404" modified:"1697104404" priority:"M" project:"routine" status:"pending" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"6503d215-4b33-400c-928f-eda5ecee138e"]
+new [description:"Cardio 20 Min" end:"1697117189" entry:"1697104404" modified:"1697117189" priority:"M" project:"routine" status:"completed" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"6503d215-4b33-400c-928f-eda5ecee138e"]
+---
+time 1697117192
+old [description:"ABS 5 minutes" entry:"1697104405" modified:"1697104405" priority:"M" project:"routine" status:"pending" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"a520f8fa-90fc-4b57-b5a1-c85f9c197ed3"]
+new [description:"ABS 5 minutes" end:"1697117192" entry:"1697104405" modified:"1697117192" priority:"M" project:"routine" status:"completed" tags:"care,workout" tags_care:"x" tags_workout:"x" uuid:"a520f8fa-90fc-4b57-b5a1-c85f9c197ed3"]
+---
+time 1697117194
+old [description:"Listen Alux" entry:"1697104405" modified:"1697104405" priority:"M" project:"routine" status:"pending" tags:"mindset" tags_mindset:"x" uuid:"47ab26c2-5a91-4634-86cd-25616e9f1051"]
+new [description:"Listen Alux" end:"1697117194" entry:"1697104405" modified:"1697117194" priority:"M" project:"routine" status:"completed" tags:"mindset" tags_mindset:"x" uuid:"47ab26c2-5a91-4634-86cd-25616e9f1051"]
+---
+time 1697117195
+old [description:"Cold shower" entry:"1697104405" modified:"1697104405" priority:"M" project:"routine" status:"pending" tags:"care" tags_care:"x" uuid:"cd170d49-0114-4187-b750-8acc7cd377a6"]
+new [description:"Cold shower" end:"1697117195" entry:"1697104405" modified:"1697117195" priority:"M" project:"routine" status:"completed" tags:"care" tags_care:"x" uuid:"cd170d49-0114-4187-b750-8acc7cd377a6"]
+---
+time 1697117196
+old [description:"Listen German" entry:"1697104405" modified:"1697104405" priority:"M" project:"routine" status:"pending" tags:"education" tags_education:"x" uuid:"09d84990-19d0-4aa5-b5fb-a113319f5341"]
+new [description:"Listen German" end:"1697117196" entry:"1697104405" modified:"1697117196" priority:"M" project:"routine" status:"completed" tags:"education" tags_education:"x" uuid:"09d84990-19d0-4aa5-b5fb-a113319f5341"]
+---
+time 1697117209
+old [description:"Solve leetcode 153.Find Minimum in Rotated Sorted Array" entry:"1697104778" modified:"1697104778" project:"algorithms" status:"pending" tags:"Dev" tags_Dev:"x" uuid:"f6ed87ef-bdb9-444f-9c8a-0da1c92b3e9d"]
+new [description:"Solve leetcode 153.Find Minimum in Rotated Sorted Array" end:"1697117209" entry:"1697104778" modified:"1697117209" project:"algorithms" status:"completed" tags:"Dev" tags_Dev:"x" uuid:"f6ed87ef-bdb9-444f-9c8a-0da1c92b3e9d"]
+---
+time 1697935214
+old [description:"Meditate 15 at 12" due:"1697130000" entry:"1697104415" modified:"1697104415" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"b0d20d85-2ffd-4cad-b17e-1ea80d923ee9"]
+new [description:"Meditate 15 at 12" due:"1697130000" end:"1697935214" entry:"1697104415" modified:"1697935214" priority:"L" project:"routine" status:"completed" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"b0d20d85-2ffd-4cad-b17e-1ea80d923ee9"]
+---
+time 1697935215
+old [description:"Meditate 15 at 4" due:"1697144400" entry:"1697104415" modified:"1697104415" priority:"L" project:"routine" status:"pending" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"2731fd59-2109-4d5b-ae79-bc1b64e338cf"]
+new [description:"Meditate 15 at 4" due:"1697144400" end:"1697935215" entry:"1697104415" modified:"1697935215" priority:"L" project:"routine" status:"completed" tags:"care,mindset" tags_care:"x" tags_mindset:"x" uuid:"2731fd59-2109-4d5b-ae79-bc1b64e338cf"]
+---
+time 1697935218
+old [description:"Review the 'netflix' project" entry:"1696239154" modified:"1696239154" project:"Portfolio" status:"pending" tags:"review" tags_review:"x" uuid:"fc59c329-a341-4b61-8941-cf0435ab8596"]
+new [description:"Review the 'netflix' project" end:"1697935218" entry:"1696239154" modified:"1697935218" project:"Portfolio" status:"completed" tags:"review" tags_review:"x" uuid:"fc59c329-a341-4b61-8941-cf0435ab8596"]
+---
+time 1697935219
+old [description:"make bed" entry:"1697104531" modified:"1697104531" project:"domestic" status:"pending" tags:"clean" tags_clean:"x" uuid:"256c3110-68b7-4312-a825-e29622d30d0b"]
+new [description:"make bed" end:"1697935219" entry:"1697104531" modified:"1697935219" project:"domestic" status:"completed" tags:"clean" tags_clean:"x" uuid:"256c3110-68b7-4312-a825-e29622d30d0b"]
+---
+time 1697935220
+old [description:"wash dishes" entry:"1697104595" modified:"1697104595" project:"domestic" status:"pending" tags:"clean" tags_clean:"x" uuid:"83c84ace-819a-4870-920e-49182d65cb59"]
+new [description:"wash dishes" end:"1697935220" entry:"1697104595" modified:"1697935220" project:"domestic" status:"completed" tags:"clean" tags_clean:"x" uuid:"83c84ace-819a-4870-920e-49182d65cb59"]
+---
+time 1697935222
+old [description:"Guitar Lesson w\/ rests" entry:"1697104894" modified:"1697104894" project:"Music" status:"pending" tags:"mindset" tags_mindset:"x" uuid:"5c4259b3-8156-4ac5-91cf-23133225d3cd"]
+new [description:"Guitar Lesson w\/ rests" end:"1697935222" entry:"1697104894" modified:"1697935222" project:"Music" status:"deleted" tags:"mindset" tags_mindset:"x" uuid:"5c4259b3-8156-4ac5-91cf-23133225d3cd"]
+---
+time 1697935233
+old [description:"Practice dnc" entry:"1697105006" modified:"1697105006" project:"Music" status:"pending" tags:"mindset" tags_mindset:"x" uuid:"9d19a1c9-80f3-4558-9757-6fa5014cc884"]
+new [description:"Practice dnc" end:"1697935233" entry:"1697105006" modified:"1697935233" project:"Music" status:"deleted" tags:"mindset" tags_mindset:"x" uuid:"9d19a1c9-80f3-4558-9757-6fa5014cc884"]
+---
+time 1697935236
+old [description:"download 'silva method' book .pub into phone" entry:"1697105448" modified:"1697105448" project:"ebooks" status:"pending" tags:"research" tags_research:"x" uuid:"baee6c6c-79b6-48c5-a507-97bba412f50e"]
+new [description:"download 'silva method' book .pub into phone" end:"1697935236" entry:"1697105448" modified:"1697935236" project:"ebooks" status:"completed" tags:"research" tags_research:"x" uuid:"baee6c6c-79b6-48c5-a507-97bba412f50e"]
+---
