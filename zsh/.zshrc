@@ -205,3 +205,13 @@ export OPENAI_API_KEY="$(gpg --decrypt $HOME/.gpt_key.gpg 2>&1| tail -n 1)"
 
 alias vimdiff="NVIM_APPNAME=LazyVim nvim -d"
 
+
+# bun completions
+[ -s "/Users/cristianf.tovar/.bun/_bun" ] && source "/Users/cristianf.tovar/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+## Taskwarrior
+export TASKDDATA="/var/taskd"
