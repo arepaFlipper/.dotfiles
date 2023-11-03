@@ -22,7 +22,9 @@ return {
     end,
     keys = {
       { "ñl", "<cmd>LBQuestions<cr>", desc = "List Questions" },
+      { ";l", "<cmd>LBQuestions<cr>", desc = "List Questions" },
       { "ñq", "<cmd>LBQuestion<cr>", desc = "View Question" },
+      { ";q", "<cmd>LBQuestion<cr>", desc = "View Question" },
       { "ñr", "<cmd>LBReset<cr>", desc = "Reset Code" },
       { "ñt", "<cmd>LBTest<cr>", desc = "Run Code" },
       { "ñs", "<cmd>LBSubmit<cr>", desc = "Submit Code" },
