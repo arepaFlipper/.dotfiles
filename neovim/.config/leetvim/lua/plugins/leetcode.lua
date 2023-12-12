@@ -1,34 +1,21 @@
 return {
   {
-    "Dhanus3133/LeetBuddy.nvim",
+    "kawre/leetcode.nvim",
+    build = ":TSUpdate html",
     dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim",
+        "nvim-telescope/telescope.nvim",
+        "nvim-lua/plenary.nvim", -- required by telescope
+        "MunifTanjim/nui.nvim",
+
+        -- optional
+        "nvim-treesitter/nvim-treesitter",
+        "rcarriga/nvim-notify",
+        "nvim-tree/nvim-web-devicons",
     },
-    config = function()
-      local sep = require("plenary.path").path.sep
-      require("leetbuddy").setup({
-        language = "py",
-        directory = vim.loop.os_homedir()
-          .. sep
-          .. "Documents"
-          .. sep
-          .. "yt-tutos"
-          .. sep
-          .. "neetcode"
-          .. sep
-          .. "leetcoding",
-      })
-    end,
-    keys = {
-      { "ñl", "<cmd>LBQuestions<cr>", desc = "List Questions" },
-      { ";l", "<cmd>LBQuestions<cr>", desc = "List Questions" },
-      { "ñq", "<cmd>LBQuestion<cr>", desc = "View Question" },
-      { ";q", "<cmd>LBQuestion<cr>", desc = "View Question" },
-      { "ñr", "<cmd>LBReset<cr>", desc = "Reset Code" },
-      { "ñt", "<cmd>LBTest<cr>", desc = "Run Code" },
-      { "ñs", "<cmd>LBSubmit<cr>", desc = "Submit Code" },
-      { "ñp", "<cmd>LBChangeLanguage<cr>", desc = "switch language" },
+    opts = {
+        -- configuration goes here
+      lang = "python",
+      directory = vim.loop.os_homedir() .. "/Documents/neetcode/leetcoding",
     },
   },
   {
