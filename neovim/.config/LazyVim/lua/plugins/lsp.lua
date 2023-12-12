@@ -1,8 +1,12 @@
 return {
-  "neovim/nvim-lspconfig",
-  opts = {
-    servers = {
-      tailwindcss = {},
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        tailwindcss = {},
+        tsserver = {},
+        pyright = {},
+      },
     },
   },
   {
