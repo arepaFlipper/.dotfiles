@@ -12,6 +12,7 @@ export PATH=$HOME/bin:$HOME/.cargo/bin:$HOME/.config/git/git-log-compact:/usr/lo
 #Aliases
 alias ns="npm run start"
 alias nb="npm run build"
+alias ndv="npm run dev"
 alias gcof="git checkout -f"
 alias drs="source ./.env/bin/activate && ./manage.py runserver 0.0.0.0:8000"
 alias fig="docker-compose"
