@@ -12,6 +12,7 @@ export PATH=$HOME/bin:$HOME/.cargo/bin:$HOME/.config/git/git-log-compact:/usr/lo
 #Aliases
 alias ns="npm run start"
 alias nb="npm run build"
+alias ndv="npm run dev"
 alias gcof="git checkout -f"
 alias drs="source ./.env/bin/activate && ./manage.py runserver 0.0.0.0:8000"
 alias fig="docker-compose"
@@ -205,3 +206,13 @@ export OPENAI_API_KEY="$(gpg --decrypt $HOME/.gpt_key.gpg 2>&1| tail -n 1)"
 
 alias vimdiff="NVIM_APPNAME=LazyVim nvim -d"
 
+
+# bun completions
+[ -s "/Users/cristianf.tovar/.bun/_bun" ] && source "/Users/cristianf.tovar/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+## Taskwarrior
+export TASKDDATA="/var/taskd"

@@ -1,0 +1,28 @@
+2023-09-30 23:25:26 ==== taskd 1.1.0 3caa8e2 ====
+2023-09-30 23:25:26 Serving from /home/openvpnas/.dotfiles/taskwarrior/taskd
+2023-09-30 23:25:26 Using address 0.0.0.0
+2023-09-30 23:25:26 Using port 53589
+2023-09-30 23:25:26 Using family 
+2023-09-30 23:25:26 Queue size 10 requests
+2023-09-30 23:25:26 Request size limit 1048576 bytes
+2023-09-30 23:25:26 IP logging on
+2023-09-30 23:25:26 CA          /home/openvpnas/.dotfiles/taskwarrior/taskd/ca.cert.pem
+2023-09-30 23:25:26 Certificate /home/openvpnas/.dotfiles/taskwarrior/taskd/server.cert.pem
+2023-09-30 23:25:26 Private Key /home/openvpnas/.dotfiles/taskwarrior/taskd/server.key.pem
+2023-09-30 23:25:26 CRL         /home/openvpnas/.dotfiles/taskwarrior/taskd/server.crl.pem
+2023-09-30 23:25:26 Server starting
+2023-09-30 23:25:26 Server ready
+2023-09-30 23:29:35 ==== taskd 1.1.0 3caa8e2 ====
+2023-09-30 23:29:35 Serving from /home/openvpnas/.dotfiles/taskwarrior/taskd
+2023-09-30 23:29:35 Using address 0.0.0.0
+2023-09-30 23:29:35 Using port 53589
+2023-09-30 23:29:35 Using family 
+2023-09-30 23:29:35 Queue size 10 requests
+2023-09-30 23:29:35 Request size limit 1048576 bytes
+2023-09-30 23:29:35 IP logging on
+2023-09-30 23:29:35 CA          /home/openvpnas/.dotfiles/taskwarrior/taskd/ca.cert.pem
+2023-09-30 23:29:35 Certificate /home/openvpnas/.dotfiles/taskwarrior/taskd/server.cert.pem
+2023-09-30 23:29:35 Private Key /home/openvpnas/.dotfiles/taskwarrior/taskd/server.key.pem
+2023-09-30 23:29:35 CRL         /home/openvpnas/.dotfiles/taskwarrior/taskd/server.crl.pem
+2023-09-30 23:29:35 Server starting
+2023-09-30 23:29:35 Server ready
