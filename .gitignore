@@ -4,3 +4,4 @@ Obsidian/.config/obsidian/*
 !Obsidian/.config/obsidian/obsidian.json
 
 
+neovim/.config/LazyVim/lazy-lock.json
