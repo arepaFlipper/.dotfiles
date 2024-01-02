@@ -101,7 +101,7 @@ local purple_black = "ptpu"
 local cyan_black = "ptcy"
 local gray_black = "ptgray"
 local cyan_red = "ptcy_red"
-function TAble_of_nodes(trig)
+function Table_of_nodes(trig)
 	local styles_code = "  \\x1b[1;32;40m"
 	if trig == black_red then
 		styles_code = "  \\x1b[1;30;41m"
@@ -190,25 +190,25 @@ end
 
 -- fontColor_backgroundColor
 
-cs({ trig = black_red }, fmt(print_fmt_str, TAble_of_nodes(black_red)))
-cs({ trig = black_green }, fmt(print_fmt_str, TAble_of_nodes(black_green)))
-cs({ trig = black_yellow }, fmt(print_fmt_str, TAble_of_nodes(black_yellow)))
-cs({ trig = black_purple }, fmt(print_fmt_str, TAble_of_nodes(black_purple)))
-cs({ trig = black_cyan }, fmt(print_fmt_str, TAble_of_nodes(black_cyan)))
-cs({ trig = black_white }, fmt(print_fmt_str, TAble_of_nodes(black_white)))
-cs({ trig = white_red }, fmt(print_fmt_str, TAble_of_nodes(white_red)))
-cs({ trig = white_green }, fmt(print_fmt_str, TAble_of_nodes(white_green)))
-cs({ trig = white_blue }, fmt(print_fmt_str, TAble_of_nodes(white_blue)))
-cs({ trig = white_purple }, fmt(print_fmt_str, TAble_of_nodes(white_purple)))
-cs({ trig = white_cyan }, fmt(print_fmt_str, TAble_of_nodes(white_cyan)))
-cs({ trig = red_black }, fmt(print_fmt_str, TAble_of_nodes(red_black)))
-cs({ trig = green_black }, fmt(print_fmt_str, TAble_of_nodes(green_black)))
-cs({ trig = yellow_black }, fmt(print_fmt_str, TAble_of_nodes(yellow_black)))
-cs({ trig = blue_black }, fmt(print_fmt_str, TAble_of_nodes(blue_black)))
-cs({ trig = purple_black }, fmt(print_fmt_str, TAble_of_nodes(purple_black)))
-cs({ trig = cyan_black }, fmt(print_fmt_str, TAble_of_nodes(cyan_black)))
-cs({ trig = gray_black }, fmt(print_fmt_str, TAble_of_nodes(gray_black)))
-cs({ trig = cyan_red }, fmt(print_fmt_str, TAble_of_nodes(cyan_red)))
+cs({ trig = black_red }, fmt(print_fmt_str, Table_of_nodes(black_red)))
+cs({ trig = black_green }, fmt(print_fmt_str, Table_of_nodes(black_green)))
+cs({ trig = black_yellow }, fmt(print_fmt_str, Table_of_nodes(black_yellow)))
+cs({ trig = black_purple }, fmt(print_fmt_str, Table_of_nodes(black_purple)))
+cs({ trig = black_cyan }, fmt(print_fmt_str, Table_of_nodes(black_cyan)))
+cs({ trig = black_white }, fmt(print_fmt_str, Table_of_nodes(black_white)))
+cs({ trig = white_red }, fmt(print_fmt_str, Table_of_nodes(white_red)))
+cs({ trig = white_green }, fmt(print_fmt_str, Table_of_nodes(white_green)))
+cs({ trig = white_blue }, fmt(print_fmt_str, Table_of_nodes(white_blue)))
+cs({ trig = white_purple }, fmt(print_fmt_str, Table_of_nodes(white_purple)))
+cs({ trig = white_cyan }, fmt(print_fmt_str, Table_of_nodes(white_cyan)))
+cs({ trig = red_black }, fmt(print_fmt_str, Table_of_nodes(red_black)))
+cs({ trig = green_black }, fmt(print_fmt_str, Table_of_nodes(green_black)))
+cs({ trig = yellow_black }, fmt(print_fmt_str, Table_of_nodes(yellow_black)))
+cs({ trig = blue_black }, fmt(print_fmt_str, Table_of_nodes(blue_black)))
+cs({ trig = purple_black }, fmt(print_fmt_str, Table_of_nodes(purple_black)))
+cs({ trig = cyan_black }, fmt(print_fmt_str, Table_of_nodes(cyan_black)))
+cs({ trig = gray_black }, fmt(print_fmt_str, Table_of_nodes(gray_black)))
+cs({ trig = cyan_red }, fmt(print_fmt_str, Table_of_nodes(cyan_red)))
 -- End Refactoring --
 
 return snippets, autosnippets
