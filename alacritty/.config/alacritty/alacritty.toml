@@ -1,0 +1,67 @@
+working_directory = "None"
+
+[cursor]
+blink_interval = 200
+
+[colors.bright]
+black = "#808080"
+blue = "#0066ff"
+cyan = "#00ffff"
+green = "#00d900"
+magenta = "#cc00ff"
+red = "#fe0100"
+white = "#FFFFFF"
+yellow = "#feff00"
+
+[colors.cursor]
+cursor = "#ffffff"
+text = "#F81CE5"
+
+[colors.normal]
+black = "#000000"
+blue = "#0066ff"
+cyan = "#00ffff"
+green = "#00a600"
+magenta = "#cc00ff"
+red = "#fe0100"
+white = "#d0d0d0"
+yellow = "#feff00"
+
+[cursor.style]
+shape = "Beam"
+blinking = "Always"
+
+
+[env]
+TERM = "tmux-256color"
+
+[font]
+size = 12
+
+[font.bold]
+family = "JetBrains Mono ExtraBold"
+style = "Bold"
+
+[font.italic]
+family = "Nimbus Mono PS"
+style = "Italic"
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+
+[shell]
+args = ["--login"]
+program = "/bin/zsh"
+
+[window.dimensions]
+columns = 140
+lines = 38
+
+[window.padding]
+x = 6
+y = 4
