@@ -1,4 +1,7 @@
 working_directory = "None"
+import=[
+  "~/.config/alacritty/themes/catppuccin/catppuccin-frappe.toml",
+]
 
 [cursor]
 blink_interval = 200
