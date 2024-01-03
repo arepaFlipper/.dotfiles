@@ -7,7 +7,7 @@ local opts = { noremap = true, silent = true }
 local Util = require("lazyvim.util")
 
 -- Delete a word backwards
-keymap.set("n", "dw", "vb_d")
+keymap.set("n", "db", "vb_d")
 
 -- Select All
 keymap.set("v", "<C-a>", "<Esc>gg<S-v>G")
