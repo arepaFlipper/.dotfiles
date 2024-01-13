@@ -18,6 +18,6 @@ tmux send-keys -t $window11 'lazygit' C-m
 #
 tmux new-window -n $window12
 tmux send-keys -t $window12 '/usr/bin/obsidian' C-m
-tmux send-keys -t $window12 'lvim .' C-m
+tmux send-keys -t $window12 'dvim .' C-m
 #
 tmux attach -t $session1:2

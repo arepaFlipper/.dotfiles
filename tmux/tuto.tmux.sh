@@ -34,6 +34,6 @@ tmux new -s $session2 -n $window21 -d
 tmux send-keys -t $window21 'lazygit' C-m
 
 tmux new -s $session3 -n $window31 -d
-tmux send-keys -t $window31 'lvim .' C-m
+tmux send-keys -t $window31 'dvim .' C-m
 
 tmux attach -t $session2:1

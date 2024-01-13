@@ -10,6 +10,6 @@ tmux kill-session -t dotfiles
 tmux has-session -t dotfiles
 
 tmux new -s dotfiles -n nvim -d
-tmux send-key -t nvim "lvim ." C-m
+tmux send-key -t nvim "dvim ." C-m
 
 tmux attach -t dotfiles

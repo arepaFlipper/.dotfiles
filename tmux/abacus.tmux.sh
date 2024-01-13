@@ -34,7 +34,7 @@ tmux split-pane -h -t $window11.1 'cd ./tests/ && npm run test'
 # Session 2: Code Editing
 tmux new -s $session2 -n $window21 -d
 tmux set-environment -t $session2 TASKDATA $task_data
-tmux send-keys -t $session2:1 'lvim .' C-m
+tmux send-keys -t $session2:1 'dvim .' C-m
 
 # Session 3 repository: LazyGit
 tmux new -s $session3 -n $window31 -d
