@@ -15,7 +15,7 @@ return {
     opts = {
       -- configuration goes here
       lang = "python3",
-      directory = vim.loop.os_homedir() .. "/Documents/neetcode/leetcoding",
+      directory = vim.loop.os_homedir() .. "/Documents/yt-tutos/neetcode/leetcoding",
     },
   },
   {
