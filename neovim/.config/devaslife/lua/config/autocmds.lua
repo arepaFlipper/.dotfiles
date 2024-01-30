@@ -16,3 +16,12 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.wo.conceallevel = 0
   end,
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "md", "markdown" },
+  callback = function()
+    vim.wo.conceallevel = 2
+    vim.opt_local.conceallevel = 2
+    vim.opt.conceallevel = 1
+  end,
+})
