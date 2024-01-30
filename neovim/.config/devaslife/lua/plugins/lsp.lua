@@ -16,8 +16,8 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
-    opts = {
-      autoformat = false,
-    },
+    opts = function(_, opts)
+      vim.g.autoformat = false
+    end,
   },
 }
