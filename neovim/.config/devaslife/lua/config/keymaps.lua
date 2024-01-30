@@ -41,17 +41,15 @@ vim.keymap.set("n", "<leader>tt", function()
 end, { noremap = true, silent = true, desc = "Open taskwarrior in floating window" })
 
 local status_ok, rest = pcall(require, "rest-nvim")
+local status_ok, obsidian = pcall(require, "obsidian")
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "http",
   callback = function()
     local buff = tonumber(vim.fn.expand("<abuf>"), 10)
     vim.keymap.set("n", "ñrr", rest.run, { noremap = true, buffer = buff })
-    vim.keymap.set(
-      "n",
-      "ñro",
-      '<cmd> lua r=require("rest-nvim");r.setup({result={show_headers=false, show_http_info=false}});r.run()<CR>',
-      { noremap = true, buffer = buff }
-    )
+    -- vim.keymap.set("n", "<leader>dl", "<cmd>ObsidianToday<CR>", { noremap = true, buffer = buff })
+
+    vim.keymap.set( "n", "ñro", '<cmd> lua r=require("rest-nvim");r.setup({result={show_headers=false, show_http_info=false}});r.run()<CR>', { noremap = true, buffer = buff })
     --[[ vim.keymap.set("n", "ñrl", rest.last, { noremap = true, buffer = buff }) ]]
     vim.keymap.set("n", "ñrp", rest.run(true), { noremap = true, buffer = buff })
   end,

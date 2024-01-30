@@ -10,18 +10,15 @@ return {
       {
         name = "general_vault",
         path = "~/Documents/obsidian_vault",
-        overrides = {
-          notes_subdit = "inbox",
-        }
       },
     },
     daily_notes = {
       folder = "Journalist/Daily",
       date_format = "%Y_%m_%d",
-      new_note_title = "New Note: ${slug}",
+      alias_format = "%A, %dth %B, %Y",
     },
     mappings = {
-      ["gf"] = {
+      ["gd"] = {
         action = function()
           return require("obsidian").util.gf_passthrough()
         end,
@@ -33,12 +30,12 @@ return {
         end,
         opts = { buffer = true },
       },
-      ["<leader>dl"] = {
+      ["<leader>odl"] = {
         action = function()
-          return require("obsidian").util.toggle_checkbox()
+          vim.cmd("ObsidianToday")
         end,
         opts = { buffer = true },
-      },
+    },
     },
     note_id_func = function(title)
       local suffix = ""
@@ -48,8 +45,8 @@ return {
           for _ = 1, 4 do
           suffix = suffix .. string.char(math.random(65, 90))
         end
-        return tostring(os.time()) .. "-" .. suffix
       end
+      return tostring(os.time()) .. "-" .. suffix
     end,
   }
 }
