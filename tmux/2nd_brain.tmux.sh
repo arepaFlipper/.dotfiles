@@ -1,7 +1,4 @@
 #!/bin/sh
-# -t: tag
-# -n: name
-# -d: dettach
 session1="brain"
 
 folder_name="obsidian_vault"
@@ -15,9 +12,11 @@ cd ${path}
 # session 1
 tmux new -s $session1 -n $window11 -d
 tmux send-keys -t $window11 'lazygit' C-m
-#
+
 tmux new-window -n $window12
-tmux send-keys -t $window12 '/usr/bin/obsidian' C-m
 tmux send-keys -t $window12 'dvim .' C-m
+
+tmux split-window -v -t $window11 '/usr/bin/obsidian'
+
 #
 tmux attach -t $session1:2
