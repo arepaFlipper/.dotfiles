@@ -8,7 +8,14 @@ session1="tuto_logs"
 # folder_name="js_mastery/pricewise"
 # folder_name="EdRoh/portfolio"
 # folder_name="Elliott-Chong/quizmify"
-folder_name="chriscourses/fighting_game"
+folder_name="freeCodeCamp/zubiarfan/courses/Rust"
+window11="lazygit"
+window12="lazygit"
+window13="neovim"
+path="$HOME/Documents/yt-tutos/${folder_name}/"
+# tmux kill-session -t $session0;
+cd ${path}
+# tmux new -s $session0;
 
 branch="main"
 window11="lazygit"
