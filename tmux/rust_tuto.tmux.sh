@@ -9,7 +9,7 @@ session1="tuto_logs"
 # folder_name="EdRoh/portfolio"
 # folder_name="Elliott-Chong/quizmify"
 
-folder_name="2-Areas/academic/docker/"
+folder_name="2-Areas/academic/rust/"
 window11="lazygit"
 window12="lazygit"
 window13="neovim"
