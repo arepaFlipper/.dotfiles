@@ -11,13 +11,35 @@ return {
         "tailwindcss-language-server",
         "typescript-language-server",
         "css-lsp",
+        "gopls",
+        "rust-analyzer",
       })
     end,
   },
   {
     "neovim/nvim-lspconfig",
-    opts = function(_, opts)
-      vim.g.autoformat = false
-    end,
+    opts = {
+      servers = {
+        gopls = {
+          settings = {
+            filetypes = { "go", "gomod", "gowork", "gotmpl" },
+            gopls = { gofumpt = true },
+          },
+          flags = {
+            debounce_text_changes = 150,
+          },
+        },
+        rust_analyzer = {
+          settings = {
+            ["rust-analyzer"] = {
+              procMacro = { enable = true },
+              cargo = { allFeatures = true },
+              filetypes = { "rust", "rs" },
+              autostart = true,
+            },
+          },
+        },
+      },
+    },
   },
 }
