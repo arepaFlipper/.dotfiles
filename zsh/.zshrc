@@ -215,3 +215,5 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 ## Taskwarrior
 export TASKDDATA="/var/taskd"
+
+eval "$(zoxide init --cmd cd zsh)"
