@@ -9,7 +9,7 @@ return {
     workspaces = {
       {
         name = "general_vault",
-        path = "~/manjaro_shares/obsidian_vault",
+        path = "~/Ipad_shares/obsidian_vault",
       },
     },
     daily_notes = {
@@ -48,6 +48,10 @@ return {
         end,
         opts = { buffer = true },
       },
+    },
+    templates = {
+      subdir = "Templates",
+      date_format = "YYYY_MM_DD",
     },
     note_id_func = function(title)
       local suffix = ""

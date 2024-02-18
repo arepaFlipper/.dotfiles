@@ -13,7 +13,9 @@ folder_name="2-Areas/academic/docker/"
 window11="lazygit"
 window12="lazygit"
 window13="neovim"
-path="$HOME/Documents/obsidian_vault/${folder_name}/"
+parent_path="$HOME/Ipad_shares/obsidian_vault"
+path="${parent_path}/${folder_name}/"
+
 # tmux kill-session -t $session0;
 cd ${path}
 # tmux new -s $session0;
@@ -49,7 +51,7 @@ tmux send-keys -t $window31 'dvim .' C-m
 
 # session 4
 tmux new -s $session4 -n $window41 -d
-tmux send-keys -t $session4 'cd ~/Documents/obsidian_vault/' C-m
+tmux send-keys -t $session4 "cd ${parent_page}" C-m
 tmux send-keys -t $session4 'dvim .' C-m
 
 tmux attach -t $session3:1

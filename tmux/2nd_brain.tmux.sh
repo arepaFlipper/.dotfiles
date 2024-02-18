@@ -4,7 +4,7 @@ session1="brain"
 folder_name="obsidian_vault"
 window11="lazygit"
 window12="neovim"
-path="$HOME/manjaro_shares/${folder_name}"
+path="$HOME/Ipad_shares/${folder_name}"
 # tmux kill-session -t $session0;
 cd ${path}
 # tmux new -s $session0;
