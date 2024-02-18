@@ -9,7 +9,7 @@ return {
     workspaces = {
       {
         name = "general_vault",
-        path = "~/Ipad_shares/obsidian_vault",
+        path = "~/iPad_sync/obsidian_vault",
       },
     },
     daily_notes = {

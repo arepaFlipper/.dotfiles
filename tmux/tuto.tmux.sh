@@ -13,7 +13,7 @@ folder_name="2-Areas/academic/docker/"
 window11="lazygit"
 window12="lazygit"
 window13="neovim"
-path="$HOME/Documents/obsidian_vault/${folder_name}/"
+path="$HOME/iPad_sync/obsidian_vault/${folder_name}/"
 # tmux kill-session -t $session0;
 cd ${path}
 # tmux new -s $session0;
