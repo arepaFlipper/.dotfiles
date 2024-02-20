@@ -51,7 +51,7 @@ tmux send-keys -t $window31 'dvim .' C-m
 
 # session 4
 tmux new -s $session4 -n $window41 -d
-tmux send-keys -t $session4 "cd ${parent_page}" C-m
+tmux send-keys -t $session4 "cd ${parent_path}" C-m
 tmux send-keys -t $session4 'dvim .' C-m
 
 tmux attach -t $session3:1
