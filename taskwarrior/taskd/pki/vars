@@ -1,7 +1,0 @@
-BITS=4096
-EXPIRATION_DAYS=365
-ORGANIZATION="Göteborg Bit Factory"
-CN=ec2-54-83-151-160.compute-1.amazonaws.com
-COUNTRY=CO
-STATE="Bogota"
-LOCALITY="Bogota"
