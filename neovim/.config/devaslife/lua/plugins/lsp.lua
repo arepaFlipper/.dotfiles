@@ -14,6 +14,16 @@ return {
         "gopls",
         "rust-analyzer",
       })
+      require("lvim.lsp.manager").setup("cssls", {
+        settings = {
+          css = {
+            css = {
+              validate = true,
+              lint = { unknownAtRules = "ignore" },
+            },
+          },
+        },
+      })
     end,
   },
   {
