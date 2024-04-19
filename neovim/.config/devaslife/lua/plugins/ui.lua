@@ -4,7 +4,7 @@ return {
     event = "VeryLazy",
     opts = {
       options = {
-        theme = "solarized_dark",
+        theme = "catppuccin",
       },
     },
   },
@@ -51,15 +51,6 @@ return {
         -- mode = "tabs",
         -- show_buffer_close_icons = false,
         -- show_close_icon = false,
-      },
-    },
-  },
-  {
-    "nvim-lualine/lualine.nvim",
-    event = "VeryLazy",
-    opts = {
-      options = {
-        theme = "solarized_dark",
       },
     },
   },
