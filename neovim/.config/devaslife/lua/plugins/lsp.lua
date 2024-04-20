@@ -10,21 +10,36 @@ return {
         "shfmt",
         "tailwindcss-language-server",
         "typescript-language-server",
+        "css-lsp",
+        "gopls",
         "rust-analyzer",
       })
     end,
   },
   {
     "neovim/nvim-lspconfig",
+    cssls = {
+      setup = {
+        filetypes = { "css", "scss", "sass" },
+        lint = {
+          unknownAtRules = "ignore",
+        },
+      },
+    },
     opts = {
       servers = {
-        gopls = {
+        cssls = {
           settings = {
-            filetypes = { "go", "gomod", "gowork", "gotmpl" },
-            gopls = { gofumpt = true },
+            ["cssls"] = {
+              validate = true,
+              lint = {
+                unknownAtRules = "ignore",
+              },
+              filetypes = { "css", "scss", "sass" },
+            },
           },
-          flags = {
-            debounce_text_changes = 150,
+          lint = {
+            unknownAtRules = "ignore",
           },
         },
         rust_analyzer = {
