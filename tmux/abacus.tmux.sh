@@ -44,4 +44,4 @@ tmux new -s $session4 -d
 tmux send-keys -t $session4 'dvim .' C-m
 
 # Attach to Session 2 to start development environment
-tmux attach -t $session4
+tmux attach -t $session2
