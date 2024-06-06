@@ -21,6 +21,7 @@ alias econ="~/econ.tmux.sh"
 alias forms="~/forms.tmux.sh"
 alias tuto="~/tuto.tmux.sh"
 alias ecommerce="~/ecommerce.tmux.sh"
+alias quiz_craft="~/quiz_craft_ai.tmux.sh"
 alias ta="tmux attach"
 alias rust_tuto="~/rust_tuto.tmux.sh"
 alias chatapp="~/chatapp_tuto.tmux.sh"
@@ -225,3 +226,4 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export TASKDDATA="/var/taskd"
 
 eval "$(zoxide init --cmd cd zsh)"
+if [ -f "/home/tovar/.config/fabric/fabric-bootstrap.inc" ]; then . "/home/tovar/.config/fabric/fabric-bootstrap.inc"; fi

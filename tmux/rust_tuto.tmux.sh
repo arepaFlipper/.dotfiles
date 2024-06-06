@@ -8,7 +8,6 @@ session1="tuto_logs"
 # folder_name="js_mastery/pricewise"
 # folder_name="EdRoh/portfolio"
 # folder_name="Elliott-Chong/quizmify"
-
 folder_name="2-Areas/academic/rust/"
 window11="lazygit"
 window12="lazygit"
@@ -38,6 +37,7 @@ cd ${path}
 # session 1
 tmux new -s $session1 -n $window11 -d
 # tmux send-keys -t $window11 'npm run dev' C-m
+tmux send-keys -t $window11 'qutebrowser https://practice.course.rs/' C-m
 tmux split-pane -t $window11.1
 
 # session 2
@@ -53,4 +53,4 @@ tmux new -s $session4 -n $window41 -d
 tmux send-keys -t $session4 "cd ${parent_path}" C-m
 tmux send-keys -t $session4 'dvim .' C-m
 
-tmux attach -t $session3:1
+tmux attach -t $session4:1
