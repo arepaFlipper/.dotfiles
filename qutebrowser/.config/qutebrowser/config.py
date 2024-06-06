@@ -9,6 +9,7 @@ config.set('auto_save.session', True)  # Automatically save the session on exit
 config.set('content.autoplay', False)  # Disable autoplay of videos
 config.set('content.cookies.accept', 'no-3rdparty')  # Accept only first-party cookies
 config.set('content.headers.do_not_track', True)  # Send "Do Not Track" header
+config.set('content.javascript.clipboard', "access-paste", "https://chatgpt.com")  # Enable JS for specific sites
 config.set('content.javascript.enabled', True, 'https://*.trustedsite.com/*')  # Enable JS for specific sites
 
 # Search engines
@@ -63,4 +64,14 @@ config.set('url.start_pages', ['https://google.com'])  # Set start pages
 
 # Enable smooth scrolling
 config.set('scrolling.smooth', True)
+
+config.unbind('J')
+config.unbind('K')
+config.unbind('H')
+config.unbind('L')
+
+config.bind('J', 'back')
+config.bind('K', 'forward')
+config.bind('H', 'tab-prev')
+config.bind('L', 'tab-next')
 
