@@ -1,3 +1,4 @@
+vim.api.nvim_set_keymap("n", "<leader>odl", "<CMD>ObsidianToday<CR>", { noremap = true })
 return {
   "epwalsh/obsidian.nvim",
   version = "*", -- recommended, use latest release instead of latest commit
@@ -33,12 +34,6 @@ return {
       ["<leader>ch"] = {
         action = function()
           return require("obsidian").util.toggle_checkbox()
-        end,
-        opts = { buffer = true },
-      },
-      ["<leader>odl"] = {
-        action = function()
-          vim.cmd("ObsidianToday")
         end,
         opts = { buffer = true },
       },
