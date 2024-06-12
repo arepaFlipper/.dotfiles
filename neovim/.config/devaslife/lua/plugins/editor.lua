@@ -57,7 +57,8 @@ return {
           local builtin = require("telescope.buildin")
           builtin.live_grep()
         end,
-        desc = "Search for a string in your current working directory and get results live as you type, respects .gitignore",
+        desc =
+        "Search for a string in your current working directory and get results live as you type, respects .gitignore",
       },
       {
         "ño",
@@ -98,8 +99,8 @@ return {
         end,
         desc = "Lists Function names, variables, from Treesitter",
       },
-      { "<leader><space>", Util.telescope("files", { cwd = false }), desc = "Find Files (root dir)" },
-      { "<leader>/", Util.telescope("live_grep", { cwd = false }), desc = "Find Files (root dir)" },
+      { "<leader><space>", Util.pick("files", { cwd = false }),     desc = "Find Files (root dir)" },
+      { "<leader>/",       Util.pick("live_grep", { cwd = false }), desc = "Find Files (root dir)" },
       {
         "sf",
         function()
