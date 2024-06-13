@@ -49,8 +49,17 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.keymap.set("n", "ñrr", rest.run, { noremap = true, buffer = buff })
     -- vim.keymap.set("n", "<leader>dl", "<cmd>ObsidianToday<CR>", { noremap = true, buffer = buff })
 
-    vim.keymap.set( "n", "ñro", '<cmd> lua r=require("rest-nvim");r.setup({result={show_headers=false, show_http_info=false}});r.run()<CR>', { noremap = true, buffer = buff })
+    vim.keymap.set(
+      "n",
+      "ñro",
+      '<cmd> lua r=require("rest-nvim");r.setup({result={show_headers=false, show_http_info=false}});r.run()<CR>',
+      { noremap = true, buffer = buff }
+    )
     --[[ vim.keymap.set("n", "ñrl", rest.last, { noremap = true, buffer = buff }) ]]
     vim.keymap.set("n", "ñrp", rest.run(true), { noremap = true, buffer = buff })
   end,
 })
+
+vim.keymap.set("n", "<leader>h", function()
+  vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+end)
