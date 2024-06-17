@@ -4,7 +4,7 @@ session1="brain"
 folder_name="obsidian_vault"
 window11="lazygit"
 window12="neovim"
-path="$HOME/iPad_sync/${folder_name}"
+path="$VAULT"
 # tmux kill-session -t $session0;
 cd ${path}
 # tmux new -s $session0;

@@ -50,6 +50,12 @@ alias texvim="NVIM_APPNAME=benbrastmckie nvim"
 alias vimtex="NVIM_APPNAME=VimTeX nvim"
 alias leetvim="NVIM_APPNAME=leetvim nvim"
 
+extract-wisdom () {
+  link=${1:""}
+  "$HOME/scripts/extract_wisdom.sh" "$link";
+}
+
+
 alias tn="task add $1"
 alias td="task delete $1"
 alias twl="task list"
@@ -224,6 +230,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 ## Taskwarrior
 export TASKDDATA="/var/taskd"
+export VAULT="$HOME/iPad_sync/obsidian_vault/"
 
 eval "$(zoxide init --cmd cd zsh)"
 if [ -f "/home/tovar/.config/fabric/fabric-bootstrap.inc" ]; then . "/home/tovar/.config/fabric/fabric-bootstrap.inc"; fi
