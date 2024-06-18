@@ -58,6 +58,7 @@ aliases:
   - $video_title
 tags:
   - youtube
+  - pending
 ---
 
 # $video_title
