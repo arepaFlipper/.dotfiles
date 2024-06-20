@@ -3,10 +3,10 @@
 # -n: name
 # -d: detach
 
-session1="logs 💻"
-session2="repo 🪡"
-session3="code 🛠️"
-session4="notes 📓"
+session1="logs"
+session2="repo"
+session3="code"
+session4="notes"
 
 obsidian="$HOME/iPad_sync/obsidian_vault/"
 path="$HOME/Documents/yt-tutos/ionic_react_capacitor/"
