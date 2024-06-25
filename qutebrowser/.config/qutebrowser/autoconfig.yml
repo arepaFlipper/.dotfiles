@@ -17,7 +17,7 @@ settings:
   colors.tooltip.bg:
     global: null
   colors.webpage.bg:
-    global: darkgrey
+    global: null
   colors.webpage.darkmode.algorithm:
     global: lightness-hsl
   colors.webpage.darkmode.contrast:
@@ -30,8 +30,7 @@ settings:
     global: always
   colors.webpage.preferred_color_scheme:
     global: dark
-  colors.webpage.bg:
-    global: #282828
+  content.javascript.clipboard:
+    global: access-paste
   url.default_page:
-    global: 'https://neetcode.com/roadmap'
-
+    global: https://neetcode.com/roadmap
