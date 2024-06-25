@@ -27,6 +27,15 @@ if [ $? -ne 0 ]; then
 	exit 1
 fi
 
+# Extract the channel name using yt-dlp
+channel_name=$(yt-dlp --get-channel "$1")
+
+# Check if yt-dlp succeeded
+if [ $? -ne 0 ]; then
+	echo "Failed to retrieve the channel name."
+	exit 1
+fi
+
 # Process the title to create a suitable filename
 if [ -n "$video_title" ]; then
 	suffix=$(echo "$video_title" | sed 's/ /-/g' | sed 's/[^a-zA-Z0-9-]//g' | tr '[:upper:]' '[:lower:]')
@@ -63,6 +72,8 @@ tags:
 
 # $video_title
 
+This video was produced by $channel_name.
+
 ## RESOURCES
 - [video]($1)
 
@@ -75,7 +86,7 @@ tempfile=$(mktemp)
 
 cat "$filepath" | fabric --model "gpt-3.5-turbo" -sp extract_wisdom >"$tempfile"
 
-sed -i '9r '"$tempfile" "$filepath"
+sed -i '11r '"$tempfile" "$filepath"
 rm "$tempfile"
 
 # Output the filename
