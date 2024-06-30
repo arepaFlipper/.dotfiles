@@ -235,3 +235,4 @@ export VAULT="$HOME/iPad_sync/obsidian_vault/"
 
 eval "$(zoxide init --cmd cd zsh)"
 if [ -f "/home/tovar/.config/fabric/fabric-bootstrap.inc" ]; then . "/home/tovar/.config/fabric/fabric-bootstrap.inc"; fi
+eval "$(rbenv init -)"
