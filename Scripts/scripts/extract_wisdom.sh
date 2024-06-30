@@ -28,7 +28,7 @@ if [ $? -ne 0 ]; then
 fi
 
 # Extract the channel name using yt-dlp
-channel_name=$(yt-dlp --get-channel "$1")
+channel_name=$(yt-dlp --print channel "$1")
 
 # Check if yt-dlp succeeded
 if [ $? -ne 0 ]; then
@@ -71,8 +71,9 @@ tags:
 ---
 
 # $video_title
+This video was produced by $channel_name
 
-This video was produced by $channel_name.
+
 
 ## RESOURCES
 - [video]($1)
@@ -86,7 +87,7 @@ tempfile=$(mktemp)
 
 cat "$filepath" | fabric --model "gpt-3.5-turbo" -sp extract_wisdom >"$tempfile"
 
-sed -i '11r '"$tempfile" "$filepath"
+sed -i '12r '"$tempfile" "$filepath"
 rm "$tempfile"
 
 # Output the filename
