@@ -8,3 +8,5 @@ neovim/.config/LazyVim/lazy-lock.json
 .obsidian
 neovim/.config/devaslife/lazy-lock.json
 neovim/.config/devaslife/.luarc.json
+
+**.swp
