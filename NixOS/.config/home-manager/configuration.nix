@@ -82,17 +82,18 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    vim 
-    wget
-    tmux
-    git
-    nodejs_20
-    docker
-    docker-compose
-    openssl_3_3
-    flatpak
-    flatpak-builder
-    fzf
+		vim 
+		neovim 
+		wget
+		tmux
+		git
+		nodejs_20
+		docker
+		docker-compose
+		openssl_3_3
+		flatpak
+		flatpak-builder
+		fzf
 
 		python3	
 		python312Packages.pip
@@ -105,6 +106,7 @@
 		zsh-syntax-highlighting
 		tre-command
 
+		libgcc
   ];
 
   environment.variables.EDITOR = "vim";
