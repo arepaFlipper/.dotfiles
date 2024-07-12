@@ -83,7 +83,6 @@
 
   environment.systemPackages = with pkgs; [
 		vim 
-		neovim 
 		wget
 		tmux
 		git

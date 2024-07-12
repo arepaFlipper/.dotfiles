@@ -4,7 +4,8 @@ let
 in 
 {
   imports = [
-    ./modules/sh.nix
+    ./modules/shell.nix
+    ./modules/neovim.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -28,7 +29,7 @@ in
     #pkgs.hello
     lazygit
     vimPlugins.LazyVim
-    unstable.neovim
+    #nixvim
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -76,7 +77,7 @@ in
   #  /etc/profiles/per-user/cris/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    EDITOR = "vim";
+    EDITOR = "nvim";
   };
 
   # Let Home Manager install and manage itself.
@@ -84,12 +85,6 @@ in
 
   programs.lazygit = {
   	enable = true;
-  };
-
-  programs.neovim = {
-		plugins = with pkgs.vimPlugins; [
-			LazyVim
-		];
   };
 
 }
