@@ -1,5 +1,10 @@
 { config, pkgs, ... }:
-
+let
+  myAliases = {
+    la = "ls -lha";
+    nb = "npm run build";
+  };
+in 
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -20,7 +25,10 @@
   home.packages = [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
-    pkgs.hello
+    #pkgs.hello
+    pkgs.neovim
+    pkgs.lazygit
+    pkgs.vimPlugins.LazyVim
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -68,9 +76,30 @@
   #  /etc/profiles/per-user/cris/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    EDITOR = "nvim";
   };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+    programs.bash = {
+    enable = true;
+    shellAliases = myAliases;
+  };
+
+  programs.zsh = {
+    enable = true;
+    shellAliases = myAliases;
+  };
+
+  programs.lazygit = {
+  	enable = true;
+  };
+
+  programs.neovim = {
+  	enable = true;
+		plugins = with pkgs.vimPlugins; [
+			LazyVim
+		];
+  };
+
 }

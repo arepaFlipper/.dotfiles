@@ -67,7 +67,6 @@
 		packages = [
 			pkgs.alacritty	
 			pkgs.qutebrowser	
-			pkgs.neovim	
 			pkgs.home-manager	
 		];
   };
