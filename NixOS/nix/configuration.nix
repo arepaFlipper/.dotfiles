@@ -35,7 +35,8 @@
   services.xserver.enable = true;
   #services.xserver.layout = "us";
   services.xserver.xkb.layout = "us";
-  services.xserver.xkbOptions = "eurosign:e";
+  #services.xserver.xkbOptions = "eurosign:e";
+  services.xserver.xkb.options = "eurosign:e";
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
@@ -67,9 +68,11 @@
 			pkgs.alacritty	
 			pkgs.qutebrowser	
 			pkgs.neovim	
+			pkgs.home-manager	
 		];
   };
 
+  # services.xserver.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.enable = true;
   # services.xserver.displayManager.autoLogin.user = "cris";
   services.displayManager.autoLogin.user = "cris";
@@ -99,6 +102,10 @@
 		stow
 
 		zsh-powerlevel10k
+		zsh-autosuggestions
+		zsh-syntax-highlighting
+		tre-command
+
   ];
 
   environment.variables.EDITOR = "vim";
@@ -109,8 +116,6 @@
   networking.firewall.allowedTCPPorts = [ 24800 8000 ];
   virtualisation.docker.enable = true;
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  system.stateVersion = "24.05";
   programs.zsh = {
 		enable = true;
 		promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
@@ -129,5 +134,8 @@
     };
   };
 
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+	nix.settings.allowed-users = ["cris"];
+  system.stateVersion = "24.05";
 }
 
