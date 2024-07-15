@@ -114,25 +114,19 @@
   xdg.portal.enable = true;
 
   networking.firewall.allowedTCPPorts = [ 24800 8000 ];
-  virtualisation.docker.enable = true;
+  virtualisation.docker = {
+    enable = true;
+    rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
+  };
 
   programs.zsh = {
 		enable = true;
 		promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
 	};
 
-  # Add Synergy systemd service
-  systemd.services.synergy = {
-    description = "Synergy Service";
-    after = [ "network.target" ];
-    wantedBy = [ "multi-user.target" ];
-    serviceConfig = {
-      ExecStart = "/run/current-system/sw/bin/synergy";
-      Restart = "on-failure";
-      User = "cris";
-      Type = "simple";
-    };
-  };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 	nix.settings.allowed-users = ["cris"];
