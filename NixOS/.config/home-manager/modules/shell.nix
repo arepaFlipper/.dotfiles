@@ -26,6 +26,9 @@ in
 		#
 			initExtra = ''
 				[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+				autoload -U edit-command-line
+				zle -N edit-command-line
+				bindkey -M viins '^X^E' edit-command-line
 			'';
 			zplug = {
 				enable = true;
