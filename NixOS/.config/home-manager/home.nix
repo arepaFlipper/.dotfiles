@@ -7,6 +7,8 @@ in
     ./modules/shell.nix
     ./modules/neovim.nix
     ./modules/alacritty.nix
+    ./modules/tmux.nix
+    ./modules/syncthing.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -29,14 +31,15 @@ in
     # # "Hello, world!" when run.
     #pkgs.hello
     lazygit
-    vimPlugins.LazyVim
     #nixvim
+    fzf
+    syncthing
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
     # # fonts?
-    # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
+     (pkgs.nerdfonts.override { fonts = [ "Meslo" "FiraCode" "DroidSansMono" "JetBrainsMono" ]; })
 
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
@@ -59,6 +62,11 @@ in
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
+
+    ".p10k.zsh" = {
+      source = ./.p10k.zsh;
+      executable = true;
+    };
   };
 
   # Home Manager can also manage your environment variables through
@@ -78,7 +86,6 @@ in
   #  /etc/profiles/per-user/cris/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    EDITOR = "nvim";
   };
 
   # Let Home Manager install and manage itself.
