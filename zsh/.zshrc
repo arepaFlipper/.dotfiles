@@ -8,6 +8,7 @@ fi
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:$HOME/.cargo/bin:$HOME/.config/git/git-log-compact:/usr/local/bin:/usr/bin:$PATH
 
+
 #Aliases
 alias ns="npm run start"
 alias nb="npm run build"
@@ -231,59 +232,8 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 ## Taskwarrior
 export TASKDDATA="/var/taskd"
-export VAULT="$HOME/sync_repo/brain/"
+export VAULT="$HOME/iPad_sync/obsidian_vault/"
 
 eval "$(zoxide init --cmd cd zsh)"
 if [ -f "/home/tovar/.config/fabric/fabric-bootstrap.inc" ]; then . "/home/tovar/.config/fabric/fabric-bootstrap.inc"; fi
-eval "$(rbenv init -)"
-
-typeset -U path cdpath fpath manpath
-
-for profile in ${(z)NIX_PROFILES}; do
-  fpath+=($profile/share/zsh/site-functions $profile/share/zsh/$ZSH_VERSION/functions $profile/share/zsh/vendor-completions)
-done
-
-HELPDIR="/nix/store/azf64cfahr0215gildbdksf6lmjghnyg-zsh-5.9/share/zsh/$ZSH_VERSION/help"
-
-
-
-
-
-# Oh-My-Zsh/Prezto calls compinit during initialization,
-# calling it twice causes slight start up slowdown
-# as all $fpath entries will be traversed again.
-
-# History options should be set in .zshrc and after oh-my-zsh sourcing.
-# See https://github.com/nix-community/home-manager/issues/177.
-HISTSIZE="10000"
-SAVEHIST="10000"
-
-HISTFILE="$HOME/.zsh_history"
-mkdir -p "$(dirname "$HISTFILE")"
-
-setopt HIST_FCNTL_LOCK
-setopt HIST_IGNORE_DUPS
-unsetopt HIST_IGNORE_ALL_DUPS
-setopt HIST_IGNORE_SPACE
-unsetopt HIST_EXPIRE_DUPS_FIRST
-setopt SHARE_HISTORY
-unsetopt EXTENDED_HISTORY
-
-# Existing .zshrc content ...
-
-# Enable Ctrl-x-e to edit command line
-autoload -U edit-command-line
-zle -N edit-command-line
-bindkey -M viins '^X^E' edit-command-line
-
-fpath=(~/.zsh/cache/site-functions $fpath)
-
-# Use -u option to ignore insecure directories
-compinit -i -u
-
-autoload -U edit-command-line
-zle -N edit-command-line
-bindkey -M viins '^X^E' edit-command-line
-
-rm ~/.config/zsh/plugins/zsh-syntax-highlighting
-
+#eval "$(rbenv init -)"
