@@ -5,7 +5,13 @@ let
     pkgs.zsh-autosuggestions
     pkgs.zsh-syntax-highlighting
   ];
-  sessionVariables = {};
+  sessionVariables = {
+    GOOGLE_API_KEY = "";
+    YOUTUBE_API_KEY = "";
+    OPENAI_API_KEY = "";
+  };
+  variables = sessionVariables;
+  localVariables = variables;
   myAliases = {
     la = "ls -lha";
 		ns="npm run start";
@@ -46,6 +52,7 @@ let
 		texvim="NVIM_APPNAME=benbrastmckie nvim";
 		vimtex="NVIM_APPNAME=VimTeX nvim";
 		leetvim="NVIM_APPNAME=leetvim nvim";
+
   };
 in 
 {
@@ -71,6 +78,18 @@ in
 				autoload -U edit-command-line
 				zle -N edit-command-line
 				bindkey -M viins '^X^E' edit-command-line
+
+        export GOOGLE_API_KEY=""
+        export YOUTUBE_API_KEY=""
+        export OPENAI_API_KEY=""
+        export PATH=$PATH:~/.local/share/pipx/venvs/fabric/bin
+		    export VAULT="$HOME/sync_repo/brain";
+
+        extract-wisdom () {
+          link=$''+''{1:-""}
+          "$HOME/scripts/extract_wisdom.sh" "$link";
+        }
+
 			'';
 			zplug = {
 				enable = true;
@@ -98,5 +117,10 @@ in
 
   programs.bash = {
     enable = true;
+    
+    initExtra = ''
+      # include .profile if it exists
+      [[ -f ~/.profile ]] && . ~/.profile
+    '';
   };
 }

@@ -34,6 +34,10 @@ in
     #nixvim
     fzf
     syncthing
+    pipx
+    ripgrep
+    ffmpeg
+    yt-dlp
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -86,6 +90,9 @@ in
   #  /etc/profiles/per-user/cris/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
+    GOOGLE_API_KEY = "";
+    YOUTUBE_API_KEY = "";
+    OPENAI_API_KEY = "";
   };
 
   # Let Home Manager install and manage itself.
