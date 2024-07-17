@@ -6,7 +6,7 @@ in
   imports = [
     ./modules/shell.nix
     ./modules/neovim.nix
-    ./modules/alacritty.nix
+    #./modules/alacritty.nix
     ./modules/tmux.nix
     ./modules/syncthing.nix
   ];
@@ -38,6 +38,8 @@ in
     ripgrep
     ffmpeg
     yt-dlp
+    gnupg
+    pinentry
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -72,6 +74,25 @@ in
       executable = true;
     };
   };
+
+  services.gnome-keyring.enable = true;
+  programs.gpg = {
+    enable = true;
+    # settings.pinentry-program = "${pkgs.pinentry.gnome3}/bin/pinentry";
+  };
+
+  services.gpg-agent = {
+    enable = true;
+    #pinentryPackage = "curses";
+    #enableSSHSupport = true;
+  };
+
+  services.dbus.packages = [ pkgs.gcr ];
+  # programs.gnupg.agent = {
+  #   enable = true;
+  #   enableSSHSupport = true;
+  #   pinentryFlavor = "qt";
+  # };
 
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. These will be explicitly sourced when using a
