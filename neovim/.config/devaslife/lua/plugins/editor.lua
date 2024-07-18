@@ -99,8 +99,8 @@ return {
         end,
         desc = "Lists Function names, variables, from Treesitter",
       },
-      { "<leader><space>", Util.pick("files", { cwd = false }),     desc = "Find Files (root dir)" },
-      { "<leader>/",       Util.pick("live_grep", { cwd = false }), desc = "Find Files (root dir)" },
+      { "<leader><space>", Util.pick("files", { cwd = nil }),     desc = "Find Files (root dir)" },
+      { "<leader>/",       Util.pick("live_grep", { cwd = nil }), desc = "Find Files (root dir)" },
       {
         "sf",
         function()

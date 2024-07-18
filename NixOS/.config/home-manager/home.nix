@@ -87,7 +87,6 @@ in
     #enableSSHSupport = true;
   };
 
-  services.dbus.packages = [ pkgs.gcr ];
   # programs.gnupg.agent = {
   #   enable = true;
   #   enableSSHSupport = true;
