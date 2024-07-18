@@ -17,6 +17,8 @@ return {
       folder = "2-Areas/Journalist/Daily",
       date_format = "%Y_%m_%d",
       alias_format = "%A, %dth %B, %Y",
+      default_tags = {"daily-notes"},
+      template = "Templates/Daily Template.md"
     },
     mappings = {
       ["gd"] = {
@@ -44,6 +46,8 @@ return {
         opts = { buffer = true },
       },
     },
+    notes_subdir = "0-Inbox",
+    new_notes_location = "notes_subdir",
     templates = {
       subdir = "Templates",
       date_format = "YYYY_MM_DD",
