@@ -52,7 +52,7 @@ let
 		texvim="NVIM_APPNAME=benbrastmckie nvim";
 		vimtex="NVIM_APPNAME=VimTeX nvim";
 		leetvim="NVIM_APPNAME=leetvim nvim";
-
+		tl="tmux ls";
   };
 in 
 {
