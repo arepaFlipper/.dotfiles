@@ -1,7 +1,5 @@
 working_directory = "None"
-import=[
-  "~/.config/alacritty/themes/catppuccin/catppuccin-frappe.toml",
-]
+import = ["~/.config/alacritty/themes/catppuccin-mocha.toml"]
 
 [cursor]
 blink_interval = 200
@@ -59,7 +57,7 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
 
 [shell]
 args = ["--login"]
-program = "/bin/zsh"
+program = "zsh"
 
 [window.dimensions]
 columns = 140

@@ -53,6 +53,7 @@ let
 		vimtex="NVIM_APPNAME=VimTeX nvim";
 		leetvim="NVIM_APPNAME=leetvim nvim";
 		tl="tmux ls";
+    hmsi="home-manager switch --impure";
   };
 in 
 {
