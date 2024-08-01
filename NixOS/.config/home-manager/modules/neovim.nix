@@ -17,6 +17,7 @@ in
     lua5_1
     gcc
     gnumake
+    w3m
   ];
 
   programs.neovim = {
