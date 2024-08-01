@@ -43,6 +43,8 @@ let
 		jupy="~/Documents/jupyter_notes/jupyter-init.sh";
 		dotfiles="~/dotfiles.tmux.sh";
 		keyboard="~/qmk.tmux.sh";
+    inlaze="~/InlazeMovies.tmux.sh";
+    inventory_management="~/inventory-management.tmux.sh";
 
 		lvim="NVIM_APPNAME=LazyVim nvim";
 		dvim="NVIM_APPNAME=devaslife nvim";

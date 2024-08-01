@@ -51,6 +51,6 @@ tmux send-keys -t $window31 'dvim .' C-m
 
 # session 4 (notes)
 tmux new -s $session4 -n $window41 -d
-tmux send-keys -t $session4 'cd /iPad_sync/obsidian_vault/ && dvim .' C-m
+tmux send-keys -t $session4 'cd $HOME/sync_repo/obsidian_vault/ && dvim .' C-m
 
 tmux attach -t $session3:1

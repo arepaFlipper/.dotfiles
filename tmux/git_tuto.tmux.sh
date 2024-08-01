@@ -12,7 +12,7 @@ session1="tuto_logs"
 window11="lazygit"
 window12="lazygit"
 window13="neovim"
-parent_path="$HOME/iPad_sync/obsidian_vault"
+parent_path="$HOME/sync_repo/obsidian_vault"
 folder_name="2-Areas/academic/GIT/"
 path="${parent_path}/${folder_name}/"
 # tmux kill-session -t $session0;

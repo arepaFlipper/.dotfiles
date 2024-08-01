@@ -8,7 +8,7 @@ session2="repo"
 session3="code"
 session4="notes"
 
-obsidian="$HOME/iPad_sync/obsidian_vault/"
+obsidian="$HOME/sync_repo/obsidian_vault/"
 path="$HOME/Documents/yt-tutos/WebDevSimplified/ecommerce"
 
 branch="main"

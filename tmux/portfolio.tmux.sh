@@ -8,12 +8,10 @@ session2="repo"
 session3="code"
 session4="notes"
 
-obsidian="$HOME/iPad_sync/obsidian_vault/"
+obsidian="$HOME/sync_repo/brain"
 folder_name="portfolio/"
 parent_path="$HOME/Documents/yt-tutos/EdRoh/"
 path="${parent_path}/${folder_name}/"
-
-branch="main"
 
 cd ${path}
 # Ensure tmux sessions are killed if they already exist
