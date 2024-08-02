@@ -5,7 +5,7 @@
 [core]
 	editor = NVIM_APPNAME=LazyVim nvim
 	pager = delta
-	attributesFile = /home/tovar/.gitattributes
+	attributesFile = $HOME/.gitattributes
 
 [interactive]
   diffFilter = delta --color-only
