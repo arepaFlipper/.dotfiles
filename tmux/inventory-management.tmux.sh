@@ -24,7 +24,7 @@ tmux kill-session -t $session4 2>/dev/null
 tmux new-session -s $session1 -n "command line 💻" -d
 tmux send-keys -t $session1:1 "cd ${path}" C-m
 tmux split-window -h -t $session1:1
-tmux send-keys -t $session1:1.1 "npm run dev" C-m
+tmux send-keys -t $session1:1.1 "cd client && npm run dev" C-m
 
 # session 2: repo
 tmux new-session -s $session2 -n "repo 🌲" -d
