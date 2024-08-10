@@ -44,6 +44,7 @@ let
 		dotfiles="~/dotfiles.tmux.sh";
 		keyboard="~/qmk.tmux.sh";
     inlaze="~/InlazeMovies.tmux.sh";
+		fs_node="~/fs_node.tmux.sh";
     inventory_management="~/inventory-management.tmux.sh";
 
 		lvim="NVIM_APPNAME=LazyVim nvim";
