@@ -1,9 +1,9 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  #source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+#fi
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:$HOME/.cargo/bin:$HOME/.config/git/git-log-compact:/usr/local/bin:/usr/bin:$PATH
@@ -35,7 +35,6 @@ alias inlaze="~/InlazeMovies.tmux.sh"
 alias inventory_managerment="~/inventory-management.tmux.sh"
 alias leetcode="~/leetcode.tmux.sh"
 alias fs_node="~/fs_node.tmux.sh"
-alias ttask="~/taskwarrior.tmux.sh"
 alias abacus="~/abacus.tmux.sh"
 alias p18="~/p18.tmux.sh"
 alias bot="~/bot_Ax.tmux.sh"
@@ -60,34 +59,6 @@ extract-wisdom () {
   "$HOME/scripts/extract_wisdom.sh" "$link";
 }
 
-
-alias tn="task add $1"
-alias td="task delete $1"
-alias twl="task list"
-
-alias routine_tasks="bash ~/.dotfiles/taskwarrior/.task/routine.sh"
-alias meditation_tasks="bash ~/.dotfiles/taskwarrior/.task/meditations.sh"
-task_project_function () {
-  task $1 modify project:$2
-}
-
-alias tproj="task_project_function"
-
-task_tag_function () {
-  task $1 modify +$2 +$3 +$4
-}
-
-alias ttag="task_tag_function"
-
-newcakefunction () {
-    task add Bake cake for $1 due:$2 scheduled:due-4d wait:due-5d project:$3
-    task add buy eggs +$1,grocery due:$2 scheduled:due-1d wait:-2d project:$3
-    task add buy flour +$1,grocery due:$2 scheduled:due-1d wait:-2d project:$3
-    task add buy milk +$1,grocery due:$2 scheduled:due-1d wait:-2d project:$3
-}
-
-alias newcake=newcakefunction
-
 function nvims(){
   items=("default" "kickstart" "LazyVim" "NvChad" "AstroNvim" "packervim" "tuffgniuz" "benbrastmckie" "VimTeX" "ejmastnak" "leetvim")
   config=$(printf "%s\n" "${items[@]}" | fzf --prompt="Neovim Config >>" --height=~50% --layout=reverse --border --exit-0)
@@ -103,7 +74,7 @@ function nvims(){
 bindkey -s ^ñ "nvims\n"
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+# export ZSH="$HOME/.oh-my-zsh"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -177,7 +148,7 @@ plugins=(
 	tmux
 	git
 )
-source $ZSH/oh-my-zsh.sh
+#source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -208,14 +179,14 @@ export LANG=en_US.UTF-8
 # Open tmux on startup, requires tmux plugin
 ZSH_TMUX_AUTOSTART=true
 
-source ~/.dotfiles/zsh/powerlevel10k/powerlevel10k.zsh-theme
+#source ~/.dotfiles/zsh/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # set vim as default IDE
 export EDITOR=nvim
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+#source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -233,9 +204,7 @@ alias vimdiff="NVIM_APPNAME=LazyVim nvim -d"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-## Taskwarrior
-export TASKDDATA="/var/taskd"
-export VAULT="$HOME/iPad_sync/obsidian_vault/"
+export VAULT="$HOME/sync_repo/brain/"
 
 eval "$(zoxide init --cmd cd zsh)"
 if [ -f "/home/tovar/.config/fabric/fabric-bootstrap.inc" ]; then . "/home/tovar/.config/fabric/fabric-bootstrap.inc"; fi
