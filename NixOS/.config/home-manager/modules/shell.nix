@@ -4,6 +4,7 @@ let
   home.packages = with pkgs; [
     pkgs.zsh-autosuggestions
     pkgs.zsh-syntax-highlighting
+    pkgs.zoxide
   ];
   sessionVariables = {
     GOOGLE_API_KEY = "";
@@ -64,59 +65,27 @@ in
 		enable = true;
 		sessionVariables = sessionVariables;
     shellAliases = myAliases;
-		# enableCompletion = true;
-		#
-		# autosuggestion.enable = true;
-		# syntaxHighlighting = {
-		# 		enable = true;
-		# };
-		#
-		#   oh-my-zsh = {
-		#    enable = true;
-		#    theme = "agnoster";
-		#    plugins = [ "git" "sudo" ];
-		#   };
-		#
-			initExtra = ''
-				[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-				autoload -U edit-command-line
-				zle -N edit-command-line
-				bindkey -M viins '^X^E' edit-command-line
+		enableCompletion = true;
 
-        export GOOGLE_API_KEY=""
-        export YOUTUBE_API_KEY=""
-        export OPENAI_API_KEY=""
+		autosuggestion.enable = true;
+		syntaxHighlighting = {
+				enable = true;
+		};
+
+    oh-my-zsh = {
+      enable = true;
+      theme = "robbyrussell";
+      plugins = [ "git" "sudo" ];
+    };
+
+			initExtra = ''
+				[[ ! -f ~/.dotfiles/zsh/.config/zsh/.p10k.zsh ]] || source ~/.dotfiles/zsh/.config/zsh/.p10k.zsh
+
+        source $HOME/.dotfiles/zsh/.zshrc
         export PATH=$PATH:~/.local/share/pipx/venvs/fabric/bin
 		    export VAULT="$HOME/sync_repo/brain";
 
-        extract-wisdom () {
-          link=$''+''{1:-""}
-          "$HOME/scripts/extract_wisdom.sh" "$link";
-        }
-
 			'';
-			zplug = {
-				enable = true;
-				plugins = [
-					{
-						name = "romkatv/powerlevel10k";
-						tags = [ "as:theme" "depth:1" ];
-					}
-					{
-						# will source zsh-autosuggestions.plugin.zsh
-						name = "zsh-users/zsh-autosuggestions";
-						# src = pkgs.fetchFromGitHub {
-						# 	owner = "zsh-users";
-						# 	repo = "zsh-autosuggestions";
-						# 	rev = "v0.4.0";
-						# 	sha256 = "0z6i9wjjklb4lvr7zjhbphibsyx51psv50gm07mbb0kj9058j6kc";
-						# };
-					}
-					{
-						name = "zsh-users/zsh-syntax-highlighting";
-					}
-				];
-			};
   };
 
   programs.bash = {
