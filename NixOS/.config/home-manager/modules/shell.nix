@@ -64,7 +64,7 @@ in
   programs.zsh = {
 		enable = true;
 		sessionVariables = sessionVariables;
-    shellAliases = myAliases;
+    # shellAliases = myAliases;
 		enableCompletion = true;
 
 		autosuggestion.enable = true;

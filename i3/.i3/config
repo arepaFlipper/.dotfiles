@@ -36,7 +36,7 @@ exec --no-startup-id nm-applet
 
 # Prevent screen from sleeping
 exec_always --no-startup-id xset s off
-exec_always --no-startup-id xset -dpms
+exec_always --no-startup-id xset -dpms s off
 exec_always --no-startup-id xset s noblank
 
 
