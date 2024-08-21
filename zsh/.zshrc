@@ -146,7 +146,10 @@ plugins=(
 	tmux
 	git
 )
-source $ZSH/oh-my-zsh.sh
+
+if [[ "$(cat /etc/hostname)" != "nixos" ]]; then
+  source $ZSH/oh-my-zsh.sh
+fi
 
 # User configuration
 
