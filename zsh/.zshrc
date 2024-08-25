@@ -50,6 +50,8 @@ alias avim="NVIM_APPNAME=AstroNvim nvim"
 alias texvim="NVIM_APPNAME=benbrastmckie nvim"
 alias vimtex="NVIM_APPNAME=VimTeX nvim"
 alias leetvim="NVIM_APPNAME=leetvim nvim"
+alias hmsi="home-manager switch --impure"
+alias tl="tmux ls"
 
 extract-wisdom () {
   link=${1:""}
