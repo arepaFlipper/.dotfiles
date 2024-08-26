@@ -1,10 +1,11 @@
 { config, pkgs, ... }:
 {
   home.packages = with pkgs; [
-    alacritty
+    delta
+    lazygit
   ];
-  programs.alacritty = {
-    enable = true;
+  programs.lazygit = {
+  	enable = true;
   };
 }
 
