@@ -3,7 +3,7 @@
 # confirmations, etc.) must go above this block; everything else may go below.
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.cargo/bin:$HOME/.config/git/git-log-compact:/usr/local/bin:/usr/bin:$PATH
+export PATH=$HOME/bin:$HOME/.cargo/bin:$HOME/.config/git/git-log-compact:/usr/local/bin:/usr/bin:$(go env GOPATH)/bin:$PATH
 
 
 #Aliases
@@ -210,7 +210,6 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export VAULT="$HOME/sync_repo/brain/"
 
 eval "$(zoxide init --cmd cd zsh)"
-if [ -f "/home/tovar/.config/fabric/fabric-bootstrap.inc" ]; then . "/home/tovar/.config/fabric/fabric-bootstrap.inc"; fi
 #eval "$(rbenv init -)"
 
 source $HOME/.ssh/api_key.sh
