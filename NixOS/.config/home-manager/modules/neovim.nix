@@ -18,6 +18,7 @@ in
     gcc
     gnumake
     w3m
+    solc
   ];
 
   programs.neovim = {

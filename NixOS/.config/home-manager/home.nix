@@ -10,6 +10,7 @@ in
     ./modules/tmux.nix
     ./modules/syncthing.nix
     ./modules/git.nix
+    ./modules/cura.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -34,7 +35,11 @@ in
     #nixvim
     ripgrep
     ffmpeg
+    yt-dlp
+    nodePackages_latest.nodejs
+    scrcpy
 
+    android-udev-rules
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of

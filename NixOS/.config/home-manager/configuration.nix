@@ -62,7 +62,7 @@
   users.users.cris = {
     isNormalUser = true;
     description = "cris";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "kvm" "adbusers" ];
     shell = pkgs.zsh;
 		packages = [
 			pkgs.alacritty	
@@ -106,6 +106,10 @@
 		tre-command
 
 		libgcc
+
+    # android SDK
+    android-tools
+
   ];
 
   environment.variables.EDITOR = "vim";
@@ -127,6 +131,8 @@
 		promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
 	};
 
+  # android SDK
+  programs.adb.enable = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 	nix.settings.allowed-users = ["cris"];
