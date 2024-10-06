@@ -8,7 +8,7 @@ return {
       --- execute at the en end of the file only
       --- execute at the en end of the file only
 
-      vim.keymap.set("i", "<tab>", function()
+      vim.keymap.set("i", "<s-tab>", function()
         local col = vim.fn.col(".")
         local line_len = vim.fn.col("$")
         if col ~= line_len then
@@ -17,7 +17,7 @@ return {
           return vim.fn["<right>"]()
         end
       end, { expr = true })
-      vim.keymap.set("i", "<right>", function()
+      vim.keymap.set("i", "<s-right>", function()
         local col = vim.fn.col(".")
         local line_len = vim.fn.col("$")
         if col == line_len then
