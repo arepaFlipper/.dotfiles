@@ -1,5 +1,5 @@
 working_directory = "None"
-import = ["~/.config/alacritty/themes/catppuccin-mocha.toml"]
+general.import = ["~/.config/alacritty/themes/catppuccin-mocha.toml"]
 
 [cursor]
 blink_interval = 200
@@ -55,7 +55,7 @@ style = "Regular"
 save_to_clipboard = true
 semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
 
-[shell]
+[terminal.shell]
 args = ["--login"]
 program = "zsh"
 
