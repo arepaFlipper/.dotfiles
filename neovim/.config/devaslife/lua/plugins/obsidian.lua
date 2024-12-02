@@ -15,10 +15,10 @@ return {
     },
     daily_notes = {
       folder = "2-Areas/Journalist/Daily",
-      date_format = "%Y_%m_%d",
+      date_format = "V-%Y_%m_%d",
       alias_format = "%A, %dth %B, %Y",
-      default_tags = {"daily-notes"},
-      template = "Templates/Daily Template.md"
+      default_tags = { "daily-notes" },
+      template = "Templates/Daily Template.md",
     },
     mappings = {
       ["gd"] = {
