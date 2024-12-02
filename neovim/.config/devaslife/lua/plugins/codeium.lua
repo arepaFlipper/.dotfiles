@@ -8,6 +8,7 @@ return {
       --- execute at the en end of the file only
       --- execute at the en end of the file only
 
+      vim.g.codeium_disable_bindings = true
       vim.keymap.set("i", "<s-tab>", function()
         local col = vim.fn.col(".")
         local line_len = vim.fn.col("$")

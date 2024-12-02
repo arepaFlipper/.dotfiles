@@ -1,9 +1,12 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.cargo/bin:$HOME/.config/git/git-log-compact:/usr/local/bin:/usr/bin:$(go env GOPATH)/bin:$PATH
+export PATH=$HOME/bin:$HOME/.cargo/bin:$HOME/.config/git/git-log-compact:/usr/local/bin:/usr/bin:$PATH
 
 
 #Aliases
@@ -22,19 +25,13 @@ alias iomobile="~/ionic.tmux.sh"
 alias quiz_craft="~/quiz_craft_ai.tmux.sh"
 alias ta="tmux attach"
 alias rust_tuto="~/rust_tuto.tmux.sh"
-alias pytest_tuto="~/pytest.tmux.sh"
 alias chatapp="~/chatapp_tuto.tmux.sh"
 alias microservices="~/microservices.tmux.sh"
 alias portfolio="~/portfolio.tmux.sh"
 alias docker_tuto="~/docker_tuto.tmux.sh"
 alias git_tuto="~/git_tuto.tmux.sh"
-alias inlaze="~/InlazeMovies.tmux.sh"
-alias inventory_management="~/inventory-management.tmux.sh"
-alias solidity_tuto="~/solidity_tuto.tmux.sh"
-alias aora="~/aora.tmux.sh"
-alias recycle="~/recycle_chain.tmux.sh"
 alias leetcode="~/leetcode.tmux.sh"
-alias fs_node="~/fs_node.tmux.sh"
+alias ttask="~/taskwarrior.tmux.sh"
 alias abacus="~/abacus.tmux.sh"
 alias p18="~/p18.tmux.sh"
 alias bot="~/bot_Ax.tmux.sh"
@@ -53,13 +50,39 @@ alias avim="NVIM_APPNAME=AstroNvim nvim"
 alias texvim="NVIM_APPNAME=benbrastmckie nvim"
 alias vimtex="NVIM_APPNAME=VimTeX nvim"
 alias leetvim="NVIM_APPNAME=leetvim nvim"
-alias hmsi="home-manager switch --impure"
-alias tl="tmux ls"
 
 extract-wisdom () {
   link=${1:""}
   "$HOME/scripts/extract_wisdom.sh" "$link";
 }
+
+
+alias tn="task add $1"
+alias td="task delete $1"
+alias twl="task list"
+
+alias routine_tasks="bash ~/.dotfiles/taskwarrior/.task/routine.sh"
+alias meditation_tasks="bash ~/.dotfiles/taskwarrior/.task/meditations.sh"
+task_project_function () {
+  task $1 modify project:$2
+}
+
+alias tproj="task_project_function"
+
+task_tag_function () {
+  task $1 modify +$2 +$3 +$4
+}
+
+alias ttag="task_tag_function"
+
+newcakefunction () {
+    task add Bake cake for $1 due:$2 scheduled:due-4d wait:due-5d project:$3
+    task add buy eggs +$1,grocery due:$2 scheduled:due-1d wait:-2d project:$3
+    task add buy flour +$1,grocery due:$2 scheduled:due-1d wait:-2d project:$3
+    task add buy milk +$1,grocery due:$2 scheduled:due-1d wait:-2d project:$3
+}
+
+alias newcake=newcakefunction
 
 function nvims(){
   items=("default" "kickstart" "LazyVim" "NvChad" "AstroNvim" "packervim" "tuffgniuz" "benbrastmckie" "VimTeX" "ejmastnak" "leetvim")
@@ -77,7 +100,6 @@ bindkey -s ^ñ "nvims\n"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -151,10 +173,7 @@ plugins=(
 	tmux
 	git
 )
-
-if [[ ! -e "/etc/hostname" || "$(cat /etc/hostname)" != "nixos" ]]; then
-  source $ZSH/oh-my-zsh.sh
-fi
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -185,14 +204,14 @@ export LANG=en_US.UTF-8
 # Open tmux on startup, requires tmux plugin
 ZSH_TMUX_AUTOSTART=true
 
-#source ~/.dotfiles/zsh/powerlevel10k/powerlevel10k.zsh-theme
+source ~/.dotfiles/zsh/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # set vim as default IDE
 export EDITOR=nvim
-#source ~/powerlevel10k/powerlevel10k.zsh-theme
+source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -210,9 +229,13 @@ alias vimdiff="NVIM_APPNAME=LazyVim nvim -d"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-export VAULT="$HOME/sync_repo/brain/"
+## Taskwarrior
+export TASKDDATA="/var/taskd"
+export VAULT="$HOME/iPad_sync/obsidian_vault/"
 
 eval "$(zoxide init --cmd cd zsh)"
-#eval "$(rbenv init -)"
-
-source $HOME/.ssh/api_key.sh
+if [ -f "/home/tovar/.config/fabric/fabric-bootstrap.inc" ]; then . "/home/tovar/.config/fabric/fabric-bootstrap.inc"; fi
+eval "$(rbenv init -)"
+# Created by `pipx` on 2024-07-07 07:55:46
+export PATH="$PATH:/Users/christopher/.local/bin"
+if [ -f "/Users/christopher/.config/fabric/fabric-bootstrap.inc" ]; then . "/Users/christopher/.config/fabric/fabric-bootstrap.inc"; fi

@@ -1,4 +1,4 @@
-#!/home/cris/.nix-profile/bin/zsh
+#!/bin/zsh
 
 # Check if yt-dlp is installed
 if ! command -v yt-dlp &>/dev/null; then
