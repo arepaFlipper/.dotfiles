@@ -38,6 +38,7 @@ alias bot="~/bot_Ax.tmux.sh"
 alias 2nd_brain="~/2nd_brain.tmux.sh"
 alias jupy="~/Documents/jupyter_notes/jupyter-init.sh"
 alias dotfiles="~/dotfiles.tmux.sh"
+alias recycle="~/recycle_chain.tmux.sh"
 alias keyboard="~/qmk.tmux.sh"
 alias V="/usr/bin/nvim"
 alias rk="~/.cargo/bin/rust-kanban"
@@ -50,6 +51,7 @@ alias avim="NVIM_APPNAME=AstroNvim nvim"
 alias texvim="NVIM_APPNAME=benbrastmckie nvim"
 alias vimtex="NVIM_APPNAME=VimTeX nvim"
 alias leetvim="NVIM_APPNAME=leetvim nvim"
+alias bvim="NVIM_APPNAME=bvim nvim"
 
 extract-wisdom () {
   link=${1:""}
