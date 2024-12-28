@@ -7,6 +7,7 @@
 local opt = vim.opt
 
 opt.cursorcolumn = true
+opt.clipboard = "unnamedplus"
 
 Emojis = {
   "😊", "😎", "🚀", "💯", "🔢", "😀", "😃", "😄", "😁", "😆", "😆", "😅", "😂", "🙃", "😉", "😊",
