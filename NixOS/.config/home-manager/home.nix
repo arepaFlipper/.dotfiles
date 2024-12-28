@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ inputs, config, pkgs, ghostty, ... }:
 let
   unstable = import <nixos-unstable> { config = {allowUnfree = true;};};
 in 
@@ -10,7 +10,8 @@ in
     ./modules/tmux.nix
     ./modules/syncthing.nix
     ./modules/git.nix
-    ./modules/cura.nix
+    # ./modules/cura.nix
+    # ./modules/ghostty.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -40,6 +41,9 @@ in
     scrcpy
 
     android-udev-rules
+
+    libreoffice
+    gnomeExtensions.gsconnect
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
@@ -52,6 +56,9 @@ in
     #   echo "Hello, ${config.home.username}!"
     # '')
      (pkgs.nerdfonts.override { fonts = [ "Meslo" "FiraCode" "DroidSansMono" "JetBrainsMono" ]; })
+
+     # ghostty.${system}.default
+     ghostty.packages.x86_64-linux.default
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
