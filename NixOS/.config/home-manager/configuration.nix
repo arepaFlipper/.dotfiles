@@ -49,7 +49,6 @@
     PasswordAuthentication = true;
   };
 
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -95,7 +94,7 @@
 		fzf
 
 		python3	
-		python312Packages.pip
+		# python312Packages.pip
 
 		synergy
 		stow
