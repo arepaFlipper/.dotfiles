@@ -6,7 +6,7 @@ in
   imports = [
     ./modules/shell.nix
     ./modules/neovim.nix
-    ./modules/alacritty.nix
+    # ./modules/alacritty.nix
     ./modules/tmux.nix
     ./modules/syncthing.nix
     ./modules/git.nix
@@ -59,6 +59,8 @@ in
 
      # ghostty.${system}.default
      ghostty.packages.x86_64-linux.default
+
+     yazi
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
