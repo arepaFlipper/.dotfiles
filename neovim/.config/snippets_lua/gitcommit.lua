@@ -157,8 +157,11 @@ cs( -- for([%w_]+) emoji.log{{{
     ]],
 		{
 			d(1, function(_, snip)
-				local ms = Emojis[math.random(#Emojis)]
-				return sn(1, t(ms))
+        local emojis_path = vim.fn.expand("~/.dotfiles/neovim/.config/snippets_lua/emojis.lua")
+        local M = dofile(emojis_path)
+        local Emojis = M.Emojis
+        local emoji_selected = Emojis[math.random(#Emojis)]
+				return sn(1, t(emoji_selected))
 			end),
 		}
 	)

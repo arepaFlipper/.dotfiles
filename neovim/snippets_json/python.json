@@ -1,0 +1,82 @@
+{
+  "Python Snippets": [
+    {
+      "prefix": "pdb",
+      "body": "__import__('pdb').set_trace() ##DELETEME:",
+      "description": "Insert pdb breakpoint"
+    },
+    {
+      "prefix": "ptba_r",
+      "body": [
+        "print(\"\"\"\\x1b[1;30;41m {1} {2}:\"\"\") ## DELETEME:",
+        "print({3}) ## DELETEME:",
+        "print('\\x1b[0m') ## DELETEME:"
+      ],
+      "description": "Print with black font on red background"
+    },
+    {
+      "prefix": "ptba_gre",
+      "body": [
+        "print(\"\"\"\\x1b[1;30;42m {1} {2}:\"\"\") ## DELETEME:",
+        "print({3}) ## DELETEME:",
+        "print('\\x1b[0m') ## DELETEME:"
+      ],
+      "description": "Print with black font on green background"
+    },
+    {
+      "prefix": "ptba_y",
+      "body": [
+        "print(\"\"\"\\x1b[1;30;43m {1} {2}:\"\"\") ## DELETEME:",
+        "print({3}) ## DELETEME:",
+        "print('\\x1b[0m') ## DELETEME:"
+      ],
+      "description": "Print with black font on yellow background"
+    },
+    {
+      "prefix": "ptba_pu",
+      "body": [
+        "print(\"\"\"\\x1b[1;30;45m {1} {2}:\"\"\") ## DELETEME:",
+        "print({3}) ## DELETEME:",
+        "print('\\x1b[0m') ## DELETEME:"
+      ],
+      "description": "Print with black font on purple background"
+    },
+    {
+      "prefix": "ptba_cy",
+      "body": [
+        "print(\"\"\"\\x1b[1;30;46m {1} {2}:\"\"\") ## DELETEME:",
+        "print({3}) ## DELETEME:",
+        "print('\\x1b[0m') ## DELETEME:"
+      ],
+      "description": "Print with black font on cyan background"
+    },
+    {
+      "prefix": "ptba_wh",
+      "body": [
+        "print(\"\"\"\\x1b[1;30;47m {1} {2}:\"\"\") ## DELETEME:",
+        "print({3}) ## DELETEME:",
+        "print('\\x1b[0m') ## DELETEME:"
+      ],
+      "description": "Print with black font on white background"
+    },
+    {
+      "prefix": "ptwh_r",
+      "body": [
+        "print(\"\"\"\\x1b[1;37;41m {1} {2}:\"\"\") ## DELETEME:",
+        "print({3}) ## DELETEME:",
+        "print('\\x1b[0m') ## DELETEME:"
+      ],
+      "description": "Print with white font on red background"
+    },
+    {
+      "prefix": "ptcy_red",
+      "body": [
+        "print(\"\"\"\\x1b[1;31;46m {1} {2}:\"\"\") ## DELETEME:",
+        "print({3}) ## DELETEME:",
+        "print('\\x1b[0m') ## DELETEME:"
+      ],
+      "description": "Print with cyan font on red background"
+    }
+  ]
+}
+

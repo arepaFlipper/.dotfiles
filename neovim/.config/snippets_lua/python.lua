@@ -162,7 +162,12 @@ function Table_of_nodes(trig)
 	end
 	return {
 		d(1, function()
-			return sn(1, t(Emojis[math.random(#Emojis)]))
+      local emojis_path = vim.fn.expand("~/.dotfiles/neovim/.config/snippets_lua/emojis.lua")
+      local M = dofile(emojis_path)
+      local Emojis = M.Emojis
+			local emoji_selected = Emojis[math.random(#Emojis)]
+			emoji_selected = sn(1, t(emoji_selected))
+			return sn(1, emoji_selected)
 		end),
 		d(2, function(_, snip)
 			local v = snip.env
@@ -180,6 +185,7 @@ function Table_of_nodes(trig)
 			local ms = styles_code .. v.TM_FILENAME .. ":" .. v.TM_LINE_NUMBER .. "\t"
 			ms = ms .. my_clipboard
 			return sn(1, t(ms))
+			-- return sn(1, t("world"))
 		end),
 		d(3, function()
 			local my_clipboard = vim.fn.getreg('"', 1, true)[1]
