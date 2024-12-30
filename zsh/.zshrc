@@ -179,6 +179,7 @@ plugins=(
 if [[ "$OSTYPE" == darwin* ]]; then
   source $ZSH/oh-my-zsh.sh
   eval "$(rbenv init -)"
+  source ~/.p10k.M2.zsh
 fi
 
 if [[ "$OSTYPE" == linux* ]]; then
@@ -188,7 +189,9 @@ if [[ "$OSTYPE" == linux* ]]; then
     echo "Running on NixOS"
   elif [[ "$OS_ID" == "arch" ]]; then
     echo "Running on Arch"
+    source ~/.p10k.arch.zsh
   else
+    source $ZSH/oh-my-zsh.sh
     echo "Running on ($OS_ID)"
   fi
 
@@ -225,8 +228,6 @@ ZSH_TMUX_AUTOSTART=true
 
 source ~/.dotfiles/zsh/powerlevel10k/powerlevel10k.zsh-theme
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # set vim as default IDE
 export EDITOR=nvim
