@@ -41,6 +41,9 @@ in
         };
 
           initExtra = ''
+            alias hmsi="home-manager switch --impure"
+            alias nxrb="nixos-rebuild switch --flake ~/.dotfiles/NixOS/.config/home-manager"
+            source $HOME/.dotfiles/zsh/.zshrc
             source $HOME/.dotfiles/NixOS/.p10k.zsh
           '';
     };

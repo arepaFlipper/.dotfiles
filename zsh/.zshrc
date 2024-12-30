@@ -98,7 +98,7 @@ function nvims(){
   NVIM_APPNAME=$config nvim $@
 }
 
-bindkey -s ^ñ "nvims\n"
+# bindkey -s ^; "nvims\n"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
