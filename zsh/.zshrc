@@ -225,7 +225,7 @@ alias vimdiff="NVIM_APPNAME=LazyVim nvim -d"
 
 
 # bun completions
-[ -s "/Users/cristianf.tovar/.bun/_bun" ] && source "/Users/cristianf.tovar/.bun/_bun"
+[ -s "/Users/christopher/.bun/_bun" ] && source "/Users/christopher/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
@@ -236,8 +236,27 @@ export TASKDDATA="/var/taskd"
 export VAULT="$HOME/iPad_sync/obsidian_vault/"
 
 eval "$(zoxide init --cmd cd zsh)"
-if [ -f "/home/tovar/.config/fabric/fabric-bootstrap.inc" ]; then . "/home/tovar/.config/fabric/fabric-bootstrap.inc"; fi
-eval "$(rbenv init -)"
+if [ -f "$HOME/.config/fabric/fabric-bootstrap.inc" ]; then . "$HOME/.config/fabric/fabric-bootstrap.inc"; fi
+
+# macOS-specific configurations
+if [[ "$OSTYPE" == darwin* ]]; then
+  eval "$(rbenv init -)"
+fi
+
+
+if [[ "$OSTYPE" == linux* ]]; then
+  OS_ID=$(grep -E '^ID=' /etc/os-release | awk -F'=' '{print tolower($2)}' | tr -d '"')
+
+  if [[ "$OS_ID" == "nixos" ]]; then
+    echo "Running on NixOS"
+  elif [[ "$OS_ID" == "arch" ]]; then
+    echo "Running on Arch"
+  else
+    echo "Running on ($OS_ID)"
+  fi
+
+fi
+
 # Created by `pipx` on 2024-07-07 07:55:46
 export PATH="$PATH:/Users/christopher/.local/bin"
 if [ -f "/Users/christopher/.config/fabric/fabric-bootstrap.inc" ]; then . "/Users/christopher/.config/fabric/fabric-bootstrap.inc"; fi
