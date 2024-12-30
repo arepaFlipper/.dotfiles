@@ -175,7 +175,24 @@ plugins=(
 	tmux
 	git
 )
-# source $ZSH/oh-my-zsh.sh
+
+if [[ "$OSTYPE" == darwin* ]]; then
+  source $ZSH/oh-my-zsh.sh
+  eval "$(rbenv init -)"
+fi
+
+if [[ "$OSTYPE" == linux* ]]; then
+  OS_ID=$(grep -E '^ID=' /etc/os-release | awk -F'=' '{print tolower($2)}' | tr -d '"')
+
+  if [[ "$OS_ID" == "nixos" ]]; then
+    echo "Running on NixOS"
+  elif [[ "$OS_ID" == "arch" ]]; then
+    echo "Running on Arch"
+  else
+    echo "Running on ($OS_ID)"
+  fi
+
+fi
 
 # User configuration
 
@@ -239,23 +256,8 @@ eval "$(zoxide init --cmd cd zsh)"
 if [ -f "$HOME/.config/fabric/fabric-bootstrap.inc" ]; then . "$HOME/.config/fabric/fabric-bootstrap.inc"; fi
 
 # macOS-specific configurations
-if [[ "$OSTYPE" == darwin* ]]; then
-  eval "$(rbenv init -)"
-fi
 
 
-if [[ "$OSTYPE" == linux* ]]; then
-  OS_ID=$(grep -E '^ID=' /etc/os-release | awk -F'=' '{print tolower($2)}' | tr -d '"')
-
-  if [[ "$OS_ID" == "nixos" ]]; then
-    echo "Running on NixOS"
-  elif [[ "$OS_ID" == "arch" ]]; then
-    echo "Running on Arch"
-  else
-    echo "Running on ($OS_ID)"
-  fi
-
-fi
 
 # Created by `pipx` on 2024-07-07 07:55:46
 export PATH="$PATH:/Users/christopher/.local/bin"
