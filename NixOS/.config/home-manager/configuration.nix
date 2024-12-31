@@ -81,6 +81,8 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
+    gnome.gnome-tweaks
+    catppuccin-cursors.frappeSky
 		vim 
 		wget
 		tmux

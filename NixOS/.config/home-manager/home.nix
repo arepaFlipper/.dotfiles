@@ -79,6 +79,11 @@ in
 
   };
 
+  home.pointerCursor = {
+   name = "Catppuccin";
+   package = pkgs.catppuccin-cursors.frappeSky;
+  };
+
   services.gnome-keyring.enable = true;
 
   # Home Manager can also manage your environment variables through
