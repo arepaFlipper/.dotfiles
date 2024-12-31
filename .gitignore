@@ -4,10 +4,10 @@ Obsidian/.config/obsidian/*
 !Obsidian/.config/obsidian/obsidian.json
 
 
-neovim/.config/LazyVim/lazy-lock.json
 .obsidian
-neovim/.config/devaslife/lazy-lock.json
 neovim/.config/devaslife/.luarc.json
 
 **.swp
 cursors/.icons/catppuccin-mocha-sky-cursors
+**/lazyvim.json
+**/lazy-lock.json
