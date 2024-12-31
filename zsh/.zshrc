@@ -31,7 +31,6 @@ alias portfolio="~/portfolio.tmux.sh"
 alias docker_tuto="~/docker_tuto.tmux.sh"
 alias git_tuto="~/git_tuto.tmux.sh"
 alias leetcode="~/leetcode.tmux.sh"
-alias ttask="~/taskwarrior.tmux.sh"
 alias abacus="~/abacus.tmux.sh"
 alias p18="~/p18.tmux.sh"
 alias bot="~/bot_Ax.tmux.sh"
@@ -59,30 +58,8 @@ extract-wisdom () {
 }
 
 
-alias tn="task add $1"
-alias td="task delete $1"
-alias twl="task list"
 
-alias routine_tasks="bash ~/.dotfiles/taskwarrior/.task/routine.sh"
-alias meditation_tasks="bash ~/.dotfiles/taskwarrior/.task/meditations.sh"
-task_project_function () {
-  task $1 modify project:$2
-}
 
-alias tproj="task_project_function"
-
-task_tag_function () {
-  task $1 modify +$2 +$3 +$4
-}
-
-alias ttag="task_tag_function"
-
-newcakefunction () {
-    task add Bake cake for $1 due:$2 scheduled:due-4d wait:due-5d project:$3
-    task add buy eggs +$1,grocery due:$2 scheduled:due-1d wait:-2d project:$3
-    task add buy flour +$1,grocery due:$2 scheduled:due-1d wait:-2d project:$3
-    task add buy milk +$1,grocery due:$2 scheduled:due-1d wait:-2d project:$3
-}
 
 alias newcake=newcakefunction
 
@@ -252,9 +229,7 @@ alias vimdiff="NVIM_APPNAME=LazyVim nvim -d"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-## Taskwarrior
-export TASKDDATA="/var/taskd"
-export VAULT="$HOME/iPad_sync/obsidian_vault/"
+export VAULT="$HOME/sync_repo/brain/"
 
 eval "$(zoxide init --cmd cd zsh)"
 if [ -f "$HOME/.config/fabric/fabric-bootstrap.inc" ]; then . "$HOME/.config/fabric/fabric-bootstrap.inc"; fi
