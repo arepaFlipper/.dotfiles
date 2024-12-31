@@ -11,3 +11,4 @@ neovim/.config/devaslife/.luarc.json
 cursors/.icons/catppuccin-mocha-sky-cursors
 **/lazyvim.json
 **/lazy-lock.json
+**.lock
