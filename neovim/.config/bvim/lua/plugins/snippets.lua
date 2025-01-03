@@ -25,7 +25,6 @@ return {
       local ls = require("luasnip") --{{{
 
       -- require("luasnip.loaders.from_vscode").lazy_load()
-      require("luasnip.loaders.from_lua").load({ paths = { "~/.dotfiles/neovim/.config/snippets_lua/" } })
       require("luasnip").config.setup({ store_selection_keys = "<A-p>" })
 
       -- javascript and react snippets
@@ -40,6 +39,7 @@ return {
       require("luasnip/loaders/from_vscode").lazy_load()
 
       vim.cmd([[command! LuaSnipEdit :lua require("luasnip.loaders.from_lua").edit_snippet_files()]]) --}}}
+      require("luasnip.loaders.from_lua").load({ paths = { "~/.dotfiles/neovim/.config/snippets_lua/" } })
 
       -- Virtual Text{{{
       local types = require("luasnip.util.types")

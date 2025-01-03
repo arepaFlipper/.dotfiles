@@ -210,8 +210,12 @@ cs( -- for([%w_]+) emoji.log{{{
 				line_number_code = line_number_code * 255
 				local line_number_code_str = string.format("%x", line_number_code)
 				line_number_code_str = "#" .. string.sub(line_number_code_str, 1, 6)
+        local emojis_path = vim.fn.expand("~/.dotfiles/neovim/.config/snippets_lua/emojis.lua")
+        local M = dofile(emojis_path)
+        local Emojis = M.Emojis
+        local emoji_selected = Emojis[math.random(#Emojis)]
 				local ms = "console.log(`"
-					.. Emojis[math.random(#Emojis)]
+					.. emoji_selected
 					.. "%c"
 					.. v.TM_FILENAME
 					.. ":"
@@ -264,8 +268,13 @@ cs(
 				line_number_code = line_number_code * 255
 				local line_number_code_str = string.format("%x", line_number_code)
 				line_number_code_str = "#" .. string.sub(line_number_code_str, 1, 6)
+        local emojis_path = vim.fn.expand("~/.dotfiles/neovim/.config/snippets_lua/emojis.lua")
+        local M = dofile(emojis_path)
+        local Emojis = M.Emojis
+        local emoji_selected = Emojis[math.random(#Emojis)]
+        print(emoji_selected)
 				local ms = "console.log(`"
-					.. Emojis[math.random(#Emojis)]
+					.. emoji_selected
 					.. "%c"
 					.. v.TM_FILENAME
 					.. ":"
