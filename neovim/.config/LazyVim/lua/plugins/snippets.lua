@@ -21,6 +21,7 @@ return {
 
       require("luasnip/loaders/from_vscode").load({ include = { "html" } })
       require("luasnip/loaders/from_vscode").lazy_load()
+      require("luasnip.loaders.from_lua").load({ paths = { "~/.dotfiles/neovim/.config/snippets_lua/" } })
 
       vim.cmd([[command! LuaSnipEdit :lua require("luasnip.loaders.from_lua").edit_snippet_files()]]) --}}}
 

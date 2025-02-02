@@ -1,9 +1,12 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.cargo/bin:$HOME/.config/git/git-log-compact:/usr/local/bin:/usr/bin:$(go env GOPATH)/bin:$PATH
+export PATH=$HOME/bin:$HOME/.cargo/bin:$HOME/.config/git/git-log-compact:/usr/local/bin:/usr/bin:$PATH
 
 
 #Aliases
@@ -22,26 +25,21 @@ alias iomobile="~/ionic.tmux.sh"
 alias quiz_craft="~/quiz_craft_ai.tmux.sh"
 alias ta="tmux attach"
 alias rust_tuto="~/rust_tuto.tmux.sh"
-alias pytest_tuto="~/pytest.tmux.sh"
 alias chatapp="~/chatapp_tuto.tmux.sh"
 alias microservices="~/microservices.tmux.sh"
 alias portfolio="~/portfolio.tmux.sh"
 alias docker_tuto="~/docker_tuto.tmux.sh"
 alias git_tuto="~/git_tuto.tmux.sh"
-alias inlaze="~/InlazeMovies.tmux.sh"
-alias inventory_management="~/inventory-management.tmux.sh"
-alias solidity_tuto="~/solidity_tuto.tmux.sh"
-alias aora="~/aora.tmux.sh"
-alias recycle="~/recycle_chain.tmux.sh"
 alias leetcode="~/leetcode.tmux.sh"
-alias fs_node="~/fs_node.tmux.sh"
 alias abacus="~/abacus.tmux.sh"
 alias p18="~/p18.tmux.sh"
 alias bot="~/bot_Ax.tmux.sh"
 alias 2nd_brain="~/2nd_brain.tmux.sh"
 alias jupy="~/Documents/jupyter_notes/jupyter-init.sh"
 alias dotfiles="~/dotfiles.tmux.sh"
+alias recycle="~/recycle_chain.tmux.sh"
 alias keyboard="~/qmk.tmux.sh"
+alias litetech="~/litetech.tmux.sh"
 alias V="/usr/bin/nvim"
 alias rk="~/.cargo/bin/rust-kanban"
 
@@ -53,13 +51,18 @@ alias avim="NVIM_APPNAME=AstroNvim nvim"
 alias texvim="NVIM_APPNAME=benbrastmckie nvim"
 alias vimtex="NVIM_APPNAME=VimTeX nvim"
 alias leetvim="NVIM_APPNAME=leetvim nvim"
-alias hmsi="home-manager switch --impure"
-alias tl="tmux ls"
+alias bvim="NVIM_APPNAME=bvim nvim"
 
 extract-wisdom () {
   link=${1:""}
   "$HOME/scripts/extract_wisdom.sh" "$link";
 }
+
+
+
+
+
+alias newcake=newcakefunction
 
 function nvims(){
   items=("default" "kickstart" "LazyVim" "NvChad" "AstroNvim" "packervim" "tuffgniuz" "benbrastmckie" "VimTeX" "ejmastnak" "leetvim")
@@ -73,11 +76,10 @@ function nvims(){
   NVIM_APPNAME=$config nvim $@
 }
 
-bindkey -s ^ñ "nvims\n"
+# bindkey -s ^; "nvims\n"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -152,8 +154,28 @@ plugins=(
 	git
 )
 
-if [[ ! -e "/etc/hostname" || "$(cat /etc/hostname)" != "nixos" ]]; then
+if [[ "$OSTYPE" == darwin* ]]; then
   source $ZSH/oh-my-zsh.sh
+  eval "$(rbenv init -)"
+  source ~/.p10k.M2.zsh
+fi
+
+if [[ "$OSTYPE" == linux* ]]; then
+  OS_ID=$(grep -E '^ID=' /etc/os-release | awk -F'=' '{print tolower($2)}' | tr -d '"')
+
+  if [[ "$OS_ID" == "nixos" ]]; then
+    echo "Running on NixOS"
+  elif [[ "$OS_ID" == "arch" ]]; then
+    echo "Running on Arch"
+    source $ZSH/oh-my-zsh.sh
+    source ~/.p10k.arch.zsh
+    source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+  else
+    source $ZSH/oh-my-zsh.sh
+    echo "Running on ($OS_ID)"
+  fi
+
 fi
 
 # User configuration
@@ -185,14 +207,12 @@ export LANG=en_US.UTF-8
 # Open tmux on startup, requires tmux plugin
 ZSH_TMUX_AUTOSTART=true
 
-#source ~/.dotfiles/zsh/powerlevel10k/powerlevel10k.zsh-theme
+source ~/.dotfiles/zsh/powerlevel10k/powerlevel10k.zsh-theme
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # set vim as default IDE
 export EDITOR=nvim
-#source ~/powerlevel10k/powerlevel10k.zsh-theme
+source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -204,7 +224,7 @@ alias vimdiff="NVIM_APPNAME=LazyVim nvim -d"
 
 
 # bun completions
-[ -s "/Users/cristianf.tovar/.bun/_bun" ] && source "/Users/cristianf.tovar/.bun/_bun"
+[ -s "/Users/christopher/.bun/_bun" ] && source "/Users/christopher/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
@@ -213,6 +233,12 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export VAULT="$HOME/sync_repo/brain/"
 
 eval "$(zoxide init --cmd cd zsh)"
-#eval "$(rbenv init -)"
+if [ -f "$HOME/.config/fabric/fabric-bootstrap.inc" ]; then . "$HOME/.config/fabric/fabric-bootstrap.inc"; fi
 
-source $HOME/.ssh/api_key.sh
+# macOS-specific configurations
+
+
+
+# Created by `pipx` on 2024-07-07 07:55:46
+export PATH="$PATH:/Users/christopher/.local/bin"
+if [ -f "/Users/christopher/.config/fabric/fabric-bootstrap.inc" ]; then . "/Users/christopher/.config/fabric/fabric-bootstrap.inc"; fi

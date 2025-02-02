@@ -14,7 +14,7 @@ local rep = require("luasnip.extras").rep
 local snippets, autosnippets = {}, {} --}}}
 
 local group = vim.api.nvim_create_augroup("Javascript Snippets", { clear = true })
-local file_pattern = { "*.jsx", "*.js" }
+local file_pattern = "COMMIT_EDITMSG"
 
 local function cs(trigger, nodes, opts) --{{{
 	local snippet = s(trigger, nodes)
@@ -147,90 +147,21 @@ table.insert(snippets, function_snippet_func)
 
 -- snippets strats here--
 
-cs( -- for([%w_]+) JS For Loop snippet{{{
-	{ trig = "for([%w_]+)", regTrig = true, hidden = true },
-	fmt(
-		[[
-for (let {} = 0; {} < {}; {}++) {{
-  {}
-}}
-
-{}
-    ]],
-		{
-			d(1, function(_, snip)
-				return sn(1, i(1, snip.captures[1]))
-			end),
-			rep(1),
-			c(2, { i(1, "num"), sn(1, { i(1, "arr"), t(".length") }) }),
-			rep(1),
-			i(3, "// TODO:"),
-			i(4),
-		}
-	)
-) --}}}
-cs( -- [while] JS While Loop snippet{{{
-	"while",
-	fmt(
-		[[
-while ({}) {{
-  {}
-}}
-  ]],
-		{
-			i(1, ""),
-			i(2, "// TODO:"),
-		}
-	)
-) --}}}
+--console.log(`%c $TM_FILENAME:$TM_LINE_NUMBER - $CLIPBOARD`, 'font-weight: bold; background: #'+('000000' + (Math.round(250-(50_000*((($TM_LINE_NUMBER+40.5)**(0.9))+6)**(-1.5))) * 0x10000 + (255-Math.round(250-(50_000*((($TM_LINE_NUMBER+40.5)**(0.9))+6)**(-1.5)))) * 0x100).toString(16)).slice(-6)+'; color:#fff;')// DELETEME\n
 
 cs( -- for([%w_]+) emoji.log{{{
-	{ trig = "cng", regTrig = false },
+	{ trig = "emo", regTrig = false },
 	fmt(
 		[[
     {1}
-    {2}
     ]],
 		{
 			d(1, function(_, snip)
-				local v = snip.env
-				local my_clipboard = vim.fn.getreg('"', 1, true)[1] -- type:ignore
-				my_clipboard:gsub("%$", "")
-				if string.match(my_clipboard, "'") then
-					my_clipboard = my_clipboard:gsub("%'", "")
-				end
-				if string.match(my_clipboard, '"') then
-					my_clipboard = my_clipboard:gsub('%"', "")
-				end
-				if string.match(my_clipboard, "`") then
-					my_clipboard = my_clipboard:gsub("%`", "")
-				end
-				local line_number_code = math.floor(250 - 50000 * ((v.TM_LINE_NUMBER + 40.5) ^ 0.9 + 6) ^ -1.5)
-					* 0x10000
-				line_number_code = line_number_code * 255
-				local line_number_code_str = string.format("%x", line_number_code)
-				line_number_code_str = "#" .. string.sub(line_number_code_str, 1, 6)
-				local ms = "console.log(`"
-					.. Emojis[math.random(#Emojis)]
-					.. "%c"
-					.. v.TM_FILENAME
-					.. ":"
-					.. v.TM_LINE_NUMBER
-					.. " - "
-					.. my_clipboard
-					.. "`"
-					.. ",'font-weight:bold; background:"
-					.. line_number_code_str
-					.. ";color:#fff;'"
-					.. "); //DELETEME:"
-				--[[ local sl = "console.log(" .. snip.captures[1] .. ");" ]]
-
-				return sn(1, t(ms))
-			end),
-			d(2, function()
-				local my_clipboard = vim.fn.getreg('"', 1, true)[1]
-				local sl = "console.log(" .. my_clipboard .. "); // DELETEME:"
-				return sn(1, t(sl))
+        local emojis_path = vim.fn.expand("~/.dotfiles/neovim/.config/snippets_lua/emojis.lua")
+        local M = dofile(emojis_path)
+        local Emojis = M.Emojis
+        local emoji_selected = Emojis[math.random(#Emojis)]
+				return sn(1, t(emoji_selected))
 			end),
 		}
 	)

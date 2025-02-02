@@ -194,7 +194,7 @@ cs( -- for([%w_]+) emoji.log{{{
 		{
 			d(1, function(_, snip)
 				local v = snip.env
-				local my_clipboard = vim.fn.getreg('"', 1, true)[1]
+				local my_clipboard = vim.fn.getreg('"', 1, true)[1] -- type:ignore
 				my_clipboard:gsub("%$", "")
 				if string.match(my_clipboard, "'") then
 					my_clipboard = my_clipboard:gsub("%'", "")
@@ -210,8 +210,11 @@ cs( -- for([%w_]+) emoji.log{{{
 				line_number_code = line_number_code * 255
 				local line_number_code_str = string.format("%x", line_number_code)
 				line_number_code_str = "#" .. string.sub(line_number_code_str, 1, 6)
+        local M = dofile(emojis_path)
+        local Emojis = M.Emojis
+        local emoji_selected = Emojis[math.random(#Emojis)]
 				local ms = "console.log(`"
-					.. Emojis[math.random(#Emojis)]
+					.. emoji_selected
 					.. "%c"
 					.. v.TM_FILENAME
 					.. ":"
@@ -220,7 +223,7 @@ cs( -- for([%w_]+) emoji.log{{{
 					.. my_clipboard
 					.. "`"
 					.. ",'font-weight:bold; background:"
-					.. line_number_code
+					.. line_number_code_str
 					.. ";color:#fff;'"
 					.. "); //DELETEME:"
 				--[[ local sl = "console.log(" .. snip.captures[1] .. ");" ]]

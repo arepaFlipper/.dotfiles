@@ -13,7 +13,7 @@ let
     ];
     file = {
       ".p10k.zsh" = {
-        source = ./.p10k.zsh;
+        source = ~/.dotfiles/NixOS/.config/home-manager/.p10k.zsh;
         executable = true;
       };
     };
@@ -41,9 +41,10 @@ in
         };
 
           initExtra = ''
-            [[ ! -f ~/.dotfiles/zsh/.config/zsh/.p10k.zsh ]] || source ~/.dotfiles/zsh/.config/zsh/.p10k.zsh
-
+            alias hmsi="home-manager switch --impure"
+            alias nxrb="sudo nixos-rebuild switch --flake ~/.dotfiles/NixOS/.config/home-manager"
             source $HOME/.dotfiles/zsh/.zshrc
+            source $HOME/.dotfiles/NixOS/.p10k.zsh
           '';
     };
     bash = {
