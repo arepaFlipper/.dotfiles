@@ -4,4 +4,4 @@
 local opt = vim.opt
 opt.clipboard = "unnamedplus"
 
-opt.iskeyword:append("-")
+-- opt.iskeyword:append("-")
