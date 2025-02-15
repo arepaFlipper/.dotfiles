@@ -10,6 +10,7 @@ in
     ./modules/tmux.nix
     ./modules/syncthing.nix
     ./modules/git.nix
+    ./modules/window_manager.nix
     # ./modules/cura.nix
     # ./modules/ghostty.nix
   ];

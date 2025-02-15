@@ -37,8 +37,16 @@
   services.xserver.xkb.layout = "us";
   #services.xserver.xkbOptions = "eurosign:e";
   services.xserver.xkb.options = "eurosign:e";
-  services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
+  services.xserver.windowManager = {
+    i3 = {
+      enable = true;
+    };
+  };
+  # services.xserver.desktopManager.i3.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  # Enable i3 as window manager
+  services.xserver.displayManager.defaultSession = "none+i3";
 
   console.keyMap = "la-latin1";
 
@@ -110,6 +118,11 @@
 
     # android SDK
     android-tools
+
+    # Window Manager packages
+    xorg.xrandr
+    xorg.xbacklight
+    xclip
 
   ];
 
