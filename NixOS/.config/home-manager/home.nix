@@ -9,6 +9,7 @@ in
     # ./modules/alacritty.nix
     ./modules/tmux.nix
     ./modules/syncthing.nix
+    ./modules/cursor.nix
     ./modules/git.nix
     ./modules/window_manager.nix
     # ./modules/cura.nix
@@ -80,11 +81,6 @@ in
 
   };
 
-  home.pointerCursor = {
-   name = "Catppuccin";
-   package = pkgs.catppuccin-cursors.frappeSky;
-  };
-
   services.gnome-keyring.enable = true;
 
   # Home Manager can also manage your environment variables through
@@ -106,6 +102,7 @@ in
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
 
 
 }

@@ -33,9 +33,7 @@
   };
 
   services.xserver.enable = true;
-  #services.xserver.layout = "us";
   services.xserver.xkb.layout = "us";
-  #services.xserver.xkbOptions = "eurosign:e";
   services.xserver.xkb.options = "eurosign:e";
   services.xserver.desktopManager.gnome.enable = true;
   services.xserver.windowManager = {
@@ -43,7 +41,6 @@
       enable = true;
     };
   };
-  # services.xserver.desktopManager.i3.enable = true;
   services.xserver.displayManager.gdm.enable = true;
   # Enable i3 as window manager
   services.xserver.displayManager.defaultSession = "none+i3";
@@ -89,8 +86,8 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    gnome.gnome-tweaks
-    catppuccin-cursors.frappeSky
+    gnome-tweaks
+    catppuccin-cursors.frappeYellow
 		vim 
 		wget
 		tmux
@@ -122,11 +119,17 @@
     # Window Manager packages
     xorg.xrandr
     xorg.xbacklight
+    xorg.xwininfo
     xclip
-
   ];
 
-  environment.variables.EDITOR = "vim";
+  environment.variables = {
+    EDITOR = "vim";
+    XCURSOR_THEME = "Catppuccin-Frappe-Sky";
+    XCURSOR_SIZE = "24";
+  };
+
+  fonts.packages = with pkgs; [ catppuccin-cursors ];
 
   services.flatpak.enable = true;
   xdg.portal.enable = true;
