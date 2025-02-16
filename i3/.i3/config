@@ -86,17 +86,22 @@ bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
+# exec --no-startup-id xsetroot -cursor_name left_ptr
+
 # NOTE: alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
+
 # NOTE: move focused window
-bindsym $mod+h focus left; exec --no-startup-id xdotool mousemove --window $(xdotool getwindowfocus) 50% 50%
-bindsym $mod+j focus down; exec --no-startup-id xdotool mousemove --window $(xdotool getwindowfocus) 50% 50%
-bindsym $mod+k focus up; exec --no-startup-id xdotool mousemove --window $(xdotool getwindowfocus) 50% 50%
-bindsym $mod+l focus right; exec --no-startup-id xdotool mousemove --window $(xdotool getwindowfocus) 50% 50%
+bindsym $mod+h focus left; exec --no-startup-id $HOME/scripts/lineup.sh
+bindsym $mod+j focus down; exec --no-startup-id $HOME/scripts/lineup.sh
+bindsym $mod+k focus up; exec --no-startup-id $HOME/scripts/lineup.sh
+bindsym $mod+l focus right; exec --no-startup-id $HOME/scripts/lineup.sh
+
+# bindsym $mod+l focus right; exec --no-startup-id xdotool mousemove --window $(xdotool getwindowfocus) line_up
 
 
 # alternatively, you can use the cursor keys:

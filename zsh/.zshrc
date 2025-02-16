@@ -58,6 +58,9 @@ extract-wisdom () {
   "$HOME/scripts/extract_wisdom.sh" "$link";
 }
 
+line_up () {
+  bash "$HOME/scripts/lineup.sh";
+}
 
 
 
@@ -229,6 +232,8 @@ alias vimdiff="NVIM_APPNAME=LazyVim nvim -d"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+export XCURSOR_THEME="catppuccin-mocha-sky-cursors"
 
 export VAULT="$HOME/sync_repo/brain/"
 
