@@ -13,6 +13,7 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking.hostName = "nixos"; # Define your hostname.
   networking.networkmanager.enable = true;
@@ -35,7 +36,6 @@
   services.xserver.enable = true;
   services.xserver.xkb.layout = "us";
   services.xserver.xkb.options = "eurosign:e";
-  services.xserver.desktopManager.gnome.enable = true;
   services.xserver.windowManager = {
     i3 = {
       enable = true;
@@ -86,7 +86,6 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    gnome-tweaks
     catppuccin-cursors.frappeYellow
 		vim 
 		wget
@@ -132,9 +131,15 @@
   fonts.packages = with pkgs; [ catppuccin-cursors ];
 
   services.flatpak.enable = true;
-  xdg.portal.enable = true;
 
-  networking.firewall.allowedTCPPorts = [ 24800 8000 ];
+  # Enable XDG portal but specify a compatible implementation
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  };
+
+
+  networking.firewall.allowedTCPPorts = [ 24800 8000 5432 5173 ];
   virtualisation.docker = {
     enable = true;
     rootless = {
