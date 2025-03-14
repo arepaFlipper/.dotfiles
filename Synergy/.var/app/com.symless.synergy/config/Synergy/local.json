@@ -1,0 +1,40 @@
+{
+  "version": 6,
+  "ips": {},
+  "myId": "54c7a5ec2f6799dba9164d2ded6425ab7453831fc73e03266e86903fbbdb1408",
+  "send-report": true,
+  "serial": "7B76323B6D61696E74656E616E63653B70726F3B63726973746869616D20746F7661723B313B637269737469616E3030746F76617240676D61696C2E636F6D3B203B353635313432343030303B353635323633333630307D",
+  "diagnostic": {
+    "level": "DEBUG2",
+    "dir": "/home/arepa/.var/app/com.symless.synergy/.local/state/Synergy/synergy.log"
+  },
+  "local_security": {
+    "path": "/home/arepa/.var/app/com.symless.synergy/config/Synergy/synergyCert.pem"
+  },
+  "local_system": {
+    "path": "/home/arepa/.var/app/com.symless.synergy/config/Synergy/synergy.conf",
+    "run_on_login_screen": true
+  },
+  "local_computers": {
+    "54c7a5ec2f6799dba9164d2ded6425ab7453831fc73e03266e86903fbbdb1408": "127.0.0.1",
+    "31698105ae2ae378b8b6a85753e3f6c3d0f39b0299e48f779853bb2b5df91310": "192.168.1.29",
+    "71df2e75d1eeff8a4406640a03a6363205e0a90975112663e3952c911b365592": "192.168.1.78",
+    "536d5777788815bcca863f39c6baf9a8f8007d187ba87048e3ab76e81920d994": "192.168.1.25",
+    "299b7408b264b522c4632fe773c001b569951cb6c78c7cd000d4d5d0bd469132": "192.168.1.78"
+  },
+  "local_developers": {
+    "keepForeground": true,
+    "elevate_privileges": 1
+  },
+  "local_override": {
+    "computerName": "Arch",
+    "serverIP": "192.168.1.29",
+    "elevate_privileges": 1,
+    "args": [
+      ""
+    ]
+  },
+  "network": {
+    "interface": "Auto"
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "version": {
+    "syncVersion": 1741974532910,
+    "schemaVersion": 14
+  },
+  "data": {
+    "mainID": {
+      "id": ""
+    },
+    "autoDiscover": {
+      "discovery": true
+    },
+    "computers": [
+      {
+        "id": "31698105ae2ae378b8b6a85753e3f6c3d0f39b0299e48f779853bb2b5df91310",
+        "name": "NixOS",
+        "hostname": "nixos",
+        "screen_position": {},
+        "dead_corners": {
+          "top-left": "",
+          "bottom-right": "",
+          "top-right": "",
+          "bottom-left": ""
+        },
+        "scroll_sensitivity": 0.5,
+        "fix": {
+          "num_lock": false,
+          "xtest": false,
+          "capslock": false,
+          "scr_lock": false,
+          "sync_language": false,
+          "invert_scroll": false,
+          "prevent_sleep": false
+        },
+        "hdk": {
+          "caps": false,
+          "scr_lock": false,
+          "num_lock": false
+        },
+        "modifier": {
+          "Alt": "Alt",
+          "Meta": "Meta",
+          "Shift": "Shift",
+          "Super": "Super",
+          "Ctrl": "Ctrl"
+        },
+        "misc": {
+          "os": "linux",
+          "connected": true,
+          "height": 110,
+          "width": 535,
+          "left": 44,
+          "top": 165,
+          "customImage": null,
+          "screenCount": 1,
+          "screens": []
+        }
+      },
+      {
+        "id": "54c7a5ec2f6799dba9164d2ded6425ab7453831fc73e03266e86903fbbdb1408",
+        "name": "Arch",
+        "hostname": "asus",
+        "screen_position": {},
+        "dead_corners": {
+          "top-left": "",
+          "bottom-right": "",
+          "top-right": "",
+          "bottom-left": ""
+        },
+        "scroll_sensitivity": 0.5,
+        "fix": {
+          "num_lock": false,
+          "xtest": false,
+          "capslock": false,
+          "scr_lock": false,
+          "sync_language": false,
+          "invert_scroll": false,
+          "prevent_sleep": false
+        },
+        "hdk": {
+          "caps": false,
+          "scr_lock": false,
+          "num_lock": false
+        },
+        "modifier": {
+          "Alt": "Alt",
+          "Meta": "Meta",
+          "Shift": "Shift",
+          "Super": "Super",
+          "Ctrl": "Ctrl"
+        },
+        "misc": {
+          "os": "linux",
+          "connected": true,
+          "height": 110,
+          "width": 200,
+          "left": 14,
+          "top": 165,
+          "customImage": null,
+          "screenCount": 1,
+          "screens": []
+        }
+      },
+      {
+        "id": "536d5777788815bcca863f39c6baf9a8f8007d187ba87048e3ab76e81920d994",
+        "name": "Alienware",
+        "hostname": "DESKTOP-JV6RBL1",
+        "screen_position": {},
+        "dead_corners": {
+          "top-left": "",
+          "bottom-right": "",
+          "top-right": "",
+          "bottom-left": ""
+        },
+        "scroll_sensitivity": 0.5,
+        "fix": {
+          "num_lock": false,
+          "xtest": false,
+          "capslock": false,
+          "scr_lock": false,
+          "sync_language": false,
+          "invert_scroll": false,
+          "prevent_sleep": false
+        },
+        "hdk": {
+          "caps": false,
+          "scr_lock": false,
+          "num_lock": false
+        },
+        "modifier": {
+          "Alt": "Alt",
+          "Meta": "Meta",
+          "Shift": "Shift",
+          "Super": "Super",
+          "Ctrl": "Ctrl"
+        },
+        "misc": {
+          "os": "windows",
+          "connected": true,
+          "height": 110,
+          "width": 192,
+          "left": 416,
+          "top": 165,
+          "customImage": null,
+          "screenCount": 1,
+          "screens": []
+        }
+      },
+      {
+        "id": "299b7408b264b522c4632fe773c001b569951cb6c78c7cd000d4d5d0bd469132",
+        "name": "M2",
+        "hostname": "Cristians-MacBook-Pro.local",
+        "screen_position": {},
+        "dead_corners": {
+          "top-left": "",
+          "bottom-right": "",
+          "top-right": "",
+          "bottom-left": ""
+        },
+        "scroll_sensitivity": 0.5,
+        "fix": {
+          "num_lock": false,
+          "xtest": false,
+          "capslock": false,
+          "scr_lock": false,
+          "sync_language": false,
+          "invert_scroll": false,
+          "prevent_sleep": false
+        },
+        "hdk": {
+          "caps": false,
+          "scr_lock": false,
+          "num_lock": false
+        },
+        "modifier": {
+          "Alt": "Alt",
+          "Meta": "Meta",
+          "Shift": "Shift",
+          "Super": "Super",
+          "Ctrl": "Ctrl"
+        },
+        "misc": {
+          "os": "macos",
+          "connected": true,
+          "height": 110,
+          "width": 200,
+          "left": 215,
+          "top": 165,
+          "customImage": null,
+          "screenCount": 1,
+          "screens": []
+        }
+      }
+    ],
+    "keyboard": {
+      "altgr": true,
+      "lock_to_screen": true
+    },
+    "hotkeys": {},
+    "security": {
+      "encryption": true,
+      "key_length": "4096",
+      "fingerprint": "39:BA:C4:90:B2:83:04:48:93:C8:20:BC:EC:D5:0B:C2:8E:1E:8C:04:5E:0A:51:0D:D5:8F:9E:64:86:5C:FA:E8"
+    },
+    "mouse": {
+      "relative": true
+    },
+    "performance": {
+      "allow_copy": true,
+      "limit": 4000,
+      "sync": false
+    },
+    "local-network": {
+      "keep_alive": true,
+      "interval": 5000
+    },
+    "system": {
+      "auto_restart": true,
+      "admin_daemon": false,
+      "no_daemon": false
+    },
+    "developers": {
+      "switchDelay": 0,
+      "shouldSwitchDoubleTap": false,
+      "switchDoubleTap": 0,
+      "dragAndDrop": false,
+      "corePort": 24800,
+      "showMeta": false
+    },
+    "override": {
+      "shouldOverride": false,
+      "configFile": "section: screens\n\tNixOS:\n\t\talt = alt\n\t\tmeta = meta\n\t\tshift = shift\n\t\tsuper = super\n\t\tctrl = ctrl\n\t\thalfDuplexNumLock = false\n\t\txtestIsXineramaUnaware = false\n\t\thalfDuplexCapsLock = false\n\t\thalfDuplexScrollLock = false\n\t\tswitchCorners = none \n\t\taltgr = alt\n\n\tM2:\n\t\talt = alt\n\t\tmeta = meta\n\t\tshift = shift\n\t\tsuper = super\n\t\tctrl = ctrl\n\t\thalfDuplexNumLock = false\n\t\txtestIsXineramaUnaware = false\n\t\thalfDuplexCapsLock = false\n\t\thalfDuplexScrollLock = false\n\t\tswitchCorners = none \n\t\taltgr = alt\n\n\tAlienware:\n\t\talt = alt\n\t\tmeta = meta\n\t\tshift = shift\n\t\tsuper = super\n\t\tctrl = ctrl\n\t\thalfDuplexNumLock = false\n\t\txtestIsXineramaUnaware = false\n\t\thalfDuplexCapsLock = false\n\t\thalfDuplexScrollLock = false\n\t\tswitchCorners = none \n\t\taltgr = alt\n\n\tArch:\n\t\talt = alt\n\t\tmeta = meta\n\t\tshift = shift\n\t\tsuper = super\n\t\tctrl = ctrl\n\t\thalfDuplexNumLock = false\n\t\txtestIsXineramaUnaware = false\n\t\thalfDuplexCapsLock = false\n\t\thalfDuplexScrollLock = false\n\t\tswitchCorners = none \n\t\taltgr = alt\nend\n\nsection: links\n\n\tNixOS:\n\t\tdown(66,100) = Arch(0,100)\n\t\tdown(34,66) = M2(0,100)\n\t\tdown(0,34) = Alienware(0,100)\n\n\tArch:\n\t\tup(0,100) = NixOS(66,100)\n\t\tleft(0,100) = M2(0,100)\n\n\tM2:\n\t\tup(0,100) = NixOS(34,66)\n\t\tleft(0,100) = Alienware(0,100)\n\t\tright(0,100) = Arch(0,100)\n\n\tAlienware:\n\t\tup(0,100) = NixOS(0,34)\n\t\tright(0,100) = M2(0,100)\n\nend\n\nsection: options\n\theartbeat = 5000\n\trelativeMouseMoves = true\n\tclipboardSharing = true\n\tclipboardSharingSize = 4000\n\twin32KeepForeground = true\n\tdisableLockToScreen = false\nend\n",
+      "serverName": "NixOS"
+    }
+  }
+}
