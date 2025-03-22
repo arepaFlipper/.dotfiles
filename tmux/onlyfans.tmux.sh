@@ -39,7 +39,7 @@ tmux send-keys -t $session3:1 "cd ${path} && dvim ." C-m
 # session 4: notes
 tmux new-session -s $session4 -n "notes 📝" -d
 tmux send-keys -t $session4:1 "cd ${obsidian}" C-m
-tmux send-keys -t $session4:1 "bvim ./0-Inbox/1741387012-onlyfans-project" C-m
+tmux send-keys -t $session4:1 "bvim ./0-Inbox/1741387012-onlyfans-project.md" C-m
 
 # Attach to the "code" session
 tmux attach -t $session3
