@@ -102,7 +102,6 @@
 		python3	
 		# python312Packages.pip
 
-		synergy
 		stow
 
 		zsh-powerlevel10k
