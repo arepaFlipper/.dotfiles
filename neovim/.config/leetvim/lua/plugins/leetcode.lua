@@ -15,7 +15,10 @@ return {
     opts = {
       -- configuration goes here
       lang = "python3",
-      directory = vim.loop.os_homedir() .. "/Documents/yt-tutos/neetcode/leetcoding",
+      storage = {
+        home = vim.loop.os_homedir() .. "/Documents/yt-tutos/neetcode/leetcoding",
+        cache = vim.loop.os_homedir() .. "/Documents/yt-tutos/neetcode/leetcoding/cache",
+      },
     },
   },
   {
@@ -70,4 +73,5 @@ return {
       handlers = {},
     },
   },
+  { "LazyVim/LazyVim", version = "v13.9.1" },
 }
