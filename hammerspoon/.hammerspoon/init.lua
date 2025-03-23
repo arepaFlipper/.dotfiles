@@ -166,4 +166,12 @@ KeyWatcher = eventtap.new({
 }, eventHandler)
 KeyWatcher:start()
 
+hs.hotkey.bind({ "ctrl+shift" }, "v", function()
+	hs.eventtap.keyStroke({ "cmd" }, "v", true) -- Simulate Cmd+V once
+
+	hs.timer.doAfter(0.1, function()
+		hs.eventtap.keyStroke({ "cmd" }, "v", true) -- Simulate Cmd+V twice
+	end)
+end)
+
 -- vim: set sw=2:
