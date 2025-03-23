@@ -1,18 +1,18 @@
 {
   "version": {
-    "syncVersion": 1741974532910,
+    "syncVersion": 1742692020094,
     "schemaVersion": 14
   },
   "data": {
     "mainID": {
-      "id": ""
+      "id": "fa4e249de28081454623cd57937fe83075b58fcb3bb32284a25925c84a1ecb93"
     },
     "autoDiscover": {
       "discovery": true
     },
     "computers": [
       {
-        "id": "31698105ae2ae378b8b6a85753e3f6c3d0f39b0299e48f779853bb2b5df91310",
+        "id": "fa4e249de28081454623cd57937fe83075b58fcb3bb32284a25925c84a1ecb93",
         "name": "NixOS",
         "hostname": "nixos",
         "screen_position": {},
@@ -48,18 +48,18 @@
           "os": "linux",
           "connected": true,
           "height": 110,
-          "width": 535,
-          "left": 44,
-          "top": 165,
+          "width": 596,
+          "left": 13,
+          "top": 110,
           "customImage": null,
           "screenCount": 1,
           "screens": []
         }
       },
       {
-        "id": "54c7a5ec2f6799dba9164d2ded6425ab7453831fc73e03266e86903fbbdb1408",
-        "name": "Arch",
-        "hostname": "asus",
+        "id": "299b7408b264b522c4632fe773c001b569951cb6c78c7cd000d4d5d0bd469132",
+        "name": "M2",
+        "hostname": "Cristians-MacBook-Pro.local",
         "screen_position": {},
         "dead_corners": {
           "top-left": "",
@@ -73,7 +73,7 @@
           "xtest": false,
           "capslock": false,
           "scr_lock": false,
-          "sync_language": false,
+          "sync_language": true,
           "invert_scroll": false,
           "prevent_sleep": false
         },
@@ -90,12 +90,12 @@
           "Ctrl": "Ctrl"
         },
         "misc": {
-          "os": "linux",
-          "connected": true,
+          "os": "macos",
+          "connected": false,
           "height": 110,
           "width": 200,
-          "left": 14,
-          "top": 165,
+          "left": 214,
+          "top": 221,
           "customImage": null,
           "screenCount": 1,
           "screens": []
@@ -136,20 +136,20 @@
         },
         "misc": {
           "os": "windows",
-          "connected": true,
+          "connected": false,
           "height": 110,
           "width": 192,
-          "left": 416,
-          "top": 165,
+          "left": 415,
+          "top": 221,
           "customImage": null,
           "screenCount": 1,
           "screens": []
         }
       },
       {
-        "id": "299b7408b264b522c4632fe773c001b569951cb6c78c7cd000d4d5d0bd469132",
-        "name": "M2",
-        "hostname": "Cristians-MacBook-Pro.local",
+        "id": "54c7a5ec2f6799dba9164d2ded6425ab7453831fc73e03266e86903fbbdb1408",
+        "name": "Arch",
+        "hostname": "asus",
         "screen_position": {},
         "dead_corners": {
           "top-left": "",
@@ -180,12 +180,12 @@
           "Ctrl": "Ctrl"
         },
         "misc": {
-          "os": "macos",
-          "connected": true,
+          "os": "linux",
+          "connected": false,
           "height": 110,
           "width": 200,
-          "left": 215,
-          "top": 165,
+          "left": 13,
+          "top": 221,
           "customImage": null,
           "screenCount": 1,
           "screens": []
@@ -196,11 +196,92 @@
       "altgr": true,
       "lock_to_screen": true
     },
-    "hotkeys": {},
+    "hotkeys": {
+      "0d3074e1-dfaf-4801-9219-1c6529bb5f97": {
+        "id": "0d3074e1-dfaf-4801-9219-1c6529bb5f97",
+        "keystroke": {
+          "type": "keystroke",
+          "control": true,
+          "alt": true,
+          "meta": false,
+          "shift": false,
+          "key": "KeyJ"
+        },
+        "enabled": true,
+        "actions": [
+          {
+            "type": "SWITCH_TO_COMPUTER",
+            "enabled": true,
+            "trigger": 0,
+            "target": "M2"
+          }
+        ]
+      },
+      "e282e8e2-bd18-45bb-ae8f-b9235c20b46a": {
+        "id": "e282e8e2-bd18-45bb-ae8f-b9235c20b46a",
+        "keystroke": {
+          "type": "keystroke",
+          "control": true,
+          "alt": true,
+          "meta": false,
+          "shift": false,
+          "key": "KeyK"
+        },
+        "enabled": true,
+        "actions": [
+          {
+            "type": "SWITCH_IN_DIRECTION",
+            "enabled": true,
+            "trigger": 0,
+            "target": "up"
+          }
+        ]
+      },
+      "fba0bb6b-e1b5-4619-948c-0c43a82119cc": {
+        "id": "fba0bb6b-e1b5-4619-948c-0c43a82119cc",
+        "keystroke": {
+          "type": "keystroke",
+          "control": true,
+          "alt": true,
+          "meta": false,
+          "shift": false,
+          "key": "KeyH"
+        },
+        "enabled": true,
+        "actions": [
+          {
+            "type": "SWITCH_TO_COMPUTER",
+            "enabled": true,
+            "trigger": 0,
+            "target": "Arch"
+          }
+        ]
+      },
+      "1e56c331-d112-4b58-9eeb-4210f6722187": {
+        "id": "1e56c331-d112-4b58-9eeb-4210f6722187",
+        "keystroke": {
+          "type": "keystroke",
+          "control": true,
+          "alt": true,
+          "meta": false,
+          "shift": false,
+          "key": "KeyL"
+        },
+        "enabled": true,
+        "actions": [
+          {
+            "type": "SWITCH_TO_COMPUTER",
+            "enabled": true,
+            "trigger": 0,
+            "target": "Alienware"
+          }
+        ]
+      }
+    },
     "security": {
       "encryption": true,
       "key_length": "4096",
-      "fingerprint": "39:BA:C4:90:B2:83:04:48:93:C8:20:BC:EC:D5:0B:C2:8E:1E:8C:04:5E:0A:51:0D:D5:8F:9E:64:86:5C:FA:E8"
+      "fingerprint": "4B:04:2D:FA:F1:C4:83:BE:AF:94:55:A8:79:EA:8E:B4:CD:C6:82:CF:D0:4B:5A:47:97:76:FB:FF:DD:25:56:46"
     },
     "mouse": {
       "relative": true
@@ -223,14 +304,14 @@
       "switchDelay": 0,
       "shouldSwitchDoubleTap": false,
       "switchDoubleTap": 0,
-      "dragAndDrop": false,
+      "dragAndDrop": true,
       "corePort": 24800,
       "showMeta": false
     },
     "override": {
-      "shouldOverride": false,
-      "configFile": "section: screens\n\tNixOS:\n\t\talt = alt\n\t\tmeta = meta\n\t\tshift = shift\n\t\tsuper = super\n\t\tctrl = ctrl\n\t\thalfDuplexNumLock = false\n\t\txtestIsXineramaUnaware = false\n\t\thalfDuplexCapsLock = false\n\t\thalfDuplexScrollLock = false\n\t\tswitchCorners = none \n\t\taltgr = alt\n\n\tM2:\n\t\talt = alt\n\t\tmeta = meta\n\t\tshift = shift\n\t\tsuper = super\n\t\tctrl = ctrl\n\t\thalfDuplexNumLock = false\n\t\txtestIsXineramaUnaware = false\n\t\thalfDuplexCapsLock = false\n\t\thalfDuplexScrollLock = false\n\t\tswitchCorners = none \n\t\taltgr = alt\n\n\tAlienware:\n\t\talt = alt\n\t\tmeta = meta\n\t\tshift = shift\n\t\tsuper = super\n\t\tctrl = ctrl\n\t\thalfDuplexNumLock = false\n\t\txtestIsXineramaUnaware = false\n\t\thalfDuplexCapsLock = false\n\t\thalfDuplexScrollLock = false\n\t\tswitchCorners = none \n\t\taltgr = alt\n\n\tArch:\n\t\talt = alt\n\t\tmeta = meta\n\t\tshift = shift\n\t\tsuper = super\n\t\tctrl = ctrl\n\t\thalfDuplexNumLock = false\n\t\txtestIsXineramaUnaware = false\n\t\thalfDuplexCapsLock = false\n\t\thalfDuplexScrollLock = false\n\t\tswitchCorners = none \n\t\taltgr = alt\nend\n\nsection: links\n\n\tNixOS:\n\t\tdown(66,100) = Arch(0,100)\n\t\tdown(34,66) = M2(0,100)\n\t\tdown(0,34) = Alienware(0,100)\n\n\tArch:\n\t\tup(0,100) = NixOS(66,100)\n\t\tleft(0,100) = M2(0,100)\n\n\tM2:\n\t\tup(0,100) = NixOS(34,66)\n\t\tleft(0,100) = Alienware(0,100)\n\t\tright(0,100) = Arch(0,100)\n\n\tAlienware:\n\t\tup(0,100) = NixOS(0,34)\n\t\tright(0,100) = M2(0,100)\n\nend\n\nsection: options\n\theartbeat = 5000\n\trelativeMouseMoves = true\n\tclipboardSharing = true\n\tclipboardSharingSize = 4000\n\twin32KeepForeground = true\n\tdisableLockToScreen = false\nend\n",
-      "serverName": "NixOS"
+      "shouldOverride": true,
+      "configFile": "section: screens\n\tnixos-4a1ecb93:\n\t\talt = alt\n\t\tmeta = meta\n\t\tshift = shift\n\t\tsuper = super\n\t\tctrl = ctrl\n\t\thalfDuplexNumLock = false\n\t\txtestIsXineramaUnaware = false\n\t\thalfDuplexCapsLock = false\n\t\thalfDuplexScrollLock = false\n\t\tswitchCorners = none \n\t\taltgr = alt\n\tm2-bd469132:\n\t\talt = alt\n\t\tmeta = meta\n\t\tshift = shift\n\t\tsuper = super\n\t\tctrl = ctrl\n\t\thalfDuplexNumLock = false\n\t\txtestIsXineramaUnaware = false\n\t\thalfDuplexCapsLock = false\n\t\thalfDuplexScrollLock = false\n\t\tswitchCorners = none \n\t\taltgr = alt\n\talienware-1920d994:\n\t\talt = alt\n\t\tmeta = meta\n\t\tshift = shift\n\t\tsuper = super\n\t\tctrl = ctrl\n\t\thalfDuplexNumLock = false\n\t\txtestIsXineramaUnaware = false\n\t\thalfDuplexCapsLock = false\n\t\thalfDuplexScrollLock = false\n\t\tswitchCorners = none \n\t\taltgr = alt\n\tarch-bbdb1408:\n\t\talt = alt\n\t\tmeta = meta\n\t\tshift = shift\n\t\tsuper = super\n\t\tctrl = ctrl\n\t\thalfDuplexNumLock = false\n\t\txtestIsXineramaUnaware = false\n\t\thalfDuplexCapsLock = false\n\t\thalfDuplexScrollLock = false\n\t\tswitchCorners = none \n\t\taltgr = alt\nend\n\nsection: links\n\tnixos-4a1ecb93:\n\t\tdown(34,67) = m2-bd469132(0,100)\n\t\tdown(67,100) = alienware-1920d994(0,100)\n\t\tdown(0,34) = arch-bbdb1408(0,100)\n\tm2-bd469132:\n\t\tup(0,100) = nixos-4a1ecb93(34,67)\n\t\tright(0,100) = alienware-1920d994(0,100)\n\t\tleft(0,100) = arch-bbdb1408(0,100)\n\talienware-1920d994:\n\t\tup(0,100) = nixos-4a1ecb93(67,100)\n\t\tleft(0,100) = m2-bd469132(0,100)\n\tarch-bbdb1408:\n\t\tup(0,100) = nixos-4a1ecb93(0,34)\n\t\tright(0,100) = m2-bd469132(0,100)\nend\n\nsection: options\n\theartbeat = 5000\n\trelativeMouseMoves = true\n\tclipboardSharing = true\n\tclipboardSharingSize = 4000\n\twin32KeepForeground = true\n\tdisableLockToScreen = false\n\tkeystroke(Control+Alt+j) = switchToScreen(m2-bd469132)\n\tkeystroke(Control+Alt+k) = switchInDirection(up)\n\tkeystroke(Control+Alt+h) = switchToScreen(arch-bbdb1408)\n\tkeystroke(Control+Alt+l) = switchToScreen(alienware-1920d994)\nend\n",
+      "serverName": "nixos-4a1ecb93"
     }
   }
 }
