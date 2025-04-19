@@ -156,11 +156,13 @@ plugins=(
 	zsh-syntax-highlighting
 	tmux
 	git
+	direnv
 )
 
 if [[ "$OSTYPE" == darwin* ]]; then
   source $ZSH/oh-my-zsh.sh
   eval "$(rbenv init -)"
+  eval "$(direnv hook zsh)"
   source ~/.p10k.M2.zsh
 fi
 
@@ -221,8 +223,6 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-export OPENAI_API_KEY="$(gpg --decrypt $HOME/.gpt_key.gpg 2>&1| tail -n 1)"
 
 alias vimdiff="NVIM_APPNAME=LazyVim nvim -d"
 
