@@ -43,7 +43,7 @@
   };
   services.xserver.displayManager.gdm.enable = true;
   # Enable i3 as window manager
-  services.xserver.displayManager.defaultSession = "none+i3";
+  services.displayManager.defaultSession = "none+i3";
 
   console.keyMap = "la-latin1";
 
@@ -75,9 +75,7 @@
 		];
   };
 
-  # services.xserver.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.enable = true;
-  # services.xserver.displayManager.autoLogin.user = "cris";
   services.displayManager.autoLogin.user = "cris";
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
@@ -135,7 +133,13 @@
   xdg.portal = {
     enable = true;
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-  };
+    configPackages = [ ];
+    config = {
+        common = { 
+          default = [ "gtk" ];
+        };
+      };
+    };
 
 
   networking.firewall.allowedTCPPorts = [ 24800 8000 5432 5173 ];
