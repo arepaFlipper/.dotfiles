@@ -41,6 +41,7 @@ alias recycle="~/recycle_chain.tmux.sh"
 alias keyboard="~/qmk.tmux.sh"
 alias litetech="~/litetech.tmux.sh"
 alias onlyfans="~/onlyfans.tmux.sh"
+alias debt="~/debt_collector.tmux.sh"
 alias V="/usr/bin/nvim"
 alias rk="~/.cargo/bin/rust-kanban"
 
