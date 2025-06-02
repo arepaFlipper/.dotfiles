@@ -142,7 +142,7 @@
     };
 
 
-  networking.firewall.allowedTCPPorts = [ 24800 8000 5432 5173 ];
+  networking.firewall.allowedTCPPorts = [ 24800 8000 5432 5173 5444 ];
   virtualisation.docker = {
     enable = true;
     rootless = {
@@ -161,6 +161,6 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 	nix.settings.allowed-users = ["cris"];
-  system.stateVersion = "24.11";
+  system.stateVersion = "25.05";
 }
 
