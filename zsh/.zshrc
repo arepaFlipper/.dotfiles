@@ -172,16 +172,17 @@ if [[ "$OSTYPE" == linux* ]]; then
 
   if [[ "$OS_ID" == "nixos" ]]; then
     echo "Running on NixOS"
+	source ~/.p10k.zsh
   elif [[ "$OS_ID" == "arch" ]]; then
     echo "Running on Arch"
-    source $ZSH/oh-my-zsh.sh
-    source ~/.p10k.arch.zsh
-    source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-    source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+	source ~/.p10k.arch.zsh
   else
     source $ZSH/oh-my-zsh.sh
     echo "Running on ($OS_ID)"
   fi
+source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+  #source $ZSH/oh-my-zsh.sh
 
 fi
 

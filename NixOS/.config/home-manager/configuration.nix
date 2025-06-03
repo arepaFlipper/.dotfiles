@@ -69,7 +69,7 @@
     extraGroups = [ "networkmanager" "wheel" "docker" "kvm" "adbusers" ];
     shell = pkgs.zsh;
 		packages = [
-			pkgs.alacritty	
+			pkgs.ghostty	
 			pkgs.qutebrowser	
 			pkgs.home-manager	
 		];
@@ -92,7 +92,6 @@
 		nodejs_20
 		docker
 		docker-compose
-		openssl_3_3
 		flatpak
 		flatpak-builder
 		fzf

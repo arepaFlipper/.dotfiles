@@ -4,7 +4,7 @@ let
 in
 {
   home.packages = with pkgs; [
-    unstable.neovim-unwrapped
+    neovim-unwrapped
     vimPlugins.nvim-treesitter
     unzip
     go
@@ -23,7 +23,7 @@ in
 
   programs.neovim = {
     enable = true;
-    package = unstable.neovim-unwrapped;
+    package = pkgs.neovim-unwrapped;
     defaultEditor = true;
     extraPackages = [
       pkgs.gcc

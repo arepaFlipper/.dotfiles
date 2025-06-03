@@ -11,12 +11,6 @@ let
         fzf
         (pkgs.nerdfonts.override { fonts = [ "Meslo" "FiraCode" "DroidSansMono" "JetBrainsMono" ]; })
     ];
-    file = {
-      ".p10k.zsh" = {
-        source = ~/.dotfiles/NixOS/.config/home-manager/.p10k.zsh;
-        executable = true;
-      };
-    };
   };
 in 
 {
