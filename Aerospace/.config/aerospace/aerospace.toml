@@ -37,6 +37,9 @@ cmd-slash = 'split vertical'
 
 cmd-f = 'fullscreen'
 
+cmd-q = 'close'
+cmd-w = 'workspace-back-and-forth'
+
 cmd-shift-backslash = 'layout v_accordion'           # 'layout stacking' in i3
 cmd-shift-minus = 'layout h_accordion'               # 'layout tabbed' in i3
 cmd-shift-space = 'layout tiles horizontal vertical' # 'layout toggle split' in i3
