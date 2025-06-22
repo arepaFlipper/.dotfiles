@@ -5,18 +5,14 @@ in
 {
   imports = [
     ./modules/shell.nix
+    #./modules/ghostty.nix
     ./modules/neovim.nix
-    # ./modules/alacritty.nix
     ./modules/tmux.nix
     ./modules/syncthing.nix
     ./modules/cursor.nix
     ./modules/git.nix
     ./modules/window_manager.nix
-    # ./modules/cura.nix
-    # ./modules/ghostty.nix
   ];
-  # Home Manager needs a bit of information about you and the paths it should
-  # manage.
   home.username = "arepa";
   home.homeDirectory = "/home/arepa";
 
@@ -31,38 +27,28 @@ in
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
+  nixpkgs.config.packageOverrides = pkgs: {
+    qutebrowser = pkgs.qutebrowser.override {
+      python3 = pkgs.python3.override {
+        packageOverrides = python-self: python-super: {
+          lxml-html-clean = python-super.lxml-html-clean.overridePythonAttrs (oldAttrs: {
+            doCheck = false;  # Skip tests
+          });
+        };
+      };
+    };
+  };
+
   home.packages = with pkgs; [
-    # # Adds the 'hello' command to your environment. It prints a friendly
-    # # "Hello, world!" when run.
-    #pkgs.hello
-    #nixvim
     ripgrep
     ffmpeg
-    yt-dlp
     nodePackages_latest.nodejs
     scrcpy
 
-    qutebrowser
-    xorg.libxcb
-    xorg.xcbutilcursor
-
-    android-udev-rules
-
     libreoffice
-    # # It is sometimes useful to fine-tune packages, for example, by applying
-    # # overrides. You can do that directly here, just don't forget the
-    # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
-    # # fonts?
-
-    # # You can also create simple shell scripts directly inside your
-    # # configuration. For example, this adds a command 'my-hello' to your
-    # # environment:
-    # (pkgs.writeShellScriptBin "my-hello" ''
-    #   echo "Hello, ${config.home.username}!"
-    # '')
-     (pkgs.nerdfonts.override { fonts = [ "Meslo" "FiraCode" "DroidSansMono" "JetBrainsMono" ]; })
-
-     yazi
+    ghostty
+    qutebrowser
+    yazi
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -78,9 +64,7 @@ in
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
-
   };
-
 
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. These will be explicitly sourced when using a
@@ -98,19 +82,10 @@ in
   #
   #  /etc/profiles/per-user/arepa/etc/profile.d/hm-session-vars.sh
   #
-
-  # Let Home Manager install and manage itself.
-  programs.qutebrowser = {
-    enable = true;
-    extraConfig = ''
-config.load_autoconfig(False)
-import os
-config_path = os.path.expanduser("/home/arepa/.dotfiles/qutebrowser/.config/qutebrowser/config.py")
-with open(config_path) as f:
-    exec(f.read())
-    '';
+  home.sessionVariables = {
+    #EDITOR = "vim";
   };
 
-
-
+  # Let Home Manager install and manage itself.
+  programs.home-manager.enable = true;
 }

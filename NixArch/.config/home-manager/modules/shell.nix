@@ -8,10 +8,11 @@ in
     python313Packages.pip
     pkgs.zsh-syntax-highlighting
     zoxide
-    alacritty
+    #alacritty
     yt-dlp
     fzf
-    (pkgs.nerdfonts.override { fonts = [ "Meslo" "FiraCode" "DroidSansMono" "JetBrainsMono" ]; })
+    oh-my-zsh
+    #(pkgs.nerdfonts.override { fonts = [ "Meslo" "FiraCode" "DroidSansMono" "JetBrainsMono" ]; })
   ];
 
   programs = {
@@ -28,10 +29,11 @@ in
 
       initExtra = ''
         alias hmsi="home-manager switch --impure"
-        alias nxrb="sudo nixos-rebuild switch --flake ~/.dotfiles/NixOS/.config/home-manager"
+        alias nxrb="sudo nixos-rebuild switch --flake ~/.dotfiles/NixArch/.config/home-manager"
         source $HOME/.dotfiles/zsh/.zshrc
       '';
     };
+
 
     bash = {
       enable = true;

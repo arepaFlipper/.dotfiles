@@ -1,36 +1,32 @@
 {
-  description = "Config the home-manager";  # Description of the flake
+  description = "Home Manager configuration of arepa";
 
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-24.11";  # Input for Nixpkgs channel or repository
-    unstable.url = "nixpkgs/nixos-unstable";  # Input for Nixpkgs channel or repository
-    home-manager.url = "github:nix-community/home-manager/release-24.11";  # Input for Home Manager from GitHub
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";  # Ensure Home Manager follows the same Nixpkgs version
+    # Specify the source of Home Manager and Nixpkgs.
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, unstable, home-manager, ... }:
-	let 
-		lib = nixpkgs.lib;  # Shortcut to access commonly used functions from Nixpkgs
-		system = "x86_64-linux";  # Target system architecture
-		pkgs = nixpkgs.legacyPackages.${system};  # Legacy packages for the specified system
-		unstable = unstable.legacyPackages.${system};  # Legacy packages for the specified system
-	in {
-		nixosConfigurations = {  # NixOS configurations section
-			nixos = lib.nixosSystem {  # Define a NixOS system configuration named 'nixos'
-				inherit system;  # Inherit the system architecture
-				modules = [ 
-          ./configuration.nix 
-        ];  # List of modules to include in the NixOS configuration
-			};
-		};
-		homeConfigurations = {  # Home Manager configurations section
-			arepa = home-manager.lib.homeManagerConfiguration {  # Define a Home Manager configuration named 'cris'
-				inherit pkgs;  # Inherit package set for Home Manager configuration
-				modules = [ 
-          ./home.nix
-        ];  # List of modules to include in the Home Manager configuration
-			};
-		};
-	};
-}
+  outputs =
+    { nixpkgs, home-manager, ... }:
+    let
+      system = "x86_64-linux";
+      pkgs = nixpkgs.legacyPackages.${system};
+    in
+    {
+      homeConfigurations."arepa" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
 
+
+        # Specify your home configuration modules here, for example,
+        # the path to your home.nix.
+        modules = [ ./home.nix ];
+
+        # Optionally use extraSpecialArgs
+        # to pass through arguments to home.nix
+      };
+    };
+}
