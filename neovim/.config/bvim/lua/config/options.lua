@@ -3,5 +3,6 @@
 -- Add any additional options here
 local opt = vim.opt
 opt.clipboard = "unnamedplus"
+vim.g.lazyvim_blink_main = false
 
 -- opt.iskeyword:append("-")

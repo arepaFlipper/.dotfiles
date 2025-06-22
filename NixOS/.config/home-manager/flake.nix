@@ -2,9 +2,9 @@
   description = "Config the home-manager";  # Description of the flake
 
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-24.11";  # Input for Nixpkgs channel or repository
+    nixpkgs.url = "nixpkgs/nixos-25.05";  # Input for Nixpkgs channel or repository
     unstable.url = "nixpkgs/nixos-unstable";  # Input for Nixpkgs channel or repository
-    home-manager.url = "github:nix-community/home-manager/release-24.11";  # Input for Home Manager from GitHub
+    home-manager.url = "github:nix-community/home-manager/release-25.05";  # Input for Home Manager from GitHub
     home-manager.inputs.nixpkgs.follows = "nixpkgs";  # Ensure Home Manager follows the same Nixpkgs version
     ghostty.url = "github:ghostty-org/ghostty";
   };
