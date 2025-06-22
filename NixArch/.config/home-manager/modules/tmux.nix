@@ -67,7 +67,6 @@ in {
     enable = true;
     mouse = true;
     keyMode = "vi";
-    shell = "${pkgs.zsh}/bin/zsh";
     extraConfig = ''
     '';
 

@@ -8,10 +8,11 @@ in
     python313Packages.pip
     pkgs.zsh-syntax-highlighting
     zoxide
-    alacritty
+    #alacritty
     yt-dlp
     fzf
-    (pkgs.nerdfonts.override { fonts = [ "Meslo" "FiraCode" "DroidSansMono" "JetBrainsMono" ]; })
+    oh-my-zsh
+    #(pkgs.nerdfonts.override { fonts = [ "Meslo" "FiraCode" "DroidSansMono" "JetBrainsMono" ]; })
   ];
 
   programs = {
@@ -26,19 +27,18 @@ in
         plugins = [ "git" "sudo" "tmux" "pip" ];
       };
 
-      initExtra = ''
+      initContent = ''
         alias hmsi="home-manager switch --impure"
-        alias nxrb="sudo nixos-rebuild switch --flake ~/.dotfiles/NixOS/.config/home-manager"
+        alias nxrb="sudo nixos-rebuild switch --flake ~/.dotfiles/NixArch/.config/home-manager"
         source $HOME/.dotfiles/zsh/.zshrc
+	if [ -n "$BASH_VERSION" ] && [ -f "$HOME/.nix-profile/bin/zsh" ]; then
+	    export SHELL="$HOME/.nix-profile/bin/zsh"
+	    exec "$HOME/.nix-profile/bin/zsh"
+	fi
       '';
     };
 
-    bash = {
-      enable = true;
-      initExtra = ''
-        [[ -f ~/.profile ]] && . ~/.profile
-      '';
-    };
+
   };
 }
 

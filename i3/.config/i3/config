@@ -12,7 +12,7 @@
 set $mod Mod4
 exec_always --no-startup-id killall polybar
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
-exec --no-startup-id "~/scripts/synergy_invert.sh"
+exec --no-startup-id "flatpak run com.symless.synergy"
 # exec setxkbmap -layout latam
 
 
@@ -66,9 +66,8 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id ~/scripts/execute_ghostty.sh
-bindsym $mod+g exec --no-startup-id ~/scripts/execute_qutebrowser.sh
-
+bindsym $mod+Return exec --no-startup-id ghostty
+bindsym $mod+g exec --no-startup-id '$HOME/scripts/execute_qutebrowser.sh'
 
 # kill focused window
 bindsym $mod+q kill
