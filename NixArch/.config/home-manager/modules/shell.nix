@@ -27,20 +27,18 @@ in
         plugins = [ "git" "sudo" "tmux" "pip" ];
       };
 
-      initExtra = ''
+      initContent = ''
         alias hmsi="home-manager switch --impure"
         alias nxrb="sudo nixos-rebuild switch --flake ~/.dotfiles/NixArch/.config/home-manager"
         source $HOME/.dotfiles/zsh/.zshrc
+	if [ -n "$BASH_VERSION" ] && [ -f "$HOME/.nix-profile/bin/zsh" ]; then
+	    export SHELL="$HOME/.nix-profile/bin/zsh"
+	    exec "$HOME/.nix-profile/bin/zsh"
+	fi
       '';
     };
 
 
-    bash = {
-      enable = true;
-      initExtra = ''
-        [[ -f ~/.profile ]] && . ~/.profile
-      '';
-    };
   };
 }
 
