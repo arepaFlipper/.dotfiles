@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 let
   unstable = import <nixos-unstable> { config = {allowUnfree = true;};};
+in 
+{
   home = {
 
     packages = with pkgs; [
@@ -9,11 +11,10 @@ let
         pkgs.zoxide
         yt-dlp
         fzf
+        python313Packages.pip
         (pkgs.nerdfonts.override { fonts = [ "Meslo" "FiraCode" "DroidSansMono" "JetBrainsMono" ]; })
     ];
   };
-in 
-{
   programs = {
     zsh = {
         enable = true;
