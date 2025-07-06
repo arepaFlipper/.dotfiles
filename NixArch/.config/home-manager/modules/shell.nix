@@ -1,19 +1,20 @@
 { config, pkgs, ... }:
+
 let
   unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
-in
-{
+in {
   home.packages = with pkgs; [
-    pkgs.zsh-autosuggestions
+    zsh-autosuggestions
+    zsh-powerlevel10k
     python313Packages.pip
-    pkgs.zsh-syntax-highlighting
+    zsh-syntax-highlighting
     zoxide
-    #alacritty
     yt-dlp
     fzf
     oh-my-zsh
-    #(pkgs.nerdfonts.override { fonts = [ "Meslo" "FiraCode" "DroidSansMono" "JetBrainsMono" ]; })
   ];
+
+  home.file.".p10k.zsh".source = ../../../../zsh/.p10k.arch.zsh;
 
   programs = {
     zsh = {
@@ -27,18 +28,17 @@ in
         plugins = [ "git" "sudo" "tmux" "pip" ];
       };
 
-      initContent = ''
+      initExtra = ''
+        source ~/.p10k.zsh
         alias hmsi="home-manager switch --impure"
         alias nxrb="sudo nixos-rebuild switch --flake ~/.dotfiles/NixArch/.config/home-manager"
         source $HOME/.dotfiles/zsh/.zshrc
-	if [ -n "$BASH_VERSION" ] && [ -f "$HOME/.nix-profile/bin/zsh" ]; then
-	    export SHELL="$HOME/.nix-profile/bin/zsh"
-	    exec "$HOME/.nix-profile/bin/zsh"
-	fi
+        if [ -n "$BASH_VERSION" ] && [ -f "$HOME/.nix-profile/bin/zsh" ]; then
+            export SHELL="$HOME/.nix-profile/bin/zsh"
+            exec "$HOME/.nix-profile/bin/zsh"
+        fi
       '';
     };
-
-
   };
 }
 
