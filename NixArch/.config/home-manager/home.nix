@@ -5,7 +5,6 @@ in
 {
   imports = [
     ./modules/shell.nix
-    #./modules/ghostty.nix
     ./modules/neovim.nix
     ./modules/tmux.nix
     ./modules/syncthing.nix
@@ -27,23 +26,13 @@ in
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  nixpkgs.config.packageOverrides = pkgs: {
-    qutebrowser = pkgs.qutebrowser.override {
-      python3 = pkgs.python3.override {
-        packageOverrides = python-self: python-super: {
-          lxml-html-clean = python-super.lxml-html-clean.overridePythonAttrs (oldAttrs: {
-            doCheck = false;  # Skip tests
-          });
-        };
-      };
-    };
-  };
 
   home.packages = with pkgs; [
     ripgrep
     ffmpeg
     nodePackages_latest.nodejs
     scrcpy
+    docker-compose
 
     libreoffice
     ghostty
