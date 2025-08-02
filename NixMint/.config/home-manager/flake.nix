@@ -1,5 +1,5 @@
 {
-  description = "Home Manager configuration of arepa";
+  description = "Home Manager configuration of vicky";
 
   inputs = {
     # Specify the source of Home Manager and Nixpkgs.
@@ -17,7 +17,7 @@
       pkgs = nixpkgs.legacyPackages.${system};
     in
     {
-      homeConfigurations."arepa" = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations."vicky" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
 
