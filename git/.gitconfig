@@ -3,7 +3,7 @@
 	email = cristian00tovar@gmail.com
 
 [core]
-	editor = NVIM_APPNAME=LazyVim nvim
+	editor = hx
 	pager = delta
 	attributesFile = $HOME/.gitattributes
 

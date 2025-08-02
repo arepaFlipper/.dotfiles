@@ -62,6 +62,7 @@ in
      ghostty.packages.x86_64-linux.default
 
      cura-appimage
+     helix
 
      yazi
   ];
