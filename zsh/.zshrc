@@ -175,7 +175,7 @@ if [[ "$OSTYPE" == linux* ]]; then
 	source ~/.p10k.zsh
   elif [[ "$OS_ID" == "arch" ]]; then
     echo "Running on Arch"
-	source ~/.p10k.arch.zsh
+    source ~/.p10k.arch.zsh
   else
     source $ZSH/oh-my-zsh.sh
     echo "Running on ($OS_ID)"

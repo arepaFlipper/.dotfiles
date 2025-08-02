@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 let
   unstable = import <nixos-unstable> { config = {allowUnfree = true;};};
+in 
+{
   home = {
 
     packages = with pkgs; [
@@ -9,46 +11,32 @@ let
         pkgs.zoxide
         yt-dlp
         fzf
-        (pkgs.nerdfonts.override { fonts = [ "Meslo" "FiraCode" "DroidSansMono" "JetBrainsMono" ]; })
+        python313Packages.pip
     ];
   };
-in 
-{
   programs = {
     zsh = {
+      enable = true;
+      enableCompletion = true;
+      autosuggestion.enable = true;
+      oh-my-zsh = {
         enable = true;
-        enableCompletion = true;
+        plugins = [ "git" "sudo" "tmux" "pip" ];
+      };
 
-        autosuggestion.enable = true;
-        syntaxHighlighting = {
-            enable = true;
-        };
-
-        oh-my-zsh = {
-          enable = true;
-          plugins = [ 
-            "git" 
-            "sudo" 
-            "tmux" 
-            "pip" 
-          ];
-        };
-
-          initExtra = ''
-            alias hmsi="home-manager switch --impure"
-            alias nxrb="sudo nixos-rebuild switch --flake ~/.dotfiles/NixOS/.config/home-manager"
-            source $HOME/.dotfiles/zsh/.zshrc
-            source $HOME/.dotfiles/NixOS/.p10k.zsh
-          '';
+      initContent = ''
+        alias hmsi="home-manager switch --impure"
+        alias nxrb="sudo nixos-rebuild switch --flake ~/.dotfiles/NixOS/.config/home-manager"
+        source $HOME/.dotfiles/zsh/.zshrc
+      '';
     };
+
     bash = {
       enable = true;
-        
       initExtra = ''
-        # include .profile if it exists
         [[ -f ~/.profile ]] && . ~/.profile
       '';
     };
   };
-
 }
+

@@ -27,7 +27,7 @@ in
   # You should not change this value, even if you update Home Manager. If you do
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
-  home.stateVersion = "24.11"; # Please read the comment before changing.
+  home.stateVersion = "25.05"; # Please read the comment before changing.
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
@@ -41,6 +41,7 @@ in
     yt-dlp
     nodePackages_latest.nodejs
     scrcpy
+    telegram-desktop
 
     android-udev-rules
 
@@ -56,10 +57,12 @@ in
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-     (pkgs.nerdfonts.override { fonts = [ "Meslo" "FiraCode" "DroidSansMono" "JetBrainsMono" ]; })
 
      # ghostty.${system}.default
      ghostty.packages.x86_64-linux.default
+
+     cura-appimage
+     helix
 
      yazi
   ];

@@ -7,7 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+      /etc/nixos/hardware-configuration.nix
     ];
 
   # Bootloader.
@@ -69,9 +69,10 @@
     extraGroups = [ "networkmanager" "wheel" "docker" "kvm" "adbusers" ];
     shell = pkgs.zsh;
 		packages = [
-			pkgs.ghostty	
-			pkgs.qutebrowser	
-			pkgs.home-manager	
+			pkgs.ghostty
+			pkgs.zoxide
+			pkgs.qutebrowser
+			pkgs.home-manager
 		];
   };
 
@@ -95,6 +96,7 @@
 		flatpak
 		flatpak-builder
 		fzf
+    obsidian
 
 		python3	
 		# python312Packages.pip
@@ -141,7 +143,7 @@
     };
 
 
-  networking.firewall.allowedTCPPorts = [ 24800 8000 5432 5173 5444 ];
+  networking.firewall.allowedTCPPorts = [ 24800 8000 3000 5432 5173 5444 ];
   virtualisation.docker = {
     enable = true;
     rootless = {

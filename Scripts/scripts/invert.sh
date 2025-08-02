@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/sh
 
 if [ "$(pidof pid)" ]; then
   pkill pid
