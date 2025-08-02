@@ -41,8 +41,6 @@ in
 
   home.activation = {
     init = ''
-      luarocks install --local neovim
-      npm install --save-dev ts-standard
     '';
   };
 

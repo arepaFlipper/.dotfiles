@@ -97,7 +97,6 @@
 		flatpak-builder
 		fzf
     obsidian
-    helix
 
 		python3	
 		# python312Packages.pip
