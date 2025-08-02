@@ -12,7 +12,6 @@ in
         yt-dlp
         fzf
         python313Packages.pip
-        (pkgs.nerdfonts.override { fonts = [ "Meslo" "FiraCode" "DroidSansMono" "JetBrainsMono" ]; })
     ];
   };
   programs = {
@@ -25,7 +24,7 @@ in
         plugins = [ "git" "sudo" "tmux" "pip" ];
       };
 
-      initExtra = ''
+      initContent = ''
         alias hmsi="home-manager switch --impure"
         alias nxrb="sudo nixos-rebuild switch --flake ~/.dotfiles/NixOS/.config/home-manager"
         source $HOME/.dotfiles/zsh/.zshrc

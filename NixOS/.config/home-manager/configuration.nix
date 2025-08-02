@@ -7,7 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+      /etc/nixos/hardware-configuration.nix
     ];
 
   # Bootloader.
@@ -96,6 +96,7 @@
 		flatpak
 		flatpak-builder
 		fzf
+    obsidian
 
 		python3	
 		# python312Packages.pip

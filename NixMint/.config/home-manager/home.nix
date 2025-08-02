@@ -12,8 +12,8 @@ in
     ./modules/git.nix
     ./modules/window_manager.nix
   ];
-  home.username = "arepa";
-  home.homeDirectory = "/home/arepa";
+  home.username = "vicky";
+  home.homeDirectory = "/home/vicky";
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -69,7 +69,7 @@ in
   #
   # or
   #
-  #  /etc/profiles/per-user/arepa/etc/profile.d/hm-session-vars.sh
+  #  /etc/profiles/per-user/vicky/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
     #EDITOR = "vim";

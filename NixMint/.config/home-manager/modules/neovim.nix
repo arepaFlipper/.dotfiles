@@ -41,6 +41,7 @@ in
 
   home.activation = {
     init = ''
+      #luarocks install --local neovim
     '';
   };
 

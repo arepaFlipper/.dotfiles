@@ -57,10 +57,12 @@ in
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-     (pkgs.nerdfonts.override { fonts = [ "Meslo" "FiraCode" "DroidSansMono" "JetBrainsMono" ]; })
 
      # ghostty.${system}.default
      ghostty.packages.x86_64-linux.default
+
+     cura-appimage
+     helix
 
      yazi
   ];
