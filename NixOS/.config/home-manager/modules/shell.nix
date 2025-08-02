@@ -12,7 +12,6 @@ in
         yt-dlp
         fzf
         python313Packages.pip
-        (pkgs.nerdfonts.override { fonts = [ "Meslo" "FiraCode" "DroidSansMono" "JetBrainsMono" ]; })
     ];
   };
   programs = {
