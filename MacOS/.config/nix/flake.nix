@@ -15,7 +15,8 @@
         environment.systemPackages =
           [
             pkgs.vim
-            pkgs.nodejs_23
+            pkgs.nodejs_24
+            pkgs.helix
           ];
 
         # Necessary for using flakes on this system.

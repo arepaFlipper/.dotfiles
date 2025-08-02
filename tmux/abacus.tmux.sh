@@ -18,7 +18,7 @@ session3="${session_name}_repo"
 window31="lazygit"
 session4="${session_name}_db"
 window41="dvim ."
-path="$HOME/Documents/${session_name}"
+path="$HOME/Documents/${session_name}/feature-new-ui"
 
 # Navigate to the working directory
 cd "${path}/"
