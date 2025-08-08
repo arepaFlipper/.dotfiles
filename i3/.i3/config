@@ -212,3 +212,5 @@ bindsym $mod+Shift+grave mode "resize"
 # finds out, if available)
 
 exec --no-startup-id xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Tapping Enabled" 1
+# Switch to next workspace with Super+Ctrl+Tab
+bindsym $mod+Ctrl+Tab workspace next
