@@ -17,7 +17,8 @@ c.url.searchengines = {
     'DEFAULT': 'https://www.google.com/search?q={}',
     'ddg': 'https://duckduckgo.com/?q={}',
     'wiki': 'https://en.wikipedia.org/wiki/{}',
-    'nix': 'https://search.nixos.org/packages?channel=25.05&from=0&size=50&sort=relevance&type=packages&query={}'
+    'nix': 'https://search.nixos.org/packages?channel=25.05&from=0&size=50&sort=relevance&type=packages&query={}',
+    'emo': 'https://emojipedia.org/en/search?q={}'
 }
 
 # Key bindings
