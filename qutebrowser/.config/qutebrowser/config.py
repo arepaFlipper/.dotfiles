@@ -16,7 +16,8 @@ config.set('content.javascript.enabled', True, 'https://*.trustedsite.com/*')  #
 c.url.searchengines = {
     'DEFAULT': 'https://www.google.com/search?q={}',
     'ddg': 'https://duckduckgo.com/?q={}',
-    'wiki': 'https://en.wikipedia.org/wiki/{}'
+    'wiki': 'https://en.wikipedia.org/wiki/{}',
+    'nix': 'https://search.nixos.org/packages?channel=25.05&from=0&size=50&sort=relevance&type=packages&query={}'
 }
 
 # Key bindings
@@ -59,7 +60,7 @@ config.set('content.blocking.adblock.lists', [
 ])
 
 # Miscellaneous
-config.set('url.default_page', 'https://neetcode.io')  # Set start page
+config.set('url.default_page', 'https://news.ycombinator.com/')  # Set start page
 config.set('url.start_pages', ['https://google.com'])  # Set start pages
 
 # Enable smooth scrolling
