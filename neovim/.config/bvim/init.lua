@@ -148,3 +148,5 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.fn.setreg("p", macro)
   end,
 })
+
+vim.cmd.colorscheme("catppuccin")
