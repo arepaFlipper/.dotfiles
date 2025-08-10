@@ -12,3 +12,4 @@ cursors/.icons/catppuccin-mocha-sky-cursors
 **/lazyvim.json
 **/lazy-lock.json
 **.lock
+Synergy/.var/app/com.symless.synergy/config/Synergy/synergyCert.pem
