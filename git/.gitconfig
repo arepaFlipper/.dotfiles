@@ -3,7 +3,7 @@
 	email = cristian00tovar@gmail.com
 
 [core]
-	editor = hx
+	editor = nvim
 	pager = delta
 	attributesFile = $HOME/.dotfiles/git/.gitattributes
   hooksPath = ~/.githooks
