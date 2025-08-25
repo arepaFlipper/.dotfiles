@@ -143,7 +143,14 @@
     };
 
 
-  networking.firewall.allowedTCPPorts = [ 24800 8000 3000 5432 5173 5444 ];
+  networking.firewall = {
+      enable = true;
+      allowedTCPPorts = [ 8000 3000 5432 5173 5444 ];
+      allowedTCPPortRanges = [
+        { from = 24800; to = 24830; }
+      ];
+  };
+
   virtualisation.docker = {
     enable = true;
     rootless = {
