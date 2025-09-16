@@ -70,6 +70,6 @@ in {
     shell = "${pkgs.zsh}/bin/zsh";
     extraConfig = ''
     '';
-
+    baseIndex = 1;
   };
 }
