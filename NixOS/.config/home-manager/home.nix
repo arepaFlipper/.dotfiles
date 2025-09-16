@@ -12,6 +12,7 @@ in
     ./modules/cursor.nix
     ./modules/git.nix
     ./modules/window_manager.nix
+    ./modules/document_viewer.nix
     # ./modules/cura.nix
     # ./modules/ghostty.nix
   ];
