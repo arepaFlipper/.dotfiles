@@ -47,10 +47,10 @@ tmux new-window -t $session2 -n "k9s" 'k9s'
 
 # session 3 (code)
 tmux new -s $session3 -n $window31 -d
-tmux send-keys -t $window31 'dvim .' C-m
+tmux send-keys -t $window31 'bvim .' C-m
 
 # session 4 (notes)
 tmux new -s $session4 -n $window41 -d
-tmux send-keys -t $session4 'cd $HOME/sync_repo/obsidian_vault/ && dvim .' C-m
+tmux send-keys -t $session4 'cd $HOME/sync_repo/obsidian_vault/ && bvim .' C-m
 
 tmux attach -t $session3:1

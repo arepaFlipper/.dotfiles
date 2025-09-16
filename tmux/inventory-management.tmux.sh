@@ -32,12 +32,12 @@ tmux send-keys -t $session2:1 "lazygit" C-m
 
 # session 3: code
 tmux new-session -s $session3 -n "code 👷" -d
-tmux send-keys -t $session3:1 "dvim ." C-m
+tmux send-keys -t $session3:1 "bvim ." C-m
 
 # session 4: notes
 tmux new-session -s $session4 -n "notes 📝" -d
 tmux send-keys -t $session4:1 "cd ${obsidian}" C-m
-tmux send-keys -t $session4:1 "dvim ." C-m
+tmux send-keys -t $session4:1 "bvim ." C-m
 
 # Attach to the "code" session
 tmux attach -t $session3
