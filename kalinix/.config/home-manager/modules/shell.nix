@@ -22,7 +22,7 @@
     oh-my-zsh = {
       enable = true;
       package = pkgs.oh-my-zsh;
-      plugins = [ "git" "tmux" ];
+      plugins = [ "git" "tmux" "autopep8" "pip" "python" "pyenv"];
       theme = "robbyrussell";
     };
   };
