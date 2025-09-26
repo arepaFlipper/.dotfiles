@@ -8,6 +8,7 @@ in
 		./modules/shell.nix
 		./modules/neovim.nix
 		./modules/nodejs.nix
+		./modules/tmux.nix
 	];
 
   home.username = "govic";
