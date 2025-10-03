@@ -6,6 +6,7 @@ in
 
 	imports = [
 		./modules/shell.nix
+    ./modules/ai-support.nix
 		./modules/neovim.nix
 		./modules/nodejs.nix
 		./modules/tmux.nix
