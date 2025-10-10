@@ -1,55 +1,51 @@
 {
-  description = "Main darwin system flake";
+  description = "Nix-darwin + Home Manager configuration for macOS";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    darwin.url = "github:LnL7/nix-darwin";
-    darwin.inputs.nixpkgs.follows = "nixpkgs";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nix-darwin = {
+      url = "github:LnL7/nix-darwin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ self, darwin, nixpkgs }:
+  outputs = { self, nixpkgs, nix-darwin, home-manager, ... }:
     let
-      configuration = { pkgs, ... }: {
-        # List packages installed in system profile. To search by name, run:
-        # $ nix-env -qaP | grep wget
-        environment.systemPackages =
-          [
-            pkgs.vim
-            pkgs.nodejs_24
-            pkgs.helix
-          ];
-
-        # Necessary for using flakes on this system.
-        nix.settings.experimental-features = "nix-command flakes";
-        nix.enable = false;
-
-        # Enable alternative shell support in darwin.
-        programs.zsh.enable = true;
-
-        # Set Git commit hash for darwin-version.
-        system.configurationRevision = self.rev or self.dirtyRev or null;
-
-        # Used for backwards compatibility, please read the changelog before changing.
-        # $ darwin-rebuild changelog
-        system.stateVersion = 5;
-
-        # The platform the configuration will be used on.
-        nixpkgs.hostPlatform = "aarch64-darwin";
-
-        users.users.christopher = {
-          name = "Christopher";
-          home = "/Users/christopher";
-        };
-      };
+      system = "aarch64-darwin";  # or "aarch64-darwin" on Apple Silicon
+      pkgs = nixpkgs.legacyPackages.${system};
     in
     {
-      # Build darwin flake using:
-      # $ darwin-rebuild build --flake .#M2
-      darwinConfigurations."Cristians-MacBook-Pro" = darwin.lib.darwinSystem {
-        modules = [ configuration ];
+      darwinConfigurations = {
+        "Cristians-MacBook-Pro" = nix-darwin.lib.darwinSystem {
+          inherit system;
+          modules = [
+            ./darwin.nix
+
+            home-manager.darwinModules.home-manager
+
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+
+              users.users."Christopher".home = "/Users/christopher";
+              home-manager.users."Christopher" = import ./home.nix;
+            }
+          ];
+        };
+      };
+      users.users."Christopher" = {
+        name = "Christopher";
+        isNormalUser = true;   # optional
+        home = "/Users/christopher";
+        shell = pkgs.zsh;      # or whichever shell
+        # other user settings...
       };
 
-      # Expose the package set, including overlays, for convenience.
-      darwinPackages = self.darwinConfigurations."Cristians-MacBook-Pro".pkgs;
+
     };
 }
+
