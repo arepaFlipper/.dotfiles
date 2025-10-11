@@ -25,6 +25,16 @@ in
       target = "${config.home.homeDirectory}/.config/starship.toml";
     };
 
+    "~/.tmux.conf" = {
+      source = ../../../tmux/.tmux.conf;
+      target = "${config.home.homeDirectory}/.tmux.conf";
+    };
+
+    "~/.tmux.conf.local" = {
+      source = ../../../tmux/.tmux.conf.local;
+      target = "${config.home.homeDirectory}/.tmux.conf.local";
+    };
+
   };
 }
 
