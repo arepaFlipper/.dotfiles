@@ -1,6 +1,6 @@
 return {
   {
-    "Exafunction/codeium.vim",
+    "Exafunction/windsurf.vim",
     config = function()
       -- Chang<c-g>e '<C-g>' here to any keycode you like.
       vim.g.codeium_no_map_tab = true
