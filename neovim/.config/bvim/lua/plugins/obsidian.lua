@@ -1,6 +1,7 @@
 vim.api.nvim_set_keymap("n", "<leader>odl", "<CMD>ObsidianToday<CR>", { noremap = true })
 return {
-  "obsidian-nvim/obsidian.nvim",
+  -- "obsidian-nvim/obsidian.nvim",
+  "epwalsh/obsidian.nvim",
   version = "*", -- recommended, use latest release instead of latest commit
   lazy = true,
   ft = "markdown",
