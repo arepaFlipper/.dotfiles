@@ -1,5 +1,14 @@
 { config, pkgs, inputs, lib, ... }:
 {
+
+  home.packages = with pkgs; [
+    fzf
+    fd
+    lazygit
+    starship
+    unzip
+  ];
+
   # Programs
   programs.zsh = {
     enable = true;
@@ -7,8 +16,8 @@
     syntaxHighlighting.enable = true;
     autosuggestion.enable = true;
 
-    initContent = lib.mkOrder 500 ''
-      echo "Restored shell config �"
+    initContent = ''
+      echo "Welcome Crhistofer  "
       export LANG=en_US.UTF-8
       export LC_ALL=en_US.UTF-8
     '';
@@ -29,6 +38,8 @@
   programs.starship = {
     enable = true;
     enableZshIntegration = true;
+
+    # Minimum Configuration: Customizing the prompt
   };
 
   programs.bash = {
@@ -45,15 +56,4 @@
     options = [ "--cmd cd" ];
   };
 
-  # Add packages you want in your shell
-  home.packages = with pkgs; [
-    # example
-    fzf
-    fd
-    lazygit
-    starship
-    unzip
-  ];
 }
-
-

@@ -37,12 +37,12 @@
           ];
         };
       };
+
       users.users."Christopher" = {
         name = "Christopher";
-        isNormalUser = true;   # optional
+        isNormalUser = true;
         home = "/Users/christopher";
-        shell = pkgs.zsh;      # or whichever shell
-        # other user settings...
+        shell = pkgs.zsh;
       };
 
 
