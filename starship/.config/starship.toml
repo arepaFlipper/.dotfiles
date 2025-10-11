@@ -1,129 +1,264 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
 format = """
-[](#3B4252)\
-$python\
-$username\
-[](bg:#434C5E fg:#3B4252)\
+$os\
+$username$hostname\
+[](bg:blue_mid fg:arch_blue)\
 $directory\
-[](fg:#434C5E bg:#4C566A)\
+[](fg:blue_mid bg:blue_dark)\
 $git_branch\
 $git_status\
-[](fg:#4C566A bg:#86BBD8)\
-$c\
-$elixir\
-$elm\
-$golang\
-$haskell\
-$java\
-$julia\
+[](fg:blue_dark bg:midnight_mid)\
 $nodejs\
-$nim\
 $rust\
-[](fg:#86BBD8 bg:#06969A)\
-$docker_context\
-[](fg:#06969A bg:#33658A)\
+$golang\
+$php\
+[](fg:midnight_mid bg:midnight)\
 $time\
-[ ](fg:#33658A)\
-"""
-command_timeout = 5000
-# Disable the blank line at the start of the prompt
-# add_newline = false
+[ ](fg:midnight)\
+\n$character"""
 
-# You can also replace your username with a neat symbol like  to save some space
-[username]
-show_always = true
-style_user = "bg:#3B4252"
-style_root = "bg:#3B4252"
-format = '[$user ]($style)'
+palette = 'arch_gradient'
 
-[directory]
-style = "bg:#434C5E"
-format = "[ $path ]($style)"
-truncation_length = 3
-truncation_symbol = "…/"
+[palettes.arch_gradient]
+arch_blue = '#1793d1'
+blue_mid = '#0074ae'
+blue_dark = '#394260'
+midnight_mid = '#212736'
+midnight = '#1d2230'
+text_dark = '#090c0c'
+text_light = '#e3e5e5'
+text_accent = '#769ff0'
+text_muted = '#a0a9cb'
+separator = '#a3aed2'
+color_fg0 = '#fbf1c7'
+color_bg1 = '#3c3836'
+color_bg3 = '#665c54'
+color_blue = '#458588'
+color_aqua = '#689d6a'
+color_green = '#98971a'
+russian_green = '#68A063'
+fluo_green = '#17fc03'
+color_orange = '#d65d0e'
+color_purple = '#b16286'
+color_red = '#cc241d'
+color_yellow = '#d79921'
+yellow_dark = '#d5b60a'
 
-# Here is how you can shorten some long paths by text replacement
-# similar to mapped_locations in Oh My Posh:
-[directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = " "
-"Pictures" = " "
-# Keep in mind that the order matters. For example:
-# "Important Documents" = "  "
-# will not be replaced, because "Documents" was already substituted before.
-# So either put "Important Documents" before "Documents" or use the substituted version:
-# "Important  " = "  "
+[os]
+format = "[ $symbol ]($style)"
+style = "bg:arch_blue fg:text_light"
+disabled = false
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+AlmaLinux = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CachyOS = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+Nobara = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+RockyLinux = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Void = " "
+Windows = "󰍲 "
+
+[aws]
+symbol = "  "
+
+[buf]
+symbol = " "
+
+[bun]
+symbol = " "
 
 [c]
 symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
+
+[cpp]
+symbol = " "
+
+[cmake]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[crystal]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[deno]
+symbol = " "
 
 [docker_context]
 symbol = " "
-style = "bg:#06969A"
-format = '[ $symbol $context ]($style) $path'
 
 [elixir]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
+symbol = " "
 
 [elm]
 symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
 
-[git_branch]
-symbol = ""
-style = "bg:#4C566A"
-format = '[ $symbol $branch ]($style)'
+[fennel]
+symbol = " "
 
-[git_status]
-style = "bg:#4C566A"
-format = '[$all_status$ahead_behind ]($style)'
+[fossil_branch]
+symbol = " "
 
-[golang]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
+[gcloud]
+symbol = "  "
+
+[git_commit]
+tag_symbol = '  '
+
+[guix_shell]
+symbol = " "
 
 [haskell]
 symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
+
+[haxe]
+symbol = " "
+
+[hg_branch]
+symbol = " "
 
 [java]
 symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
 
 [julia]
 symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
 
-[nodejs]
-symbol = ""
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
+[kotlin]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[memory_usage]
+symbol = "󰍛 "
+
+[meson]
+symbol = "󰔷 "
 
 [nim]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
+symbol = "󰆥 "
+
+[nix_shell]
+symbol = " "
+
+[ocaml]
+symbol = " "
+
+[username]
+show_always = true
+style_user = "bg:arch_blue fg:text_light"
+style_root = "bg:arch_blue fg:text_light"
+format = '[$user]($style)'
+
+[hostname]
+ssh_symbol = " "
+ssh_only = false
+format = "[@$hostname ]($style)"
+style = "bg:arch_blue fg:text_light"
+disabled = false
+
+[directory]
+read_only = "󰌾 "
+style = "fg:text_light bg:blue_mid"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncate_to_repo = false
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = "󰉍 "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = "󰊢"
+style = "bg:blue_dark fg:color_red"
+format = '[[ $symbol ](fg:color_red bg:blue_dark)[ $branch ](fg:white bg:blue_dark)]($style)'
+
+[git_status]
+style = "bg:blue_dark"
+format = '[[($all_status$ahead_behind )](fg:text_accent bg:blue_dark)]($style)'
+
+[package]
+symbol = "󰏗 "
 
 [python]
-style = "bg:#3B4252"
-format = '[(\($virtualenv\) )]($style)'
+symbol = " "
+style = "bg:color_yellow fg:black"
+format = '[[($all_status$ahead_behind )](fg:text_accent bg:color_yellow)]($style)'
+pyenv_version_name = true
+detect_files = ['.python-version', 'Pipfile', '__init__.py', 'pyproject.toml', 'requirements.txt', 'setup.py', 'tox.ini']
+disabled = false
+
+[nodejs]
+symbol = " "
+style = "bg:russian_green"
+format = '[[ $symbol ($version) ](fg:fluo_green bg:midnight_mid)]($style)'
 
 [rust]
-symbol = ""
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
+symbol = "󱘗 "
+style = "bg:midnight_mid"
+format = '[[ $symbol ($version) ](fg:text_accent bg:midnight_mid)]($style)'
 
-[time]
-disabled = false
-time_format = "%R"           # Hour:Minute Format
-style = "bg:#33658A"
-format = '[ $time ]($style)'
+[golang]
+symbol = " "
+style = "bg:midnight_mid"
+format = '[[ $symbol ($version) ](fg:text_accent bg:midnight_mid)]($style)'
+
+[php]
+symbol = ""
+style = "bg:midnight_mid"
+format = '[[ $symbol ($version) ](fg:text_accent bg:midnight_mid)]($style)'
+
+
+[character]
+success_symbol = '[🤑](fluo_green)'
+error_symbol = '[😵](color_red)'
+vimcmd_symbol = '[ ](white) '
+vimcmd_replace_one_symbol = '[ ](yellow_dark) '
+vimcmd_replace_symbol = '[ ](color_yellow) '
+vimcmd_visual_symbol = '[🥽](bold fg:midnight)'
