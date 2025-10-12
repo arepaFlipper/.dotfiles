@@ -6,7 +6,7 @@ in
   imports = [
     ./modules/shell.nix
     ./modules/neovim.nix
-    # ./modules/alacritty.nix
+    ./modules/dns_resolver.nix
     ./modules/tmux.nix
     ./modules/syncthing.nix
     ./modules/cursor.nix
@@ -82,6 +82,10 @@ in
     #   org.gradle.daemon.idletimeout=3600000
     # '';
 
+    "Cargo.toml" = {
+      source = "${config.home.homeDirectory}/.dotfiles/Rust/Cargo.toml";
+      target = "${config.home.homeDirectory}/Cargo.toml";
+    };
   };
 
 
@@ -104,7 +108,5 @@ in
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-
-
 
 }
