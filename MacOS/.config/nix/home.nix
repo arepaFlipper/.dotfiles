@@ -17,6 +17,7 @@ in
   imports = [
     ./modules/shell.nix
     ./modules/tmux.nix
+    ./modules/document_viewer.nix
   ];
 
   home.file = {
