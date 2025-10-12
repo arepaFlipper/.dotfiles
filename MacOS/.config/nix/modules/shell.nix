@@ -75,7 +75,7 @@
     oh-my-zsh = {
       enable = true;
       package = pkgs.oh-my-zsh;
-      plugins = [ "git" "autopep8" "pip" "python" "pyenv"];
+      plugins = [ "git" "tmux" "autopep8" "pip" "python" "pyenv"];
       theme = "robbyrussell";
     };
   };
