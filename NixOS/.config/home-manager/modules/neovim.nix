@@ -6,6 +6,7 @@ in
   home.packages = with pkgs; [
     neovim-unwrapped
     vimPlugins.nvim-treesitter
+    catppuccin
     unzip
     go
     cargo

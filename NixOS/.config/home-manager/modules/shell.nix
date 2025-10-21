@@ -12,6 +12,8 @@ in
         yt-dlp
         fzf
         python313Packages.pip
+        jq
+        jqp
     ];
   };
   programs = {

@@ -66,8 +66,8 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id ~/scripts/execute_ghostty.sh
-bindsym $mod+g exec --no-startup-id ~/scripts/execute_qutebrowser.sh
+bindsym $mod+Return exec --no-startup-id ghostty
+bindsym $mod+g exec --no-startup-id qutebrowser
 
 
 # kill focused window
@@ -212,5 +212,6 @@ bindsym $mod+Shift+grave mode "resize"
 # finds out, if available)
 
 exec --no-startup-id xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Tapping Enabled" 1
+
 # Switch to next workspace with Super+Ctrl+Tab
 bindsym $mod+Ctrl+Tab workspace next

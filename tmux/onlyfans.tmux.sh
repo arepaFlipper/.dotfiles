@@ -34,7 +34,7 @@ tmux send-keys -t $session2:1 "cd ${path}/ lazygit" C-m
 
 # session 3: code
 tmux new-session -s $session3 -n "code 👷" -d
-tmux send-keys -t $session3:1 "cd ${path} && dvim ." C-m
+tmux send-keys -t $session3:1 "cd ${path} && bvim ." C-m
 
 # session 4: notes
 tmux new-session -s $session4 -n "notes 📝" -d

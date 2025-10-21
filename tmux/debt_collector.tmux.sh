@@ -17,7 +17,7 @@ window21="neovim"
 session3="${session_name}_repo"
 window31="lazygit"
 session4="${session_name}_db"
-window41="dvim ."
+window41="bvim ."
 path="$HOME/Documents/${session_name}"
 
 # Navigate to the working directory
@@ -38,7 +38,7 @@ tmux send-keys -t $session3:1 'lazygit' C-m
 
 # Session 4 repository: DadBod Database
 # tmux new -s $session4 -d
-# tmux send-keys -t $session4 'dvim .' C-m
+# tmux send-keys -t $session4 'bvim .' C-m
 
 # Attach to Session 2 to start development environment
 tmux attach -t $session2

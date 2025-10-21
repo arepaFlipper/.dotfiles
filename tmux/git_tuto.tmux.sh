@@ -46,11 +46,11 @@ tmux send-keys -t $window21 'lazygit' C-m
 
 # session 3
 tmux new -s $session3 -n $window31 -d
-tmux send-keys -t $window31 'dvim .' C-m
+tmux send-keys -t $window31 'bvim .' C-m
 
 # session 4
 tmux new -s $session4 -n $window41 -d
 tmux send-keys -t $session4 "cd ${parent_path}" C-m
-tmux send-keys -t $session4 'dvim .' C-m
+tmux send-keys -t $session4 'bvim .' C-m
 
 tmux attach -t $session3:1

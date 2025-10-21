@@ -35,13 +35,13 @@ tmux send-keys -t $session2:2 "cd ${path}/backend && lazygit" C-m
 
 # session 3: code
 tmux new-session -s $session3 -n "code 👷" -d
-tmux send-keys -t $session3:1 "cd ${path}/frontend && dvim ." C-m
-tmux send-keys -t $session3:2 "cd ${path}/backend && dvim ." C-m
+tmux send-keys -t $session3:1 "cd ${path}/frontend && bvim ." C-m
+tmux send-keys -t $session3:2 "cd ${path}/backend && bvim ." C-m
 
 # session 4: notes
 tmux new-session -s $session4 -n "notes 📝" -d
 tmux send-keys -t $session4:1 "cd ${obsidian}" C-m
-tmux send-keys -t $session4:1 "dvim ." C-m
+tmux send-keys -t $session4:1 "bvim ." C-m
 
 # Attach to the "code" session
 tmux attach -t $session3
