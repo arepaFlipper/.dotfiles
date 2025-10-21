@@ -39,9 +39,5 @@ tmux send-keys -t $session2:1 'bvim .' C-m
 tmux new -s $session3 -n $window31 -d
 tmux send-keys -t $session3:1 'lazygit' C-m
 
-# Session 4 repository: DadBod Database
-tmux new -s $session4 -d
-tmux send-keys -t $session4 'bvim .' C-m
-
 # Attach to Session 2 to start development environment
 tmux attach -t $session2
