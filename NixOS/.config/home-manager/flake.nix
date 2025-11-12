@@ -9,12 +9,61 @@
     ghostty.url = "github:ghostty-org/ghostty";
   };
 
-  outputs = { self, nixpkgs, unstable, home-manager, ghostty, ... }:
+  outputs = { self, nixpkgs, unstable, home-manager, ghostty, ... } @ inputs:
 	let 
 		lib = nixpkgs.lib;  # Shortcut to access commonly used functions from Nixpkgs
 		system = "x86_64-linux";  # Target system architecture
-		pkgs = nixpkgs.legacyPackages.${system};  # Legacy packages for the specified system
 		unstable = unstable.legacyPackages.${system};  # Legacy packages for the specified system
+
+    gemini-cli-overlay = final: prev: {
+      gemini-cli = prev.stdenv.mkDerivation rec {
+        pname = "gemini-cli";
+        version = "0.6.1";
+
+        src = prev.fetchFromGitHub {
+          owner = "google-gemini";
+          repo = "gemini-cli";
+          rev = "10f5da1";
+          sha256 = "1QeVFPl6IH1iQFxrDZ0U8eTeLd+fIgSw1CkAiSGaL/s=";
+        };
+
+        buildInputs = [ prev.nodejs prev.makeWrapper ];
+        nativeBuildInputs = [ prev.makeWrapper ];
+
+        buildPhase = ''
+          runHook preBuild
+          npm install
+          npm run build || make build || true
+          runHook postBuild
+        '';
+
+        installPhase = ''
+          runHook preInstall
+          mkdir -p $out/lib/gemini-cli $out/bin
+          cp -r ./* $out/lib/gemini-cli
+          makeWrapper ${prev.nodejs}/bin/node $out/bin/gemini-cli \
+            --add-flags "$out/lib/gemini-cli/index.js"
+          runHook postInstall
+        '';
+
+        meta = with prev.lib; {
+          description = "Google Gemini CLI";
+          homepage = "https://github.com/google-gemini/gemini-cli";
+          license = licenses.asl20;
+          platforms = platforms.linux;
+        };
+      };
+    };
+
+
+
+
+    pkgs_with_overlay = import nixpkgs {
+      system = system;
+      overlays = [ gemini-cli-overlay ];
+    };
+    pkgs = pkgs_with_overlay;
+
 	in {
 		nixosConfigurations = {  # NixOS configurations section
 			nixos = lib.nixosSystem {  # Define a NixOS system configuration named 'nixos'

@@ -13,6 +13,7 @@ in
     ./modules/git.nix
     ./modules/window_manager.nix
     ./modules/document_viewer.nix
+    # ./modules/ai-support.nix
     # ./modules/cura.nix
     # ./modules/ghostty.nix
   ];
