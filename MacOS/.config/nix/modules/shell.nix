@@ -7,6 +7,7 @@
     lazygit
     starship
     unzip
+    doppler
   ];
 
   # Programs
@@ -20,6 +21,7 @@
       export LANG=en_US.UTF-8
       export LC_ALL=en_US.UTF-8
       export VAULT="$HOME/sync_repo/brain/";
+      export EDITOR=vim;
     '';
 
     shellAliases = {
