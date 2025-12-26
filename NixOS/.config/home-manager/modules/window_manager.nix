@@ -12,5 +12,6 @@
     networkmanagerapplet # for network control in i3
     xdotool
   ];
+
 }
 

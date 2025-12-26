@@ -15,9 +15,6 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.hostName = "nixos"; # Define your hostname.
-  networking.networkmanager.enable = true;
-
   time.timeZone = "America/Bogota";
 
   i18n.defaultLocale = "en_US.UTF-8";
@@ -33,17 +30,25 @@
     LC_TIME = "es_CO.UTF-8";
   };
 
-  services.xserver.enable = true;
-  services.xserver.xkb.layout = "us";
-  services.xserver.xkb.options = "eurosign:e";
-  services.xserver.windowManager = {
-    i3 = {
-      enable = true;
+
+  services.xserver = {
+    enable = true;
+    xkb.layout = "us";
+    xkb.options = "eurosign:e";
+    windowManager = {
+
+      i3 = {
+        enable = true;
+      };
     };
+    displayManager.gdm.enable = true;
+
   };
-  services.xserver.displayManager.gdm.enable = true;
+
   # Enable i3 as window manager
   services.displayManager.defaultSession = "none+i3";
+
+  services.xscreensaver.enable = false;
 
   console.keyMap = "la-latin1";
 
@@ -54,7 +59,7 @@
     PasswordAuthentication = true;
   };
 
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -101,8 +106,6 @@
 		python3	
 		# python312Packages.pip
 
-		stow
-
 		zsh-powerlevel10k
 		zsh-autosuggestions
 		zsh-syntax-highlighting
@@ -118,6 +121,8 @@
     xorg.xbacklight
     xorg.xwininfo
     xclip
+
+    i3lock-color
   ];
 
   environment.variables = {
@@ -143,12 +148,24 @@
     };
 
 
-  networking.firewall = {
-      enable = true;
-      allowedTCPPorts = [ 8000 3000 5432 5173 5444 ];
-      allowedTCPPortRanges = [
-        { from = 24800; to = 24830; }
-      ];
+  networking = {
+
+    hostName = "nixos"; # Define your hostname.
+    networkmanager.enable = true;
+    firewall = {
+        enable = true;
+        allowedTCPPorts = [ 8000 3000 4000 5432 5173 5444 8888 ];
+        allowedTCPPortRanges = [
+          { from = 24800; to = 24830; }
+          { from = 5430; to = 5440; }
+        ];
+    };
+
+    extraHosts = ''
+      192.168.1.87    M2
+      192.168.1.25    Alien
+      192.168.1.7     Arch
+    '';
   };
 
   virtualisation.docker = {
@@ -166,6 +183,12 @@
 
   # android SDK
   programs.adb.enable = true;
+
+  programs.xss-lock.enable = false;
+  security.pam.services.i3lock = {
+    enable = true;
+  };
+
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 	nix.settings.allowed-users = ["cris"];
