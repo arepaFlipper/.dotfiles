@@ -326,7 +326,6 @@ set -g @tasks_format_end '#[fg=white,bg=#44475a]'
 set -g @tasks_icon_urgent '🔥'
 set -g @tasks_icon_outstanding '+'
 
-set-option -g default-shell /usr/bin/fish
 
 # -- custom variables ----------------------------------------------------------
 
