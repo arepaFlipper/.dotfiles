@@ -31,42 +31,6 @@
   };
 
 
-  services.xserver = {
-    enable = true;
-    xkb.layout = "us";
-    xkb.options = "eurosign:e";
-    windowManager = {
-
-      i3 = {
-        enable = true;
-      };
-    };
-    displayManager.gdm.enable = true;
-
-  };
-
-  # Enable i3 as window manager
-  services.displayManager.defaultSession = "none+i3";
-
-  services.xscreensaver.enable = false;
-
-  console.keyMap = "la-latin1";
-
-  services.printing.enable = true;
-  services.openssh.enable = true;
-  services.openssh.settings = {
-    PermitRootLogin = "yes";
-    PasswordAuthentication = true;
-  };
-
-  services.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  };
 
   users.users.cris = {
     isNormalUser = true;
@@ -81,8 +45,52 @@
 		];
   };
 
-  services.displayManager.autoLogin.enable = true;
-  services.displayManager.autoLogin.user = "cris";
+  console.keyMap = "la-latin1";
+
+  security.rtkit.enable = true;
+  # Enable i3 as window manager
+
+  services = {
+    xserver = {
+      enable = true;
+      xkb.layout = "us";
+      xkb.options = "eurosign:e";
+      windowManager = {
+        i3 = {
+          enable = true;
+        };
+      };
+      displayManager.gdm.enable = true;
+    };
+
+    displayManager.defaultSession = "none+i3";
+
+    xscreensaver.enable = false;
+
+    printing.enable = true;
+    openssh.enable = true;
+    openssh.settings = {
+      PermitRootLogin = "yes";
+      PasswordAuthentication = true;
+    };
+
+    pulseaudio.enable = false;
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+    };
+
+    displayManager.autoLogin.enable = true;
+    displayManager.autoLogin.user = "cris";
+    flatpak.enable = true;
+
+    tailscale = {
+      enable = true;
+    };
+  };
+
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
 
@@ -102,6 +110,7 @@
 		flatpak-builder
 		fzf
     obsidian
+    tailscale
 
 		python3	
 		# python312Packages.pip
@@ -133,7 +142,6 @@
 
   fonts.packages = with pkgs; [ catppuccin-cursors ];
 
-  services.flatpak.enable = true;
 
   # Enable XDG portal but specify a compatible implementation
   xdg.portal = {
@@ -146,7 +154,6 @@
         };
       };
     };
-
 
   networking = {
 
@@ -188,7 +195,6 @@
   security.pam.services.i3lock = {
     enable = true;
   };
-
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 	nix.settings.allowed-users = ["cris"];
