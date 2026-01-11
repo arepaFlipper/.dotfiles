@@ -19,6 +19,7 @@ c.url.searchengines = {
     'wiki': 'https://en.wikipedia.org/wiki/{}',
     'nix': 'https://search.nixos.org/packages?channel=25.11&from=0&size=50&sort=relevance&type=packages&query={}',
     'yt': 'https://www.youtube.com/results?search_query={}',
+    'annas': 'https://annas-archive.se/search?q={}',
     'mynix': 'https://mynixos.com/search?q={}',
     'emo': 'https://emojipedia.org/en/search?q={}'
 }
