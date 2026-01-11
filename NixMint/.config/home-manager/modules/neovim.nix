@@ -10,7 +10,7 @@ in
     go
     cargo
     openjdk
-    python311Full # This should provide pip
+    python315 # This should provide pip
     fd
     tree-sitter
     luarocks-nix
@@ -21,18 +21,25 @@ in
     solc
   ];
 
-  programs.neovim = {
-    enable = true;
-    package = pkgs.neovim-unwrapped;
-    defaultEditor = true;
-    extraPackages = [
-      pkgs.gcc
-      pkgs.vimPlugins.nvim-treesitter
-    ];
-    extraLuaConfig = ''
-      -- Add your Lua configuration here
-    '';
-  };
+  programs = {
+		neovim = {
+			enable = true;
+			package = pkgs.neovim-unwrapped;
+			defaultEditor = true;
+			extraPackages = [
+				pkgs.gcc
+				pkgs.vimPlugins.nvim-treesitter
+			];
+			extraLuaConfig = ''
+				-- Add your Lua configuration here
+			'';
+		};
+
+		zsh.shellAliases = {
+			bvim = "NVIM_APPNAME=bvim nvim";
+		};
+
+	};
 
   home.sessionVariables = {
     LUA_PATH = "${pkgs.luarocks-nix}/share/lua/5.1/?.lua;;";
