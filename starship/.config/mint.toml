@@ -2,10 +2,11 @@
 
 format = """
 $os\
-$username$hostname\
-[](bg:blue_mid fg:arch_blue)\
+$username\
+$hostname\
+[](bg:green_dir fg:green_host)\
 $directory\
-[](fg:blue_mid bg:blue_dark)\
+[](fg:green_dir bg:blue_dark)\
 $git_branch\
 $git_status\
 [](fg:blue_dark bg:midnight_mid)\
@@ -18,11 +19,20 @@ $time\
 [ ](fg:midnight)\
 \n$character"""
 
-palette = 'arch_gradient'
+palette = 'mint_gradient'
 
-[palettes.arch_gradient]
+[palettes.mint_gradient]
 arch_blue = '#1793d1'
+
+green_os   = '#92B662'
+green_user = '#95B965'
+green_host = '#98C167'
+green_dir  = '#A1C470'
+
 mint_green = '#86BE43'
+green_mid = '#92B662'
+green_mint = '#92B500'
+green_path = '#ADFFC3'
 blue_mid = '#0074ae'
 blue_dark = '#394260'
 midnight_mid = '#212736'
@@ -47,8 +57,8 @@ color_yellow = '#d79921'
 yellow_dark = '#d5b60a'
 
 [os]
-format = "[ $symbol ]($style)"
-style = "bg:mint_green fg:text_light"
+format = "[](green_os)[$symbol](bg:green_os fg:text_light)[](green_os)"
+style = "bg:green_os fg:text_light"
 disabled = false
 
 [os.symbols]
@@ -190,20 +200,22 @@ symbol = " "
 
 [username]
 show_always = true
-style_user = "bg:arch_blue fg:text_light"
-style_root = "bg:arch_blue fg:text_light"
-format = '[$user]($style)'
+style_user = "bg:green_user fg:text_light"
+style_root = "bg:color_green fg:text_light"
+format = '[](fg:black bg:green_user)[ $user]($style)'
+# format = '[[](fg:green_os bg:green_user)][$user]($style)'
 
 [hostname]
 ssh_symbol = " "
 ssh_only = false
 format = "[@$hostname ]($style)"
-style = "bg:arch_blue fg:text_light"
+# format = '[[](fg:green_user bg:green_host)][@$hostname]($style)'
+style = "bg:green_host fg:text_light"
 disabled = false
 
 [directory]
 read_only = "󰌾 "
-style = "fg:text_light bg:blue_mid"
+style = "fg:text_dark bg:green_dir"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncate_to_repo = false
