@@ -9,7 +9,7 @@ in
     ./modules/dns_resolver.nix
     ./modules/tmux.nix
     ./modules/syncthing.nix
-    ./modules/cursor.nix
+    ./modules/theming.nix
     ./modules/git.nix
     ./modules/window_manager.nix
     ./modules/document_viewer.nix
@@ -92,7 +92,7 @@ in
       target = "${config.home.homeDirectory}/.config/i3/config";
     };
     "scripts" = {
-      source = "${config.home.homeDirectory}/.dotfiles/scripts";
+      source = "${config.home.homeDirectory}/.dotfiles/Scripts/scripts";
       target = "${config.home.homeDirectory}/scripts";
     };
   };
