@@ -60,6 +60,9 @@ bindsym XF86MonBrightnessUp exec --no-startup-id ~/scripts/increase_brightness.s
 # Decrease brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id ~/scripts/decrease_brightness.sh
 
+# Invert focused window
+bindsym $mod+i exec --no-startup-id ~/scripts/invert.sh
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
