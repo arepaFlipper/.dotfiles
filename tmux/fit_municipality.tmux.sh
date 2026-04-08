@@ -19,9 +19,11 @@ session2="${session_name}_code"
 window21="neovim"
 session3="${session_name}_repo"
 window31="lazygit"
-session4="${session_name}_ai"
-window41="bvim ."
-path="$HOME/Documents/ABEXUS/${session_name}/dev"
+session4="${session_name}_DB"
+window41="Postgres"
+session5="${session_name}_ai"
+window51="tool"
+path="$HOME/Documents/${session_name}/feature-new-ui"
 
 # Array to store successfully created/managed sessions
 created_sessions=()
@@ -66,8 +68,10 @@ create_or_manage_session() {
 if create_or_manage_session "$session1" "Docker, Node.js, and Testing"; then
     tmux new -s "$session1" -n "$window11" -d
     tmux send-keys -t "$window11" 'docker-compose up -d && docker-compose logs -f' C-m
-    tmux split-window -v -t "$window11" 'cd ./frontend/ && npm run dev'
-    tmux split-pane -h -t "$window11".1 'cd ./backend/ && npm run start:debug'
+    tmux split-window -v -t "$window11" 'cd ./frontend/client/ && npm run start'
+    tmux split-pane -h -t "$window11".2 'cd ./frontend/pollster/ && npm run start'
+    tmux split-pane -v -t "$window11".1 'docker attach abacus_dj'
+    tmux split-pane -h -t "$window11".1 'cd ./tests/ && npm run test'
     created_sessions+=("$session1")
 fi
 
@@ -85,11 +89,18 @@ if create_or_manage_session "$session3" "LazyGit Repository"; then
     created_sessions+=("$session3")
 fi
 
-# Session 4 repository: tool
-if create_or_manage_session "$session4" "AI Tool"; then
+# Session 4 DB visualizer
+if create_or_manage_session "$session4" "DB Visualizer"; then
     tmux new -s "$session4" -n "$window41" -d
-    tmux send-keys -t "$session4":1 'bvim .' C-m
+    tmux send-keys -t "$session4":1 "nix develop --command zsh -c 'NVIM_APPNAME=bvim nvim +DBUI +only'" C-m
     created_sessions+=("$session4")
+fi
+
+# Session 5 AI: tool
+if create_or_manage_session "$session5" "AI tool"; then
+    tmux new -s "$session5" -n "$window41" -d
+    tmux send-keys -t "$session5":1 'echo "AI hype sucks"' C-m
+    created_sessions+=("$session5")
 fi
 
 # Final attachment logic
@@ -102,5 +113,4 @@ elif [ ${#created_sessions[@]} -gt 0 ]; then
 else
     echo "No sessions were created or available to attach to."
 fi
-
 
