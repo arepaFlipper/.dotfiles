@@ -27,8 +27,6 @@
 
     extraConfig = lib.concatStringsSep "\n" [
        # Shell configuration first
-      "set-option -g default-shell ${pkgs.zsh}/bin/zsh"
-      "set-option -g default-command ${pkgs.zsh}/bin/zsh"
 
       "set -g renumber-windows on"
       "bind r source-file ~/.tmux.conf \\; display \"Reloaded tmux config\""
