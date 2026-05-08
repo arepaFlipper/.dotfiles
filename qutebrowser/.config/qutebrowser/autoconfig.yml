@@ -32,5 +32,7 @@ settings:
     global: dark
   content.javascript.clipboard:
     global: access-paste
+  tabs.show:
+    global: never
   url.default_page:
     global: https://neetcode.com/roadmap
