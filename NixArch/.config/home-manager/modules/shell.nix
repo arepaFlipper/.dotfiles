@@ -28,7 +28,7 @@ in {
         plugins = [ "git" "sudo" "tmux" "pip" ];
       };
 
-      initExtra = ''
+      initContent = ''
         source ~/.p10k.zsh
         alias hmsi="home-manager switch --impure"
         alias nxrb="sudo nixos-rebuild switch --flake ~/.dotfiles/NixArch/.config/home-manager"
