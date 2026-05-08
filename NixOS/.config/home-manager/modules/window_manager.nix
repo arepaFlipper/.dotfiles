@@ -11,6 +11,7 @@
     polybar # alternative status bar
     networkmanagerapplet # for network control in i3
     xdotool
+    lxappearance
   ];
 
 }

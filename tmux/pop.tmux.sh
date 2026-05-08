@@ -9,7 +9,7 @@ set -e
 # -d: dettach
 
 # Session name and window names
-session_name="fit_municipality"
+session_name="popcorn_time"
 session1="${session_name}_logs"
 window11="logs"
 panel11=${window11}.1
@@ -23,7 +23,7 @@ session4="${session_name}_DB"
 window41="Postgres"
 session5="${session_name}_ai"
 window51="tool"
-path="$HOME/Documents/${session_name}/feature-new-ui"
+path="$HOME/torrentflix/"
 
 # Array to store successfully created/managed sessions
 created_sessions=()
@@ -113,4 +113,5 @@ elif [ ${#created_sessions[@]} -gt 0 ]; then
 else
     echo "No sessions were created or available to attach to."
 fi
+
 

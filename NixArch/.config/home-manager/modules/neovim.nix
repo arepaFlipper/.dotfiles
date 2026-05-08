@@ -10,7 +10,6 @@ in
     go
     cargo
     openjdk
-    python311Full # This should provide pip
     fd
     tree-sitter
     luarocks-nix
@@ -29,7 +28,7 @@ in
       pkgs.gcc
       pkgs.vimPlugins.nvim-treesitter
     ];
-    extraLuaConfig = ''
+    initLua = ''
       -- Add your Lua configuration here
     '';
   };

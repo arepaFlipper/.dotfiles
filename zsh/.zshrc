@@ -43,6 +43,7 @@ alias litetech="~/litetech.tmux.sh"
 alias onlyfans="~/onlyfans.tmux.sh"
 alias debt="~/debt_collector.tmux.sh"
 alias fit="~/fit_municipality.tmux.sh"
+alias pop="~/pop.tmux.sh"
 alias V="/usr/bin/nvim"
 alias rk="~/.cargo/bin/rust-kanban"
 

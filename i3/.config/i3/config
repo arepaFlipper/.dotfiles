@@ -12,7 +12,8 @@
 set $mod Mod4
 exec_always --no-startup-id killall polybar
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
-exec --no-startup-id "flatpak run com.symless.synergy"
+exec --no-startup-id "$HOME/.dotfiles/Scripts/scripts/synergy_invert.sh"
+
 # exec setxkbmap -layout latam
 
 
@@ -59,6 +60,9 @@ bindsym XF86MonBrightnessUp exec --no-startup-id ~/scripts/increase_brightness.s
 # Decrease brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id ~/scripts/decrease_brightness.sh
 
+# Invert focused window
+bindsym $mod+i exec --no-startup-id ~/scripts/invert.sh
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -68,7 +72,7 @@ tiling_drag modifier titlebar
 
 # start a terminal
 bindsym $mod+Return exec --no-startup-id ghostty
-bindsym $mod+g exec --no-startup-id '$HOME/scripts/execute_qutebrowser.sh'
+bindsym $mod+g exec --no-startup-id '/etc/profiles/per-user/cris/bin/qutebrowser'
 
 # kill focused window
 bindsym $mod+q kill
@@ -83,23 +87,19 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 
 # NOTE: change focus
 bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
+# bindsym $mod+Shift+j move down 😴 I never use this
+# bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # exec --no-startup-id xsetroot -cursor_name left_ptr
 
 # NOTE: alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 
 # NOTE: move focused window
 bindsym $mod+h focus left; exec --no-startup-id $HOME/scripts/lineup.sh
-bindsym $mod+j focus down; exec --no-startup-id $HOME/scripts/lineup.sh
-bindsym $mod+k focus up; exec --no-startup-id $HOME/scripts/lineup.sh
 bindsym $mod+l focus right; exec --no-startup-id $HOME/scripts/lineup.sh
 
 # bindsym $mod+l focus right; exec --no-startup-id xdotool mousemove --window $(xdotool getwindowfocus) line_up
@@ -162,6 +162,10 @@ bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
+# move to next workspace
+bindsym $mod+p workspace next
+bindsym $mod+n workspace previous
+
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
 bindsym $mod+Shift+2 move container to workspace number $ws2
@@ -179,7 +183,7 @@ bindsym $mod+r reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit' --background '#333333' --border '#888888' --text '#ffffff'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -189,10 +193,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym l resize shrink width 10 px or 10 ppt
         bindsym j resize grow height 10 px or 10 ppt
         bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+        bindsym h resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize move left

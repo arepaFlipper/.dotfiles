@@ -11,6 +11,7 @@ in
     ./modules/cursor.nix
     ./modules/git.nix
     ./modules/window_manager.nix
+    ./modules/RDP.nix
   ];
   home.username = "arepa";
   home.homeDirectory = "/home/arepa";
@@ -22,7 +23,7 @@ in
   # You should not change this value, even if you update Home Manager. If you do
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
-  home.stateVersion = "25.05"; # Please read the comment before changing.
+  home.stateVersion = "26.05"; # Please read the comment before changing.
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
@@ -30,7 +31,7 @@ in
   home.packages = with pkgs; [
     ripgrep
     ffmpeg
-    nodePackages_latest.nodejs
+    # nodePackages_latest.nodejs
     scrcpy
     docker-compose
 
@@ -53,6 +54,10 @@ in
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
+    ".p10k.arch.zsh" = {
+      source = "${config.home.homeDirectory}/.dotfiles/zsh/.p10k.arch.zsh";
+      target = "${config.home.homeDirectory}/.p10k.arch.zsh";
+    };
   };
 
   # Home Manager can also manage your environment variables through

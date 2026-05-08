@@ -9,7 +9,7 @@ in
     ./modules/dns_resolver.nix
     ./modules/tmux.nix
     ./modules/syncthing.nix
-    ./modules/cursor.nix
+    ./modules/theming.nix
     ./modules/git.nix
     ./modules/window_manager.nix
     ./modules/document_viewer.nix
@@ -86,6 +86,14 @@ in
     "Cargo.toml" = {
       source = "${config.home.homeDirectory}/.dotfiles/Rust/Cargo.toml";
       target = "${config.home.homeDirectory}/Cargo.toml";
+    };
+    "i3" = {
+      source = "${config.home.homeDirectory}/.dotfiles/i3/.config/i3/config";
+      target = "${config.home.homeDirectory}/.config/i3/config";
+    };
+    "scripts" = {
+      source = "${config.home.homeDirectory}/.dotfiles/Scripts/scripts";
+      target = "${config.home.homeDirectory}/scripts";
     };
   };
 
