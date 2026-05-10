@@ -17,7 +17,7 @@ c.url.searchengines = {
     'DEFAULT': 'https://www.google.com/search?q={}',
     'ddg': 'https://duckduckgo.com/?q={}',
     'wiki': 'https://en.wikipedia.org/wiki/{}',
-    'nix': 'https://search.nixos.org/packages?channel=25.11&from=0&size=50&sort=relevance&type=packages&query={}',
+    'nix': 'https://search.nixos.org/packages?channel=26.04&from=0&size=50&sort=relevance&type=packages&query={}',
     'yt': 'https://www.youtube.com/results?search_query={}',
     'annas': 'https://annas-archive.li/search?q={}',
     'mynix': 'https://mynixos.com/search?q={}',
