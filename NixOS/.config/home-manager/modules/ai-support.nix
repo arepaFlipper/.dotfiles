@@ -6,6 +6,7 @@
     gemini-cli
     codex
     claude-code
+    inputs.hermes-agent.packages.${pkgs.system}.default
   ];
 
 }

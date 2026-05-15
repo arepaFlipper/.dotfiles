@@ -198,6 +198,7 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 	nix.settings.allowed-users = ["cris"];
+	nix.settings.trusted-users = ["root" "cris"];
   system.stateVersion = "26.05";
 }
 

@@ -1,7 +1,4 @@
-{ inputs, config, pkgs, ghostty, ... }:
-let
-  unstable = import <nixos-unstable> { config = {allowUnfree = true;};};
-in 
+{ inputs, config, pkgs, ghostty, unstable, ... }:
 {
   imports = [
     ./modules/shell.nix
@@ -13,7 +10,7 @@ in
     ./modules/git.nix
     ./modules/window_manager.nix
     ./modules/document_viewer.nix
-    # ./modules/ai-support.nix
+    ./modules/ai-support.nix
     # ./modules/cura.nix
     # ./modules/ghostty.nix
   ];
@@ -118,4 +115,15 @@ in
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
+  nix.package = pkgs.nix;
+  nix.settings = {
+    substituters = [
+      "https://cache.nixos.org"
+      "https://ghostty.cachix.org"
+    ];
+    trusted-public-keys = [
+      "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+      "ghostty.cachix.org-1:f/lsUmPhTI9HqRKtaHBY/mI177ORCxH0mZp88YtoJ6k="
+    ];
+  };
 }
