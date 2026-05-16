@@ -70,50 +70,58 @@ end --}}}
 
 -- Old Style --
 
-local if_fmt_arg = { --{{{
-	i(1, ""),
-	c(2, { i(1, "LHS"), i(1, "10") }),
-	c(3, { i(1, "==="), i(1, "<"), i(1, ">"), i(1, "<="), i(1, ">="), i(1, "!==") }),
-	i(4, "RHS"),
-	i(5, "//TODO:"),
-}
-local if_fmt_1 = fmt(
-	[[
-{}if ({} {} {}) {};
-    ]],
-	vim.deepcopy(if_fmt_arg)
-)
-local if_fmt_2 = fmt(
-	[[
-{}if ({} {} {}) {{
-  {};
-}}
-    ]],
-	vim.deepcopy(if_fmt_arg)
-)
+local function get_if_fmt_arg()
+	return {
+		i(1, ""),
+		c(2, { i(1, "LHS"), i(1, "10") }),
+		c(3, { i(1, "==="), i(1, "<"), i(1, ">"), i(1, "<="), i(1, ">="), i(1, "!==") }),
+		i(4, "RHS"),
+		i(5, "//TODO:"),
+	}
+end
 
 local if_snippet = s(
 	{ trig = "IF", regTrig = false, hidden = true },
 	c(1, {
-		if_fmt_1,
-		if_fmt_2,
+		sn(
+			nil,
+			fmt(
+				[[
+{}if ({} {} {}) {};
+    ]],
+				get_if_fmt_arg()
+			)
+		),
+		sn(
+			nil,
+			fmt(
+				[[
+{}if ({} {} {}) {{
+  {};
+}}
+    ]],
+				get_if_fmt_arg()
+			)
+		),
 	})
 ) --}}}
-local function_fmt = fmt( --{{{
-	[[
+local function get_function_fmt()
+	return fmt(
+		[[
 function {}({}) {{
   {}
 }}
     ]],
-	{
-		i(1, "myFunc"),
-		c(2, { i(1, "arg"), i(1, "") }),
-		i(3, "//TODO:"),
-	}
-)
+		{
+			i(1, "myFunc"),
+			c(2, { i(1, "arg"), i(1, "") }),
+			i(3, "//TODO:"),
+		}
+	)
+end
 
-local function_snippet = s({ trig = "f[un]?", regTrig = true, hidden = true }, function_fmt)
-local function_snippet_func = s({ trig = "func" }, vim.deepcopy(function_fmt)) --}}}
+local function_snippet = s({ trig = "f[un]?", regTrig = true, hidden = true }, get_function_fmt())
+local function_snippet_func = s({ trig = "func" }, get_function_fmt()) --}}}
 
 local short_hand_if_fmt = fmt( --{{{
 	[[
