@@ -30,6 +30,7 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
+              home-manager.backupFileExtension = "hm-bak";
 
               users.users."Christopher".home = "/Users/christopher";
               home-manager.users."Christopher" = import ./home.nix;

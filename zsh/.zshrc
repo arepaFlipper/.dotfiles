@@ -1,7 +1,8 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+# macOS uses Starship (managed by home-manager); skip p10k there.
+if [[ "$OSTYPE" != darwin* ]] && [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
@@ -171,7 +172,6 @@ if [[ "$OSTYPE" == darwin* ]]; then
   source $ZSH/oh-my-zsh.sh
   eval "$(rbenv init -)"
   eval "$(direnv hook zsh)"
-  source ~/.p10k.M2.zsh
 fi
 
 if [[ "$OSTYPE" == linux* ]]; then
@@ -222,12 +222,16 @@ export LANG=en_US.UTF-8
 # Open tmux on startup, requires tmux plugin
 ZSH_TMUX_AUTOSTART=true
 
-source ~/.dotfiles/zsh/powerlevel10k/powerlevel10k.zsh-theme
+if [[ "$OSTYPE" != darwin* ]]; then
+  source ~/.dotfiles/zsh/powerlevel10k/powerlevel10k.zsh-theme
+fi
 
 
 # set vim as default IDE
 export EDITOR=nvim
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+if [[ "$OSTYPE" != darwin* ]] && [[ -r ~/powerlevel10k/powerlevel10k.zsh-theme ]]; then
+  source ~/powerlevel10k/powerlevel10k.zsh-theme
+fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

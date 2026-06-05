@@ -2,6 +2,20 @@
 let
   unstable = import <nixos-unstable> { config = { allowUnfree = true; };};
   imports = [ <home-manager/nix-darwin> ];
+  tmuxDir = ../../../tmux;
+  tmuxScriptEntries =
+    let
+      files = builtins.readDir tmuxDir;
+      isScript = name: type:
+        type == "regular" &&
+        (lib.hasSuffix ".tmux.sh" name || name == "tmoxpen.sh");
+    in
+      lib.mapAttrs' (name: _:
+        lib.nameValuePair ".tmux/${name}" {
+          source = "${tmuxDir}/${name}";
+          executable = true;
+        }
+      ) (lib.filterAttrs isScript files);
 in
 {
   home.homeDirectory = "/Users/christopher";
@@ -17,7 +31,6 @@ in
   imports = [
     ./modules/shell.nix
     ./modules/tmux.nix
-    ./modules/document_viewer.nix
   ];
 
   home.file = {
@@ -36,6 +49,6 @@ in
       target = "${config.home.homeDirectory}/.tmux.conf.local";
     };
 
-  };
+  } // tmuxScriptEntries;
 }
 
