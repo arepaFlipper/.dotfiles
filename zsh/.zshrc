@@ -169,8 +169,7 @@ plugins=(
 )
 
 if [[ "$OSTYPE" == darwin* ]]; then
-  source $ZSH/oh-my-zsh.sh
-  eval "$(rbenv init -)"
+  echo "Running on MacOS"
   eval "$(direnv hook zsh)"
 fi
 
@@ -220,7 +219,7 @@ export LANG=en_US.UTF-8
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Open tmux on startup, requires tmux plugin
-ZSH_TMUX_AUTOSTART=true
+# ZSH_TMUX_AUTOSTART=true  # disabled — opt in per-session with `ta` / `tmoxpen <project>`
 
 if [[ "$OSTYPE" != darwin* ]]; then
   source ~/.dotfiles/zsh/powerlevel10k/powerlevel10k.zsh-theme
@@ -264,5 +263,4 @@ if [ -f "$HOME/.config/fabric/fabric-bootstrap.inc" ]; then . "$HOME/.config/fab
 
 # Created by `pipx` on 2024-07-07 07:55:46
 export PATH="$PATH:/Users/christopher/.local/bin"
-if [ -f "/Users/christopher/.config/fabric/fabric-bootstrap.inc" ]; then . "/Users/christopher/.config/fabric/fabric-bootstrap.inc"; fi
 
