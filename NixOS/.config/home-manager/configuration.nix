@@ -161,7 +161,7 @@
     networkmanager.enable = true;
     firewall = {
         enable = true;
-        allowedTCPPorts = [ 8000 3000 4000 5432 5173 5444 8888 ];
+        allowedTCPPorts = [ 8000 3000 3535 4000 4321 5432 5173 5444 8888 ];
         allowedTCPPortRanges = [
           { from = 24800; to = 24830; }
           { from = 5430; to = 5440; }
@@ -195,6 +195,17 @@
   security.pam.services.i3lock = {
     enable = true;
   };
+
+  programs.nix-ld.enable = true;
+
+  programs.nix-ld.libraries = with pkgs; [
+    stdenv.cc.cc
+    zlib
+    openssl
+    curl
+    libffi
+    icu
+  ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 	nix.settings.allowed-users = ["cris"];
