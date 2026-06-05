@@ -28,10 +28,14 @@ load_project() {
             setup_logs_session() {
                 local s="$1"
                 tmux send-keys -t "$s":1 'docker-compose up -d && docker-compose logs -f' C-m
-                tmux split-window -v -t "$s":1 'cd ./frontend/client/ && npm run start'
-                tmux split-pane -h -t "$s":2 'cd ./frontend/pollster/ && npm run start'
-                tmux split-pane -v -t "$s":1 'docker attach abacus_dj'
-                tmux split-pane -h -t "$s":1 'cd ./tests/ && npm run test'
+                tmux split-window -v -t "$s":1
+                tmux send-keys -t "$s":1.{last} 'cd ./frontend/client/ && npm run start' C-m
+                tmux split-window -h -t "$s":1.{last}
+                tmux send-keys -t "$s":1.{last} 'cd ./frontend/pollster/ && npm run start' C-m
+                tmux split-window -h -t "$s":1.{top-left}
+                tmux send-keys -t "$s":1.{last} 'docker attach abacus_dj' C-m
+                tmux split-window -h -t "$s":1.{last}
+                tmux send-keys -t "$s":1.{last} 'cd ./tests/ && npm run test' C-m
             }
             ;;
         infranet)
@@ -44,9 +48,89 @@ load_project() {
             path="${VAULT:-$HOME/sync_repo/brain}"
             ;;
         dotfiles)
+            session_type="dotfiles"
             session_name="dotfiles"
             path="$HOME/.dotfiles"
-            ai_cmd='claude'
+            ;;
+        forms)
+            session_name="forms"
+            path="$HOME/Documents/ABEXUS/wrap/surv"
+            ;;
+        tuto)
+            session_name="tuto"
+            path="$HOME/sync_repo/obsidian_vault/2-Areas/academic/docker"
+            ;;
+        ecommerce)
+            session_name="ecommerce"
+            path="$HOME/Documents/yt-tutos/WebDevSimplified/ecommerce"
+            ;;
+        iomobile)
+            session_name="iomobile"
+            path="$HOME/Documents/yt-tutos/ionic_react_capacitor"
+            ;;
+        quiz_craft)
+            session_name="quiz_craft"
+            path="$HOME/Documents/yt-tutos/Elliott-Chong/quizmify"
+            ;;
+        rust_tuto)
+            session_name="rust_tuto"
+            path="$HOME/sync_repo/obsidian_vault/2-Areas/academic/rust"
+            ;;
+        chatapp)
+            session_name="chatapp"
+            path="$HOME/Documents/yt-tutos/Desphixs/chat_app"
+            ;;
+        microservices)
+            session_name="microservices"
+            path="$HOME/Documents/yt-tutos/freeCodeCamp/micro"
+            ;;
+        portfolio)
+            session_name="portfolio"
+            path="$HOME/Documents/yt-tutos/EdRoh/portfolio"
+            ;;
+        docker_tuto)
+            session_name="docker_tuto"
+            path="$HOME/sync_repo/obsidian_vault/2-Areas/academic/docker"
+            ;;
+        git_tuto)
+            session_name="git_tuto"
+            path="$HOME/sync_repo/obsidian_vault/2-Areas/academic/GIT"
+            ;;
+        leetcode)
+            session_name="leetcode"
+            path="$HOME/Documents/yt-tutos/neetcode/leetcoding"
+            ;;
+        bot)
+            session_name="bot_Ax"
+            path="$HOME/Documents/ABEXUS/docker-wrapper"
+            ;;
+        recycle)
+            session_name="recycle"
+            path="$HOME/Documents/yt-tutos/recycle-blockchain-tracker"
+            ;;
+        keyboard)
+            session_name="keyboard"
+            path="$HOME/qmk_setup"
+            ;;
+        litetech)
+            session_name="litetech"
+            path="$HOME/Documents/litebox"
+            ;;
+        onlyfans)
+            session_name="onlyfans"
+            path="$HOME/Documents/yt-tutos/AsAProgrammer/onlyfans"
+            ;;
+        debt)
+            session_name="debt_collector"
+            path="$HOME/Documents/debt_collector"
+            ;;
+        fit)
+            session_name="fit_municipality"
+            path="$HOME/Documents/fit_municipality/feature-new-ui"
+            ;;
+        pop)
+            session_name="pop"
+            path="$HOME/torrentflix"
             ;;
         *)
             return 1
@@ -128,6 +212,41 @@ launch_brain() {
     fi
 }
 
+launch_dotfiles() {
+    local name="${session_name:-dotfiles}"
+    local -a created
+
+    local s1="${name}_code" s2="${name}_repo" s3="${name}_ai" s4="${name}_terminal"
+
+    if create_or_manage "$s1" "code"; then
+        tmux new -s "$s1" -n "neovim" -d
+        tmux send-keys -t "$s1":1 "$code_cmd" C-m
+        created+=("$s1")
+    fi
+    if create_or_manage "$s2" "repo"; then
+        tmux new -s "$s2" -n "lazygit" -d
+        tmux send-keys -t "$s2":1 "$repo_cmd" C-m
+        created+=("$s2")
+    fi
+    if create_or_manage "$s3" "AI"; then
+        tmux new -s "$s3" -n "tool" -d
+        tmux send-keys -t "$s3":1 "$ai_cmd" C-m
+        created+=("$s3")
+    fi
+    if create_or_manage "$s4" "terminal"; then
+        tmux new -s "$s4" -n "terminal" -d
+        created+=("$s4")
+    fi
+
+    if [[ " ${created[*]} " =~ " ${s1} " ]]; then
+        tmux attach -t "$s1"
+    elif [[ ${#created[@]} -gt 0 ]]; then
+        tmux attach -t "${created[0]}"
+    else
+        echo "No new sessions created."
+    fi
+}
+
 # ── interactive setup ──────────────────────────────────────────────────────────
 
 interactive_setup() {
@@ -151,6 +270,7 @@ interactive_setup() {
     cd "$path"
     case "$session_type" in
         brain)    launch_brain ;;
+        dotfiles) launch_dotfiles ;;
         standard) launch_standard "$session_name" ;;
     esac
 }
@@ -180,5 +300,6 @@ fi
 cd "$path"
 case "$session_type" in
     brain)    launch_brain ;;
+    dotfiles) launch_dotfiles ;;
     standard) launch_standard "${session_name:-$project}" ;;
 esac

@@ -8,7 +8,7 @@
     go
     cargo
     openjdk
-    python311Full # This should provide pip
+    python3
     fd
     tree-sitter
     luarocks-nix

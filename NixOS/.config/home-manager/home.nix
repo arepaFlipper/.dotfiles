@@ -1,4 +1,20 @@
-{ inputs, config, pkgs, ghostty, unstable, ... }:
+{ inputs, config, pkgs, lib, ghostty, unstable, ... }:
+let
+  tmuxDir = ../../../tmux;
+  tmuxScriptEntries =
+    let
+      files = builtins.readDir tmuxDir;
+      isScript = name: type:
+        type == "regular" &&
+        (lib.hasSuffix ".tmux.sh" name || name == "tmoxpen.sh");
+    in
+      lib.mapAttrs' (name: _:
+        lib.nameValuePair ".tmux/${name}" {
+          source = "${tmuxDir}/${name}";
+          executable = true;
+        }
+      ) (lib.filterAttrs isScript files);
+in
 {
   imports = [
     ./modules/shell.nix
@@ -92,7 +108,7 @@
       source = "${config.home.homeDirectory}/.dotfiles/Scripts/scripts";
       target = "${config.home.homeDirectory}/scripts";
     };
-  };
+  } // tmuxScriptEntries;
 
 
   # Home Manager can also manage your environment variables through
