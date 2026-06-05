@@ -7,43 +7,43 @@
     home-manager.url = "github:nix-community/home-manager/release-25.05";  # Input for Home Manager from GitHub
     home-manager.inputs.nixpkgs.follows = "nixpkgs";  # Ensure Home Manager follows the same Nixpkgs version
     ghostty.url = "github:ghostty-org/ghostty";
+    hermes-agent.url = "github:NousResearch/hermes-agent";
   };
 
-  outputs = { self, nixpkgs, unstable, home-manager, ghostty, ... } @ inputs:
+  outputs = { self, nixpkgs, unstable, home-manager, ghostty, hermes-agent, ... } @ inputs:
 	let 
 		lib = nixpkgs.lib;  # Shortcut to access commonly used functions from Nixpkgs
 		system = "x86_64-linux";  # Target system architecture
 		unstable = unstable.legacyPackages.${system};  # Legacy packages for the specified system
 
     gemini-cli-overlay = final: prev: {
-      gemini-cli = prev.stdenv.mkDerivation rec {
+      gemini-cli = prev.buildNpmPackage rec {
         pname = "gemini-cli";
-        version = "0.6.1";
+        version = "0.42.0";
 
         src = prev.fetchFromGitHub {
           owner = "google-gemini";
           repo = "gemini-cli";
-          rev = "10f5da1";
-          sha256 = "1QeVFPl6IH1iQFxrDZ0U8eTeLd+fIgSw1CkAiSGaL/s=";
+          rev = "v${version}";
+          sha256 = "sha256-QYSzJdyjJ5SvPkI/uf/wu8MdM76W+djai6zD38IJpos=";
         };
 
-        buildInputs = [ prev.nodejs prev.makeWrapper ];
-        nativeBuildInputs = [ prev.makeWrapper ];
+        npmDepsHash = "sha256-hKNEJ/MAseYs8WLr36h40pYv+5nef8EPhZIfmPKYJPY=";
 
-        buildPhase = ''
-          runHook preBuild
-          npm install
-          npm run build || make build || true
-          runHook postBuild
-        '';
+        nativeBuildInputs = [ prev.makeWrapper prev.pkg-config ];
+        buildInputs = [ prev.libsecret ];
 
-        installPhase = ''
-          runHook preInstall
-          mkdir -p $out/lib/gemini-cli $out/bin
-          cp -r ./* $out/lib/gemini-cli
-          makeWrapper ${prev.nodejs}/bin/node $out/bin/gemini-cli \
-            --add-flags "$out/lib/gemini-cli/index.js"
-          runHook postInstall
+        # gemini-cli build steps
+        npmBuildScript = "bundle";
+        
+        postInstall = ''
+          # The binary is named 'gemini' in package.json, but user wants 'gemini-cli'
+          if [ -f $out/bin/gemini ]; then
+            mv $out/bin/gemini $out/bin/gemini-cli
+          fi
+
+          # Remove dangling symlinks created by npm workspaces that Nix fixupPhase doesn't like
+          find $out/lib/node_modules -type l -xtype l -delete
         '';
 
         meta = with prev.lib; {
@@ -55,14 +55,16 @@
       };
     };
 
-
-
-
-    pkgs_with_overlay = import nixpkgs {
-      system = system;
+    pkgs = import nixpkgs {
+      inherit system;
+      config.allowUnfree = true;
       overlays = [ gemini-cli-overlay ];
     };
-    pkgs = pkgs_with_overlay;
+
+    unstable-pkgs = import unstable {
+      inherit system;
+      config.allowUnfree = true;
+    };
 
 	in {
 		nixosConfigurations = {  # NixOS configurations section
@@ -76,12 +78,14 @@
 		homeConfigurations = {  # Home Manager configurations section
 			cris = home-manager.lib.homeManagerConfiguration {  # Define a Home Manager configuration named 'cris'
 				inherit pkgs;  # Inherit package set for Home Manager configuration
-        extraSpecialArgs = { inherit ghostty; };
+        extraSpecialArgs = { 
+          inherit ghostty inputs; 
+          unstable = unstable-pkgs;
+        };
 				modules = [ 
-          ./home.nix
-        ];  # List of modules to include in the Home Manager configuration
+				  ./home.nix
+				];  # List of modules to include in the Home Manager configuration
 			};
 		};
 	};
 }
-

@@ -1,7 +1,20 @@
-{ inputs, config, pkgs, ghostty, ... }:
+{ inputs, config, pkgs, lib, ghostty, unstable, ... }:
 let
-  unstable = import <nixos-unstable> { config = {allowUnfree = true;};};
-in 
+  tmuxDir = ../../../tmux;
+  tmuxScriptEntries =
+    let
+      files = builtins.readDir tmuxDir;
+      isScript = name: type:
+        type == "regular" &&
+        (lib.hasSuffix ".tmux.sh" name || name == "tmoxpen.sh");
+    in
+      lib.mapAttrs' (name: _:
+        lib.nameValuePair ".tmux/${name}" {
+          source = "${tmuxDir}/${name}";
+          executable = true;
+        }
+      ) (lib.filterAttrs isScript files);
+in
 {
   imports = [
     ./modules/shell.nix
@@ -13,7 +26,7 @@ in
     ./modules/git.nix
     ./modules/window_manager.nix
     ./modules/document_viewer.nix
-    # ./modules/ai-support.nix
+    ./modules/ai-support.nix
     # ./modules/cura.nix
     # ./modules/ghostty.nix
   ];
@@ -95,7 +108,7 @@ in
       source = "${config.home.homeDirectory}/.dotfiles/Scripts/scripts";
       target = "${config.home.homeDirectory}/scripts";
     };
-  };
+  } // tmuxScriptEntries;
 
 
   # Home Manager can also manage your environment variables through
@@ -118,4 +131,15 @@ in
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
+  nix.package = pkgs.nix;
+  nix.settings = {
+    substituters = [
+      "https://cache.nixos.org"
+      "https://ghostty.cachix.org"
+    ];
+    trusted-public-keys = [
+      "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+      "ghostty.cachix.org-1:f/lsUmPhTI9HqRKtaHBY/mI177ORCxH0mZp88YtoJ6k="
+    ];
+  };
 }

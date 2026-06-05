@@ -1,7 +1,4 @@
 { config, pkgs, unstable, nixvim, ... }:
-let
-  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
-in
 {
   home.packages = with pkgs; [
     neovim-unwrapped
@@ -11,7 +8,7 @@ in
     go
     cargo
     openjdk
-    python311Full # This should provide pip
+    python3
     fd
     tree-sitter
     luarocks-nix
