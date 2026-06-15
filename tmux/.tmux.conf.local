@@ -181,15 +181,20 @@ tmux_conf_theme_right_separator_sub=''  #   PowerlineSymbols.otf font
 #     - #{username_ssh}
 tmux_conf_theme_status_left=' 🌏 #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} '
 
-run-shell 'LOCAL_IP="N/A"; \
-if [[ "$OSTYPE" == darwin* ]]; then \
-  LOCAL_IP=$(ifconfig | grep "inet " | grep -v 127.0.0.1 | awk "{print \$2}"); \
-elif [[ "$OSTYPE" == linux* ]]; then \
-  LOCAL_IP=$(ip route get 1.2.3.4 | cut -d " " -f 7); \
-fi; \
-echo "set -g @local_ip ${LOCAL_IP}" > /tmp/tmux_ip.sh'
-
-source-file /tmp/tmux_ip.sh
+run-shell 'LOCAL_IP=""; \
+case "$(uname -s)" in \
+  Darwin) \
+    iface=$(route -n get default 2>/dev/null | awk "/interface:/{print \$2}"); \
+    [ -n "$iface" ] && LOCAL_IP=$(ipconfig getifaddr "$iface" 2>/dev/null); \
+    [ -z "$LOCAL_IP" ] && LOCAL_IP=$(ipconfig getifaddr en0 2>/dev/null); \
+    [ -z "$LOCAL_IP" ] && LOCAL_IP=$(ipconfig getifaddr en1 2>/dev/null); \
+    ;; \
+  Linux) \
+    LOCAL_IP=$(ip route get 1.2.3.4 2>/dev/null | awk "{for(i=1;i<=NF;i++) if(\$i==\"src\"){print \$(i+1); exit}}"); \
+    ;; \
+esac; \
+[ -z "$LOCAL_IP" ] && LOCAL_IP="N/A"; \
+"${TMUX_PROGRAM:-tmux}" set -g @local_ip "$LOCAL_IP"'
 
 tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #{tasks_status} #{?battery_status, #{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %a %H:%M:%S , %d %b | #{username}#{root} | #{@local_ip} '
 
