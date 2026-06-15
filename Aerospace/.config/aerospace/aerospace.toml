@@ -7,7 +7,7 @@
 enable-normalization-flatten-containers = false
 enable-normalization-opposite-orientation-for-nested-containers = false
 
-on-focus-changed = 'move-mouse window-lazy-center'
+on-focus-changed = 'move-mouse monitor-lazy-center'
 
 [mode.main.binding]
 alt-j = "focus-monitor --wrap-around next"
@@ -27,23 +27,23 @@ cmd-shift-j = 'move-workspace-to-monitor 1'
 cmd-shift-k = 'move-workspace-to-monitor main'
 cmd-shift-l = 'move right'
 
-cmd-j = 'focus-monitor 1'
+cmd-s = 'focus-monitor 1'
+cmd-j = [
+  'move-workspace-to-monitor next',
+  'focus-monitor next'
+]
 cmd-k = 'focus-monitor main'
 cmd-l = 'focus right'
 cmd-h = 'focus left'
 
 # Consider using 'join-with' command as a 'split' replacement if you want to enable normalizations
-cmd-minus = 'split horizontal'
+# cmd-minus = 'split horizontal' # ☹️ I cannot zoom out apps if I use this
 cmd-slash = 'split vertical'
 
 cmd-f = 'fullscreen'
 
 cmd-q = 'close'
 cmd-w = 'workspace-back-and-forth'
-cmd-s = [
-  'move-workspace-to-monitor next',
-  'focus-monitor next'
-]
 
 cmd-shift-backslash = 'layout v_accordion'           # 'layout stacking' in i3
 cmd-shift-minus = 'layout h_accordion'               # 'layout tabbed' in i3
@@ -101,7 +101,7 @@ run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
 if.app-id = 'md.obsidian'
-run = 'move-node-to-workspace 4'
+run = 'move-node-to-workspace 6'
 
 [[on-window-detected]]
 if.app-id = "com.googlecode.iterm2"
