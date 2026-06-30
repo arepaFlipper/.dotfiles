@@ -14,7 +14,6 @@
 	let 
 		lib = nixpkgs.lib;  # Shortcut to access commonly used functions from Nixpkgs
 		system = "x86_64-linux";  # Target system architecture
-		unstable = unstable.legacyPackages.${system};  # Legacy packages for the specified system
 
     gemini-cli-overlay = final: prev: {
       gemini-cli = prev.buildNpmPackage rec {
@@ -80,7 +79,7 @@
 				inherit pkgs;  # Inherit package set for Home Manager configuration
         extraSpecialArgs = { 
           inherit ghostty inputs; 
-          unstable = unstable-pkgs;
+          unstable-pkgs = unstable-pkgs;
         };
 				modules = [ 
 				  ./home.nix

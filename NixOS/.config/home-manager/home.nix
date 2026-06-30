@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, lib, ghostty, unstable, ... }:
+{ inputs, config, pkgs, lib, ghostty, unstable-pkgs, ... }:
 let
   tmuxDir = ../../../tmux;
   tmuxScriptEntries =

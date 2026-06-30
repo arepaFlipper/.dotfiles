@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, lib, ... }:
+{ config, pkgs, inputs, lib, unstable-pkgs, ... }:
 
 {
   # Add packages you want in your shell
@@ -7,8 +7,8 @@
     gemini-cli
     codex
     claude-code
+    unstable-pkgs.antigravity-cli
     inputs.hermes-agent.packages.${pkgs.system}.default
-    codex
   ];
 
 }
