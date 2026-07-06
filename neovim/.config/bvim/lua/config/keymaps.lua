@@ -67,3 +67,24 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.keymap.set("n", "<leader>h", function()
   vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
 end)
+
+-- Jump between markdown headings of level 1-2 (# / ##)
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "md", "markdown" },
+  callback = function()
+    local buf = vim.api.nvim_get_current_buf()
+    local heading_opts = { noremap = true, silent = true, buffer = buf, desc = "Jump to next/prev heading (# or ##)" }
+    local heading_pattern = [[^#\{1,2\}\s]]
+
+    local function jump(flags)
+      return function()
+        vim.fn.search(heading_pattern, flags)
+      end
+    end
+
+    vim.keymap.set("n", "<M-}>", jump(""), heading_opts)
+    vim.keymap.set("n", "<M-]>", jump(""), heading_opts)
+    vim.keymap.set("n", "<M-{>", jump("b"), heading_opts)
+    vim.keymap.set("n", "<M-[>", jump("b"), heading_opts)
+  end,
+})
