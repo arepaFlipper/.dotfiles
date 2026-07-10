@@ -17,6 +17,13 @@
     syntaxHighlighting.enable = true;
     autosuggestion.enable = true;
 
+    # Put Homebrew (/opt/homebrew/bin) back on PATH. nix-darwin's generated
+    # /etc/zprofile doesn't run path_helper, and home-manager owns ~/.zprofile,
+    # so brew shellenv has to be declared here to survive darwin-rebuild.
+    profileExtra = ''
+      eval "$(/opt/homebrew/bin/brew shellenv)"
+    '';
+
     initContent = lib.mkOrder 500 ''
       export LANG=en_US.UTF-8
       export LC_ALL=en_US.UTF-8
