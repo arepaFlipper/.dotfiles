@@ -42,7 +42,28 @@ return {
       },
       ["<leader>oo"] = {
         action = function()
-          vim.cmd("ObsidianOpen")
+          -- Open the current note in Obsidian at the line the cursor is on.
+          -- Requires the "Advanced URI" community plugin in Obsidian, which
+          -- supports the `line` parameter; the plain `obsidian://open` URI
+          -- (used by :ObsidianOpen) cannot jump to a line.
+          local vault_name = "brain"
+          local vault_path = vim.fn.expand("~/sync_repo/brain")
+          local filepath = vim.fn.expand("%:p")
+          local line = vim.api.nvim_win_get_cursor(0)[1]
+
+          if filepath:sub(1, #vault_path) == vault_path then
+            local rel = filepath:sub(#vault_path + 2)
+            local uri = string.format(
+              "obsidian://advanced-uri?vault=%s&filepath=%s&line=%d",
+              vim.uri_encode(vault_name),
+              vim.uri_encode(rel),
+              line
+            )
+            vim.ui.open(uri)
+          else
+            -- Fall back for notes outside the configured vault.
+            vim.cmd("ObsidianOpen")
+          end
         end,
         opts = { buffer = true },
       },
