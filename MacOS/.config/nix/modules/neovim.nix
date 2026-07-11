@@ -6,8 +6,10 @@ let
   dotfiles = "${config.home.homeDirectory}/.dotfiles";
 in
 {
-  # Neovim itself (uncomment to manage the binary via nix instead of Homebrew):
-  # home.packages = [ pkgs.neovim ];
+  # Neovim binary, managed by nix instead of Homebrew. Only the binary is
+  # owned here — plugins/config stay with lazy.nvim inside the bvim distro,
+  # so we deliberately do NOT use home-manager's `programs.neovim`.
+  home.packages = [ pkgs.neovim ];
 
   # Manage the `bvim` distro config as a symlink at ~/.config/bvim.
   # Launched with `NVIM_APPNAME=bvim nvim` (see the `bvim` alias in zsh).
