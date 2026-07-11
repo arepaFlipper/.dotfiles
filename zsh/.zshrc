@@ -1,11 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-# macOS uses Starship (managed by home-manager); skip p10k there.
-if [[ "$OSTYPE" != darwin* ]] && [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:$HOME/.cargo/bin:$HOME/.config/git/git-log-compact:/usr/local/bin:/usr/bin:$PATH
 
@@ -176,21 +168,14 @@ fi
 
 if [[ "$OSTYPE" == linux* ]]; then
   OS_ID=$(grep -E '^ID=' /etc/os-release | awk -F'=' '{print tolower($2)}' | tr -d '"')
+  echo "Running on ($OS_ID)"
 
-  if [[ "$OS_ID" == "nixos" ]]; then
-    echo "Running on NixOS"
-	source ~/.p10k.zsh
-  elif [[ "$OS_ID" == "arch" ]]; then
-    echo "Running on Arch"
-    source ~/.p10k.arch.zsh
-  else
-    source $ZSH/oh-my-zsh.sh
-    echo "Running on ($OS_ID)"
-  fi
-source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-  #source $ZSH/oh-my-zsh.sh
-
+  # oh-my-zsh itself is already sourced by home-manager (programs.zsh.oh-my-zsh),
+  # so it isn't re-sourced here. The prompt comes from Starship (see */shell.nix —
+  # each distro's home-manager module sets its own color palette via
+  # zsh/starship-settings.nix), so oh-my-zsh's own theme is never shown anyway.
+  source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 
 # User configuration
@@ -222,16 +207,8 @@ export LANG=en_US.UTF-8
 # Open tmux on startup, requires tmux plugin
 # ZSH_TMUX_AUTOSTART=true  # disabled — opt in per-session with `ta` / `tmoxpen <project>`
 
-if [[ "$OSTYPE" != darwin* ]]; then
-  source ~/.dotfiles/zsh/powerlevel10k/powerlevel10k.zsh-theme
-fi
-
-
 # set vim as default IDE
 export EDITOR=nvim
-if [[ "$OSTYPE" != darwin* ]] && [[ -r ~/powerlevel10k/powerlevel10k.zsh-theme ]]; then
-  source ~/powerlevel10k/powerlevel10k.zsh-theme
-fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

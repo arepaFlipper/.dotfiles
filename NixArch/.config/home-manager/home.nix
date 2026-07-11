@@ -54,10 +54,6 @@ in
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
-    ".p10k.arch.zsh" = {
-      source = "${config.home.homeDirectory}/.dotfiles/zsh/.p10k.arch.zsh";
-      target = "${config.home.homeDirectory}/.p10k.arch.zsh";
-    };
   };
 
   # Home Manager can also manage your environment variables through

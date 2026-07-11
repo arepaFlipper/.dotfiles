@@ -34,6 +34,28 @@
       '';
     };
 
+    starship = {
+      enable = true;
+      enableZshIntegration = true;
+      settings = import ../../../../zsh/starship-settings.nix {
+        name = "nixos";
+        colors = {
+          arch_blue = "#5277C3";
+          blue_mid = "#3E5C99";
+          blue_dark = "#2C3E66";
+          midnight_mid = "#1B2740";
+          midnight = "#10182B";
+          text_light = "#F5F7FA";
+          text_accent = "#9FC1FF";
+          russian_green = "#2E8B57";
+          fluo_green = "#39FF88";
+          color_red = "#FF5C5C";
+          color_yellow = "#FFD166";
+          yellow_dark = "#E0A800";
+        };
+      };
+    };
+
     bash = {
       enable = true;
       initExtra = ''

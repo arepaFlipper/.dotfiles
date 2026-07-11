@@ -115,7 +115,6 @@
 		python3	
 		# python312Packages.pip
 
-		zsh-powerlevel10k
 		zsh-autosuggestions
 		zsh-syntax-highlighting
 		tre-command
@@ -186,7 +185,6 @@
 
   programs.zsh = {
 		enable = true;
-		promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
 	};
 
   # android SDK

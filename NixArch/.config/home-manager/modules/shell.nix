@@ -5,7 +5,6 @@ let
 in {
   home.packages = with pkgs; [
     zsh-autosuggestions
-    zsh-powerlevel10k
     python313Packages.pip
     zsh-syntax-highlighting
     zoxide
@@ -13,8 +12,6 @@ in {
     fzf
     oh-my-zsh
   ];
-
-  home.file.".p10k.zsh".source = ../../../../zsh/.p10k.arch.zsh;
 
   programs = {
     zsh = {
@@ -29,7 +26,6 @@ in {
       };
 
       initContent = ''
-        source ~/.p10k.zsh
         alias hmsi="home-manager switch --impure"
         alias nxrb="sudo nixos-rebuild switch --flake ~/.dotfiles/NixArch/.config/home-manager"
         source $HOME/.dotfiles/zsh/.zshrc
@@ -38,6 +34,28 @@ in {
             exec "$HOME/.nix-profile/bin/zsh"
         fi
       '';
+    };
+
+    starship = {
+      enable = true;
+      enableZshIntegration = true;
+      settings = import ../../../../zsh/starship-settings.nix {
+        name = "arch";
+        colors = {
+          arch_blue = "#1793d1";
+          blue_mid = "#0074ae";
+          blue_dark = "#394260";
+          midnight_mid = "#212736";
+          midnight = "#1d2230";
+          text_light = "#e3e5e5";
+          text_accent = "#769ff0";
+          russian_green = "#68A063";
+          fluo_green = "#17fc03";
+          color_red = "#cc241d";
+          color_yellow = "#d79921";
+          yellow_dark = "#d5b60a";
+        };
+      };
     };
   };
 }
