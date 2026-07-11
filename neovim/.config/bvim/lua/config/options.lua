@@ -5,21 +5,13 @@ vim.g.lazyvim_blink_main = false
 
 -- opt.iskeyword:append("-")
 
--- On Linux (NixOS), xclip is built against glibc-2.40 but Nix injects glibc-2.42
--- via LD_LIBRARY_PATH, causing a version conflict. Clearing it for xclip lets it
--- use its own RPATH. On macOS there's no X display, so leave vim.g.clipboard unset
--- and let Neovim auto-detect pbcopy/pbpaste instead.
-if vim.uv.os_uname().sysname == "Linux" then
-	vim.g.clipboard = {
-		name = "xclip",
-		copy = {
-			["+"] = { "env", "-u", "LD_LIBRARY_PATH", "xclip", "-selection", "clipboard" },
-			["*"] = { "env", "-u", "LD_LIBRARY_PATH", "xclip", "-selection", "primary" },
-		},
-		paste = {
-			["+"] = { "env", "-u", "LD_LIBRARY_PATH", "xclip", "-selection", "clipboard", "-o" },
-			["*"] = { "env", "-u", "LD_LIBRARY_PATH", "xclip", "-selection", "primary", "-o" },
-		},
-		cache_enabled = 0,
-	}
+-- OS-specific settings (notably the clipboard provider) are managed by the
+-- per-OS Nix module, which writes ~/.config/bvim-local/clipboard.lua:
+--   * macOS: MacOS/.config/nix/modules/neovim.nix
+--   * NixOS: NixOS/.config/home-manager/modules/neovim.nix
+-- Sourced here if present; safe to be absent (e.g. running bvim without nix).
+local xdg = vim.env.XDG_CONFIG_HOME or vim.fn.expand("~/.config")
+local os_local = xdg .. "/bvim-local/clipboard.lua"
+if vim.uv.fs_stat(os_local) then
+	dofile(os_local)
 end

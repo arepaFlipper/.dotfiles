@@ -15,4 +15,12 @@ in
   # Launched with `NVIM_APPNAME=bvim nvim` (see the `bvim` alias in zsh).
   xdg.configFile."bvim".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/neovim/.config/bvim";
+
+  # OS-specific clipboard config, sourced by bvim's lua/config/options.lua.
+  # macOS: no X display, so let Neovim auto-detect pbcopy/pbpaste — do NOT set
+  # vim.g.clipboard (that's what broke it: "Can't open display: (null)").
+  xdg.configFile."bvim-local/clipboard.lua".text = ''
+    -- macOS: use Neovim's built-in pbcopy/pbpaste. No vim.g.clipboard override.
+    vim.opt.clipboard = "unnamedplus"
+  '';
 }
