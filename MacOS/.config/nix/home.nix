@@ -31,6 +31,7 @@ in
   imports = [
     ./modules/shell.nix
     ./modules/tmux.nix
+    ./modules/neovim.nix
   ];
 
   home.file = {
