@@ -42,14 +42,10 @@ in {
       settings = import ../../../../zsh/starship-settings.nix {
         name = "mint";
         colors = {
-          arch_blue = "#5FA346";
-          blue_mid = "#4A8636";
           blue_dark = "#356427";
-          midnight_mid = "#20401A";
           midnight = "#12240E";
           text_light = "#F1F7EC";
           text_accent = "#B7E39A";
-          russian_green = "#2E8B57";
           fluo_green = "#39FF88";
           color_red = "#FF5C5C";
           color_yellow = "#FFD166";

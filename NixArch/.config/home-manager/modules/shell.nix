@@ -42,14 +42,10 @@ in {
       settings = import ../../../../zsh/starship-settings.nix {
         name = "arch";
         colors = {
-          arch_blue = "#1793d1";
-          blue_mid = "#0074ae";
           blue_dark = "#394260";
-          midnight_mid = "#212736";
           midnight = "#1d2230";
           text_light = "#e3e5e5";
           text_accent = "#769ff0";
-          russian_green = "#68A063";
           fluo_green = "#17fc03";
           color_red = "#cc241d";
           color_yellow = "#d79921";

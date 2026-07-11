@@ -33,14 +33,10 @@
     settings = import ../../../../zsh/starship-settings.nix {
       name = "kali";
       colors = {
-        arch_blue = "#B0272A";
-        blue_mid = "#8C1F22";
         blue_dark = "#5C1416";
-        midnight_mid = "#2B0A0B";
         midnight = "#150505";
         text_light = "#F5E6E6";
         text_accent = "#FF8A8A";
-        russian_green = "#2E8B57";
         fluo_green = "#39FF88";
         color_red = "#FF3B3B";
         color_yellow = "#FFD166";

@@ -1,0 +1,157 @@
+# Shared Starship prompt layout (p10k "classic"-mirroring redesign): OS icon
+# + path + git on the left, each in its own colored powerline block, command
+# input on its own second line; status/duration/user@host/time right-aligned
+# on the first line. Matches p10k's conditional visibility: status only
+# shows on a non-zero exit code, user@host only shows for root/SSH sessions,
+# cmd_duration only shows past its min_time threshold.
+#
+# This file is a build-time source, not a deployed dotfile: nothing symlinks
+# it directly. Each machine's shell.nix reads it with builtins.fromTOML and
+# overrides `palette` / `palettes.<name>` with its own colors, e.g.:
+#
+#   settings = (builtins.fromTOML (builtins.readFile
+#     ../../../../starship/starship-layout.toml)) // {
+#     palette = "foxtrot";
+#     palettes.foxtrot = { blue_dark = "#2C3E66"; ... };
+#   };
+#
+# The palette baked in below is only the fallback used if a machine doesn't
+# override it. macOS's own hand-maintained starship/.config/starship.toml is
+# intentionally untouched by this file for now.
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = "$os[\ue0b0](fg:os_bg bg:blue_dark)$directory[\ue0b0](fg:blue_dark bg:git_bg)$git_branch$git_status[\ue0b8](fg:git_bg)\n$character"
+right_format = "[\ue0b8](bg:midnight fg:black)$status$cmd_duration[\ue0b2](fg:grey0 bg:midnight)$username$hostname[\ue0b2](fg:yellow_dark bg:grey0)$time[ ](fg:yellow_dark)"
+
+palette = 'foxtrot'
+
+[palettes.foxtrot]
+os_bg = '#5fb8f2'
+os_fg = '#7353BA'
+blue_dark = '#384B55'
+git_bg = '#4C3743'
+grey0 = '#7A8478'
+midnight = '#1E2326'
+text_light = '#D3C6AA'
+text_accent = '#7FBBB3'
+fluo_green = '#A7C080'
+color_red = '#E67E80'
+color_yellow = '#DBBC7F'
+yellow_dark = '#E69875'
+
+[os]
+format = "[ $symbol ]($style)"
+style = "bg:os_bg fg:os_fg"
+disabled = false
+
+[os.symbols]
+Alpaquita = "\ueaa2 "
+Alpine = "\uf300 "
+AlmaLinux = "\uf31d "
+Amazon = "\uf270 "
+Android = "\uf17b "
+Arch = "\uf303 "
+Artix = "\uf31f "
+CachyOS = "\uf303 "
+CentOS = "\uf304 "
+Debian = "\uf306 "
+DragonFly = "\ue28e "
+Emscripten = "\uf205 "
+EndeavourOS = "\uf197 "
+Fedora = "\uf30a "
+FreeBSD = "\uf30c "
+Garuda = "\U000f06d3 "
+Gentoo = "\uf30d "
+HardenedBSD = "\U000f078c "
+Illumos = "\U000f0238 "
+Kali = "\uf327 "
+Linux = "\uf31a "
+Mabox = "\ueb29 "
+Macos = "\uf302 "
+Manjaro = "\uf312 "
+Mariner = "\uf1cd "
+MidnightBSD = "\uf186 "
+Mint = "\uf30e "
+NetBSD = "\uf024 "
+NixOS = "\uf313 "
+Nobara = "\uf380 "
+OpenBSD = "\U000f023a "
+openSUSE = "\uf314 "
+OracleLinux = "\U000f0337 "
+Pop = "\uf32a "
+Raspbian = "\uf315 "
+Redhat = "\uf316 "
+RedHatEnterprise = "\uf316 "
+RockyLinux = "\uf32b "
+Redox = "\U000f0018 "
+Solus = "\U000f0833 "
+SUSE = "\uf314 "
+Ubuntu = "\uf31b "
+Unknown = "\uf22d "
+Void = "\uf32e "
+Windows = "\U000f0372 "
+
+[directory]
+style = "bg:blue_dark fg:text_light"
+format = "[ $path ]($style)"
+truncation_length = 1
+truncate_to_repo = false
+truncation_symbol = "\u2026/"
+# Starship disables fish-style abbreviation whenever directory.substitutions
+# is present (even unmatched), so no icon swaps for Documents/Downloads/etc.
+fish_style_pwd_dir_length = 1
+
+[git_branch]
+symbol = "\U000f02a2 "
+style = "bg:git_bg fg:color_red"
+format = "[ $symbol$branch ]($style)"
+
+# Matches the old p10k vcs symbols exactly: *N stashed, +N staged, !N modified.
+[git_status]
+style = "bg:git_bg fg:text_light"
+stashed = "*"
+staged = "+"
+modified = "!"
+format = "([$stashed ]($style))([$staged ](fg:fluo_green bg:git_bg))([$modified ](fg:color_yellow bg:git_bg))"
+
+# p10k default: only shown when the last command's exit code was non-zero.
+[status]
+disabled = false
+symbol = "[\u2718](fg:color_red bg:midnight)"
+format = "[$symbol]($style)"
+
+[cmd_duration]
+min_time = 2000
+style = "fg:text_light bg:midnight"
+format = "[ $duration ]($style)"
+
+# p10k default: the context (user@host) segment only shows for root or SSH
+# sessions, not on every prompt.
+[username]
+show_always = false
+style_user = "bg:grey0 fg:text_light"
+style_root = "bg:grey0 fg:color_red"
+format = "[ $user]($style)"
+
+[hostname]
+ssh_symbol = "\ue0a2 "
+ssh_only = true
+format = "[@$hostname ]($style)"
+style = "bg:grey0 fg:text_light"
+disabled = false
+
+[time]
+disabled = false
+format = "[ $time ]($style)"
+style = "bold fg:black bg:yellow_dark"
+time_format = "%I:%M:%S %p"
+
+# Same success/error arrow, vi-mode glyphs p10k's prompt_char used -- doubles
+# as the vi-mode indicator, same as it did in p10k.
+[character]
+success_symbol = "[\u276f](bold fg:fluo_green)"
+error_symbol = "[\u276f](bold fg:color_red)"
+vimcmd_symbol = "[\u276e](bold fg:text_accent)"
+vimcmd_replace_one_symbol = "[\u25b6](bold fg:yellow_dark)"
+vimcmd_replace_symbol = "[\u25b6](bold fg:color_yellow)"
+vimcmd_visual_symbol = "[V](bold fg:text_accent)"

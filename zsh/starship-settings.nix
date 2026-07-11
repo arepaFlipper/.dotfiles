@@ -1,26 +1,31 @@
 # Shared Starship prompt layout, used by every non-macOS home-manager module
-# (NixOS, NixMint, NixArch, kalinix). Structure/format/icons stay identical
-# across machines; only the color palette changes, so each machine gets its
-# own visual identity while the config lives in exactly one place. macOS
-# keeps its own hand-maintained starship/.config/starship.toml on purpose.
+# (NixOS, NixMint, NixArch, kalinix). Mirrors the user's old p10k "classic"
+# layout: OS icon + path + git on the left (one uniform block background),
+# status/duration/user@host/time right-aligned on the same line (a second
+# uniform block), with a two-triangle "blade" (powerline flame separators,
+# U+E0C0 thick + U+E0C1 thin) marking each block's edge against the empty
+# middle. Only the color palette changes per machine — the layout is shared
+# in exactly one place. macOS keeps its own hand-maintained
+# starship/.config/starship.toml on purpose.
 #
 # Usage from a shell.nix:
 #   programs.starship.settings = import ../../../../zsh/starship-settings.nix {
 #     name = "nixos";
-#     colors = { arch_blue = "#5277C3"; ... };
+#     colors = { blue_dark = "#2C3E66"; ... };
 #   };
 { name, colors }:
 {
   "$schema" = "https://starship.rs/config-schema.json";
 
-  format = "$os$username$hostname[](bg:blue_mid fg:arch_blue)$directory[](fg:blue_mid bg:blue_dark)$git_branch$git_status[](fg:blue_dark bg:midnight_mid)$nodejs$rust$golang$php\${custom.cpu_arch}[](fg:midnight_mid bg:midnight)$time[ ](fg:midnight)\n$character";
+  format = "$os$directory$git_branch$git_status[](fg:blue_dark)$character";
+  right_format = "[](fg:midnight)$status$cmd_duration$username$hostname$time";
 
   palette = name;
   palettes.${name} = colors;
 
   os = {
     format = "[ $symbol ]($style)";
-    style = "bg:arch_blue fg:text_light";
+    style = "bg:blue_dark fg:text_light";
     disabled = false;
     symbols = {
       Alpaquita = " ";
@@ -42,16 +47,16 @@
       Gentoo = " ";
       HardenedBSD = "󰞌 ";
       Illumos = "󰈸 ";
-      Kali = " ";
+      Kali = " ";
       Linux = " ";
       Mabox = " ";
-      Macos = " ";
+      Macos = " ";
       Manjaro = " ";
       Mariner = " ";
       MidnightBSD = " ";
       Mint = " ";
       NetBSD = " ";
-      NixOS = " ";
+      NixOS = " ";
       Nobara = " ";
       OpenBSD = "󰈺 ";
       openSUSE = " ";
@@ -71,58 +76,9 @@
     };
   };
 
-  aws.symbol = "  ";
-  buf.symbol = " ";
-  bun.symbol = " ";
-  c.symbol = " ";
-  cpp.symbol = " ";
-  cmake.symbol = " ";
-  conda.symbol = " ";
-  crystal.symbol = " ";
-  dart.symbol = " ";
-  deno.symbol = " ";
-  docker_context.symbol = " ";
-  elixir.symbol = " ";
-  elm.symbol = " ";
-  fennel.symbol = " ";
-  fossil_branch.symbol = " ";
-  gcloud.symbol = "  ";
-  git_commit.tag_symbol = "  ";
-  guix_shell.symbol = " ";
-  haskell.symbol = " ";
-  haxe.symbol = " ";
-  hg_branch.symbol = " ";
-  java.symbol = " ";
-  julia.symbol = " ";
-  kotlin.symbol = " ";
-  lua.symbol = " ";
-  memory_usage.symbol = "󰍛 ";
-  meson.symbol = "󰔷 ";
-  nim.symbol = "󰆥 ";
-  nix_shell.symbol = " ";
-  ocaml.symbol = " ";
-
-  # Mirrors p10k's "context" segment: hidden for a plain local shell, shown
-  # only when running as root or over SSH.
-  username = {
-    show_always = false;
-    style_user = "bg:arch_blue fg:text_light";
-    style_root = "bg:arch_blue fg:text_light";
-    format = "[$user]($style)";
-  };
-
-  hostname = {
-    ssh_symbol = " ";
-    ssh_only = true;
-    format = "[@$hostname ]($style)";
-    style = "bg:arch_blue fg:text_light";
-    disabled = false;
-  };
-
   directory = {
-    read_only = "󰌾 ";
-    style = "fg:text_light bg:blue_mid";
-    format = "[ $path ]($style)";
+    style = "bg:blue_dark fg:text_light";
+    format = "[$path ]($style)";
     truncation_length = 3;
     truncate_to_repo = false;
     truncation_symbol = "…/";
@@ -135,67 +91,57 @@
   };
 
   git_branch = {
-    symbol = "󰊢";
+    symbol = "󰊢 ";
     style = "bg:blue_dark fg:color_red";
-    format = "[[ $symbol ](fg:color_red bg:blue_dark)[ $branch ](fg:white bg:blue_dark)]($style)";
+    format = "[$symbol$branch ]($style)";
   };
 
+  # Matches the old p10k vcs symbols exactly: *N stashed, +N staged, !N modified.
   git_status = {
-    style = "bg:blue_dark";
-    format = "[[($all_status$ahead_behind )](fg:text_accent bg:blue_dark)]($style)";
+    style = "bg:blue_dark fg:text_light";
+    stashed = "*";
+    staged = "+";
+    modified = "!";
+    format = "([$stashed]($style) )([$staged](fg:fluo_green bg:blue_dark) )([$modified](fg:color_yellow bg:blue_dark) )";
   };
 
-  package.symbol = "󰏗 ";
+  # Exit status of the last command — always shown (not just on failure),
+  # like p10k's status segment.
+  status = {
+    disabled = false;
+    success_symbol = "[✔](fg:fluo_green bg:midnight)";
+    symbol = "[✘](fg:color_red bg:midnight)";
+    format = "[ $symbol ]($style)";
+  };
+
+  cmd_duration = {
+    min_time = 2000;
+    style = "fg:text_light bg:midnight";
+    format = "[$duration ]($style)";
+  };
+
+  # Always shown (unlike a typical minimal Starship setup) — p10k's context
+  # segment was visible on every prompt, not just root/SSH.
+  username = {
+    show_always = true;
+    style_user = "bg:midnight fg:text_light";
+    style_root = "bg:midnight fg:color_red";
+    format = "[$user]($style)";
+  };
+
+  hostname = {
+    ssh_symbol = " ";
+    ssh_only = false;
+    format = "[@$hostname ]($style)";
+    style = "bg:midnight fg:text_light";
+    disabled = false;
+  };
 
   time = {
     disabled = false;
     format = "[ $time ]($style)";
     style = "fg:text_light bg:midnight";
-    time_format = "%I:%M %p";
-  };
-
-  python = {
-    symbol = " ";
-    style = "bg:color_yellow fg:black";
-    format = "[[($all_status$ahead_behind )](fg:text_accent bg:color_yellow)]($style)";
-    pyenv_version_name = true;
-    detect_files = [ ".python-version" "Pipfile" "__init__.py" "pyproject.toml" "requirements.txt" "setup.py" "tox.ini" ];
-    disabled = false;
-  };
-
-  nodejs = {
-    symbol = " ";
-    style = "bg:russian_green";
-    format = "[[ $symbol ($version) ](fg:fluo_green bg:midnight_mid)]($style)";
-  };
-
-  rust = {
-    symbol = "󱘗 ";
-    style = "bg:midnight_mid";
-    format = "[[ $symbol ($version) ](fg:text_accent bg:midnight_mid)]($style)";
-  };
-
-  golang = {
-    symbol = " ";
-    style = "bg:midnight_mid";
-    format = "[[ $symbol ($version) ](fg:text_accent bg:midnight_mid)]($style)";
-  };
-
-  php = {
-    symbol = "";
-    style = "bg:midnight_mid";
-    format = "[[ $symbol ($version) ](fg:text_accent bg:midnight_mid)]($style)";
-  };
-
-  # p10k had a (disabled-by-default) cpu_arch segment; Starship has no
-  # built-in equivalent, so this recreates it with a custom module.
-  custom.cpu_arch = {
-    command = "uname -m";
-    when = "true";
-    symbol = " ";
-    style = "fg:text_accent bg:midnight_mid";
-    format = "[ $symbol$output ]($style)";
-    disabled = false;
+    time_format = "%I:%M:%S %p";
   };
 
   # Same success/error ❯, vi-mode ❮/V/▶ glyphs p10k's prompt_char used —

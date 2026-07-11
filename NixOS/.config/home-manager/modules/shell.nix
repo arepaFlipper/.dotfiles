@@ -24,6 +24,9 @@
       };
 
       initContent = ''
+        # zsh reserves 1 column between RPROMPT and the terminal's right edge
+        # by default (ZLE_RPROMPT_INDENT); 0 makes the right bar flush.
+        export ZLE_RPROMPT_INDENT=0
         alias hmsi="home-manager switch --impure"
         alias nxrb="sudo nixos-rebuild switch --flake ~/.dotfiles/NixOS/.config/home-manager"
         alias xres="sudo systemctl restart display-manager"
@@ -37,21 +40,25 @@
     starship = {
       enable = true;
       enableZshIntegration = true;
-      settings = import ../../../../zsh/starship-settings.nix {
-        name = "nixos";
-        colors = {
-          arch_blue = "#5277C3";
-          blue_mid = "#3E5C99";
-          blue_dark = "#2C3E66";
-          midnight_mid = "#1B2740";
-          midnight = "#10182B";
-          text_light = "#F5F7FA";
-          text_accent = "#9FC1FF";
-          russian_green = "#2E8B57";
-          fluo_green = "#39FF88";
-          color_red = "#FF5C5C";
-          color_yellow = "#FFD166";
-          yellow_dark = "#E0A800";
+      # Shared layout lives in starship/starship-layout.toml; only the
+      # palette is overridden here. See that file's header for the pattern.
+      settings = (builtins.fromTOML (builtins.readFile ../../../../starship/starship-layout.toml)) // {
+        palette = "foxtrot";
+        palettes.foxtrot = {
+          # Everforest Dark (https://everforest.vercel.app/palette), split
+          # into one distinct color per prompt section.
+          os_fg = "#7353BA"; # OS icon section fg
+          os_bg = "#5fb8f2"; # OS icon section bg
+          blue_dark = "#384B55"; # path section bg (Background Blue)
+          git_bg = "#4C3743"; # git section bg (Background Visual)
+          grey0 = "#7A8478"; # username@hostname section bg (Grey 0)
+          midnight = "#1E2326"; # status/duration section bg (Background Dim)
+          text_light = "#D3C6AA"; # Foreground
+          text_accent = "#7FBBB3"; # Blue
+          fluo_green = "#A7C080"; # Green
+          color_red = "#E67E80"; # Red
+          color_yellow = "#DBBC7F"; # Yellow
+          yellow_dark = "#E69875"; # Orange (time section bg)
         };
       };
     };

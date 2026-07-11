@@ -156,7 +156,7 @@
 
   networking = {
 
-    hostName = "nixos"; # Define your hostname.
+    hostName = "foxtrot"; # Define your hostname.
     networkmanager.enable = true;
     firewall = {
         enable = true;
