@@ -251,8 +251,6 @@ export XCURSOR_THEME="catppuccin-mocha-sky-cursors"
 
 export VAULT="$HOME/sync_repo/brain/"
 
-eval "$(zoxide init --cmd cd zsh)"
-
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
@@ -264,4 +262,11 @@ if [ -f "$HOME/.config/fabric/fabric-bootstrap.inc" ]; then . "$HOME/.config/fab
 
 # Created by `pipx` on 2024-07-07 07:55:46
 export PATH="$PATH:/Users/christopher/.local/bin"
+
+# zoxide must be initialized last so its chpwd hook isn't clobbered by later
+# config (see `zoxide doctor`). On macOS home-manager inits zoxide after this
+# file is sourced, so only init here on non-darwin systems to avoid a duplicate.
+if [[ "$OSTYPE" != darwin* ]]; then
+  eval "$(zoxide init --cmd cd zsh)"
+fi
 
