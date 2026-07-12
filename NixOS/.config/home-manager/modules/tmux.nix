@@ -73,7 +73,7 @@ in {
       # default ($TMUX_CONF.local) if it isn't already set, so pointing it at
       # our own file here overrides just the theme. Other machines use their
       # own theme file (e.g. dracula, gruvbox, catppuccin) the same way.
-      set-environment -g TMUX_CONF_LOCAL "$HOME/.dotfiles/tmux/dracula.tmux.conf.local"
+      set-environment -g TMUX_CONF_LOCAL "$HOME/.dotfiles/tmux/everforest.tmux.conf.local"
       source $HOME/.dotfiles/tmux/.tmux.conf
     '';
     baseIndex = 1;

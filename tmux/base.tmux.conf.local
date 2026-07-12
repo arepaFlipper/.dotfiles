@@ -62,7 +62,6 @@ END_BG=$("${TMUX_PROGRAM:-tmux}" display-message -p "#{@_os_end_bg}" 2>/dev/null
 END_FG=$("${TMUX_PROGRAM:-tmux}" display-message -p "#{@_os_end_fg}" 2>/dev/null); \
 "${TMUX_PROGRAM:-tmux}" set -g @os_box "#[fg=${OS_BG},bg=${SEP_BG}]${SEP}#[fg=${OS_FG},bg=${OS_BG},bold] ${OS_ICON} #[fg=${END_BG},bg=${OS_BG}]${SEP}#[fg=${END_FG},bg=${END_BG},bold]"'
 
-
 # -- mouse & status bar --------------------------------------------------------
 
 set -g mouse on
@@ -76,12 +75,4 @@ set -g @tpm_plugins '           \
     tmux-plugins/tmux-sensible  \
     tmux-plugins/tmux-yank      \
     tmux-plugins/tmux-open      \
-    chriszarate/tmux-tasks      \
 '
-
-
-# -- tmux-tasks ----------------------------------------------------------------
-
-set -g @tasks_manager 'taskwarrior'
-set -g @tasks_icon_urgent '🔥'
-set -g @tasks_icon_outstanding '+'
