@@ -1,0 +1,87 @@
+# -- base.tmux.conf.local ─────────────────────────────────────────────────────
+# Shared tmux commands, source-file'd by every *.tmux.conf.local theme file.
+# Each theme file must set @_os_sep_bg, @_os_end_bg, and @_os_end_fg BEFORE
+# source-file'ing this so the os_box powerline separators use the right colours.
+# ─────────────────────────────────────────────────────────────────────────────
+
+
+# -- local IP ------------------------------------------------------------------
+
+run-shell 'LOCAL_IP=""; \
+case "$(uname -s)" in \
+  Darwin) \
+    iface=$(route -n get default 2>/dev/null | awk "/interface:/{print \$2}"); \
+    [ -n "$iface" ] && LOCAL_IP=$(ipconfig getifaddr "$iface" 2>/dev/null); \
+    [ -z "$LOCAL_IP" ] && LOCAL_IP=$(ipconfig getifaddr en0 2>/dev/null); \
+    [ -z "$LOCAL_IP" ] && LOCAL_IP=$(ipconfig getifaddr en1 2>/dev/null); \
+    ;; \
+  Linux) \
+    LOCAL_IP=$(ip route get 1.2.3.4 2>/dev/null | awk "{for(i=1;i<=NF;i++) if(\$i==\"src\"){print \$(i+1); exit}}"); \
+    ;; \
+esac; \
+[ -z "$LOCAL_IP" ] && LOCAL_IP="N/A"; \
+"${TMUX_PROGRAM:-tmux}" set -g @local_ip "$LOCAL_IP"'
+
+
+# -- OS icon box ---------------------------------------------------------------
+# Detects the OS, picks a brand colour, pulls the matching glyph from
+# starship.toml, and builds a powerline-styled @os_box segment.
+# Separator colours are read from the theme-file-set @_os_sep_bg / @_os_end_bg
+# / @_os_end_fg so they blend correctly with each theme's right-section palette.
+
+run-shell 'OS_KEY="Unknown"; OS_BG="#a0a9cb"; OS_FG="#1d2230"; \
+case "$(uname -s)" in \
+  Darwin) OS_KEY="Macos"; OS_BG="#cccccc"; OS_FG="#1d2230" ;; \
+  Linux) \
+    OS_ID=$(. /etc/os-release 2>/dev/null && echo "$ID"); \
+    case "$OS_ID" in \
+      arch)        OS_KEY="Arch";        OS_BG="#1793d1"; OS_FG="#f8f8f2" ;; \
+      nixos)       OS_KEY="NixOS";       OS_BG="#7ebae4"; OS_FG="#1d2230" ;; \
+      ubuntu)      OS_KEY="Ubuntu";      OS_BG="#e95420"; OS_FG="#f8f8f2" ;; \
+      debian)      OS_KEY="Debian";      OS_BG="#a81d33"; OS_FG="#f8f8f2" ;; \
+      fedora)      OS_KEY="Fedora";      OS_BG="#3c6eb4"; OS_FG="#f8f8f2" ;; \
+      linuxmint)   OS_KEY="Mint";        OS_BG="#87cf3e"; OS_FG="#1d2230" ;; \
+      kali)        OS_KEY="Kali";        OS_BG="#557c94"; OS_FG="#f8f8f2" ;; \
+      pop)         OS_KEY="Pop";         OS_BG="#48b9c7"; OS_FG="#1d2230" ;; \
+      manjaro)     OS_KEY="Manjaro";     OS_BG="#35bf5c"; OS_FG="#1d2230" ;; \
+      gentoo)      OS_KEY="Gentoo";      OS_BG="#54487a"; OS_FG="#f8f8f2" ;; \
+      void)        OS_KEY="Void";        OS_BG="#478061"; OS_FG="#f8f8f2" ;; \
+      alpine)      OS_KEY="Alpine";      OS_BG="#0d597f"; OS_FG="#f8f8f2" ;; \
+      opensuse*)   OS_KEY="openSUSE";    OS_BG="#73ba25"; OS_FG="#1d2230" ;; \
+      raspbian)    OS_KEY="Raspbian";    OS_BG="#c51a4a"; OS_FG="#f8f8f2" ;; \
+      endeavouros) OS_KEY="EndeavourOS"; OS_BG="#7f3fbf"; OS_FG="#f8f8f2" ;; \
+      *)           OS_KEY="Linux";       OS_BG="#fcc624"; OS_FG="#1d2230" ;; \
+    esac ;; \
+esac; \
+STARSHIP_TOML="$HOME/.dotfiles/starship/.config/starship.toml"; \
+OS_ICON=$(grep -m1 "^${OS_KEY} = " "$STARSHIP_TOML" 2>/dev/null | cut -d \" -f2 | sed "s/ //g"); \
+[ -z "$OS_ICON" ] && OS_ICON="?"; \
+SEP=$(printf "\356\202\262"); \
+SEP_BG=$("${TMUX_PROGRAM:-tmux}" display-message -p "#{@_os_sep_bg}" 2>/dev/null); \
+END_BG=$("${TMUX_PROGRAM:-tmux}" display-message -p "#{@_os_end_bg}" 2>/dev/null); \
+END_FG=$("${TMUX_PROGRAM:-tmux}" display-message -p "#{@_os_end_fg}" 2>/dev/null); \
+"${TMUX_PROGRAM:-tmux}" set -g @os_box "#[fg=${OS_BG},bg=${SEP_BG}]${SEP}#[fg=${OS_FG},bg=${OS_BG},bold] ${OS_ICON} #[fg=${END_BG},bg=${OS_BG}]${SEP}#[fg=${END_FG},bg=${END_BG},bold]"'
+
+
+# -- mouse & status bar --------------------------------------------------------
+
+set -g mouse on
+set -g status-right-length 200
+
+
+# -- plugins -------------------------------------------------------------------
+
+set -g @tpm_plugins '           \
+    tmux-plugins/tpm            \
+    tmux-plugins/tmux-sensible  \
+    tmux-plugins/tmux-yank      \
+    tmux-plugins/tmux-open      \
+    chriszarate/tmux-tasks      \
+'
+
+
+# -- tmux-tasks ----------------------------------------------------------------
+
+set -g @tasks_manager 'taskwarrior'
+set -g @tasks_icon_urgent '🔥'
+set -g @tasks_icon_outstanding '+'
