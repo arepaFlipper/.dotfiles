@@ -26,6 +26,7 @@ in
     ./modules/git.nix
     ./modules/window_manager.nix
     ./modules/ai-support.nix
+    ./modules/ghostty.nix
   ];
   home.username = "arepa";
   home.homeDirectory = "/home/arepa";
@@ -50,7 +51,6 @@ in
     docker-compose
 
     libreoffice
-    ghostty
     qutebrowser
     yazi
   ];
