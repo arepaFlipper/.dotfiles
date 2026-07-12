@@ -14,19 +14,31 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({
-  spec = {
-    -- add LazyVim and import its plugins
-    {
-      "LazyVim/LazyVim",
-      import = "lazyvim.plugins",
-      opts = {
-        -- colorscheme = "catppuccin",
-      },
+local plugin_spec = {
+  -- add LazyVim and import its plugins
+  {
+    "LazyVim/LazyVim",
+    import = "lazyvim.plugins",
+    opts = {
+      -- colorscheme = "catppuccin",
     },
-    -- import/override with your plugins
-    { import = "plugins" },
   },
+  -- import/override with your plugins
+  { import = "plugins" },
+}
+
+-- OS-specific plugin overrides (notably the colorscheme) are managed by the
+-- per-OS Nix module, which writes ~/.config/bvim-local/plugins.lua:
+--   * NixArch: NixArch/.config/home-manager/modules/neovim.nix
+-- Appended here if present; safe to be absent (e.g. running bvim without nix).
+local xdg = vim.env.XDG_CONFIG_HOME or vim.fn.expand("~/.config")
+local os_local_plugins = xdg .. "/bvim-local/plugins.lua"
+if (vim.uv or vim.loop).fs_stat(os_local_plugins) then
+  vim.list_extend(plugin_spec, dofile(os_local_plugins))
+end
+
+require("lazy").setup({
+  spec = plugin_spec,
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
     -- If you know what you're doing, you can set this to `true` to have all your custom plugins lazy-loaded by default.

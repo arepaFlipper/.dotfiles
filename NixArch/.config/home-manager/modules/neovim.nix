@@ -30,6 +30,15 @@ in
     ];
   };
 
+  # OS-specific plugin overrides, sourced by bvim's lua/config/lazy.lua.
+  # NixArch: use the gruvbox colorscheme instead of LazyVim's tokyonight default.
+  xdg.configFile."bvim-local/plugins.lua".text = ''
+    return {
+      { "ellisonleao/gruvbox.nvim", priority = 1000, lazy = false, opts = {} },
+      { "LazyVim/LazyVim", opts = { colorscheme = "gruvbox" } },
+    }
+  '';
+
   home.sessionVariables = {
     LUA_PATH = "${pkgs.luarocks-nix}/share/lua/5.1/?.lua;;";
     LUA_CPATH = "${pkgs.luarocks-nix}/lib/lua/5.1/?.so;;";
