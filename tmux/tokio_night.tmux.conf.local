@@ -226,3 +226,6 @@ set -g @tasks_icon_outstanding '+'
 #
 # "$@"
 # # /!\ do not remove the previous line
+
+# -- shared base ---------------------------------------------------------------
+source-file ~/.dotfiles/tmux/base.tmux.conf.local

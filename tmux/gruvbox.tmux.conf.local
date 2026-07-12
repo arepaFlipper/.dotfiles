@@ -1,22 +1,5 @@
-# Gruvbox Dark theme override for NixArch, wired in via TMUX_CONF_LOCAL
-# (see NixArch/.config/home-manager/modules/tmux.nix). Same layout as the
-# shared tmux/.tmux.conf.local, only the tmux_conf_theme_* colors and the
-# os_box separator colors differ.
-# https://github.com/gpakosz/.tmux
-# (‑●‑●)> dual licensed under the WTFPL v2 license and the MIT license,
-#         without any warranty.
-#         Copyright 2012— Gregory Pakosz (@gpakosz).
-
-
-# -- navigation ----------------------------------------------------------------
-
-# if you're running tmux within iTerm2
-#   - and tmux is 1.9 or 1.9a
-#   - and iTerm2 is configured to let option key act as +Esc
-#   - and iTerm2 is configured to send [1;9A -> [1;9D for option + arrow keys
-# then uncomment the following line to make Meta + arrow keys mapping work
-#set -ga terminal-overrides "*:kUP3=\e[1;9A,*:kDN3=\e[1;9B,*:kRIT3=\e[1;9C,*:kLFT3=\e[1;9D"
-
+# -- shared base ---------------------------------------------------------------
+source-file ~/.dotfiles/tmux/base.tmux.conf.local
 
 # -- windows & pane creation ---------------------------------------------------
 
@@ -322,80 +305,4 @@ tmux_conf_theme_clock_style='24'
 # on macOS, this requires installing reattach-to-user-namespace, see README.md
 # on Linux, this requires xsel or xclip
 tmux_conf_copy_to_os_clipboard=true
-
-
-# -- user customizations -------------------------------------------------------
-# this is the place to override or undo settings
-
-# increase history size
-#set -g history-limit 10000
-
-# start with mouse mode enabled
-set -g mouse on
-set -g status-right-length 200
-
-# force Vi mode
-#   really you should export VISUAL or EDITOR environment variable, see manual
-#set -g status-keys vi
-#set -g mode-keys vi
-
-# replace C-b by C-a instead of using both prefixes
-# set -gu prefix2
-# unbind C-a
-# unbind C-b
-# set -g prefix C-a
-# bind C-a send-prefix
-
-# move status line to top
-#set -g status-position top
-
-# List of plugins
-set -g @tpm_plugins '           \
-    tmux-plugins/tpm            \
-    tmux-plugins/tmux-sensible  \
-    tmux-plugins/tmux-yank      \
-    tmux-plugins/tmux-open      \
-    chriszarate/tmux-tasks      \
-'
-# tmux-tasks plugin configuration
-# Task manager
-set -g @tasks_manager 'taskwarrior'
-
-# Colors
-set -g @tasks_format_begin '#[fg=#282828,bg=#fabd2f]'
-set -g @tasks_format_end '#[fg=#ebdbb2,bg=#3c3836]'
-
-# Icons
-set -g @tasks_icon_urgent '🔥'
-set -g @tasks_icon_outstanding '+'
-
-
-# -- custom variables ----------------------------------------------------------
-
-# to define a custom #{foo} variable, define a POSIX shell function between the
-# '# EOF' and the '# "$@"' lines. Please note that the opening brace { character
-# must be on the same line as the function name otherwise the parse won't detect
-# it.
-#
-# then, use #{foo} in e.g. the 'tmux_conf_theme_status_left' or the
-# 'tmux_conf_theme_status_right' variables.
-
-# # /!\ do not remove the following line
-# EOF
-#
-# # /!\ do not "uncomment" the functions: the leading "# " characters are needed
-#
-# weather() {                                         # see https://github.com/chubin/wttr.in#one-line-output
-#   curl -f -s -m 2 'wttr.in?format=3' || printf '\n' # /!\ make sure curl is installed
-#   sleep 900                                         # sleep for 15 minutes, throttle network requests whatever the value of status-interval
-# }
-#
-# online() {
-#   ping -c 1 1.1.1.1 >/dev/null 2>&1 && printf '✔' || printf '✘'
-# }
-#
-# "$@"
-# # /!\ do not remove the previous line
-
-# Add this to your ~/.tmux.conf.local
 

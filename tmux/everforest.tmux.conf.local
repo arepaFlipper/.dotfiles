@@ -1,3 +1,5 @@
+# -- shared base ---------------------------------------------------------------
+source-file ~/.dotfiles/tmux/base.tmux.conf.local
 
 # -- windows & pane creation ---------------------------------------------------
 
@@ -69,12 +71,6 @@ tmux_conf_theme_message_command_attr='bold'
 tmux_conf_theme_mode_fg='#1E2326'                       # everforest bgDim
 tmux_conf_theme_mode_bg='#E69875'                       # everforest orange
 tmux_conf_theme_mode_attr='bold'
-
-# status line style
-# status line style
-tmux_conf_theme_status_fg='#f8f8f2'                     # light gray
-tmux_conf_theme_status_bg='#282a36'                     # dark bg
-tmux_conf_theme_status_attr='none'
 
 # terminal title
 #   - built-in variables are:
