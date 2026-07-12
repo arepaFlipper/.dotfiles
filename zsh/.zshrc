@@ -53,7 +53,6 @@ alias vimtex="NVIM_APPNAME=VimTeX nvim"
 alias leetvim="NVIM_APPNAME=leetvim nvim"
 alias bvim="NVIM_APPNAME=bvim nvim"
 
-alias claude="$HOME/.claude/local/claude"
 
 
 extract-wisdom () {

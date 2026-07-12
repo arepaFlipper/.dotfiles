@@ -1,17 +1,31 @@
-{ inputs, config, pkgs, ... }:
+{ inputs, config, pkgs, lib, ghostty, unstable-pkgs, ... }:
 let
   unstable = import <nixos-unstable> { config = {allowUnfree = true;};};
+  tmuxDir = ../../../tmux;
+  tmuxScriptEntries =
+    let
+      files = builtins.readDir tmuxDir;
+      isScript = name: type:
+        type == "regular" &&
+        (lib.hasSuffix ".tmux.sh" name || name == "tmoxpen.sh");
+    in
+      lib.mapAttrs' (name: _:
+        lib.nameValuePair ".tmux/${name}" {
+          source = "${tmuxDir}/${name}";
+          executable = true;
+        }
+      ) (lib.filterAttrs isScript files);
 in 
 {
   imports = [
     ./modules/shell.nix
     ./modules/neovim.nix
     ./modules/tmux.nix
-    ./modules/syncthing.nix
+    # ./modules/syncthing.nix
     ./modules/cursor.nix
     ./modules/git.nix
     ./modules/window_manager.nix
-    ./modules/RDP.nix
+    ./modules/ai-support.nix
   ];
   home.username = "arepa";
   home.homeDirectory = "/home/arepa";
@@ -23,7 +37,7 @@ in
   # You should not change this value, even if you update Home Manager. If you do
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
-  home.stateVersion = "26.05"; # Please read the comment before changing.
+  home.stateVersion = "25.05"; # Please read the comment before changing.
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
@@ -54,7 +68,19 @@ in
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
-  };
+    "Cargo.toml" = {
+      source = "${config.home.homeDirectory}/.dotfiles/Rust/Cargo.toml";
+      target = "${config.home.homeDirectory}/Cargo.toml";
+    };
+    "i3" = {
+      source = "${config.home.homeDirectory}/.dotfiles/i3/.config/i3/config";
+      target = "${config.home.homeDirectory}/.config/i3/config";
+    };
+    "scripts" = {
+      source = "${config.home.homeDirectory}/.dotfiles/Scripts/scripts";
+      target = "${config.home.homeDirectory}/scripts";
+    };
+  } // tmuxScriptEntries;
 
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. These will be explicitly sourced when using a

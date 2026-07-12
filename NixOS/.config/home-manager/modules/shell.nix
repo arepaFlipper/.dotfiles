@@ -51,6 +51,7 @@
           os_bg = "#5fb8f2"; # OS icon section bg
           blue_dark = "#384B55"; # path section bg (Background Blue)
           git_bg = "#4C3743"; # git section bg (Background Visual)
+          git_fg = "#E67E80"; # git branch/status fg (Red, same as color_red)
           grey0 = "#7A8478"; # username@hostname section bg (Grey 0)
           midnight = "#1E2326"; # status/duration section bg (Background Dim)
           text_light = "#D3C6AA"; # Foreground

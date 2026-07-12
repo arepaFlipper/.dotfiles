@@ -28,6 +28,7 @@ in {
       initContent = ''
         alias hmsi="home-manager switch --impure"
         alias nxrb="sudo nixos-rebuild switch --flake ~/.dotfiles/NixArch/.config/home-manager"
+        #alias claude="$HOME/.claude/local/claude" # It
         source $HOME/.dotfiles/zsh/.zshrc
         if [ -n "$BASH_VERSION" ] && [ -f "$HOME/.nix-profile/bin/zsh" ]; then
             export SHELL="$HOME/.nix-profile/bin/zsh"
@@ -39,17 +40,26 @@ in {
     starship = {
       enable = true;
       enableZshIntegration = true;
-      settings = import ../../../../zsh/starship-settings.nix {
-        name = "arch";
-        colors = {
-          blue_dark = "#394260";
-          midnight = "#1d2230";
-          text_light = "#e3e5e5";
-          text_accent = "#769ff0";
-          fluo_green = "#17fc03";
-          color_red = "#cc241d";
-          color_yellow = "#d79921";
-          yellow_dark = "#d5b60a";
+      # Shared layout lives in starship/starship-layout.toml; only the
+      # palette is overridden here. See that file's header for the pattern.
+      settings = (builtins.fromTOML (builtins.readFile ../../../../starship/starship-layout.toml)) // {
+        palette = "gruvbox";
+        palettes.gruvbox = {
+          # Gruvbox Dark (https://github.com/morhetz/gruvbox), official hex
+          # values, split into one distinct color per prompt section.
+          os_fg = "#1d2021"; # OS icon section fg (dark0_hard)
+          os_bg = "#83a598"; # OS icon section bg (bright blue)
+          blue_dark = "#458588"; # path section bg (neutral blue)
+          git_bg = "#b16286"; # git section bg (neutral purple)
+          git_fg = "#ebdbb2"; # git branch/status fg (fg1, contrasts with purple git_bg)
+          grey0 = "#928374"; # username@hostname section bg (gray)
+          midnight = "#1d2021"; # status/duration section bg (dark0_hard)
+          text_light = "#ebdbb2"; # Foreground (fg1)
+          text_accent = "#8ec07c"; # bright aqua
+          fluo_green = "#b8bb26"; # bright green
+          color_red = "#fb4934"; # bright red
+          color_yellow = "#fabd2f"; # bright yellow
+          yellow_dark = "#d65d0e"; # time section bg (neutral orange)
         };
       };
     };

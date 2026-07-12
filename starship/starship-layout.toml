@@ -36,6 +36,7 @@ text_light = '#D3C6AA'
 text_accent = '#7FBBB3'
 fluo_green = '#A7C080'
 color_red = '#E67E80'
+git_fg = '#E67E80'
 color_yellow = '#DBBC7F'
 yellow_dark = '#E69875'
 
@@ -103,7 +104,7 @@ fish_style_pwd_dir_length = 1
 
 [git_branch]
 symbol = "\U000f02a2 "
-style = "bg:git_bg fg:color_red"
+style = "bg:git_bg fg:git_fg"
 format = "[ $symbol$branch ]($style)"
 
 # Matches the old p10k vcs symbols exactly: *N stashed, +N staged, !N modified.
