@@ -46,7 +46,7 @@ in
     };
 
     "~/.tmux.conf.local" = {
-      source = ../../../tmux/.tmux.conf.local;
+      source = ../../../tmux/dracula.tmux.conf.local;
       target = "${config.home.homeDirectory}/.tmux.conf.local";
     };
 

@@ -1,3 +1,7 @@
+# Everforest Dark theme override for NixOS, wired in via TMUX_CONF_LOCAL
+# (see NixOS/.config/home-manager/modules/tmux.nix). Same layout as the
+# shared tmux/dracula.tmux.conf.local, only the tmux_conf_theme_* colors and
+# the os_box separator colors differ.
 # https://github.com/gpakosz/.tmux
 # (‑●‑●)> dual licensed under the WTFPL v2 license and the MIT license,
 #         without any warranty.
@@ -55,7 +59,7 @@ tmux_conf_theme_highlight_focused_pane=false
 
 # focused pane colours:
 tmux_conf_theme_focused_pane_fg='default'
-tmux_conf_theme_focused_pane_bg='#0087d7'               # light blue
+tmux_conf_theme_focused_pane_bg='#7FBBB3'               # everforest blue
 
 # pane border style, possible values are:
 #   - thin (default)
@@ -63,31 +67,31 @@ tmux_conf_theme_focused_pane_bg='#0087d7'               # light blue
 tmux_conf_theme_pane_border_style=thin
 
 # pane borders colours:
-tmux_conf_theme_pane_border='#444444'                   # gray
-tmux_conf_theme_pane_active_border='#bd93f9'            # light blue
+tmux_conf_theme_pane_border='#374145'                   # everforest bg2
+tmux_conf_theme_pane_active_border='#E69875'            # everforest orange
 
 # pane indicator colours
-tmux_conf_theme_pane_indicator='#00afff'                # light blue
-tmux_conf_theme_pane_active_indicator='#00afff'         # light blue
+tmux_conf_theme_pane_indicator='#DBBC7F'                # everforest yellow
+tmux_conf_theme_pane_active_indicator='#DBBC7F'         # everforest yellow
 
 # status line style
-tmux_conf_theme_message_fg='#282a36'                    # black
-tmux_conf_theme_message_bg='#ff79c6'                    # yellow
+tmux_conf_theme_message_fg='#1E2326'                    # everforest bgDim
+tmux_conf_theme_message_bg='#DBBC7F'                    # everforest yellow
 tmux_conf_theme_message_attr='bold'
 
 # status line command style (<prefix> : Escape)
-tmux_conf_theme_message_command_fg='#ffff00'            # yellow
-tmux_conf_theme_message_command_bg='#000000'            # black
+tmux_conf_theme_message_command_fg='#D3C6AA'            # everforest fg
+tmux_conf_theme_message_command_bg='#1E2326'            # everforest bgDim
 tmux_conf_theme_message_command_attr='bold'
 
 # window modes style
-tmux_conf_theme_mode_fg='#000000'                       # black
-tmux_conf_theme_mode_bg='#ffff00'                       # yellow
+tmux_conf_theme_mode_fg='#1E2326'                       # everforest bgDim
+tmux_conf_theme_mode_bg='#E69875'                       # everforest orange
 tmux_conf_theme_mode_attr='bold'
 
 # status line style
-tmux_conf_theme_status_fg='#f8f8f2'                     # light gray
-tmux_conf_theme_status_bg='#282a36'                     # dark gray
+tmux_conf_theme_status_fg='#D3C6AA'                     # everforest fg
+tmux_conf_theme_status_bg='#1E2326'                     # everforest bgDim
 tmux_conf_theme_status_attr='none'
 
 # terminal title
@@ -108,8 +112,8 @@ tmux_conf_theme_terminal_title='#h ❐ #S ● #I #W'
 #     - #{hostname_ssh}
 #     - #{username}
 #     - #{username_ssh}
-tmux_conf_theme_window_status_fg='#f8f8f2'              # light gray
-tmux_conf_theme_window_status_bg='#282a36'              # dark gray
+tmux_conf_theme_window_status_fg='#D3C6AA'              # everforest fg
+tmux_conf_theme_window_status_bg='#1E2326'              # everforest bgDim
 tmux_conf_theme_window_status_attr='none'
 #tmux_conf_theme_window_status_format='#I #W'
 tmux_conf_theme_window_status_format='#{circled_window_index} #W'
@@ -123,8 +127,8 @@ tmux_conf_theme_window_status_format='#{circled_window_index} #W'
 #     - #{hostname_ssh}
 #     - #{username}
 #     - #{username_ssh}
-tmux_conf_theme_window_status_current_fg='#282a36'      # black
-tmux_conf_theme_window_status_current_bg='#bd93f9'      # light blue
+tmux_conf_theme_window_status_current_fg='#1E2326'      # everforest bgDim
+tmux_conf_theme_window_status_current_bg='#A7C080'      # everforest green
 tmux_conf_theme_window_status_current_attr='bold'
 #tmux_conf_theme_window_status_current_format='#I #W'
 tmux_conf_theme_window_status_current_format='#{circled_window_index} #W'
@@ -136,12 +140,12 @@ tmux_conf_theme_window_status_activity_bg='default'
 tmux_conf_theme_window_status_activity_attr='underscore'
 
 # window bell status style
-tmux_conf_theme_window_status_bell_fg='#ffff00'         # yellow
+tmux_conf_theme_window_status_bell_fg='#E67E80'         # everforest red
 tmux_conf_theme_window_status_bell_bg='default'
 tmux_conf_theme_window_status_bell_attr='blink,bold'
 
 # window last status style
-tmux_conf_theme_window_status_last_fg='#595b6f'         # light blue
+tmux_conf_theme_window_status_last_fg='#7A8478'         # everforest grey0
 tmux_conf_theme_window_status_last_bg='default'
 tmux_conf_theme_window_status_last_attr='none'
 
@@ -150,10 +154,10 @@ tmux_conf_theme_window_status_last_attr='none'
 #tmux_conf_theme_left_separator_sub='|'
 #tmux_conf_theme_right_separator_main=''
 #tmux_conf_theme_right_separator_sub='|'
-tmux_conf_theme_left_separator_main=''  # /!\ you don't need to install Powerline
-tmux_conf_theme_left_separator_sub=''   #   you only need fonts patched with
-tmux_conf_theme_right_separator_main='' #   Powerline symbols or the standalone
-tmux_conf_theme_right_separator_sub=''  #   PowerlineSymbols.otf font
+tmux_conf_theme_left_separator_main=''  # /!\ you don't need to install Powerline
+tmux_conf_theme_left_separator_sub=''   #   you only need fonts patched with
+tmux_conf_theme_right_separator_main='' #   Powerline symbols or the standalone
+tmux_conf_theme_right_separator_sub=''  #   PowerlineSymbols.otf font
 
 # status left/right content:
 #   - separate main sections with '|'
@@ -179,7 +183,7 @@ tmux_conf_theme_right_separator_sub=''  #   PowerlineSymbols.otf font
 #     - #{uptime_s}
 #     - #{username}
 #     - #{username_ssh}
-tmux_conf_theme_status_left=' 🌏 #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} '
+tmux_conf_theme_status_left=' 🌿 #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} '
 
 run-shell 'LOCAL_IP=""; \
 case "$(uname -s)" in \
@@ -227,18 +231,18 @@ STARSHIP_TOML="$HOME/.dotfiles/starship/.config/starship.toml"; \
 OS_ICON=$(grep -m1 "^${OS_KEY} = " "$STARSHIP_TOML" 2>/dev/null | cut -d \" -f2 | sed "s/ //g"); \
 [ -z "$OS_ICON" ] && OS_ICON="?"; \
 SEP=$(printf "\356\202\262"); \
-"${TMUX_PROGRAM:-tmux}" set -g @os_box "#[fg=${OS_BG},bg=#6272a4]${SEP}#[fg=${OS_FG},bg=${OS_BG},bold] ${OS_ICON} #[fg=#4ADEDE,bg=${OS_BG}]${SEP}#[fg=#282a36,bg=#4ADEDE,bold]"'
+"${TMUX_PROGRAM:-tmux}" set -g @os_box "#[fg=#414B50,bg=#83C092]${SEP}#[fg=${OS_BG},bg=#414B50]${SEP}#[fg=${OS_FG},bg=${OS_BG},bold] ${OS_ICON} #[fg=#83C092,bg=${OS_BG}]${SEP}#[fg=#1E2326,bg=#83C092,bold]"'
 
 tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #{tasks_status} #{?battery_status, #{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %a %H:%M:%S , %d %b | #{username}#{root} #{@os_box} #{@local_ip} '
 
 # status left style
-tmux_conf_theme_status_left_fg='#282a36,#f8f8f2,#e4e4e4'  # black, white , white
-tmux_conf_theme_status_left_bg='#7AA2f7,#6272a4,#00afff'  # yellow, pink, white blue
+tmux_conf_theme_status_left_fg='#1E2326,#D3C6AA,#1E2326'  # everforest bgDim, fg, bgDim
+tmux_conf_theme_status_left_bg='#DBBC7F,#414B50,#83C092'  # everforest yellow, bg3, aqua
 tmux_conf_theme_status_left_attr='bold,none,none'
 
 # status right style
-tmux_conf_theme_status_right_fg='#f8f8f2,#f8f8f2,#282a36' # light gray, white, black
-tmux_conf_theme_status_right_bg='#44475a,#6272a4,#4ADEDE' # dark gray, red, white
+tmux_conf_theme_status_right_fg='#D3C6AA,#D3C6AA,#1E2326' # everforest fg, fg, bgDim
+tmux_conf_theme_status_right_bg='#414B50,#374145,#83C092' # everforest bg3, bg2, aqua
 tmux_conf_theme_status_right_attr='none,none,bold'
 
 # pairing indicator
@@ -306,7 +310,7 @@ tmux_conf_battery_status_discharging='🔋 ' # U+1F50B
 
 # clock style (when you hit <prefix> + t)
 # you may want to use %I:%M %p in place of %R in tmux_conf_theme_status_right
-tmux_conf_theme_clock_colour='#00afff'  # light blue
+tmux_conf_theme_clock_colour='#83C092'  # everforest aqua
 tmux_conf_theme_clock_style='24'
 
 
@@ -328,6 +332,7 @@ tmux_conf_copy_to_os_clipboard=true
 
 # start with mouse mode enabled
 set -g mouse on
+set -g status-right-length 200
 
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
@@ -357,8 +362,8 @@ set -g @tpm_plugins '           \
 set -g @tasks_manager 'taskwarrior'
 
 # Colors
-set -g @tasks_format_begin '#[fg=orange,bg=#f8f8f2]'
-set -g @tasks_format_end '#[fg=white,bg=#44475a]'
+set -g @tasks_format_begin '#[fg=#1E2326,bg=#DBBC7F]'
+set -g @tasks_format_end '#[fg=#D3C6AA,bg=#374145]'
 
 # Icons
 set -g @tasks_icon_urgent '🔥'
@@ -391,6 +396,3 @@ set -g @tasks_icon_outstanding '+'
 #
 # "$@"
 # # /!\ do not remove the previous line
-
-# Add this to your ~/.tmux.conf.local
-

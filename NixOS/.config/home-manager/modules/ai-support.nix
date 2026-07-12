@@ -6,7 +6,7 @@
   home.packages = with pkgs; [
     gemini-cli
     codex
-    claude-code
+    unstable-pkgs.claude-code
     unstable-pkgs.antigravity-cli
     inputs.hermes-agent.packages.${pkgs.system}.default
   ];
