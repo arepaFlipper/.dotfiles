@@ -27,6 +27,7 @@ in
     ./modules/window_manager.nix
     ./modules/ai-support.nix
     ./modules/ghostty.nix
+    ./modules/qutebrowser.nix
   ];
   home.username = "arepa";
   home.homeDirectory = "/home/arepa";
@@ -51,7 +52,6 @@ in
     docker-compose
 
     libreoffice
-    qutebrowser
     yazi
   ];
 

@@ -10,7 +10,6 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
-exec_always --no-startup-id killall polybar
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
 exec --no-startup-id "$HOME/.dotfiles/Scripts/scripts/synergy_invert.sh"
 
@@ -72,7 +71,7 @@ tiling_drag modifier titlebar
 
 # start a terminal
 bindsym $mod+Return exec --no-startup-id ghostty
-bindsym $mod+g exec --no-startup-id '/etc/profiles/per-user/cris/bin/qutebrowser'
+bindsym $mod+g exec --no-startup-id qutebrowser
 
 # kill focused window
 bindsym $mod+q kill
