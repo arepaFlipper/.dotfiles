@@ -41,7 +41,6 @@
       enable = true;
       package = pkgs.oh-my-zsh;
       plugins = [ "git" "tmux" "autopep8" "pip" "python" "pyenv"];
-      theme = "robbyrussell";
     };
   };
 

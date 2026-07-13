@@ -23,4 +23,13 @@ in
     -- macOS: use Neovim's built-in pbcopy/pbpaste. No vim.g.clipboard override.
     vim.opt.clipboard = "unnamedplus"
   '';
+
+  # OS-specific plugin overrides, sourced by bvim's lua/config/lazy.lua.
+  # NixArch: use the gruvbox colorscheme instead of LazyVim's tokyonight default.
+  xdg.configFile."bvim-local/plugins.lua".text = ''
+    return {
+      { "rmehri01/onenord.nvim", priority = 1000, lazy = false, opts = {} },
+      { "LazyVim/LazyVim", opts = { colorscheme = "onenord" } },
+    }
+  '';
 }
