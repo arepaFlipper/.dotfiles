@@ -40,15 +40,11 @@ in
       target = "${config.home.homeDirectory}/.config/starship.toml";
     };
 
-    "~/.tmux.conf" = {
-      source = ../../../tmux/.tmux.conf;
-      target = "${config.home.homeDirectory}/.tmux.conf";
-    };
-
-    "~/.tmux.conf.local" = {
-      source = ../../../tmux/dracula.tmux.conf.local;
-      target = "${config.home.homeDirectory}/.tmux.conf.local";
-    };
+    # NOTE: ~/.tmux.conf and ~/.tmux.conf.local are intentionally NOT symlinked
+    # here. modules/tmux.nix now owns tmux the NixArch way: programs.tmux writes
+    # ~/.config/tmux/tmux.conf which sources the shared framework and selects the
+    # dracula theme via TMUX_CONF_LOCAL. Symlinking ~/.tmux.conf would shadow that
+    # XDG config and reintroduce a second source of truth.
 
   } // tmuxScriptEntries;
 }
