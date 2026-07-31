@@ -12,5 +12,6 @@ cursors/.icons/catppuccin-mocha-sky-cursors
 **/lazy-lock.json
 **.lock
 !MacOS/.config/nix/flake.lock
+!NixArch/.config/home-manager/flake.lock
 Synergy/.var/app/com.symless.synergy/config/Synergy/synergyCert.pem
 yazi/.config/yazi/keymap.toml-1780739738678217

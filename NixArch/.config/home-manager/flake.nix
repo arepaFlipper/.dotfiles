@@ -7,10 +7,9 @@
     unstable.url = "nixpkgs/nixos-unstable";  # Input for Nixpkgs channel or repository
     home-manager.url = "github:nix-community/home-manager/release-25.05";  # Input for Home Manager from GitHub
     home-manager.inputs.nixpkgs.follows = "nixpkgs";  # Ensure Home Manager follows the same Nixpkgs version
-    ghostty.url = "github:ghostty-org/ghostty";
   };
 
-  outputs = { self, nixpkgs, unstable, home-manager, ghostty, ... } @ inputs:
+  outputs = { self, nixpkgs, unstable, home-manager, ... } @ inputs:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -23,8 +22,8 @@
       homeConfigurations."arepa" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
-        extraSpecialArgs = { 
-          inherit ghostty inputs; 
+        extraSpecialArgs = {
+          inherit inputs;
           unstable-pkgs = unstable-pkgs;
         };
 
