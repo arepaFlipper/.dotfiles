@@ -5,19 +5,8 @@ in
 {
   home.packages = with pkgs; [
     neovim-unwrapped
-    # vimPlugins.nvim-treesitter
-    # unzip
-    # go
-    # cargo
-    # openjdk
-    # fd
-    # tree-sitter
-    # luarocks-nix
-    # lua5_1
     gcc
     gnumake
-    # w3m
-    # solc
   ];
 
   programs.neovim = {

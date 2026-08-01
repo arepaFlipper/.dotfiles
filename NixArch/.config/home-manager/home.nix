@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, lib, unstable-pkgs, ... }:
+{ inputs, config, pkgs, lib, unstable-pkgs, nixGLIntel, ... }:
 let
   unstable = import <nixos-unstable> { config = {allowUnfree = true;};};
   tmuxDir = ../../../tmux;

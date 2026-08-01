@@ -7,9 +7,10 @@
     unstable.url = "nixpkgs/nixos-unstable";  # Input for Nixpkgs channel or repository
     home-manager.url = "github:nix-community/home-manager/release-25.05";  # Input for Home Manager from GitHub
     home-manager.inputs.nixpkgs.follows = "nixpkgs";  # Ensure Home Manager follows the same Nixpkgs version
+    nixgl.url = "github:nix-community/nixGL";  # Wraps Nix-built OpenGL apps to use a working Mesa on non-NixOS hosts
   };
 
-  outputs = { self, nixpkgs, unstable, home-manager, ... } @ inputs:
+  outputs = { self, nixpkgs, unstable, home-manager, nixgl, ... } @ inputs:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -25,6 +26,7 @@
         extraSpecialArgs = {
           inherit inputs;
           unstable-pkgs = unstable-pkgs;
+          nixGLIntel = nixgl.packages.${system}.nixGLIntel;
         };
 
         # Specify your home configuration modules here, for example,
