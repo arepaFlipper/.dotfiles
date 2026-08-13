@@ -75,6 +75,11 @@ end
 -- frontmatter alias, so a bare `[[TCP]]` resolves to the whole note instead of
 -- the section about TCP. This rewrites the link to point at the `#TCP` anchor
 -- inside the note that owns the alias, keeping `TCP` as the displayed text.
+--
+-- When no note declares the text, we fall back to searching the vault for a
+-- `# <text>` heading: the section exists, it just was never registered as an
+-- alias. The link is anchored to that heading and the text is appended to the
+-- note's frontmatter aliases, so the next lookup takes the fast path above.
 
 -- Strip surrounding YAML quotes and undo the escaping they imply.
 local function yaml_unquote(value)
@@ -253,6 +258,232 @@ local function find_notes_declaring(query)
 	return matches
 end
 
+-- === Heading fallback: notes that only *document* the text =================
+
+-- Every note holding a `# <query>` heading (at any level), keyed by file: the
+-- anchor Obsidian resolves is the heading text, so a second identical heading in
+-- the same note would produce the very same link.
+local function find_notes_with_heading(query)
+	local wanted = query:lower()
+	local matches, seen = {}, {}
+
+	local function record(path, lnum, heading)
+		if seen[path] then
+			return
+		end
+		seen[path] = true
+		local note = read_frontmatter(path)
+		matches[#matches + 1] = {
+			id = (note and note.id) or vim.fn.fnamemodify(path, ":t:r"),
+			path = path,
+			rel = (path:gsub("^" .. vim.pesc(vault_root) .. "/", "")),
+			lnum = lnum,
+			anchor = heading,
+		}
+	end
+
+	if vim.fn.executable("rg") == 0 then
+		for _, path in ipairs(vim.fn.globpath(vault_root, "**/*.md", false, true)) do
+			for lnum, line in ipairs(vim.fn.readfile(path)) do
+				local heading = line:match("^#+%s*(.-)%s*$")
+				if heading and heading:lower() == wanted then
+					record(path, lnum, heading)
+					break
+				end
+			end
+		end
+	else
+		local out = vim.fn.systemlist({
+			"rg",
+			"--ignore-case",
+			"--line-number",
+			"--no-heading",
+			"--with-filename",
+			"--glob",
+			"*.md",
+			"--glob",
+			"!.obsidian/**",
+			"-e",
+			"^#+\\s*" .. escape_regex(query) .. "\\s*$",
+			vault_root,
+		})
+		if vim.v.shell_error > 1 then
+			vim.notify("ripgrep failed while searching the vault", vim.log.levels.ERROR)
+			return {}
+		end
+		for _, hit in ipairs(out) do
+			local path, lnum, text = hit:match("^(.-):(%d+):(.*)$")
+			if path then
+				local heading = text:match("^#+%s*(.-)%s*$")
+				if heading then
+					record(path, tonumber(lnum), heading)
+				end
+			end
+		end
+	end
+
+	table.sort(matches, function(a, b)
+		return a.rel < b.rel
+	end)
+	return matches
+end
+
+-- Render a string as a YAML scalar, quoting only when the plain form would be
+-- ambiguous (leading `-`, a `:` separator, a `#` comment, ...).
+local function yaml_scalar(value)
+	if value:match("^[%w][%w%s_%-%.%(%)%+/]*$") and not value:match("%s$") then
+		return value
+	end
+	local escaped = value:gsub("\\", "\\\\"):gsub('"', '\\"')
+	return '"' .. escaped .. '"'
+end
+
+-- Index of the frontmatter's closing `---`, or nil when the note has none.
+local function frontmatter_end(lines)
+	if vim.trim(lines[1] or "") ~= "---" then
+		return nil
+	end
+	for i = 2, #lines do
+		local trimmed = vim.trim(lines[i])
+		if trimmed == "---" or trimmed == "..." then
+			return i
+		end
+	end
+	return nil
+end
+
+-- Work out the smallest edit that appends `alias` to a note's frontmatter
+-- aliases, without rewriting the rest of the file. Returns the replaced range as
+-- 0-indexed `start, stop` (nvim_buf_set_lines semantics) plus the new lines, or
+-- nil and a reason.
+local function plan_alias_edit(lines, alias)
+	local fm_end = frontmatter_end(lines)
+	if not fm_end then
+		return nil, "note has no YAML frontmatter"
+	end
+
+	-- Locate the `aliases:` key, its inline value, and the last entry of its
+	-- block sequence (indented `- X` lines that follow it).
+	local key_name, key_line, key_value, last_item, in_aliases = nil, nil, nil, nil, false
+	local existing = {}
+	for i = 2, fm_end - 1 do
+		local key, value = lines[i]:match("^([%w_-]+):%s*(.-)%s*$")
+		if key then
+			in_aliases = key == "aliases" or key == "alias"
+			if in_aliases then
+				key_name, key_line, key_value, last_item = key, i, value, nil
+			end
+		elseif in_aliases then
+			local item = lines[i]:match("^%s+-%s*(.-)%s*$")
+			if item and item ~= "" then
+				last_item = i
+				existing[#existing + 1] = yaml_unquote(item)
+			end
+		end
+	end
+
+	if key_value then
+		local flow = key_value:match("^%[(.*)%]$")
+		if flow then
+			existing = split_flow_seq(flow)
+		elseif key_value ~= "" then
+			existing = { yaml_unquote(key_value) }
+		end
+	end
+	for _, item in ipairs(existing) do
+		if item:lower() == alias:lower() then
+			return nil, "alias already present"
+		end
+	end
+
+	local scalar = yaml_scalar(alias)
+
+	if not key_line then
+		-- No aliases key at all: start one below `id:`, or at the top of the block.
+		local at = 1
+		for i = 2, fm_end - 1 do
+			if lines[i]:match("^id:") then
+				at = i
+				break
+			end
+		end
+		return at, at, { "aliases:", "  - " .. scalar }
+	end
+
+	local flow = key_value:match("^%[(.*)%]$")
+	if flow then
+		local body = vim.trim(flow)
+		local joined = body == "" and scalar or (body .. ", " .. scalar)
+		return key_line - 1, key_line, { key_name .. ": [" .. joined .. "]" }
+	end
+
+	if key_value ~= "" then
+		-- Single inline value (`aliases: Foo`): expand it into a block sequence.
+		local only = yaml_scalar(yaml_unquote(key_value))
+		return key_line - 1, key_line, { key_name .. ":", "  - " .. only, "  - " .. scalar }
+	end
+
+	if last_item then
+		local indent = lines[last_item]:match("^(%s*)")
+		return last_item, last_item, { indent .. "- " .. scalar }
+	end
+	return key_line, key_line, { "  - " .. scalar }
+end
+
+-- The loaded buffer holding `path`, if the note is already open.
+local function loaded_buf_for(path)
+	local target = vim.fn.fnamemodify(path, ":p")
+	for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+		if vim.api.nvim_buf_is_loaded(buf) then
+			local name = vim.api.nvim_buf_get_name(buf)
+			if name ~= "" and vim.fn.fnamemodify(name, ":p") == target then
+				return buf
+			end
+		end
+	end
+	return nil
+end
+
+-- Register `alias` in the note's frontmatter so later lookups resolve it
+-- directly. Edits the open buffer when the note is loaded (and saves it, unless
+-- it already had unsaved changes) so the two copies cannot diverge.
+local function add_alias_to_note(note, alias)
+	local buf = loaded_buf_for(note.path)
+	local lines = buf and vim.api.nvim_buf_get_lines(buf, 0, -1, false) or vim.fn.readfile(note.path)
+
+	local start, stop, new_lines = plan_alias_edit(lines, alias)
+	if not start then
+		if stop ~= "alias already present" then
+			vim.notify("Could not add alias to " .. note.rel .. ": " .. stop, vim.log.levels.WARN)
+		end
+		return
+	end
+
+	if buf then
+		local dirty = vim.bo[buf].modified
+		vim.api.nvim_buf_set_lines(buf, start, stop, false, new_lines)
+		if dirty then
+			vim.notify("Added alias to the open (unsaved) " .. note.rel, vim.log.levels.INFO)
+			return
+		end
+		vim.api.nvim_buf_call(buf, function()
+			vim.cmd("silent noautocmd write")
+		end)
+	else
+		for _ = start + 1, stop do
+			table.remove(lines, start + 1)
+		end
+		for i, line in ipairs(new_lines) do
+			table.insert(lines, start + i, line)
+		end
+		if vim.fn.writefile(lines, note.path) ~= 0 then
+			vim.notify("Failed to write " .. note.rel, vim.log.levels.ERROR)
+			return
+		end
+	end
+	vim.notify("Added alias '" .. alias .. "' to " .. note.rel, vim.log.levels.INFO)
+end
+
 -- Locate the `[[...]]` the cursor sits on, and take it apart into the link
 -- target and the display text (`[[target|display]]`).
 local function link_under_cursor()
@@ -280,33 +511,39 @@ local function link_under_cursor()
 end
 
 -- Swap the link for its anchored form, guarding against the line having changed
--- while a picker was open.
+-- while a picker was open. `note.anchor` overrides the anchor text, so a heading
+-- match keeps the heading's own casing. Returns true when the line was rewritten.
 local function replace_link(bufnr, row, original_line, link, note)
 	if not vim.api.nvim_buf_is_valid(bufnr) then
-		return
+		return false
 	end
 	local current = vim.api.nvim_buf_get_lines(bufnr, row - 1, row, false)[1]
 	if current ~= original_line then
 		vim.notify("Line changed since the link was picked; aborting", vim.log.levels.WARN)
-		return
+		return false
 	end
 
-	local anchored = string.format("[[%s#%s|%s]]", note.id, link.target, link.display or link.target)
+	local anchor = note.anchor or link.target
+	local anchored = string.format("[[%s#%s|%s]]", note.id, anchor, link.display or link.target)
 	local new_line = current:sub(1, link.start_col - 1) .. anchored .. current:sub(link.end_col + 1)
 	vim.api.nvim_buf_set_lines(bufnr, row - 1, row, false, { new_line })
 	vim.notify("Linked to " .. note.rel, vim.log.levels.INFO)
+	return true
 end
 
--- Telescope list of the notes that declare the alias, so a link like `[[JSON]]`
--- (declared by two notes) can be pointed at the right one. Falls back to
--- vim.ui.select when Telescope is not loaded.
-local function pick_note(link, matches, on_choice)
+-- Telescope list of the candidate notes, so a link like `[[JSON]]` (declared by
+-- two notes) can be pointed at the right one. Heading matches carry a line
+-- number, which the preview jumps to. Falls back to vim.ui.select when Telescope
+-- is not loaded.
+local function pick_note(title, matches, on_choice)
+	local located = matches[1] ~= nil and matches[1].lnum ~= nil
+
 	local ok, pickers = pcall(require, "telescope.pickers")
 	if not ok then
 		vim.ui.select(matches, {
-			prompt = "Notes declaring " .. link.target,
+			prompt = title,
 			format_item = function(item)
-				return item.id .. "  " .. item.rel
+				return item.id .. "  " .. item.rel .. (item.lnum and (":" .. item.lnum) or "")
 			end,
 		}, function(choice)
 			if choice then
@@ -324,20 +561,25 @@ local function pick_note(link, matches, on_choice)
 
 	pickers
 		.new({}, {
-			prompt_title = "Notes declaring " .. link.target,
+			prompt_title = title,
 			finder = finders.new_table({
 				results = matches,
 				entry_maker = function(entry)
 					return {
 						value = entry,
-						display = string.format("%-40s %s", entry.id, entry.rel),
+						display = string.format(
+							"%-40s %s",
+							entry.id,
+							entry.rel .. (entry.lnum and (":" .. entry.lnum) or "")
+						),
 						ordinal = entry.id .. " " .. entry.rel,
 						path = entry.path,
+						lnum = entry.lnum,
 					}
 				end,
 			}),
 			sorter = conf.generic_sorter({}),
-			previewer = previewers.vim_buffer_cat.new({}),
+			previewer = located and previewers.vim_buffer_vimgrep.new({}) or previewers.vim_buffer_cat.new({}),
 			attach_mappings = function(prompt_bufnr)
 				actions.select_default:replace(function()
 					local selection = action_state.get_selected_entry()
@@ -363,24 +605,45 @@ local function anchor_link_under_cursor()
 		return
 	end
 
-	local matches = find_notes_declaring(link.target)
-	if #matches == 0 then
-		vim.notify("No note declares '" .. link.target .. "' as an id or alias", vim.log.levels.WARN)
-		return
-	end
-
 	local bufnr = vim.api.nvim_get_current_buf()
 	local row = vim.api.nvim_win_get_cursor(0)[1]
 	local original_line = vim.api.nvim_get_current_line()
 
-	if #matches == 1 then
-		replace_link(bufnr, row, original_line, link, matches[1])
+	local matches = find_notes_declaring(link.target)
+	if #matches > 0 then
+		if #matches == 1 then
+			replace_link(bufnr, row, original_line, link, matches[1])
+		else
+			pick_note("Notes declaring " .. link.target, matches, function(note)
+				replace_link(bufnr, row, original_line, link, note)
+			end)
+		end
 		return
 	end
 
-	pick_note(link, matches, function(note)
-		replace_link(bufnr, row, original_line, link, note)
-	end)
+	-- Nothing declares it: fall back to the notes that merely have a section
+	-- about it, and promote that heading to an alias on the way out.
+	local headings = find_notes_with_heading(link.target)
+	if #headings == 0 then
+		vim.notify(
+			"No note declares '" .. link.target .. "' as an id or alias, nor has a '# " .. link.target .. "' heading",
+			vim.log.levels.WARN
+		)
+		return
+	end
+
+	local function anchor_and_register(note)
+		if replace_link(bufnr, row, original_line, link, note) then
+			add_alias_to_note(note, note.anchor)
+		end
+	end
+
+	if #headings == 1 then
+		anchor_and_register(headings[1])
+		return
+	end
+
+	pick_note("Notes with a '# " .. link.target .. "' heading", headings, anchor_and_register)
 end
 
 return {
@@ -440,7 +703,9 @@ return {
 				opts = { buffer = true },
 			},
 			-- Rewrite the [[link]] under the cursor as [[<note id>#<text>|<text>]],
-			-- pointing at whichever note declares that text as an id or alias.
+			-- pointing at whichever note declares that text as an id or alias --
+			-- or, failing that, at the note whose `# <text>` heading covers it,
+			-- adding the text to that note's aliases.
 			["<leader>ol"] = {
 				action = function()
 					anchor_link_under_cursor()
