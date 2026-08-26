@@ -67,7 +67,7 @@
 
 	in {
 		nixosConfigurations = {  # NixOS configurations section
-			nixos = lib.nixosSystem {  # Define a NixOS system configuration named 'nixos'
+			foxtrot = lib.nixosSystem {  # Define a NixOS system configuration named 'nixos'
 				inherit system;  # Inherit the system architecture
 				modules = [ 
           ./configuration.nix 

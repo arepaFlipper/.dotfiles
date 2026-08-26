@@ -246,3 +246,4 @@ if [[ "$OSTYPE" != darwin* ]]; then
   eval "$(zoxide init --cmd cd zsh)"
 fi
 
+export PATH="$HOME/.local/bin:$PATH"

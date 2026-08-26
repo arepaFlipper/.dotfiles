@@ -63,8 +63,8 @@
   # NixArch: use the gruvbox colorscheme instead of LazyVim's tokyonight default.
   xdg.configFile."bvim-local/plugins.lua".text = ''
     return {
-      { "rose-pine/neovim", priority = 1000, lazy = false, opts = {} },
-      { "LazyVim/LazyVim", opts = { colorscheme = "rose-pine" } },
+      { "rebelot/kanagawa.nvim", priority = 1000, lazy = false, opts = {} },
+      { "LazyVim/LazyVim", opts = { colorscheme = "kanagawa" } },
     }
   '';
 
