@@ -1,0 +1,12 @@
+[Unit]
+Description=Synergy → AeroSpace monitor toggle bridge
+After=default.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/synergy-aerospace-bridge
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=default.target
