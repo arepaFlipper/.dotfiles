@@ -1,18 +1,18 @@
 { config, pkgs, lib, ... }:
 
 {
+  # Same pattern as NixArch's modules/tmux.nix: keep programs.tmux minimal and
+  # delegate all keybindings/theming to the shared gpakosz/oh-my-tmux framework
+  # at ~/.dotfiles/tmux/.tmux.conf. The framework is themed by whichever file
+  # TMUX_CONF_LOCAL points at; on alpha that's the dracula theme. Do NOT also
+  # symlink ~/.tmux.conf (see home.nix) — with no ~/.tmux.conf present, tmux
+  # reads the XDG config home-manager generates here, which sources the
+  # framework and sets TMUX_CONF, so `prefix r`/`prefix e` keep working.
   programs.tmux = {
     enable = true;
-
-    # shell = "${pkgs.zsh}/bin/zsh";
     package = pkgs.tmux;
-
-    keyMode = "vi";
-
-    baseIndex = 1;
     mouse = true;
-    historyLimit = 999999;
-    escapeTime = 10;
+    keyMode = "vi";
 
     plugins = with pkgs.tmuxPlugins; [
       better-mouse-mode
@@ -25,27 +25,22 @@
       }
     ];
 
-    extraConfig = lib.concatStringsSep "\n" [
-       # Shell configuration first
+    extraConfig = ''
+      # The gpakosz/oh-my-tmux framework is self-referential: it re-reads
+      # $TMUX_CONF to extract its own embedded shell helpers, e.g.
+      #   run 'cut -c3- "$TMUX_CONF" | sh -s _apply_configuration'
+      # It only auto-detects TMUX_CONF when unset, and its detection would
+      # land on the home-manager-generated ~/.config/tmux/tmux.conf (this very
+      # wrapper), which has no _apply_configuration function -> `sh` exits 127
+      # and `prefix r`/`prefix e` break. So pin TMUX_CONF to the framework file
+      # itself *before* sourcing it.
+      set-environment -g TMUX_CONF "$HOME/.dotfiles/tmux/.tmux.conf"
 
-      "set -g renumber-windows on"
-      "bind r source-file ~/.tmux.conf \\; display \"Reloaded tmux config\""
-      "set -g status-keys vi"
-      "set -g default-terminal \"tmux-256color\""
-      "set -ag terminal-overrides \",xterm-256color:RGB\""
-      "bind | split-window -h"
-      "bind - split-window -v"
-      "bind J resize-pane -D 5"
-      "bind K resize-pane -U 5"
-      "bind L resize-pane -R 5"
-      "bind H resize-pane -L 5"
-      "bind -r h select-pane -L"
-      "bind -r j select-pane -D"
-      "bind -r k select-pane -U"
-      "bind -r l select-pane -R"
-      "bind -T copy-mode-vi v send -X begin-selection"
-      "bind -T copy-mode-vi y send -X copy-selection"
-    ];
+      # dracula theme override: TMUX_CONF_LOCAL only defaults to the framework's
+      # $TMUX_CONF.local if unset, so pointing it at our own file overrides just
+      # the theme. Other machines set their own (e.g. gruvbox on NixArch).
+      set-environment -g TMUX_CONF_LOCAL "$HOME/.dotfiles/tmux/dracula.tmux.conf.local"
+      source $HOME/.dotfiles/tmux/.tmux.conf
+    '';
   };
 }
-

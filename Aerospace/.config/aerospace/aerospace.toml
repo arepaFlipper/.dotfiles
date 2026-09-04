@@ -28,7 +28,8 @@ cmd-shift-k = 'move-workspace-to-monitor main'
 cmd-shift-l = 'move right'
 
 cmd-s = 'focus-monitor 1'
-cmd-j = [
+cmd-j = 'focus-monitor 1'
+cmd-backslash = [
   'move-workspace-to-monitor next',
   'focus-monitor next'
 ]
@@ -82,6 +83,36 @@ cmd-shift-8 = 'move-node-to-workspace 8'
 cmd-shift-9 = 'move-node-to-workspace 9'
 cmd-shift-0 = 'move-node-to-workspace 10'
 
+# --- Synergy interop -------------------------------------------------------
+# Toggle focus between the two monitors (Sidecar <-> Built-in). With exactly
+# two monitors, `focus-monitor --wrap-around next` IS the toggle: from Built-in
+# it wraps to Sidecar, from Sidecar back to Built-in.
+#
+# Two separate input paths land here, because this Mac (hostname `alpha`) runs
+# Synergy as a *client* -- the server owns the physical keyboard and swallows
+# its own hotkeys, so they never arrive here as real keystrokes:
+#
+#   ctrl-alt-backslash  This Mac's own keyboard. Synergy is not involved at
+#                       all, so AeroSpace sees Control+Option+\ natively.
+#   f19                 Synthesized by the Synergy server right after
+#                       switchToScreen(alpha). F19 carries no modifiers, so
+#                       there is nothing for Linux/Windows/macOS to disagree
+#                       about -- it sidesteps the ctrl/alt/meta mapping mess.
+ctrl-alt-backslash = 'focus-monitor --wrap-around next'
+# Every modifier permutation of F19 maps to the same toggle. Synergy fires the
+# release-action while the physical Ctrl/Alt may still be held, so the key can
+# arrive decorated with modifiers depending on release order. Binding all of
+# them makes the result independent of how you let go of the combo.
+f19 = 'focus-monitor --wrap-around next'
+ctrl-f19 = 'focus-monitor --wrap-around next'
+alt-f19 = 'focus-monitor --wrap-around next'
+ctrl-alt-f19 = 'focus-monitor --wrap-around next'
+cmd-f19 = 'focus-monitor --wrap-around next'
+cmd-alt-f19 = 'focus-monitor --wrap-around next'
+# Fallback if a synthesized bare F19 doesn't come through: switch the Synergy
+# side to `keystroke(Meta+Alt+Backslash)` and uncomment this line instead.
+# cmd-alt-backslash = 'focus-monitor --wrap-around next'
+
 cmd-r = 'reload-config'
 
 alt-r = 'mode resize'
@@ -124,13 +155,16 @@ if.app-id = 'com.carriez.rustdesk'
 run = 'move-node-to-workspace 0'
 
 [workspace-to-monitor-force-assignment]
-1 = 'main'
-2 = 'main'
-3 = 'main'
-4 = 'main'
-5 = 'main'
-6 = 'secondary'
-7 = 'secondary'
-8 = 'secondary'
-9 = 'secondary'
-10 = 'main'
+# Pinned by display-name regex (case-insensitive) instead of main/secondary,
+# so the mapping survives rearranging displays or moving the menu bar.
+# Second element is the fallback when that display isn't connected.
+1 = ['sidecar', 'main']
+2 = ['sidecar', 'main']
+3 = ['sidecar', 'main']
+4 = ['sidecar', 'main']
+5 = ['sidecar', 'main']
+6 = ['built-in', 'main']
+7 = ['built-in', 'main']
+8 = ['built-in', 'main']
+9 = ['built-in', 'main']
+10 = ['built-in', 'main']

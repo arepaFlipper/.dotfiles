@@ -17,8 +17,8 @@ alias jupy="~/Documents/jupyter_notes/jupyter-init.sh"
 # tmoxpen projects
 alias abacus="tmoxpen abacus"
 alias 2nd_brain="tmoxpen 2nd_brain"
-alias infra="tmoxpen infranet"
-alias intra="tmoxpen infranet"
+alias infra="tmoxpen intranet"
+alias intra="tmoxpen intranet"
 alias dotfiles="tmoxpen dotfiles"
 alias forms="tmoxpen forms"
 alias tuto="tmoxpen tuto"
@@ -246,3 +246,4 @@ if [[ "$OSTYPE" != darwin* ]]; then
   eval "$(zoxide init --cmd cd zsh)"
 fi
 
+export PATH="$HOME/.local/bin:$PATH"

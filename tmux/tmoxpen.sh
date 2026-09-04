@@ -38,13 +38,15 @@ load_project() {
       tmux send-keys -t "$s":1.{last} 'cd ./tests/ && npm run test' C-m
     }
     ;;
-  infranet)
-    session_name="infranet"
+  intranet)
+    session_name="intranet"
     path="$HOME/Documents/ABEXUS/infranet/dev"
     setup_logs_session() {
       local s="$1"
       tmux send-keys -t "$s":1 'docker compose up -d && docker compose logs -f' C-m
       tmux split-window -v -t "$s":1
+      tmux split-window -h -t "$s":1.{last}
+      tmux send-keys -t "$s":1.{last} 'nix develop --command zsh -c "source .env && cloud-sql-proxy abexus-intranet:us-central1:intranet-db --port 5433"' C-m
     }
     ;;
   2nd_brain)
