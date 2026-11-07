@@ -27,7 +27,8 @@ cmd-shift-j = 'move-workspace-to-monitor 1'
 cmd-shift-k = 'move-workspace-to-monitor main'
 cmd-shift-l = 'move right'
 
-cmd-s = 'focus-monitor 1'
+# Screen toggle: with two monitors, wrapping to `next` bounces between them.
+cmd-s = 'focus-monitor --wrap-around next'
 cmd-j = 'focus-monitor 1'
 cmd-backslash = [
   'move-workspace-to-monitor next',
@@ -132,7 +133,7 @@ run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
 if.app-id = 'md.obsidian'
-run = 'move-node-to-workspace 6'
+run = 'move-node-to-workspace 2'
 
 [[on-window-detected]]
 if.app-id = "com.googlecode.iterm2"
