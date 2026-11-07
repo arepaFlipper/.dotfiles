@@ -62,7 +62,6 @@
       "tailscale"
       "terraform"
       "tree"          # (nix)
-      "vercel-cli"
       "w3m"
       "xclip"
       "yarn"

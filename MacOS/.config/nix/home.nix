@@ -32,6 +32,7 @@ in
     ./modules/shell.nix
     ./modules/tmux.nix
     ./modules/neovim.nix
+    ./modules/dimscreen.nix
   ];
 
   home.file = {
