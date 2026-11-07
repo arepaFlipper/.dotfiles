@@ -1,5 +1,7 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.cargo/bin:$HOME/.config/git/git-log-compact:/usr/local/bin:/usr/bin:$PATH
+export PATH=$HOME/bin:$HOME/.config/git/git-log-compact:/usr/local/bin:/usr/bin:$PATH
+# Don't let the global rustup toolchain shadow a Nix dev shell's toolchain
+[[ -z $IN_NIX_SHELL ]] && export PATH=$HOME/.cargo/bin:$PATH
 
 
 #Aliases
@@ -221,7 +223,8 @@ alias vimdiff="NVIM_APPNAME=LazyVim nvim -d"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+# Don't let the global bun shadow a Nix dev shell's bun
+[[ -z $IN_NIX_SHELL ]] && export PATH="$BUN_INSTALL/bin:$PATH"
 
 export XCURSOR_THEME="catppuccin-mocha-sky-cursors"
 
