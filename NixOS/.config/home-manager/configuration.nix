@@ -128,6 +128,8 @@
     xorg.xrandr
     xorg.xbacklight
     xorg.xwininfo
+    xorg.xmodmap
+    xdotool
     xclip
 
     i3lock-color
@@ -155,7 +157,6 @@
     };
 
   networking = {
-
     hostName = "foxtrot"; # Define your hostname.
     networkmanager.enable = true;
     firewall = {
@@ -171,7 +172,9 @@
       192.168.1.87    M2
       192.168.1.25    Alien
       192.168.1.7     Arch
+      192.168.1.29    intra.foxtrot.co
       192.168.1.29    hub.foxtrot.co
+      192.168.1.8     intra.alpha.co
     '';
   };
 

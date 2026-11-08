@@ -21,7 +21,9 @@ c.url.searchengines = {
     'yt': 'https://www.youtube.com/results?search_query={}',
     'annas': 'https://annas-archive.li/search?q={}',
     'mynix': 'https://mynixos.com/search?q={}',
-    'emo': 'https://emojipedia.org/en/search?q={}'
+    'emo': 'https://emojipedia.org/en/search?q={}',
+    '3d': 'https://www.thingiverse.com/search?q={}&page=1',
+    'crate': 'https://crates.io/search?q={}'
 }
 
 # Key bindings
@@ -53,6 +55,9 @@ c.tabs.padding = {'top': 5, 'bottom': 5, 'left': 5, 'right': 5}
 # Downloads
 c.downloads.location.directory = '~/Downloads'
 c.downloads.location.prompt = False  # Download files immediately without prompting
+
+# Key bindings
+config.bind(',3', 'download --dest ~/3d_print/zip_downloads')
 
 # Privacy
 config.set('content.blocking.enabled', True)  # Enable content blocking

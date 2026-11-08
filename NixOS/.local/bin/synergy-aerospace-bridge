@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# When Ctrl+Alt+\ fires on foxtrot, Synergy logs "switchToScreen(alpha-0ea09446)".
+# This script catches that and tells AeroSpace to toggle monitors on alpha via SSH.
+# Watching the log avoids all macOS TCC/key-injection issues.
+
+LOG="${HOME}/.var/app/com.symless.synergy/.local/state/Synergy/synergy.log"
+DEBOUNCE=1
+LAST_FIRE=0
+
+notify() {
+  DISPLAY=:0 XAUTHORITY=/run/user/1000/gdm/Xauthority \
+    DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus \
+    notify-send -t 3000 "Synergy" "$1"
+}
+
+while read -r _; do
+  NOW=$(date +%s)
+  if ((NOW - LAST_FIRE >= DEBOUNCE)); then
+    LAST_FIRE=$NOW
+    notify "Hotkey fired → sending AeroSpace toggle to alpha"
+    ssh -i "${HOME}/.ssh/M2" -o BatchMode=yes -o ConnectTimeout=3 \
+      M2 "/opt/homebrew/bin/aerospace focus-monitor --wrap-around next" </dev/null &
+    #M2 "osascript -e 'tell application \"System Events\" to keystroke \"s\" using {command down}'" &
+  fi
+done < <(tail -F "${LOG}" 2>/dev/null | grep --line-buffered 'hotkey: switchToScreen(alpha-0ea09446)')

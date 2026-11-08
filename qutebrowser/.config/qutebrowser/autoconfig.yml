@@ -32,6 +32,8 @@ settings:
     global: dark
   content.javascript.clipboard:
     global: access-paste
+  content.notifications.enabled:
+    https://meet.google.com: true
   tabs.show:
     global: never
   url.default_page:
