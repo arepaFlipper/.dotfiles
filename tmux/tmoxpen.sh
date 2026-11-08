@@ -40,7 +40,7 @@ load_project() {
     ;;
   intranet)
     session_name="intranet"
-    path="$HOME/Documents/ABEXUS/infranet/dev"
+    path="$HOME/Documents/ABEXUS/intranet/dev"
     setup_logs_session() {
       local s="$1"
       tmux send-keys -t "$s":1 'docker compose up -d && docker compose logs -f' C-m
@@ -125,7 +125,7 @@ load_project() {
     ;;
   onlyfans)
     session_name="onlyfans"
-    path="$HOME/Documents/yt-tutos/AsAProgrammer/onlyfans"
+    path="$HOME/Documents/yt-tutos/AsAProgrammer/onlyfans/dev"
     ;;
   debt)
     session_name="debt_collector"

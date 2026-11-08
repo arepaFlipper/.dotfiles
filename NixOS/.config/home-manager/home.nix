@@ -22,6 +22,7 @@ in
     ./modules/dns_resolver.nix
     ./modules/tmux.nix
     ./modules/syncthing.nix
+    ./modules/docs-sync.nix
     ./modules/theming.nix
     ./modules/git.nix
     ./modules/window_manager.nix
@@ -77,7 +78,6 @@ in
      # ghostty.${system}.default
      ghostty.packages.x86_64-linux.default
 
-     cura-appimage
      helix
 
      yazi

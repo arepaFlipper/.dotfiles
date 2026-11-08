@@ -32,7 +32,7 @@
         alias xres="sudo systemctl restart display-manager"
         alias kx11="sudo pkill -9 -f 'bin/X vt1'"
         alias ksyn="sudo pkill synergy"
-        alias xwork="xrandr --output DP-1 --rate 59.98 --brightness 0.3 --mode 5120x1440"
+        alias xwork="xrandr --output DP-2 --rate 59.98 --brightness 0.3 --mode 5120x1440"
         export PATH="$HOME/.local/bin:$PATH"
         source $HOME/.dotfiles/zsh/.zshrc
       '';
