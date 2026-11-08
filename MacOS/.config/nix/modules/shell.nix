@@ -30,6 +30,12 @@
       export VAULT="$HOME/sync_repo/brain/";
       export EDITOR=vim;
       source $HOME/.dotfiles/zsh/.zshrc
+
+      # Source private API keys if present
+      if [[ -f "$HOME/.config/secrets/gemini.env" ]]; then
+        source "$HOME/.config/secrets/gemini.env"
+        export GOOGLE_GENERATIVE_AI_API_KEY="$GEMINI_API_KEY"
+      fi
     '';
 
     shellAliases = {

@@ -33,6 +33,7 @@ in
     ./modules/tmux.nix
     ./modules/neovim.nix
     ./modules/dimscreen.nix
+    ./modules/ai-support.nix
   ];
 
   home.file = {
