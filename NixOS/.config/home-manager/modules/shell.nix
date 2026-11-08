@@ -35,6 +35,13 @@
         alias xwork="xrandr --output DP-2 --rate 59.98 --brightness 0.3 --mode 5120x1440"
         export PATH="$HOME/.local/bin:$PATH"
         source $HOME/.dotfiles/zsh/.zshrc
+
+        # Source private API keys if present
+        [[ -f "$HOME/.config/secrets/gemini.env" ]] && source "$HOME/.config/secrets/gemini.env"
+
+        export ZLE_RPROMPT_INDENT=0
+        alias hmsi="home-manager switch --impure"
+
       '';
     };
 
