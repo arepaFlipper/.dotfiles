@@ -8,6 +8,7 @@
     unstable-pkgs.claude-code
     unstable-pkgs.antigravity-cli
     inputs.hermes-agent.packages.${pkgs.system}.default
+    unstable-pkgs.opencode
   ];
 
 }
