@@ -37,10 +37,10 @@
         source $HOME/.dotfiles/zsh/.zshrc
 
         # Source private API keys if present
-        [[ -f "$HOME/.config/secrets/gemini.env" ]] && source "$HOME/.config/secrets/gemini.env"
-
-        export ZLE_RPROMPT_INDENT=0
-        alias hmsi="home-manager switch --impure"
+        if [[ -f "$HOME/.config/secrets/gemini.env" ]]; then
+          source "$HOME/.config/secrets/gemini.env"
+          export GOOGLE_GENERATIVE_AI_API_KEY="$GEMINI_API_KEY"
+        fi
 
       '';
     };
