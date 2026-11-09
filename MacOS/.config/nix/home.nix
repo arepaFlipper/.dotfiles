@@ -32,6 +32,7 @@ in
     ./modules/shell.nix
     ./modules/tmux.nix
     ./modules/neovim.nix
+    ./modules/ai-support.nix
   ];
 
   home.file = {
