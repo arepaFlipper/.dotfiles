@@ -14,3 +14,4 @@ cursors/.icons/catppuccin-mocha-sky-cursors
 !MacOS/.config/nix/flake.lock
 Synergy/.var/app/com.symless.synergy/config/Synergy/synergyCert.pem
 yazi/.config/yazi/keymap.toml-1780739738678217
+i3/.config/polybar/colors.ini
